@@ -1,4 +1,5 @@
 import CardHolder from '@/components/CardHolder'
+import CardHolderDynamic from '@/components/CardHolderDynamic'
 import aboutUsData from '@/utilities/aboutUsPageData';
 
 const page = () => {
@@ -11,7 +12,7 @@ const page = () => {
         <div className='bg-gray-700'>
             <CardHolder datas={founders} />
             <CardHolder datas={headCouncil} />
-            <CardHolder datas={branches} />
+            <CardHolderDynamic datas={branches} />
         </div>
     )
 }

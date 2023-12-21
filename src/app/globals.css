@@ -25,3 +25,35 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@layer components{
+    .Card{
+        width: 16.667%;
+        min-width: theme('minWidth.min');
+        padding: 0.8%;
+        background-color: black;
+        margin-left: -4%;
+        border-radius: theme('borderRadius.xl');
+        box-shadow: theme('boxShadow.2xl');
+    }
+
+    
+    .Card:hover{
+        scale: theme('scale.110');
+        transition-duration: theme('transitionDuration.500');
+    }
+
+    .Card:hover ~ .Card {
+        transform: translateX(25%);
+        transition-duration: theme('transitionDuration.500');
+    }
+    .CardBGClip
+    {
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    }
+
+    .Card:first
+    {
+        margin-left: 0px;
+    }
+}

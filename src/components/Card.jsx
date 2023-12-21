@@ -1,13 +1,23 @@
 import * as FaIcons from 'react-icons/fa';
 
-const SocialMediaHandle = ({ socialMediaIcon, socialMediaHandle }) => {
+const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
+    if(socialMedia.length != 2)
+    {
+        console.error("Social Media Data Length Should Be 2 containing both site and handle");
+        return <br/>
+    }
+    const link = socialMedia[0] + socialMedia[1];
+    const handle = socialMedia[1];
     return (
-        <div className="flex border-white rounded-lg border m-2 p-2">
+        <a className="flex border-white rounded-lg text-[0.5vw] hover:scale-110 transition-transform border m-2 p-2" href={link} target={"_blank"}> 
             {socialMediaIcon}
-            <p><b>{socialMediaHandle}</b></p>
-        </div>
+            <p><b>{handle}</b></p>
+        </a>
     );
 }
+
+
+
 
 const Card = ({ data }) => {
 
@@ -17,7 +27,7 @@ const Card = ({ data }) => {
     const bgImageURL = data.bgImageURL;
 
     return (
-        <div className=" w-1/6 p-[0.8%] bg-black ml-[-50px] first:ml-0 rounded-xl shadow-2xl shadow-gray-800 hover:scale-110 hover:-translate-x-1/4 transition-all">
+        <div className="Card shadow-red-800 transition-all">
             <img 
                 className="w-full"
                 src={bgImageURL}
@@ -35,10 +45,10 @@ const Card = ({ data }) => {
                 </div>
             </div>
             <br />
-            <div className='flex justify-center'>
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaTwitter />} socialMediaHandle="@userID" />
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaInstagram />} socialMediaHandle="@userID" />
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaGithub />} socialMediaHandle="@userID" />
+            <div className='flex justify-center px-[8%]'>
+                <SocialMediaHandle socialMediaIcon={<FaIcons.FaTwitter />} socialMedia={data.twitter} />
+                <SocialMediaHandle socialMediaIcon={<FaIcons.FaInstagram />} socialMedia={data.instagram} />
+                <SocialMediaHandle socialMediaIcon={<FaIcons.FaGithub />} socialMedia={data.github} />
             </div>
         </div>
     );

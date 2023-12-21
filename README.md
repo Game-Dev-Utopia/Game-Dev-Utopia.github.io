@@ -1,5 +1,15 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+ 
+## TO DO
+1) Fix Server Side and Client SIde Optimisation
+2) Every Guy add Social Media Handle and Social Media URL 
+4) Card.jsx handle the handles
+
+## BUGS
+1) Cards visible bg when cards move...
+
+
 ## Getting Started
 
 First, run the development server:
