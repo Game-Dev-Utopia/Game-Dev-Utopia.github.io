@@ -3,8 +3,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
  
 ## TO DO
 1) Fix Server Side and Client SIde Optimisation
-2) Every Guy add Social Media Handle and Social Media URL 
-4) Card.jsx handle the handles
+2) Every Guy add Social Media Handle and Social Media URL  
+4) Card.jsx handle the handles (DONE)
 
 ## BUGS
 1) Cards visible bg when cards move...
