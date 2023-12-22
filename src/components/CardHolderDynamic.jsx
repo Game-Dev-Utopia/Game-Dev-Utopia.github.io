@@ -17,7 +17,7 @@ const DropDownElement = ({data,index,setClicked,selectCurrIndex}) => {
 
 const StaticDropDown = ({data,setClicked}) => {
     return(
-        <div className={`flex justify-evenly rounded-full bg-black p-4 text-5xl`} onClick={setClicked}>
+        <div className={`flex justify-evenly rounded-full bg-black p-4`} onClick={setClicked}>
             <div className="flex mx-2">
                 <b>{data.title}</b>
             </div>
@@ -43,7 +43,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
     },[OnHover])
 
     return (
-        <div onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
+        <div className="text-5xl" onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
             <StaticDropDown data={datas[currIndex]} setClicked={setClicked}/> 
             <ul className={`absolute rounded-lg bg-gray-900 w-fit left-1/2 -translate-x-[50%] z-10 ${clicked? "opacity-100":"opacity-0 -translate-y-[50%] scale-y-0"} transition-all duration-200`}>
                 {
@@ -59,11 +59,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
 
 const CardHolder = ({ datas, selectedNum = 0 }) => {
     const [currSelectNum,setCurrSelectNum] = useState(selectedNum);
-    const [data,setData] = useState(datas[currSelectNum]);
-
-    useEffect(()=>{
-        setData(datas[currSelectNum]);
-    },[currSelectNum])
+    const data = datas[currSelectNum];
 
     return (
         <div>
