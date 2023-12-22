@@ -3,32 +3,25 @@ import { useEffect, useState } from "react";
 import Card from "./Card";
 import { IoMdArrowDropdown } from "react-icons/io";
 
-
-
-
 const DropDownElement = ({data,index,setClicked,selectCurrIndex}) => {
-
     const HandleClick = ()=>{
         setClicked(false);
         selectCurrIndex(index);
     };
     return(
-    <li className={`relative hover:bg-gray-800  p-6  z-10 rounded-lg`} onClick={HandleClick}> 
+        <li className={`relative hover:bg-gray-800  p-6  z-10 rounded-lg`} onClick={HandleClick}> 
             {data.title}
-    </li>
+        </li>
     )
 };
 
-
-
 const StaticDropDown = ({data,setClicked}) => {
-
     return(
-        <div className={`flex justify-evenly rounded-full bg-black p-4`} onClick={setClicked}>
+        <div className={`flex justify-evenly rounded-full bg-black p-4 text-5xl`} onClick={setClicked}>
             <div className="flex mx-2">
-            {data.title} 
+                <b>{data.title}</b>
             </div>
-            <IoMdArrowDropdown className="ml-1 mr-1 mt-1  scale-125"/>
+            <IoMdArrowDropdown className="ml-1 mr-1 mt-1 scale-125" />
         </div>
     );
 }
@@ -37,11 +30,11 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
 
     const [clicked,setClicked] = useState(false);
     const [OnHover,setOnHover] = useState(false);
-    const popUpDisappearDelay = 1000;//time to wait till the pop Up disappears
+    const popUpDisappearDelay = 1000;//time to wait till the pop Up disappears in ms
 
     useEffect(()=>{
         if(!OnHover && clicked)
-        {
+    {
             const DisappearInterval = setInterval(() => {
                 setClicked(false);
             },popUpDisappearDelay);
@@ -52,20 +45,16 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
     return (
         <div onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
             <StaticDropDown data={datas[currIndex]} setClicked={setClicked}/> 
-            {
-                 <ul className={`absolute rounded-lg  bg-gray-900  w-fit left-1/2 -translate-x-[50%] z-10 
-                                 ${clicked? "opacity-100":"opacity-0 -translate-y-[50%] scale-y-0"} transition-all duration-200`}>
-                    {
-                        datas.map((data,i) =>{
-                            if(currIndex != i)
-                            return <DropDownElement data ={data} index = {i} setClicked={setClicked} selectCurrIndex={selectCurrIndex}/>
-                        })
-                    }
-                </ul>
-            }
+            <ul className={`absolute rounded-lg bg-gray-900 w-fit left-1/2 -translate-x-[50%] z-10 ${clicked? "opacity-100":"opacity-0 -translate-y-[50%] scale-y-0"} transition-all duration-200`}>
+                {
+                    datas.map((data, i) =>{
+                        if(currIndex != i)
+                        return <DropDownElement data={data} index={i} setClicked={setClicked} selectCurrIndex={selectCurrIndex}/>
+                    })
+                }
+            </ul>
         </div>
     );
-
 };
 
 const CardHolder = ({ datas, selectedNum = 0 }) => {
@@ -89,4 +78,5 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
         </div>
     );
 }
+
 export default CardHolder;

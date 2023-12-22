@@ -1,11 +1,9 @@
 import Card from "./Card";
 
-
-const StaticDropDown = ({data,index}) => {
-
-    return(
-        <div className={`block rounded-full bg-black p-4`}>
-            {data.title}
+const StaticDropDown = ({ data, index }) => {
+    return (
+        <div className={`block rounded-full bg-black p-10 text-5xl`}>
+            <b>{data.title}</b>
         </div>
     );
 }

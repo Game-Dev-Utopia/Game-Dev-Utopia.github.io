@@ -27,6 +27,12 @@ body {
 }
 
 @layer components{
+
+    @keyframes cardShuffleIn {
+        0% { margin-left: -16.667%; }
+        100% { margin-left: -4%; }
+    }
+
     .Card{
         width: 16.667%;
         min-width: theme('minWidth.min');
@@ -35,6 +41,7 @@ body {
         margin-left: -4%;
         border-radius: theme('borderRadius.xl');
         box-shadow: theme('boxShadow.2xl');
+        z-index: 0;
     }
 
     
@@ -47,9 +54,15 @@ body {
         transform: translateX(25%);
         transition-duration: theme('transitionDuration.500');
     }
+
     .CardBGClip
     {
-        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(
+            0 0, 
+            100% 0, 
+            100% 100%, 
+            0 85%
+            );
     }
 
     .Card:first
