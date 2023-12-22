@@ -2,7 +2,7 @@ import Card from "./Card";
 
 const StaticDropDown = ({ data, index }) => {
     return (
-        <div className={`block rounded-full bg-black p-10 text-5xl`}>
+        <div className={`block rounded-full bg-black p-5`}>
             <b>{data.title}</b>
         </div>
     );
@@ -13,7 +13,7 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
     const data = datas[selectedNum];
     return (
         <div>
-            <div className={`w-fit h-fit m-auto`}>
+            <div className={`w-fit h-fit m-auto text-3xl`}>
                 <StaticDropDown data={data} index={selectedNum}/>
             </div>
             <div className="min-h-screen relative">

@@ -43,7 +43,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
     },[OnHover])
 
     return (
-        <div className="text-5xl" onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
+        <div className="text-3xl" onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
             <StaticDropDown data={datas[currIndex]} setClicked={setClicked}/> 
             <ul className={`absolute rounded-lg bg-gray-900 w-fit left-1/2 -translate-x-[50%] z-10 ${clicked? "opacity-100":"opacity-0 -translate-y-[50%] scale-y-0"} transition-all duration-200`}>
                 {
