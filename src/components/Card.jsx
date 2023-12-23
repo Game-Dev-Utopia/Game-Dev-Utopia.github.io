@@ -26,27 +26,30 @@ const Card = ({ data }) => {
 
     return (
         <div key={name} className={`Card shadow-red-800 transition-all animate-[cardShuffleIn_1s]`}>
-            <img 
-                className="w-full CardBGClip"
-                src={bgImageURL}
-                alt="BG"
-            />
-            <div className="flex mt-[15%]">
-                <img 
-                    className="w-1/5 h-1/5 rounded-[50%] flex-1 m-[5%] ml-0"
-                    src={profileImageURL}
-                    alt="ProfileIMG"
+            <div className=''> 
+            {/* Add Shiny class Name to see prototype shiny effect make it pretty */}
+                <img
+                    className="w-full CardBGClip"
+                    src={bgImageURL}
+                    alt="BG"
                 />
-                <div className="flex-[4]">
-                    <h1 className="text-gray-200"><b>{name}</b></h1>
-                    <p className="text-gray-500">{desc}</p>
+                <div className="relative mt-[15%]">
+                    <img
+                        className="absolute w-1/4 h-auto -translate-y-[150%] rounded-[50%] flex-1 m-[5%] ml-0 "
+                        src={profileImageURL}
+                        alt="ProfileIMG"
+                    />
+                    <div className="flex-[4] p-3">
+                        <h1 className="text-gray-200"><b>{name}</b></h1>
+                        <p className="text-gray-500">{desc}</p>
+                    </div>
                 </div>
-            </div>
-            <br />
-            <div className='flex justify-center px-[8%]'>
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaTwitter />} socialMedia={data.twitter} />
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaInstagram />} socialMedia={data.instagram} />
-                <SocialMediaHandle socialMediaIcon={<FaIcons.FaGithub />} socialMedia={data.github} />
+                <br />
+                <div className='flex justify-center px-[8%]'>
+                    <SocialMediaHandle socialMediaIcon={<FaIcons.FaTwitter />} socialMedia={data.twitter} />
+                    <SocialMediaHandle socialMediaIcon={<FaIcons.FaInstagram />} socialMedia={data.instagram} />
+                    <SocialMediaHandle socialMediaIcon={<FaIcons.FaGithub />} socialMedia={data.github} />
+                </div>
             </div>
         </div>
     );
