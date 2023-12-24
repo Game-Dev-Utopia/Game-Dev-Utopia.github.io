@@ -8,7 +8,7 @@ const page = () => {
     const branches = aboutUsData.branchesData;
 
     return (
-        <div className='bg-gray-700'>
+        <div className='bg-[#0F000C]'>
             <CardHolder datas={founders} />
             <CardHolder datas={headCouncil} />
             <CardHolderDynamic datas={branches} />

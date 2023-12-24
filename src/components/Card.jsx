@@ -25,8 +25,8 @@ const Card = ({ data }) => {
     const bgImageURL = data.bgImageURL;
 
     return (
-        <div key={name} className={`Card shadow-red-800 transition-all animate-[cardShuffleIn_1s]`}>
-            <div className=''> 
+        <div key={name} className={`Card transition-all animate-[cardShuffleIn_1s]`}>
+            <div className='bg-[#23141D] p-3 shadow-[-20px_0px_5px_0px_rgba(0,0,0,0.7)] rounded-[10px]'> 
             {/* Add Shiny class Name to see prototype shiny effect make it pretty */}
                 <img
                     className="w-full CardBGClip"
@@ -35,13 +35,13 @@ const Card = ({ data }) => {
                 />
                 <div className="relative mt-[15%]">
                     <img
-                        className="absolute w-1/4 h-auto -translate-y-[150%] rounded-[50%] flex-1 m-[5%] ml-0 "
+                        className="absolute w-1/4 h-auto -translate-y-[150%] rounded-[50%] flex-1 m-[5%] ml-[1%]"
                         src={profileImageURL}
                         alt="ProfileIMG"
                     />
-                    <div className="flex-[4] p-3">
-                        <h1 className="text-gray-200"><b>{name}</b></h1>
-                        <p className="text-gray-500">{desc}</p>
+                    <div className="flex-[4] p-3 text-white">
+                        <h1 className='text-xl'><b>{name}</b></h1>
+                        <p>{desc}</p>
                     </div>
                 </div>
                 <br />

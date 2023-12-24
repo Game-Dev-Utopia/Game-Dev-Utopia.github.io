@@ -36,16 +36,16 @@ body {
     .Card{
         width: 16.667%;
         min-width: theme('minWidth.min');
-        padding: 0.8%;
-        background-color: black;
+        padding: 0.1%;
         margin-left: -4%;
-        border-radius: theme('borderRadius.xl');
+        /* border-radius: theme('borderRadius.xl'); */
         box-shadow: theme('boxShadow.2xl');
+        background: linear-gradient(to bottom, #23141D, #FF5F1F);
+        border-radius: 10px;
         z-index: 0;
     }
 
-    
-    .Card:hover{
+    .Card:hover {
         scale: theme('scale.110');
         transition-duration: theme('transitionDuration.500');
     }
