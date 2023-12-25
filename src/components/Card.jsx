@@ -26,10 +26,10 @@ const Card = ({ data }) => {
 
     return (
         <div key={name} className={`Card transition-all animate-[cardShuffleIn_1s]`}>
-            <div className='bg-[#23141D] p-3 shadow-[-20px_0px_5px_0px_rgba(0,0,0,0.7)] rounded-[10px]'> 
-            {/* Add Shiny class Name to see prototype shiny effect make it pretty */}
+            <div className='bg-[#23141D] hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] 
+            shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
                 <img
-                    className="w-full CardBGClip"
+                    className="w-full CardBGClip aspect-video"
                     src={bgImageURL}
                     alt="BG"
                 />
