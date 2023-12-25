@@ -8,6 +8,11 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+/* scroll bar is currently disabled. Will change it whenever required. */
+::-webkit-scrollbar {
+  display: none;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
