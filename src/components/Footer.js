@@ -2,11 +2,7 @@
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Link from "next/link";
 import { IconContext } from 'react-icons';
-import { FaFacebookF } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaThreads } from "react-icons/fa6";
+import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaThreads } from "react-icons/fa6";
 
 export default function App() {
     return (
@@ -44,7 +40,7 @@ export default function App() {
                         <div className="w-full flex my-4">
                             <div className="w-1/4 mx-10">
                                 <img src="gdu" alt="gdu logo" className="w-44 h-44 mx-auto py-4 my-10 bg-white text-black" />
-                                <h1 className="text-xl">Contact me</h1>
+                                <h1 className="text-xl">Contact Us</h1>
                             </div>
                             <div className="grid grid-cols-2 w-2/3 py-16 grid-rows-5 gap-y-1.5 justify-items-center gap-x-0 mx-20 text-left">
                                 <div className="w-2/4 text-lg h-auto my-0">
