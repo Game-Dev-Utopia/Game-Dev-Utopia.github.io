@@ -20,14 +20,14 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
 
 const Card = ({ data }) => {
     const name = data.name;
+    const designation = data.designation;
     const desc = data.desc;
     const profileImageURL = data.profileImageURL;
     const bgImageURL = data.bgImageURL;
 
     return (
         <div key={name} className={`Card transition-all animate-[cardShuffleIn_1s]`}>
-            <div className='bg-[#23141D] hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] 
-            shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
+            <div className='bg-[#23141D] hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
                 <img
                     className="w-full CardBGClip aspect-video"
                     src={bgImageURL}
@@ -41,6 +41,7 @@ const Card = ({ data }) => {
                     />
                     <div className="flex-[4] p-3 text-white">
                         <h1 className='text-xl'><b>{name}</b></h1>
+                        <h3 className='text-sm text-gray-400'>{designation}</h3>
                         <p>{desc}</p>
                     </div>
                 </div>

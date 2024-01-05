@@ -1,0 +1,34 @@
+Neoray v0.2.5 Crash Report
+Build Type: Release
+Start Time: 2024-01-05 05:07:33 1704431253449
+Crash Time: 2024-01-05 05:07:34 1704431254394
+
+Neoray is crashed because of the following reason:
+[FATAL] runtime error: index out of range [100] with length 100
+
+Stack trace:
+goroutine 1 [running, locked to thread]:
+github.com/hismailbulut/Neoray/pkg/logger.createCrashReport({0xc0002188c0, 0x3f}, 0xad?)
+	/home/grx/.cache/yay/neoray-git/src/neoray/pkg/logger/logger.go:101 +0x3e5
+github.com/hismailbulut/Neoray/pkg/logger.Log(0x4, {0xc000323970, 0x1, 0x1})
+	/home/grx/.cache/yay/neoray-git/src/neoray/pkg/logger/logger.go:135 +0x3df
+github.com/hismailbulut/Neoray/pkg/logger.Shutdown()
+	/home/grx/.cache/yay/neoray-git/src/neoray/pkg/logger/logger.go:62 +0x4c
+panic({0x640880, 0xc0002dfce0})
+	/usr/lib/go/src/runtime/panic.go:884 +0x213
+main.(*Grid).SetCell(...)
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/grid.go:177
+main.(*GridManager).SetCell(...)
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/grid_manager.go:365
+main.(*GridManager).grid_line(0xc000296000, {0xc0000b6010?, 0x2e, 0x612aa0?})
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/grid_events.go:291 +0x430
+main.(*GridManager).HandleEvents(0x640a40?)
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/grid_events.go:52 +0xd6b
+main.(*GridManager).Update(0xc0000ce000?)
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/grid_manager.go:373 +0x19
+main.UpdateHandler(0x6c4050?)
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/editor.go:288 +0x36
+main.MainLoop()
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/editor.go:276 +0x267
+main.main()
+	/home/grx/.cache/yay/neoray-git/src/neoray/cmd/neoray/main.go:64 +0x35d
