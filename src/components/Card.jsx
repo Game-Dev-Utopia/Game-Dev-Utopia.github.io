@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import * as FaIcons from 'react-icons/fa';
 
 const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
@@ -28,17 +29,25 @@ const Card = ({ data }) => {
     return (
         <div key={name} className={`Card transition-all animate-[cardShuffleIn_1s]`}>
             <div className='bg-[#23141D] hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
-                <img
-                    className="w-full CardBGClip aspect-video"
-                    src={bgImageURL}
-                    alt="BG"
-                />
+                <div className="w-full h-auto" >   
+                    <Image
+                        width={640}
+                        height={360}
+                        className='CardBGClip aspect-video'
+                        src={bgImageURL}
+                        alt="BG"
+                    /> 
+                </div>
                 <div className="relative mt-[15%]">
-                    <img
-                        className="absolute w-1/4 h-auto -translate-y-[150%] rounded-[50%] flex-1 m-[5%] ml-[1%]"
-                        src={profileImageURL}
-                        alt="ProfileIMG"
-                    />
+                    <div className="absolute w-1/4 h-auto -translate-y-[150%] flex-1 m-[5%] ml-[1%]">
+                        <Image
+                            className='rounded-[50%] '
+                            width={640}
+                            height={360}
+                            src={profileImageURL}
+                            alt="ProfileIMG"
+                        /> 
+                    </div>
                     <div className="flex-[4] p-3 text-white">
                         <h1 className='text-xl'><b>{name}</b></h1>
                         <h3 className='text-sm text-gray-400'>{designation}</h3>

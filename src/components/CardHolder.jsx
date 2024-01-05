@@ -18,7 +18,7 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
             </div>
             <div className="min-h-screen relative">
                 <div className={`flex justify-center absolute top-1/2 -translate-y-1/2`}>
-                    { data.data.map((val) => <Card data={val}/>) }
+                    { data.data.map((val,i) => <Card data={val} key={i}/>) }
                 </div>
             </div>
         </div>
