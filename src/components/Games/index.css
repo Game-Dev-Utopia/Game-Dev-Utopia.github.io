@@ -1,0 +1,225 @@
+/* Base styles */
+/* body {
+    margin: 10px;
+    padding: 0;
+    background-color: #0f000c;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+  }
+   */
+  .game-page {
+    display: flex;
+    padding: 30px;
+    background: transparent;
+    @apply bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20 ;
+  }
+  
+  
+  .video-game-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .video-card {
+    flex: 1;
+    /* background-image: linear-gradient(to right, rgba(67, 14, 14, 0.518), rgba(69, 25, 25, 0.523)); */
+    /* border: 1px solid rgb(64, 10, 10);
+    border-radius: 50px; */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
+    width: auto;
+  }
+  
+  .game-Info {
+    flex: 1;
+    /* background-image: linear-gradient(to right, rgba(67, 14, 14, 0.518), rgba(69, 25, 25, 0.523)); */
+    /* border: 1px solid rgb(64, 10, 10);
+    border-radius: 50px; */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
+    width: auto;
+    color: white;
+    margin: 10px;
+  }
+  
+  
+  .photo-list-wrapper {
+    margin: 0;
+    width: auto;
+  }
+  
+  .photo-list {
+    margin: 0;
+    width: auto; 
+  }
+  
+  
+  .photo-list ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .photo-list img {
+    width: 102px;
+    height: 100px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  }
+  
+  .photo-list img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+  
+  .game-info .thumbnail img {
+    padding: 0;
+    width: 100%; 
+    height: auto; 
+    border-radius: 50px 50px 0 0 ;
+  }
+  
+  .buttons {
+    align-items: center;
+  }
+  
+  button {
+    background-image: linear-gradient(to right, rgba(240, 240, 240, 0.3), rgba(100, 100, 100, 0.5));
+    flex-wrap: wrap;
+    padding: 10px 20px 10px 20px;
+    margin: 10px;
+    margin-left: 15px;
+    border-radius: 20%;
+    font-size: 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  button:hover, .prev-button,
+  .next-button  {
+    cursor: pointer;
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(60, 6, 6, 0.2);
+  }
+  
+  
+  button:nth-child(1){
+    background-color: red;
+    color: antiquewhite;
+  }
+  
+  button:nth-child(2){
+    background-color: darkorange;
+    color: antiquewhite;
+  }
+  
+  button:nth-child(3){
+    background-color: #350563;
+    color: antiquewhite;
+  }
+  
+  .like-button,.comment-button {
+    border-radius: 20%;
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease ease-in-out;
+  }
+  
+  .comment-button {
+    background-color: green;
+  }
+  
+  .like-symbol,
+  .comment-symbol {
+    margin-left: 7px;
+    font-size: 14px;
+  }
+  
+  
+  .carousel-container {
+    position: relative;
+    width: 100%; 
+  }
+  
+  .carousel-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .carousel-wrapper::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .carousel-wrapper::-webkit-scrollbar-thumb {
+    background-color: #ff0000; 
+    border-radius: 6px;
+  }
+  
+  .carousel-wrapper::-webkit-scrollbar-track {
+    background-color: #f0f0f0; 
+  }
+  
+  
+  
+  .carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel-item {
+    display: flex;
+    scroll-snap-align: start; 
+    flex: 0 0 auto;
+    margin-right: 10px; 
+  }
+  
+  .carousel-item img {
+    margin-right: 10px; 
+    width: 120px;
+    height:auto;
+  }
+  
+  .carousel-item img:hover{
+    transform: scale(1.1);
+    transition: transform 0.3 ease-in-out;
+  }
+  @media (max-width: 800px) {
+    .game-page {
+      display: block;
+      padding: 10px;
+      margin-left: 10px;
+    }
+    .video-game-wrapper{
+      display: block;
+    }
+  
+    .video-card {
+      margin: 5px;
+      width: auto; 
+      height: auto;
+    }
+  
+    .game-info {
+      margin: 5px;
+      width: auto; 
+      height: auto;
+    }
+  
+    button {
+      padding: 8px 15px;
+      margin: 5px;
+      margin-left: 10px;
+    }
+  }
+  
