@@ -12,9 +12,9 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     const link = socialMedia[0] + socialMedia[1];
     const handle = socialMedia[1];
     return (
-        <a className="flex border-white rounded-lg text-[0.5vw] hover:scale-110 transition-transform border m-2 p-2" href={link} target={"_blank"}> 
+        <a className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-110 transition-transform border m-2 p-2" href={link} target={"_blank"}> 
             {socialMediaIcon}
-            <p><b>{handle}</b></p>
+            <p className='text-[1.8vw] sm:text-[0.5vw] '><b>{handle}</b></p>
         </a>
     );
 }
@@ -27,8 +27,8 @@ const Card = ({ data }) => {
     const bgImageURL = data.bgImageURL;
 
     return (
-        <div key={name} className={`Card transition-all animate-[cardShuffleIn_1s]`}>
-            <div className='bg-[#23141D] hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
+        <div key={name} className={`ml-[3%] sm:Card w-[85vw] sm:w-[16.667%] overflow-hidden transition-all animate-[cardShuffleIn_1s]`}>
+            <div className='bg-[#23141D] sm:hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
                 <div className="w-full h-auto" >   
                     <Image
                         width={640}
@@ -49,9 +49,9 @@ const Card = ({ data }) => {
                         /> 
                     </div>
                     <div className="flex-[4] p-3 text-white">
-                        <h1 className='text-xl'><b>{name}</b></h1>
-                        <h3 className='text-sm text-gray-400'>{designation}</h3>
-                        <p>{desc}</p>
+                        <h1 className='text-3xl sm:text-xl'><b>{name}</b></h1>
+                        <h3 className='text-xl sm:text-sm text-gray-400'>{designation}</h3>
+                        <p className='text-xl sm:text-lg' >{desc}</p>
                     </div>
                 </div>
                 <br />

@@ -16,8 +16,13 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
             <div className={`w-fit h-fit m-auto text-3xl`}>
                 <StaticDropDown data={data} index={selectedNum}/>
             </div>
-            <div className="min-h-screen relative">
+            {/* <div className="min-h-screen relative">
                 <div className={`flex justify-center absolute top-1/2 -translate-y-1/2`}>
+                    { data.data.map((val,i) => <Card data={val} key={i}/>) }
+                </div>
+            </div> */}
+            <div className="min-h-screen relative overflow-x-auto">
+                <div className={`flex justify-center absolute top-1/2 -translate-y-1/2 p-[10%] sm:p-0`}>
                     { data.data.map((val,i) => <Card data={val} key={i}/>) }
                 </div>
             </div>
