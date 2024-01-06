@@ -40,7 +40,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
             },popUpDisappearDelay);
             return () => clearInterval(DisappearInterval);
         }
-    },[OnHover])
+    },[OnHover,clicked])
 
     return (
         <div className="text-3xl" onMouseEnter={() => setOnHover(true)} onMouseLeave={() => setOnHover(false)}>
@@ -49,7 +49,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
                 {
                     datas.map((data, i) =>{
                         if(currIndex != i)
-                        return <DropDownElement data={data} index={i} setClicked={setClicked} selectCurrIndex={selectCurrIndex}/>
+                        return <DropDownElement data={data} key={i} index={i} setClicked={setClicked} selectCurrIndex={selectCurrIndex}/>
                     })
                 }
             </ul>
@@ -66,9 +66,9 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
             <div className={`w-fit h-fit m-auto`}>
                 <DropDown datas={datas} currIndex={currSelectNum} selectCurrIndex={setCurrSelectNum}/>
             </div>
-            <div className="min-h-screen relative">
-                <div className={`flex justify-center absolute top-1/2 -translate-y-1/2`}>
-                    { data.data.map((val) => <Card data={val}/>) }
+            <div className="min-h-screen relative overflow-x-auto">
+                <div className={`flex sm:justify-center absolute top-1/2 -translate-y-1/2 p-[10%] sm:p-0`}>
+                    { data.data.map((val,i) => <Card data={val} key={i}/>) }
                 </div>
             </div>
         </div>
