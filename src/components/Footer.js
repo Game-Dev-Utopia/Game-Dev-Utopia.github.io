@@ -1,8 +1,18 @@
 "use client";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import Link from "next/link";
 import { IconContext } from 'react-icons';
-import { FaFacebookF, FaInstagram, FaXTwitter, FaLinkedinIn, FaThreads } from "react-icons/fa6";
+import { socials, footerContents } from "../utilities/FooterData";
+import { useState } from "react";
+import Link from 'next/link';
+
+
+const SocialSection = ({ logo, classes = "", onHover, path }) => {
+    const [hover, setHover] = useState(false);
+    return <div className={`mx-1 flex px-1 py-0 h-9 rounded-md items-center ${classes}`} onMouseOver={() => setHover(true)} onMouseOut={() => setHover(false)}>
+        <Link href={`${path}`}> {!hover ? logo : onHover} </Link>
+        {/* {logo} */}
+    </div>
+}
 
 export default function App() {
     return (
@@ -34,72 +44,58 @@ export default function App() {
                         style={{
                             backgroundColor: "#000",
                             color: "white",
+                            display: "flex",
+                            justifyContent: "space-evenly",
+                            height: "400px",
                         }}
 
                     >
-                        <div className="w-full flex my-4">
-                            <div className="w-1/4 mx-10">
-                                <img src="gdu" alt="gdu logo" className="w-44 h-44 mx-auto py-4 my-10 bg-white text-black" />
-                                <h1 className="text-xl">Contact Us</h1>
-                            </div>
-                            <div className="grid grid-cols-2 w-2/3 py-16 grid-rows-5 gap-y-1.5 justify-items-center gap-x-0 mx-20 text-left">
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Lets Talk </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> About Us </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Achievements </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Join Us </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Projects </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Support Us </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Teams </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Become Our Partner </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Privacy Policy </Link>
-                                </div>
-                                <div className="w-2/4 text-lg h-auto my-0">
-                                    <Link href="/trial"> Copyrights and Patents </Link>
+                        {footerContents.map((ele) =>
+                            <div key={ele.title} className="w-1/6 flex flex-col text-left relative">
+                                <h2 className="text-2xl font-semibold my-4">{ele.title}</h2>
+                                <div className="">
+                                    {ele.content.map((list) =>
+                                        <div key={list.name} className="my-4 text-lg">
+                                            {list.name !== "" ? <Link href={`${list.link}`}>{list.name}</Link> : ""}
+                                            <ul className="my-2 text-white list-disc text-justify relative left-10">
+                                                {list.arr ? list.arr.map((e) =>
+                                                    <li key={e.display} className="text-base my-2">
+                                                        <Link href={`${e.link}`}>{e.display}</Link>
+                                                    </li>
+                                                ) : ""}
+                                            </ul>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
-                        </div>
-                        <div classname="fixed ">
-                            <div className="fixed left-36 text-center">
-                                <h1 className="text-base">All Rights Reserved</h1>
+                        )}
+
+                        <div className="w-1/4">
+                            <div className="w-full">
+                                <h1 className="text-3xl font-extrabold my-4">GameDevUtopia</h1>
+                                <div className="flex">
+                                    <img src="gdu" alt="gdu logo" className="w-44 h-44 mx-auto py-4 my-10 bg-white text-black" />
+                                    <div className="grid grid-cols-3 grid-rows-3 py-4 my-10">
+                                        {socials.map((e) =>
+                                            <SocialSection
+                                                key={e.handle}
+                                                logo={e.logo}
+                                                classes={e.classes}
+                                                onHover={e.onHover ? e.onHover : e.logo}
+                                                path={e.path}
+                                            />
+                                        )}
+                                    </div>
+                                </div>
                             </div>
-                            <div className="mx-3 inline-block p-1 rounded-md ">
-                                <Link href="/trial"><FaFacebookF /> {/*facebook logo*/}</Link>
-                            </div>
-                            <div className="mx-3 inline-block p-1 rounded-md">
-                                <Link href="/trial"><FaInstagram /> {/*instagram  logo*/}</Link>
-                            </div>
-                            <div className="mx-3 inline-block p-1">
-                                <Link href="/trial"><FaXTwitter /> {/*Twitter-X logo*/}</Link>
-                            </div>
-                            <div className="mx-3 inline-block p-1">
-                                <Link href="/trial"><FaLinkedinIn /> {/*Linked In logo*/}</Link>
-                            </div>
-                            <div className="mx-3 inline-block p-1">
-                                <Link href="/trial"><FaThreads /> {/*threads logo*/}</Link>
-                            </div>
+
+
                         </div>
 
 
                     </ParallaxLayer>
-                </Parallax>
-            </div>
-        </IconContext.Provider>
+                </Parallax >
+            </div >
+        </IconContext.Provider >
     );
 }

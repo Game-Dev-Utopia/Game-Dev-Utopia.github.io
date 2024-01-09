@@ -19,11 +19,14 @@ function Navbar() {
     return (
         <>
             <IconContext.Provider value={{ color: '#fff' }}>
-                <div className='bg-black h-16 flex justify-start items-center'>
+                <div className='bg-black h-16 flex justify-start items-center fixed w-full z-50'>
                     <span className='text-white px-4 text-xl'>GameDevUtopia</span>
                 </div>
                 <nav
-                    className={sidebar ? 'bg-black flex justify-center fixed top-1/4 py-4 rounded-2xl left-1' : 'bg-black flex justify-center fixed top-1/4 py-4 rounded-2xl -left-full'}
+                    className={sidebar ?
+                        'bg-black flex justify-center z-50 fixed top-1/4 py-4 rounded-2xl left-1  border-2 border-white'
+                        :
+                        'bg-black z-50 flex justify-center fixed top-1/4 py-4 rounded-2xl -left-full  border-2 border-white'}
                     onMouseEnter={() => setSidebar(true)}
                     onMouseLeave={() => { setSidebar(false); setNavDescp(false) }}>
                     <ul className='w-full'>
@@ -31,6 +34,7 @@ function Navbar() {
                             onClick={navToggle}
                             className='flex justify-start gap-5 items-center pl-6 pr-6 pt-0 pb-4 text-xl my-1.5'>
                             <FaIcons.FaBars />
+
                         </li>)
                             :
                             (<li
@@ -53,7 +57,7 @@ function Navbar() {
                 </nav>
             </IconContext.Provider>
             <div>
-                {!sidebar ? (<div className="font-semibold absolute top-1/2 text-xl text-white bg-black rounded-r-full pr-2.5 py-2 left-1 pl-1.5" onMouseOver={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)}>&gt;</div>) : ("")}
+                {!sidebar ? (<div className="font-semibold text-xl text-white z-50 bg-black rounded-r-full pr-2.5 py-2 left-1 pl-1.5 fixed top-1/2" onMouseOver={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)}>&gt;</div>) : ("")}
             </div>
         </>
     );
