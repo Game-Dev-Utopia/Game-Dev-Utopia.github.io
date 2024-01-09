@@ -4,6 +4,7 @@ import { IconContext } from 'react-icons';
 import { socials, footerContents } from "../utilities/FooterData";
 import { useState } from "react";
 import Link from 'next/link';
+import Image from "next/image";
 
 
 const SocialSection = ({ logo, classes = "", onHover, path }) => {
@@ -74,7 +75,7 @@ export default function App() {
                             <div className="w-full">
                                 <h1 className="text-3xl font-extrabold my-4">GameDevUtopia</h1>
                                 <div className="flex">
-                                    <img src="gdu" alt="gdu logo" className="w-44 h-44 mx-auto py-4 my-10 bg-white text-black" />
+                                    <Image src="/gdu" alt="gdu logo" width={44} height={44} className="w-44 h-44 mx-auto py-4 my-10 bg-white text-black" />
                                     <div className="grid grid-cols-3 grid-rows-3 py-4 my-10">
                                         {socials.map((e) =>
                                             <SocialSection

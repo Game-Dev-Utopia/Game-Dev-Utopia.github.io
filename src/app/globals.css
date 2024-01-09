@@ -30,3 +30,43 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+/* Footer Styles */  
+/* idk why but both tailwind as well as this classes are required currently */
+.linkedin{
+  grid-column-start: 2;
+  grid-row-start: 1;
+}
+
+.linkedin:hover{
+  background: #0077b5;
+}
+
+.insta{
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.insta:hover{
+  background: linear-gradient(45deg,#feda75, #fa7e1e ,#d62976,#962fbf, #4f5bd5);
+}
+
+.twitter{
+  grid-column-start: 3;
+  grid-row-start: 2;
+}
+
+.twitter:hover{
+  background: #fff;
+}
+
+.discord{
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.discord:hover{
+  background: #7289da;
+}
+
+/* Footer styles ends */

@@ -4,7 +4,7 @@ const socials = [
     {
         handle: "LinkedIn",
         logo: <FaLinkedinIn />,
-        classes: "linkedin col-start-2 row-start-1",
+        classes: "linkedin  col-start-2 col-span-2",
         path: "https://www.linkedin.com/company/gamedevutopia/",
     },
     {
