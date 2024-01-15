@@ -1,0 +1,159 @@
+.Timeline {
+    position: relative;
+}
+
+.Achievement {
+    margin-top: 5%;
+    position: relative;
+}
+
+
+.Achievement-detail {
+    color: white;
+    background-color: #0e081f;
+    width: 75%;
+    z-index: 0;
+    margin-left: 3%;
+    border-radius: 5vh;
+    padding: 3%;
+    padding-left: 5%;
+    clip-path: polygon(
+        0% 0%,
+        75% 0%,
+        100% 50%,
+        75% 100%,
+        0% 100%
+        );
+    /* border-top: 1px solid white; */
+    /* border-bottom: 1px solid white; */
+}
+
+.Achievement-tag
+{
+    position: absolute;
+    content: "";
+    width: 5%;
+    height: 3vmin;
+    background-color:yellow;
+    z-index: 10;
+
+    top: 50%;
+    left: 80%;
+    transform: translate(-100%,-50%);
+}
+
+
+
+
+.Achievement-time {
+    color: rgb(200, 200, 200);
+    position: absolute;
+    left: 83%;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.Achievement-details{
+    width: 70%;
+
+    li {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.Timeline::before {
+    content: '';
+    position: absolute;
+    left: 80%;
+    transform : translateX(-50%);
+    height: 110%;
+    width: 4px;
+    background: white;
+}
+
+@media (min-width: 768px){
+    .Achievement-detail {
+        padding: 2%;
+        padding-left: 2%;
+        margin-left: 10%;
+        width: 36%;
+    }
+
+    .Achievement-tag
+    {
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%,-50%);
+    }
+
+
+
+
+    .Achievement-time {
+        left: 53%;
+    }
+
+    .Achievement-details{
+        width: 70%;
+
+        li {
+            margin-left: 1rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+    }
+
+
+
+    .Achievement:nth-child(odd) {
+        .Achievement-detail {
+            margin-left: auto;
+            margin-right: 10%;
+            clip-path: polygon(
+                25% 0%,
+                0% 50%,
+                25% 100%,
+                100% 100%,
+                100% 0%
+                );
+        }
+
+        .Achievement-tag
+        {
+            transform: translate(0%,-50%);
+        }
+
+        .Achievement-details{
+
+            margin-right: 0;
+            margin-left: auto;
+        }
+
+        .Achievement-time{
+            right: 55%;
+            left: auto;
+        }
+
+        .Achievement-title
+        {
+            margin-right: 5%;
+            text-align: right;
+        }
+
+    }
+
+    .Timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform : translateX(-50%);
+        height: 110%;
+        width: 4px;
+        background: white;
+    }
+}
+
+
+
