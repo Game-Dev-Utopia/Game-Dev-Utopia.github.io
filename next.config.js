@@ -14,6 +14,10 @@ const nextConfig = {
                 protocol: 'https',
                 hostname: '**.vecteezy.com**',
             },
+            {
+                protocol: 'https',
+                hostname: '**.freepik.com**',
+            },
         ],
     },
 }

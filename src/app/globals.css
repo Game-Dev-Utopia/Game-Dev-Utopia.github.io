@@ -26,14 +26,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-@layer components{
+@layer components {
 
     @keyframes cardShuffleIn {
         0% { margin-left: -16.667%; }
         100% { margin-left: -4%; }
     }
 
-    .Card{
+    .Card {
         width: 16.667%;
         min-width: theme('minWidth.min');
         padding: 0.1%;
@@ -56,8 +56,7 @@ body {
         transition-duration: theme('transitionDuration.500');
     }
 
-    .CardBGClip
-    {
+    .CardBGClip {
         clip-path: polygon(
             0 0, 
             100% 0, 
@@ -66,8 +65,73 @@ body {
             );
     }
 
-    .Card:first
-    {
+    .Card:first {
         margin-left: 0px;
+    }
+
+    .WrapperTimeline {
+    }
+
+    .Achievement-detail {
+        color: white;
+        background-color: #0e081f;
+        width: 33%;
+        margin-left: 10%;
+        border-radius: 5vh;
+        padding: 2%;
+        padding-left: 2%;
+        clip-path: polygon(
+            0% 0%,
+            75% 0%,
+            100% 50%,
+            75% 100%,
+            0% 100%
+            );
+        /* border-top: 1px solid white; */
+        /* border-bottom: 1px solid white; */
+    }
+
+    .Achievement:nth-child(odd) .Achievement-detail {
+        margin-left: auto;
+        margin-right: 10%;
+        clip-path: polygon(
+            25% 0%,
+            0% 50%,
+            25% 100%,
+            100% 100%,
+            100% 0%
+            );
+    }
+
+    .Achievement-time {
+        color: rgb(200, 200, 200);
+        position: absolute;
+        left: 53%;
+        bottom: 50%;
+        transform: translateY(50%);
+    }
+
+    .Achievement:nth-child(odd) .Achievement-time {
+        right: 55%;
+        left: auto;
+    }
+
+    .Timeline {
+        position: relative;
+    }
+
+    .Timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform : translateX(-50%);
+        height: 150%;
+        width: 4px;
+        background: white;
+    }
+
+    .Achievement {
+        margin-top: 5%;
+        position: relative;
     }
 }
