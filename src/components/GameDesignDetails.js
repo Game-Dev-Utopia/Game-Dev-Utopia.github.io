@@ -1,7 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 /* eslint-disable react/no-unescaped-entities */
 "use client"
-export default function GameDesignDetails({ isGame }) {
+export default function GameDesignDetails() {
   return (
     <section className="w-full bg-gray-100 bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-20">
       <div className="grid grid-cols-2 ">
