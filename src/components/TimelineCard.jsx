@@ -1,19 +1,28 @@
 'use client'
 import Image from 'next/image';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const TimelineCard = ({ data , scrollCurrent }) => {
     const timelineCardRef = useRef(0);
-    let scale = '1';
+    const [scale,setScale] = useState(1);
+
     useEffect(() => {
-        if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
-            scale = '1.1';
-        } else {
-            scale = '1';
+        if(scrollCurrent && timelineCardRef)
+        {
+            if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
+                setScale(1.2);
+            }
+            else {
+                setScale(1.0);
+            }
+
+            console.log(scrollCurrent.scrollTop);
         }
-    }, [])
+    }, )
+
+
     return (
-        <div className={`Achievement scale-[${scale}%]`} ref={timelineCardRef}>
+        <div className={`Achievement transition-all duration-300`} style={{scale : scale}} ref={timelineCardRef}>
             <Image 
                 alt={data.name}
                 src={data.image}
