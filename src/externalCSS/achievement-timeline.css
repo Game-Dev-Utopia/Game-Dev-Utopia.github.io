@@ -20,7 +20,7 @@
     /* background-color: #0e081f; */
     /* background: linear--radient(to right, #0e081f99, #0e081fff); */
     /* background-color: yellow; */
-    width: 75%;
+    width: 70%;
     z-index: 0;
     margin-left: 3%;
     border-radius: 20px;
@@ -33,13 +33,13 @@
 .Achievement-tag {
     position: absolute;
     content: '';
-    width: 5%;
-    height: 6vh;
+    width: 5.5%;
+    height: 5vh;
     /* background: linear-gradient(to right, #0e081f, #0e081f, #0e081f00, #0e081f00); */
     background-color: #E5BD1AFF;
     z-index: 0;
     top: 50%;
-    left: 80%;
+    left: 78%;
     transform: translate(-100%,-50%);
     clip-path: polygon(
         0% 0%,
@@ -75,10 +75,10 @@
 .Timeline::before {
     content: '';
     position: absolute;
-    left: 80%;
+    left: 78%;
     transform : translateX(-50%);
     height: 110%;
-    width: 4px;
+    width: 7px;
     background: #E5BD1A;
 }
 
@@ -88,14 +88,15 @@
 
     .Achievement-detail {
         /* padding: 2%; */
-        /* padding-left: 2%; */
-        margin-left: 10%;
+        padding-right: .5%;
+        margin-left: 10.3%;
         width: 36%;
     }
 
     .Achievement-tag {
         top: 50%;
         left: 50%;
+        width: 4%;
     }
 
     .Achievement-time {
@@ -122,8 +123,8 @@
         .Achievement-detail {
             /* background: linear-gradient(to left, #0e081f55, #0e081fff); */
             margin-left: auto;
-            margin-right: 10%;
-            padding-left: 1%;
+            margin-right: 10.3%;
+            padding-left: 0.5%;
             /* background: linear-gradient(to left, #0e081f, #E5BD1A); */
             background: linear-gradient(to left, #2f2f2f, #E5BD1A);
             /* border-left: 20px solid #E5BD1A; */
@@ -142,7 +143,6 @@
         }
 
         .Achievement-details {
-
             /* margin-right: 8%; */
             /* margin-left: auto; */
         }

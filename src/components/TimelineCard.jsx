@@ -10,7 +10,8 @@ const TimelineCard = ({ data , scrollCurrent }) => {
         if(scrollCurrent && timelineCardRef)
         {
             if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
-                setScale(1.2);
+                if(window.innerWidth > 768)
+                    setScale(1.1);
             }
             else {
                 setScale(1.0);
@@ -28,7 +29,7 @@ const TimelineCard = ({ data , scrollCurrent }) => {
                 src={data.image}
                 width="300"
                 height="300"
-                className='w-[3%] h-auto z-20 absolute rounded-[50%] border-white border-[0.3vw] left-[80%] scale-150 md:left-1/2 md:scale-100 bottom-1/2 -translate-x-1/2 translate-y-1/2'
+                className='w-[4%] h-auto z-20 absolute rounded-[50%] border-white border-[0.3vw] left-[78%] scale-150 md:w-[3%] md:left-1/2 md:scale-100 bottom-1/2 -translate-x-1/2 translate-y-1/2'
             />
             <p className='Achievement-time text-sm md:text-lg '>{data.date}</p>
             <div className='Achievement-tag'></div>
