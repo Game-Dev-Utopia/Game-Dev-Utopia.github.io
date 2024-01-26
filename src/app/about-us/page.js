@@ -12,11 +12,9 @@ const page = () => {
     const branches = aboutUsData.branchesData;
     return (
         <div className='bg-black'>
-            {/*
-            <CardHolder datas={founders} />
+            <CardHolder datas={founders} /> 
             <CardHolder datas={headCouncil} />
             <CardHolderDynamic datas={branches} />
-            */}
             <Timeline datas={timelineData}/>
         </div>
     )

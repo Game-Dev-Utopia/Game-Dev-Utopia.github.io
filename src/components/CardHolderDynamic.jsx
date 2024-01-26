@@ -17,7 +17,7 @@ const DropDownElement = ({data,index,setClicked,selectCurrIndex}) => {
 
 const StaticDropDown = ({data,setClicked}) => {
     return(
-        <div className={`flex justify-evenly rounded-full bg-black p-4`} onClick={setClicked}>
+        <div className={`flex justify-evenly rounded-full bg-gray-800 p-4`} onClick={setClicked}>
             <div className="flex mx-2">
                 <b>{data.title}</b>
             </div>

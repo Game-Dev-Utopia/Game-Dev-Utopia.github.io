@@ -2,7 +2,7 @@ import Card from "./Card";
 
 const StaticDropDown = ({ data, index }) => {
     return (
-        <div className={`block rounded-full bg-black p-5`}>
+        <div className={`block rounded-full bg-gray-800 p-5`}>
             <b>{data.title}</b>
         </div>
     );

@@ -24,7 +24,9 @@ const Timeline = ({ datas }) => {
     return (
         <div ref={ScrollRef} className='Scroll h-[90vh] overflow-y-scroll overflow-x-hidden'>
             <div  className='Timeline'> 
-                {datas.map((data, i) => <TimelineCard key={i} data={data} scrollCurrent={scrollCurrent}/> )}
+                <br/>
+                <br/>
+                {datas.map((data, i) => <TimelineCard key={i} data={data} index={i} scrollCurrent={scrollCurrent}/> )}
             </div>
         </div>
     );

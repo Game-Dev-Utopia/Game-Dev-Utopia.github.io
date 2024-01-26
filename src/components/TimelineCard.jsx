@@ -2,26 +2,36 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const TimelineCard = ({ data , scrollCurrent }) => {
+const TimelineCard = ({ data , scrollCurrent,index }) => {
     const timelineCardRef = useRef(0);
-    const [scale,setScale] = useState(1);
+    const [transparency,setTransparency] = useState(1);
 
     useEffect(() => {
         if(scrollCurrent && timelineCardRef)
         {
-            if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
-                if(window.innerWidth > 768)
-                    setScale(1.1);
-            }
-            else {
-                setScale(1.0);
-            }
+            // if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
+            //     if(window.innerWidth > 768)
+            //     {
+            //         setScale(1.1);
+            //     }
+            // }
+            // else {
+            //     setScale(1.0);
+            // }
+
+            var scrollVal = ((scrollCurrent.scrollTop + scrollCurrent.clientHeight/1.5 - timelineCardRef.current.offsetTop)/timelineCardRef.current.clientHeight);
+            if(scrollVal > 1.25)
+                scrollVal = 2.5 - scrollVal;
+            console.log(index,scrollVal);
+
+            setTransparency(scrollVal);
+
         }
     }, )
 
 
     return (
-        <div className={`Achievement transition-all duration-300 `} style={{scale : scale }} ref={timelineCardRef}>
+        <div className={`Achievement transition-all duration-300 `} style={{opacity : transparency}} ref={timelineCardRef}>
             <Image 
                 alt={data.name}
                 src={data.image}
@@ -32,7 +42,7 @@ const TimelineCard = ({ data , scrollCurrent }) => {
             <p className='Achievement-time text-sm md:text-lg '>{data.date}</p>
             <div className='Achievement-tag'></div>
             <div 
-                style={{ boxShadow : (scale > 1) ? '0px 0px 100px 0px rgba(255, 255, 0, 0.3)' : 'none' }}
+                style={{ boxShadow : (transparency > 1) ? '0px 0px 100px 0px rgba(255, 255, 0, 0.3)' : 'none' }}
                 className='Achievement-detail text-[2vw] md:text-[0.9vw]'>
                 <div className='Achievement-detail-container'>
                     <div className='Achievement-detail-inner'>
