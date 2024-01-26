@@ -35,6 +35,16 @@ body {
 
     @import '../externalCSS/achievement-timeline.css';
 
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+     /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
     .Card {
         width: 16.667%;
         min-width: theme('minWidth.min');

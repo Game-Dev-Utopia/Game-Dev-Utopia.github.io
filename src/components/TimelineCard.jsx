@@ -20,8 +20,10 @@ const TimelineCard = ({ data , scrollCurrent,index }) => {
             // }
 
             var scrollVal = ((scrollCurrent.scrollTop + scrollCurrent.clientHeight/1.5 - timelineCardRef.current.offsetTop)/timelineCardRef.current.clientHeight);
-            if(scrollVal > 1.25)
-                scrollVal = 2.5 - scrollVal;
+            if(scrollVal > 0 && scrollVal < 1)
+                scrollVal = 1
+            // if(scrollVal > 1.5)
+            //     scrollVal = 0;
             console.log(index,scrollVal);
 
             setTransparency(scrollVal);
@@ -31,19 +33,19 @@ const TimelineCard = ({ data , scrollCurrent,index }) => {
 
 
     return (
-        <div className={`Achievement transition-all duration-300 `} style={{opacity : transparency}} ref={timelineCardRef}>
+        <div className={`Achievement transition-all duration-1000`} style={{opacity : transparency}} ref={timelineCardRef}>
             <Image 
                 alt={data.name}
                 src={data.image}
                 width="300"
                 height="300"
-                className='w-[4%] h-auto z-20 absolute rounded-[50%] border-white border-[0.3vw] left-[78%] scale-150 md:w-[3%] md:left-1/2 md:scale-100 bottom-1/2 -translate-x-1/2 translate-y-1/2'
+                className='w-[6%] h-auto z-20 absolute rounded-[50%] border-white border-[0.3vw] left-[95%] scale-150 md:w-[3%] md:scale-100 md:left-1/2 bottom-1/2 -translate-x-1/2 translate-y-1/2'
             />
-            <p className='Achievement-time text-sm md:text-lg rounded-[1rem] border-[#E5BD1A] border-2 px-3 bg-black'>{data.date}</p>
+            <p className='text-center Achievement-time text-sm md:text-lg rounded-[1rem] border-[#E5BD1A] border-2 px-3 bg-black'>{data.date}</p>
             <div className='Achievement-tag'></div>
             <div 
-                style={{ boxShadow : (transparency > 1) ? '0px 0px 100px 0px rgba(255, 255, 0, 0.3)' : 'none' }}
-                className='Achievement-detail text-[2vw] md:text-[0.9vw]'>
+                style={{ boxShadow : (transparency >= 1) ? '0px 0px 100px 0px rgba(255, 255, 0, 0.3)' : 'none' }}
+                className='Achievement-detail text-[4vw] md:text-[0.9vw]'>
                 <div className='Achievement-detail-container'>
                     <div className='Achievement-detail-inner'>
                     </div>
