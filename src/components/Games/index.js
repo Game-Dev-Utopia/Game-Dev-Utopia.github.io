@@ -1,29 +1,29 @@
-/* eslint-disable @next/next/no-img-element */
-/* eslint-disable react/no-unescaped-entities */
-"use client";
+"use client"
 import React, { useState } from "react";
-import Image from 'next/image'
-import "./index.css"; // Your CSS file for styling
-import thumbnail_img from "../../../public/images/image-23.png";
-import snap2 from "../../../public/images/image-3.png";
-import snap3 from "../../../public/images/image-4.png";
-import snap4 from "../../../public/images/image-5.png";
+import "./index.css"; 
+import { FaPlay,FaShare,FaComment } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
+import { AiFillLike } from "react-icons/ai";
+// import thumbnail_img from "/images/image-23.png";
+// import snap2 from "/images/image-3.png";
+// import snap3 from "/images/image-4.png";
+// import snap4 from "/images/image-5.png";
 import Iframe from "react-iframe";
 
 const Games = () => {
-  const images = [
-    snap3,
-    snap2,
-    snap3,
-    snap4,
-    snap4,
-    snap3,
-    snap2,
-    snap3,
-    snap3,
-    snap3,
+  const genre = ["action","adventure","indie"]
+  const [itemIndex,setItemIndex] = useState(0)
+  const reactFacts = [
+    "ReactJS is a JavaScript library for building user interfaces.",
+    "It was developed by Facebook and is now open-source.",
+    "ReactJS uses a virtual DOM to improve app performance.",
+    "Components are the building blocks in a React application.",
+    "ReactJS allows for the creation of reusable UI components.",
+    "It uses JSX, a syntax extension for JavaScript.",
+    "ReactJS can be used for developing both web and mobile applications.",
+    "State and props are used to manage data in React.",
+    "ReactJS uses a unidirectional data flow which makes it easier to debug."
   ];
-
   const [likes, setLikes] = useState(0);
 
   const handleLike = () => {
@@ -33,70 +33,86 @@ const Games = () => {
 
   return (
     <>
-      <div className="game-page">
+      <div className="w-[90vw] p-2 rounded-2xl bg-gradient-to-tr from-[#202020] to-[#151515]">
         <div className="video-game-wrapper bg-gradient">
-          <div className="video-card card">
-            <Iframe
-              title="ytplayer"
-              type="text/html"
-              width="640"
-              height="400"
-              src="https://www.youtube.com/embed/M7lc1UVf-VE?autoplay=1&mute=1"
-            ></Iframe>
-            <div class="carousel-container">
-              <div class="carousel-wrapper">
-                <div class="carousel">
-                  <div class="carousel-item">
-                    <Image src={snap2} alt="Image 1" />
-                    <Image src={snap3} alt="Image 2" />
-                    <Image src={snap4} alt="Image 2" />
-                    <Image src={snap3} alt="Image 2" />
-                    <Image src={snap2} alt="Image 2" />
-                    <Image src={snap3} alt="Image 2" />
-                    <Image src={snap4} alt="Image 2" />
-                    <Image src={snap3} alt="Image 2" />
-                    <Image src={snap2} alt="Image 2" />
-                    <Image src={snap4} alt="Image 2" />
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="carousel-container mr-2">
+  <div class="carousel-wrapper">
+    <div class="carousel">
+      {reactFacts.map((fact, index) => (
+        <div key={index} class="carousel-item" onMouseOver={()=>setItemIndex(index)}>
+          <img src={'/images/image-4.png'} alt="Image 1" />
+        </div>
+      ))}
+      {/* <div class="carousel-item">
+        <img src={'/images/image-2.png'} alt="Image 1" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-4.png'} alt="Image 2" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-4.png'} alt="Image 3" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-4.png'} alt="Image 4" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-2.png'} alt="Image 5" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-4.png'} alt="Image 6" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-4.png'} alt="Image 7" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-2.png'} alt="Image 8" />
+      </div>
+      <div class="carousel-item">
+        <img src={'/images/image-2.png'} alt="Image 9" />
+      </div> */}
+    </div>
+  </div>
+</div>
 
-          <div className="game-info card">
-            <div className="game-Info">
+          <div className="video-card h-full border-l-2 border-slate-300 border-opacity-20">
+            <iframe height='400' width="600" src="https://www.youtube.com/embed/bPq776iVXtM?si=Enh2ovrDk2PBt7lg" 
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+            <span><p className="pt-7">{reactFacts[itemIndex]} {reactFacts[((itemIndex+1)%(reactFacts.length-1))]} {reactFacts[((itemIndex+2)%(reactFacts.length-1))]}</p></span>
+          </div>
+          
+
+          <div className="game-info card border-l-2 border-slate-300 border-opacity-20">
+            <div className="game-Info h-full">
               <div className="thumbnail">
-                <img src={thumbnail_img} alt="Game Thumbnail" />
+                <img src={'/images/image-23.png'} alt="Game Thumbnail" />
               </div>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
+                 Lorem Ipsum has been the industry&apos;s standard dummy
                 text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged.{" "}
+                of type and scrambled it. 
               </p>
-              <div className="buttons">
-                <button>Play</button>
-                <button>Share</button>
-                <button
-                  onClick={() =>
-                    (window.location.href =
-                      "https://chouremalhar.itch.io/dicey-roads") 
-                  }
-                >
-                  Install
+              <div className="buttons flex gap-2 my-2">
+                <button className="py-2"><FaPlay /></button>
+                <button className="py-2"><FaShare /></button>
+                <button className="py-2">
+                  <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
+                      <IoMdDownload />
+                    </a>
                 </button>
-                <button class="like-button" onClick={handleLike}>
-                  <span>Like</span>
-                  <span class="like-symbol">&#x1F44D;</span>
+                <button class="py-1 flex items-center gap-[1px]" onClick={handleLike}>
+                  <AiFillLike />
                   <span>{likes}</span>
                 </button>
 
-                <button className="comment-button">
-                  Comment
-                  <span className="comment-symbol">&#x1F4AC;</span>
+                <button className="py-2">
+                  <FaComment />
                 </button>
+              </div>
+              <div className="flex gap-2">
+                {genre.map((item) => (
+                  <span key={item} className="border-yellow-700 border-2 py-1 rounded-full bg-slate-900 text-gray-300 text-xs px-2">{item}</span>))}
               </div>
             </div>
           </div>

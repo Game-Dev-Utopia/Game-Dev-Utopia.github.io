@@ -4,18 +4,59 @@
 
 
 body {
-  background-image: url('../../public/bg.svg');
+  /* background-image: url('../../public/bg.svg'); */
   /* background-position: unset; */
-  background-color: #0f000c;
-  color:white
+  box-sizing: border-box;
+  color:white;
+  @apply bg-black;
+}
+/* 
+.game-info-container{
+  position: relative;
+  border-bottom: #FF8A00 solid 4px;
 }
 
-.game-design-container::before{
-  content: ' ';
-@apply w-[10px] bg-red-900 h-full;
+.game-design-container{
+  position: relative;
+  border-top: #FF8A00 solid 4px;
 }
 
-.game-design-container::after{
-  content: ' ';
-@apply w-[10px] bg-red-900 h-full;
+.game-design-container::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px; 
+  background: linear-gradient(to bottom, #FF8A00, white,transparent);
 }
+
+.game-design-container::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4px; 
+  background: linear-gradient(to bottom, #FF8A00, white,transparent);
+}
+
+.game-info-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to top, #FF8A00, white,transparent);
+}
+
+.game-info-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to top, #FF8A00, white,transparent);
+} */

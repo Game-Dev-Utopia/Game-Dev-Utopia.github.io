@@ -6,10 +6,14 @@ const GamePage = () => {
     <div className=' h-[100vh]'>
     <div >
     </div>
-    <div className='relative m-2 flex game-design-container'>
-    <div className='border-b-[#FF6B00] border-2 border-t-0 border-r-0 border-l-0'>
+    <div className='relative flex justify-center'>
+    <div >
+    <div className='game-design-container mb-4 p-2'>
     <Games />
+    </div>
+    <div className='game-info-container mt-4 p-2'>
     <GameDesignDetails />
+    </div>
     </div>
     </div>
     </div>
