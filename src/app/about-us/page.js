@@ -11,7 +11,7 @@ const page = () => {
     const headCouncil = aboutUsData.headCouncilData;
     const branches = aboutUsData.branchesData;
     return (
-        <div className='bg-gradient-to-r from-indigo-500'>
+        <div className='bg-black'>
             {/*
             <CardHolder datas={founders} />
             <CardHolder datas={headCouncil} />

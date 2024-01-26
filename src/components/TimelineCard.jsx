@@ -16,14 +16,12 @@ const TimelineCard = ({ data , scrollCurrent }) => {
             else {
                 setScale(1.0);
             }
-
-            console.log(scrollCurrent.scrollTop);
         }
     }, )
 
 
     return (
-        <div className={`Achievement transition-all duration-300`} style={{scale : scale}} ref={timelineCardRef}>
+        <div className={`Achievement transition-all duration-300 `} style={{scale : scale }} ref={timelineCardRef}>
             <Image 
                 alt={data.name}
                 src={data.image}
@@ -33,7 +31,9 @@ const TimelineCard = ({ data , scrollCurrent }) => {
             />
             <p className='Achievement-time text-sm md:text-lg '>{data.date}</p>
             <div className='Achievement-tag'></div>
-            <div className='Achievement-detail text-[2vw] md:text-[0.9vw]'>
+            <div 
+                style={{ boxShadow : (scale > 1) ? '0px 0px 100px 0px rgba(255, 255, 0, 0.3)' : 'none' }}
+                className='Achievement-detail text-[2vw] md:text-[0.9vw]'>
                 <div className='Achievement-detail-container'>
                     <div className='Achievement-detail-inner'>
                     </div>
