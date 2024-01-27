@@ -10,7 +10,6 @@ import { AiFillLike } from "react-icons/ai";
 // import snap3 from "/images/image-4.png";
 // import snap4 from "/images/image-5.png";
 import Iframe from "react-iframe";
-import ToolTip from "../ToolTip";
 
 const Games = () => {
   const genre = ["action","adventure","indie"]
@@ -26,18 +25,23 @@ const Games = () => {
     "State and props are used to manage data in React.",
     "ReactJS uses a unidirectional data flow which makes it easier to debug."
   ];
-  const [likes, setLikes] = useState(0);
+  const [data, setData] = useState({
+    likes: 100,
+    comments: 100,
+    shares: 90,
+    downloads: 90
+  });
 
   const handleLike = () => {
-    setLikes(likes + 1);
+    setData(prev=>({...prev,likes:prev.likes+1}))
   };
   
 
   return (
     <>
-      <div className="mx-2 p-2 rounded-2xl bg-gradient-to-tr from-[#202020] to-[#151515]">
+      <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] game-section-top">
         <div className="video-game-wrapper bg-gradient">
-        <div class="carousel-container mr-2">
+        <div class="carousel-container px-6 py-[20px]">
   <div class="carousel-wrapper">
     <div class="carousel">
       {reactFacts.map((fact, index) => (
@@ -45,47 +49,20 @@ const Games = () => {
           <img src={'/images/image-4.png'} alt="Image 1" />
         </div>
       ))}
-      {/* <div class="carousel-item">
-        <img src={'/images/image-2.png'} alt="Image 1" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-4.png'} alt="Image 2" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-4.png'} alt="Image 3" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-4.png'} alt="Image 4" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-2.png'} alt="Image 5" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-4.png'} alt="Image 6" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-4.png'} alt="Image 7" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-2.png'} alt="Image 8" />
-      </div>
-      <div class="carousel-item">
-        <img src={'/images/image-2.png'} alt="Image 9" />
-      </div> */}
     </div>
   </div>
 </div>
 
-          <div className="video-card h-full border-l-2 border-slate-300 border-opacity-20">
-            <iframe height='400' width="600" src="https://www.youtube.com/embed/raIqPgW-quI" 
+          <div className="video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
+            <iframe height='400' width="600" src="https://www.youtube.com/embed/EBYCOAgWhtw" 
             title="YouTube video player" frameborder="0" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
             allowfullscreen></iframe>
-            <span><p className="pt-7">{reactFacts[itemIndex]} {reactFacts[((itemIndex+1)%(reactFacts.length-1))]} {reactFacts[((itemIndex+2)%(reactFacts.length-1))]}</p></span>
+            <span><p className="pt-7 px-2">{reactFacts[itemIndex]} {reactFacts[((itemIndex+1)%(reactFacts.length-1))]} {reactFacts[((itemIndex+2)%(reactFacts.length-1))]}</p></span>
           </div>
           
 
-          <div className="game-info card border-l-2 border-slate-300 border-opacity-20">
+          <div className="game-info px-6 py-[20px] card border-l-2 border-slate-300 border-opacity-20">
             <div className="game-Info h-full">
               <div className="thumbnail">
                 <img src={'/images/image-23.png'} alt="Game Thumbnail" />
@@ -96,36 +73,39 @@ const Games = () => {
                 of type and scrambled it. 
               </p>
               <div className="buttons flex gap-2 my-2">
-                <button className="py-2 group">
+                <button className="p-3 group gap-1 text-sm">
                   <FaPlay />
                   <span className="tooltip group-hover:scale-100">
                   <p>Play</p>
                   </span>
                   </button>
-                <button className="py-2 group">
+                <button className="py-2 group gap-1 flex items-center text-sm">
                   <FaShare />
+                  <span>{data.shares}</span>
                   <span className="tooltip group-hover:scale-100">
                   <p>Share</p>
                   </span>
                   </button>
-                <button className="py-2 group flex">
                   <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
+                <button className="py-2 group gap-1 items-center text-sm flex">
                       <IoMdDownload />
-                    </a>
+                    <span>{data.downloads}</span>
                     <span className="tooltip group-hover:scale-100">
                   <p>Download</p>
                   </span>
                 </button>
-                <button class="py-1 flex items-center group gap-[1px]" onClick={handleLike}>
+                    </a>
+                <button class="py-2 flex items-center group text-sm" onClick={handleLike}>
                   <AiFillLike />
-                  <span>{likes}</span>
+                  <span>{data.likes}</span>
                   <span className="tooltip group-hover:scale-100">
                   <p>Like</p>
                   </span>
                 </button>
 
-                <button className="py-2 group flex">
+                <button className="py-2 flex items-center group gap-1 text-sm">
                   <FaComment />
+                  <span>{data.comments}</span>
                   <span className="tooltip group-hover:scale-100">
                   <p>Comment</p>
                   </span>

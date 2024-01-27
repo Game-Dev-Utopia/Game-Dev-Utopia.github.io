@@ -4,8 +4,6 @@ import Games from '@/components/Games'
 const GamePage = () => {
   return (
     <div className=' h-[100vh]'>
-    <div >
-    </div>
     <div className='relative flex justify-center'>
     <div >
     <div className='game-design-container mb-4 p-2'>
