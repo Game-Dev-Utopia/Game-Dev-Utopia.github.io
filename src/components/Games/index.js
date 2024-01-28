@@ -5,11 +5,6 @@ import "./index.css";
 import { FaPlay,FaShare,FaComment } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
-// import thumbnail_img from "/images/image-23.png";
-// import snap2 from "/images/image-3.png";
-// import snap3 from "/images/image-4.png";
-// import snap4 from "/images/image-5.png";
-import Iframe from "react-iframe";
 
 const Games = () => {
   const genre = ["action","adventure","indie"]
@@ -41,11 +36,11 @@ const Games = () => {
     <>
       <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] game-section-top">
         <div className="video-game-wrapper bg-gradient">
-        <div class="carousel-container px-6 py-[20px]">
-  <div class="carousel-wrapper">
-    <div class="carousel">
+        <div className="carousel-container px-6 py-[20px]">
+  <div className="carousel-wrapper">
+    <div className="carousel">
       {reactFacts.map((fact, index) => (
-        <div key={index} class="carousel-item" onMouseOver={()=>setItemIndex(index)}>
+        <div key={index} className="carousel-item" onMouseOver={()=>setItemIndex(index)}>
           <img src={'/images/image-4.png'} alt="Image 1" />
         </div>
       ))}
@@ -55,9 +50,9 @@ const Games = () => {
 
           <div className="video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
             <iframe height='400' width="600" src="https://www.youtube.com/embed/EBYCOAgWhtw" 
-            title="YouTube video player" frameborder="0" 
+            title="YouTube video player" 
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-            allowfullscreen></iframe>
+            allowFullScreen={true}></iframe>
             <span><p className="pt-7 px-2">{reactFacts[itemIndex]} {reactFacts[((itemIndex+1)%(reactFacts.length-1))]} {reactFacts[((itemIndex+2)%(reactFacts.length-1))]}</p></span>
           </div>
           
@@ -95,7 +90,7 @@ const Games = () => {
                   </span>
                 </button>
                     </a>
-                <button class="py-2 flex items-center group text-sm" onClick={handleLike}>
+                <button className="py-2 flex items-center group text-sm" onClick={handleLike}>
                   <AiFillLike />
                   <span>{data.likes}</span>
                   <span className="tooltip group-hover:scale-100">
