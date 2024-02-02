@@ -1,0 +1,191 @@
+@keyframes flipCardAnimRight {
+
+from { 
+    transform: rotateY(90deg); 
+    box-shadow: 0px 0px 100px 0px rgba(255, 255, 0, 0);
+}
+
+to { 
+    transform: rotateY(0); 
+    box-shadow: 0px 0px 100px 0px rgba(255, 255, 0, 0.2);
+}
+
+}
+
+/* Mobile Design Settings + General Settings  */
+.Timeline {
+    position: relative;
+}
+
+.Achievement {
+    margin-top: 5%;
+    position: relative;
+}
+
+.Achievement-detail-container {
+    color: white;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.Achievement-detail {
+    /* color: white; */
+    /* background-color: #0e081f; */
+    /* background: linear--radient(to right, #0e081f99, #0e081fff); */
+    /* background-color: yellow; */
+    width: 86.5%;
+    z-index: 0;
+    margin-left: 3%;
+    margin-top: 4%;
+    border-radius: 20px;
+    padding: 0.5%;
+    padding-right: 1%;
+    background: linear-gradient(to right, #2f2f2f, #E5BD1A);
+    /* padding-left: 5%; */
+}
+
+.Achievement-tag {
+    position: absolute;
+    content: '';
+    width: 5.5%;
+    height: 5vh;
+    /* background: linear-gradient(to right, #0e081f, #0e081f, #0e081f00, #0e081f00); */
+    background-color: #E5BD1AFF;
+    z-index: 0;
+    top: 50%;
+    left: 94%;
+    transform: translate(-100%,-50%);
+    clip-path: polygon(
+        0% 0%,
+        100% 50%,
+        0% 100%
+        );
+}
+
+.Achievement-time {
+    color: white;
+    position: block;
+    margin: auto;
+    width: 60%;
+    left: 83%;
+    bottom: 50%;
+    margin-bottom: 8%;
+    margin-top: 8%;
+    transform: translateX(-6%);
+}
+
+.Achievement-details {
+    /* width: 70%; */
+    padding-left: 5%;
+
+    li {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.Achievement-title {
+    font-size: 100%;
+    text-align: center;
+}
+
+.Timeline::before {
+    content: '';
+    position: absolute;
+    left: 95%;
+    transform : translateX(-50%);
+    height: 110%;
+    width: 7px;
+    background: #E5BD1A;
+}
+
+
+/* Desktop Design Setting */
+@media (min-width: 768px){
+
+    .Achievement-detail {
+        /* padding: 2%; */
+        padding-right: .5%;
+        margin-left: 10.3%;
+        margin-top: 0%;
+        width: 36%;
+        transform-origin: 100%;
+    }
+
+    .Achievement-tag {
+        top: 50%;
+        left: 50%;
+        width: 4%;
+    }
+
+    .Achievement-time {
+        position : absolute;
+        margin-bottom: 0%;
+        margin-top: 0%;
+        width: auto;
+        transform: translateX(0%);
+        transform: translateY(50%);
+        left: 53%;
+    }
+
+    .Achievement-details {
+        justify-content: center;
+        /* width: 70%; */
+        li {
+            /* margin-left: 1rem; */
+            margin-right: 1rem;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+    }
+
+    .Achievement:nth-child(odd) {
+        .Achievement-detail-container {
+            /* background: linear-gradient(to left, #0e081f55, #0e081fff); */
+            background-color: #2f2f2f;
+        }
+
+        .Achievement-detail {
+            /* background: linear-gradient(to left, #0e081f55, #0e081fff); */
+            margin-left: auto;
+            margin-right: 10.3%;
+            padding-left: 0.5%;
+            /* background: linear-gradient(to left, #0e081f, #E5BD1A); */
+            background: linear-gradient(to left, #2f2f2f, #E5BD1A);
+            /* border-left: 20px solid #E5BD1A; */
+            /* border-right: none; */
+            transform-origin: 0%;
+        }
+
+        .Achievement-tag {
+            background-color: #E5BD1AFF;
+            transform: translate(0%,-50%);
+            /* background: linear-gradient(to left, #0e081f, #0e081f, #0e081f00, #0e081f00); */
+            clip-path: polygon(
+                0% 50%,
+                100% 0%,
+                100% 100%
+                );
+        }
+
+        .Achievement-time {
+            right: 53%;
+            left: auto;
+        }
+    }
+
+    .Timeline::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform : translateX(-50%);
+        height: 110%;
+        width: 10px;
+        background: #E5BD1A;
+    }
+}
+
+
+

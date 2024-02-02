@@ -3,25 +3,81 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+    }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
+}
+
+@layer components {
+
+    @keyframes cardShuffleIn {
+    0% { margin-left: -16.667%; }
+    100% { margin-left: -4%; }
+    }
+
+    @import '../externalCSS/achievement-timeline.css';
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+     /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    .Card {
+        width: 16.667%;
+        min-width: theme('minWidth.min');
+        padding: 0.1%;
+        margin-left: -4%;
+        /* border-radius: theme('borderRadius.xl'); */
+        box-shadow: theme('boxShadow.2xl');
+        background: linear-gradient(to bottom, #23141ddc, #ff5f1f6e);
+        border-radius: 10px;
+        z-index: 0;
+    }
+
+    .Card:hover {
+        scale: theme('scale.110');
+        transition-duration: theme('transitionDuration.500');
+    }
+
+
+    .Card:hover ~ .Card {
+        transform: translateX(25%);
+        transition-duration: theme('transitionDuration.500');
+    }
+
+    .CardBGClip {
+        clip-path: polygon(
+            0 0, 
+            100% 0, 
+            100% 100%, 
+            0 85%
+            );
+    }
+
+    .Card:first {
+        margin-left: 0px;
+    }
 }
