@@ -2,32 +2,18 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 
-const TimelineCard = ({ data , scrollCurrent,index }) => {
+const TimelineCard = ({ data , scrollCurrent, index }) => {
     const timelineCardRef = useRef(0);
     const [transparency,setTransparency] = useState(1);
 
     useEffect(() => {
-        if(scrollCurrent && timelineCardRef)
-        {
-            // if (scrollCurrent.scrollTop > timelineCardRef.current.offsetTop - scrollCurrent.clientHeight/2 && scrollCurrent.scrollTop < timelineCardRef.current.offsetTop + timelineCardRef.current.clientHeight) {
-            //     if(window.innerWidth > 768)
-            //     {
-            //         setScale(1.1);
-            //     }
-            // }
-            // else {
-            //     setScale(1.0);
-            // }
-
+        if(scrollCurrent && timelineCardRef) {
             var scrollVal = ((scrollCurrent.scrollTop + scrollCurrent.clientHeight/1.5 - timelineCardRef.current.offsetTop)/timelineCardRef.current.clientHeight);
+
             if(scrollVal > 0 && scrollVal < 1)
                 scrollVal = 1
-            // if(scrollVal > 1.5)
-            //     scrollVal = 0;
-            console.log(index,scrollVal);
 
             setTransparency(scrollVal);
-
         }
     }, )
 

@@ -12,9 +12,9 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     const link = socialMedia[0] + socialMedia[1];
     const handle = socialMedia[1];
     return (
-        <a className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-110 transition-transform border m-2 p-2" href={link} target={"_blank"}> 
+        <a className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-110 transition-transform m-2 p-2" href={link} target={"_blank"}> 
             {socialMediaIcon}
-            <p className='text-[1.8vw] sm:text-[0.5vw] '><b>{handle}</b></p>
+            <p className='pl-1 text-[1.8vw] sm:text-[0.5vw] '><b>{handle}</b></p>
         </a>
     );
 }
