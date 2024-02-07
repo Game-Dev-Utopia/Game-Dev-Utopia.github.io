@@ -9,9 +9,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "D",
@@ -19,9 +19,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "D",
@@ -29,9 +29,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "E",
@@ -39,9 +39,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "F",
@@ -49,9 +49,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
@@ -66,9 +66,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "H",
@@ -76,9 +76,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "I",
@@ -86,9 +86,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "J",
@@ -96,9 +96,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "K",
@@ -106,9 +106,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
@@ -121,9 +121,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://www.shutterstock.com/image-photo/bunch-bananas-isolated-on-white-600nw-1722111529.jpg",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "M",
@@ -131,9 +131,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "N",
@@ -141,9 +141,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "O",
@@ -151,9 +151,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "P",
@@ -161,9 +161,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","godotengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
@@ -176,9 +176,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "R",
@@ -186,9 +186,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "S",
@@ -196,9 +196,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "T",
@@ -206,9 +206,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "U",
@@ -216,46 +216,46 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
     ],
     OurTeamsData : [
         {
-            title: "Out Teams",
+            title: "Our Teams",
             data: [
                 {
                     name: "GameDev Team",
-                    designation: "abcd",
+                    designation: "",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-                    profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
+                    profileImageURL: "",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abv"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "Design Team",
-                    designation: "abcd",
+                    designation: "",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-                    profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
+                    profileImageURL: "",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "Website Dev Team",
-                    designation: "abcd",
+                    designation: "",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-                    profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
+                    profileImageURL: "",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
@@ -270,9 +270,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
-                    github :["https://github.com/","thestkaaaaaaaaaaaaaaaaaaa"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    linkedin:["https://linkedin.com/","abc"],
+                    github :["https://github.com/","thestk"],
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "B",
@@ -280,9 +280,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
                     name: "C",
@@ -290,9 +290,9 @@ const aboutUsData = {
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
                     bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
                     github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"],
-                    twitter:["https://twitter.com/","elonmusk"]
+                    instagram:["https://www.instagram.com/","unrealengine"]
                 },
             ]
         },
