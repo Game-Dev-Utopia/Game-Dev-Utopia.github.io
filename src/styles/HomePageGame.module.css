@@ -3,14 +3,17 @@
     /* @apply bg-cover bg-center bg-no-repeat;
     background-image: url('/images/home_page_thumbnails/first.png'); */
     clip-path: polygon(0 0, 70% 0, 100% 100%, 0% 100%);
+    transition: all 0.5s ease-in-out;
   }
   .home_game_2{
     /* @apply bg-cover bg-center bg-no-repeat;
     background-image: url('/images/home_page_thumbnails/second.jpeg'); */
     clip-path: polygon(-132px 0px, 129.43% 0px, 99.65% 100%, 0.79% 100.35%);
+    transition: all 0.5s ease-in-out;
   }
   .home_game_3{
     /* @apply bg-cover bg-center bg-no-repeat;
     background-image: url('/images/home_page_thumbnails/third.jpeg'); */
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0 100%);
+    transition: all 0.5s ease-in-out;
   }
