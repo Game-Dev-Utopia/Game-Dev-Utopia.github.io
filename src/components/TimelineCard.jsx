@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 
 const TimelineCard = ({ data , scrollCurrent, index }) => {
     const timelineCardRef = useRef(0);
-    const [transparency,setTransparency] = useState(1);
+    const [transparency,setTransparency] = useState(0);
+
 
     useEffect(() => {
         if(scrollCurrent && timelineCardRef) {
@@ -14,6 +15,11 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
                 scrollVal = 1
 
             setTransparency(scrollVal);
+        }
+        else{
+            if(index == 0)
+                setTransparency(1);
+
         }
     }, )
 

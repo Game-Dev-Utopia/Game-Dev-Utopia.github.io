@@ -1,6 +1,7 @@
-@media (max-width: 576px) {
+@media (max-width: 654px) {
     .Mobile-Card {
         position: absolute;
+        display: none;
         margin: 0;
         padding: 0;
         width: 80vw;
@@ -10,23 +11,25 @@
         background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
     }
 
+    
     .Mobile-Card + .Mobile-Card {
-        transform: scale(0.9);
+        transform: scale(0.78) translate(12.5%, -50%);
+        display: flex;
     }
 
     .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        transform: scale(0.88);
+        transform:  scale(0.82) translate(12.5%, -51%);
+        display: flex;
     }
     .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        transform: scale(0.86);
+        transform:  scale(0.86) translate(12.5%, -52%);
+        display: flex;
     }
     .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        transform: scale(0.84);
+        transform:  scale(0.9) translate(12.5%, -53%);
+        display: flex;
     }
 
-    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card ~ .Mobile-Card{
-        display: none;
-    }
     /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
     /*     transform: scale(0.82); */
     /* } */
