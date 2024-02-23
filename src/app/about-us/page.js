@@ -11,6 +11,9 @@ const page = () => {
     const branches = aboutUsData.branchesData;
     const ourTeams = aboutUsData.OurTeamsData;
     const specialThanks = aboutUsData.SpecialThanksData;
+    const topContributionsAndProjects = aboutUsData.topContributionsAndProjects;
+    console.log(branches);
+    console.log(topContributionsAndProjects);
 
     return (
         <div className='bg-black'>
@@ -18,6 +21,7 @@ const page = () => {
             <CardHolderDynamic datas={branches} />
             <CardHolder datas={ourTeams} />
             <CardHolder datas={specialThanks} />
+            <CardHolderDynamic datas={topContributionsAndProjects} />
             <Timeline datas={timelineData}/>
         </div>
     )

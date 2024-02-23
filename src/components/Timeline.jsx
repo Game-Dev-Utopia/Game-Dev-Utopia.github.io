@@ -23,9 +23,9 @@ const Timeline = ({ datas }) => {
 
     return (
         <>
-            <h1 className='text-9xl text-center'><b>History Timeline</b></h1>
-            <p className='text-center text-2xl my-20 mx-80'>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
-            <div ref={ScrollRef} className='Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2 mx-20'>
+            <h1 className='text-[10vw] sm:text-[8vw] text-center'><b>History Timeline</b></h1>
+            <p className='text-center text-2xl my-20 mx-auto'>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat. Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+            <div ref={ScrollRef} className='Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2 mx-[0.5vw]'>
                 <div  className='Timeline'> 
                     <br/>
                     <br/>

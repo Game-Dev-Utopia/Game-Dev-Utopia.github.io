@@ -1,0 +1,36 @@
+@media (max-width: 576px) {
+    .Mobile-Card {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        width: 80vw;
+        top: 0;
+        left: 0;
+        /* transform: translate(12.5%, -50%); */
+        background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
+    }
+
+    .Mobile-Card + .Mobile-Card {
+        transform: scale(0.9);
+    }
+
+    .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        transform: scale(0.88);
+    }
+    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        transform: scale(0.86);
+    }
+    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        transform: scale(0.84);
+    }
+
+    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card ~ .Mobile-Card{
+        display: none;
+    }
+    /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
+    /*     transform: scale(0.82); */
+    /* } */
+    /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
+    /*     transform: scale(0.80); */
+    /* } */
+}

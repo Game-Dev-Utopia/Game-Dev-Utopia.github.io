@@ -9,7 +9,7 @@ const DropDownElement = ({data,index,setClicked,selectCurrIndex}) => {
         selectCurrIndex(index);
     };
     return(
-        <li className={`relative hover:bg-gray-800  p-6  z-10 rounded-lg`} onClick={HandleClick}> 
+        <li className={`relative bg-card-background-secondary hover:bg-card-foreground p-6 pl-9 sm:p-5 sm:pl-9 z-10 rounded-lg`} onClick={HandleClick}> 
             {data.title}
         </li>
     )
@@ -17,7 +17,7 @@ const DropDownElement = ({data,index,setClicked,selectCurrIndex}) => {
 
 const StaticDropDown = ({data,setClicked}) => {
     return(
-        <div className={`flex justify-evenly rounded-full bg-gray-800 p-4`} onClick={setClicked}>
+        <div className={`flex justify-evenly rounded-lg bg-card-background-secondary p-4`} onClick={setClicked}>
             <div className="flex mx-2">
                 <b>{data.title}</b>
             </div>

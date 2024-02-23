@@ -1,12 +1,10 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 import * as FaIcons from 'react-icons/fa';
 
 const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     if (socialMedia.length != 2) {
-        console.error("Should Provide more than 2 social media handle");
         return <br/>;
     }
     const link = socialMedia[0] + socialMedia[1];
@@ -16,27 +14,35 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     const max_handle_size = 7; 
 
     if(handle_size > max_handle_size)
-        handle = socialMedia[1].substring(0,max_handle_size-1) + "...";
-        
+        handle = socialMedia[1].substring(0, max_handle_size-1) + "...";
     
     return (
-        <a title={`${fullhandle}`} className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-110 transition-transform m-1 sm:p-1" href={link} target={"_blank"}> 
+        <a title={fullhandle} className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-125 transition-transform m-1 sm:p-1" href={link} target={"_blank"}> 
             <div className='text-xl'>{socialMediaIcon}</div>
             <div className='pl-1 text-[2.8vw] mx-1 my-auto sm:text-[0.6vw]  block hover:block '><b>{handle}</b></div>
         </a>
     );
 }
 
-const Card = ({ data }) => {
+const Card = ({ data, index }) => {
     const name = data.name;
     const designation = data.designation;
     const desc = data.desc;
     const profileImageURL = data.profileImageURL;
     const bgImageURL = data.bgImageURL;
 
+    const scaleArray = [90, 95, 100, 110, 125, 150];
+
+    const maxScale = 100;
+    const minScale = 70;
+    const cardsCount = 2;
+    const ds = (maxScale - minScale) / cardsCount;
+    const scale = (maxScale + 2 * index * ds)/100;
+    console.log(scale);
+
     return (
-        <div key={name} className={`ml-[3%] sm:Card w-[85vw] sm:w-[16.667%] overflow-hidden transition-all animate-[cardShuffleIn_1s]`}>
-            <div className='bg-[#23141D] sm:hover:bg-[#23141d72] transition-all duration-300 backdrop-blur-xl p-[5%] shadow-[-20px_5px_30px_0px_rgba(0,0,0,0.7)] rounded-[10px] '> 
+        <div key={name} className={`Mobile-Card sm:Card sm:w-[16.667%] overflow-hidden sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg `}>
+            <div className='bg-card-background-primary sm:hover:bg-[#00000055] transition-all duration-300 backdrop-blur-xl p-[5%] rounded-lg'> 
                 <div className="w-full h-auto" >   
                     {<Image
                         width={640}
@@ -47,7 +53,6 @@ const Card = ({ data }) => {
                     />} 
                 </div>
                 <div className={`relative ${!profileImageURL ? "mt-[0%]" : "mt-[15%]"}`}>
-
                     {profileImageURL && <div className="absolute w-1/4 h-auto -translate-y-[150%] flex-1 m-[5%] ml-[1%]">
                         <Image
                             className='rounded-[50%] '
