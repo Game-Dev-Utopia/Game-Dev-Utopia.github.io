@@ -30,10 +30,16 @@
         display: flex;
     }
 
-    /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
-    /*     transform: scale(0.82); */
+    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card {
+        transform:  scale(0.9) translate(12.5%, -53%);
+        display: flex;
+    }
+    /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
+    /*     transform:  scale(0.9) translate(12.5%, -53%) rotate(10deg); */
+    /*     display: flex; */
     /* } */
     /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
-    /*     transform: scale(0.80); */
+    /*     transform:  scale(0.9) translate(12.5%, -53%) rotate(0deg); */
+    /*     display: flex; */
     /* } */
 }

@@ -1,12 +1,15 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import * as FaIcons from 'react-icons/fa';
+import { useRef, useState } from 'react';
 
 const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     if (socialMedia.length != 2) {
         return <br/>;
     }
+
     const link = socialMedia[0] + socialMedia[1];
     const fullhandle = socialMedia[1];
     var handle = socialMedia[1];
@@ -17,31 +20,55 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
         handle = socialMedia[1].substring(0, max_handle_size-1) + "...";
     
     return (
-        <a title={fullhandle} className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-125 transition-transform m-1 sm:p-1" href={link} target={"_blank"}> 
+        <Link title={fullhandle} className="flex text-[2.2vw] sm:text-[0.7vw] border-white rounded-lg hover:scale-125 transition-transform m-1 sm:p-1" href={link && ""} target={"_blank"}> 
             <div className='text-xl'>{socialMediaIcon}</div>
             <div className='pl-1 text-[2.8vw] mx-1 my-auto sm:text-[0.6vw]  block hover:block '><b>{handle}</b></div>
-        </a>
+        </Link>
     );
 }
 
-const Card = ({ data, index }) => {
+const Card = ({ data, index, cardsCount}) => {
+    const ref = useRef(0);
+
+    const [touchStart, setTouchStart] = useState(0)
+    const [touchEnd, setTouchEnd] = useState(0)
+    const isFirstCard = (index == cardsCount-1);
+
+    const onTouchStart = (e) => {
+        setTouchEnd(0) // otherwise the swipe is fired even with usual touch events
+        if (isFirstCard) setTouchStart(e.targetTouches[0].clientX);
+    }
+
+    const onTouchMove = (e) => {
+        if (isFirstCard) {
+            setTouchEnd(e.targetTouches[0].clientX);
+            // e.target.style.transform = `translateX(${(-100 * (touchStart - touchEnd)/100)}%)`;
+            ref.current.style.transform = `translate(${(-100 * (touchStart - touchEnd)/100)}%, -50%)`;
+            ref.current.style.width = "80vw";
+        };
+    };
+
+    const onTouchEnd = () => {
+        setTouchStart(0);
+        setTouchEnd(0);
+        ref.current.style.transform = `translate(12.5%, -50%)`;
+    }
+
     const name = data.name;
     const designation = data.designation;
     const desc = data.desc;
     const profileImageURL = data.profileImageURL;
     const bgImageURL = data.bgImageURL;
 
-    const scaleArray = [90, 95, 100, 110, 125, 150];
-
-    const maxScale = 100;
-    const minScale = 70;
-    const cardsCount = 2;
-    const ds = (maxScale - minScale) / cardsCount;
-    const scale = (maxScale + 2 * index * ds)/100;
-    console.log(scale);
-
     return (
-        <div key={name} className={`Mobile-Card sm:Card sm:w-[16.667%] overflow-hidden sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg `}>
+        <div 
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+            key={name} 
+            ref={ref}
+            className={`Mobile-Card sm:Card sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
+        >
             <div className='bg-card-background-primary sm:hover:bg-[#00000055] transition-all duration-300 backdrop-blur-xl p-[5%] rounded-lg'> 
                 <div className="w-full h-auto" >   
                     {<Image

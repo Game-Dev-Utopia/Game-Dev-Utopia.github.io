@@ -6,7 +6,7 @@ const aboutUsData = {
             data: [
 
                 {
-                    name: "D",
+                    name: "A",
                     designation: "abcd",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
@@ -17,7 +17,7 @@ const aboutUsData = {
                 },
 
                 {
-                    name: "D",
+                    name: "B",
                     designation: "abcd",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
@@ -27,6 +27,17 @@ const aboutUsData = {
                     instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 
+                {
+                    name: "C",
+                    designation: "abcd",
+                    desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+                    profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
+                    bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
+                    linkedin:["https://linkedin.com/","abc"],
+                    github :["https://github.com/","thestk"],
+                    instagram:["https://www.instagram.com/","unrealengine"]
+                },
+
                 {
                     name: "D",
                     designation: "abcd",
@@ -40,17 +51,6 @@ const aboutUsData = {
 
                 {
                     name: "E",
-                    designation: "abcd",
-                    desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
-                    profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
-                    bgImageURL: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0",
-                    linkedin:["https://linkedin.com/","abc"],
-                    github :["https://github.com/","thestk"],
-                    instagram:["https://www.instagram.com/","unrealengine"]
-                },
-
-                {
-                    name: "F",
                     designation: "abcd",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
@@ -473,7 +473,7 @@ const aboutUsData = {
                     instagram:["https://www.instagram.com/","unrealengine"]
                 },
                 {
-                    name: "C",
+                    name: "B",
                     designation: "abcd",
                     desc: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
                     profileImageURL: "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg",
