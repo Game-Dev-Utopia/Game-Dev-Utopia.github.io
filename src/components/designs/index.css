@@ -130,22 +130,24 @@
   
   
   .overlay:hover .description {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
   
-  .description {
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .description.visible {
-    opacity: 1;
-  }
-  
-  .description.hidden {
-    opacity: 0;
-  }
+.description {
+  opacity: 1; 
+  transition: opacity 0.5s ease-in-out;
+  transition-delay: 2s; 
+}
+
+.visible {
+  opacity: 1;
+}
+
+.hidden {
+  opacity: 0;
+}
+
   
     
   .item:hover img, .video-item:hover video {
