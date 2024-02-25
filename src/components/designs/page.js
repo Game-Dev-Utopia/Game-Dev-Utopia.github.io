@@ -161,11 +161,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
         {images.map((image, index) => (
           <div key={image} className={`item img${index + 1}`}>
             <img src={image} alt={`Image ${index + 1}`} onClick={handleImageClick} />
-            <div
-              className="overlay"
-              onMouseEnter={() => handleDescriptionHover(index)}
-              onMouseLeave={() => handleDescriptionHover(null)}
-            >
+            <div className="overlay" >
               <div className="content" style={{ background: "transparent", color: "white" }}>
                 <div className="title">Title {index + 1}</div>
                 <div className="developer-info">
@@ -176,8 +172,8 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
               </div>
               <div className="description">
                   {showFullDescription[index]
-                    ? descriptions[index]
-                    : `${descriptions[index].slice(0, 70)}...`}
+                    ? v_descriptions[index]
+                    : `${v_descriptions[index].slice(0, 70)}...`}
                   <span
                     className="read-more"
                     onClick={() => toggleShowFullDescription(index)}
