@@ -128,24 +128,28 @@
     color: aquamarine;
   }
   
-  
-  .overlay:hover .description {
+  .item:hover .description, .video-item:hover .description {
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  animation: fade-out 5s ;
 }
-  
+
 .description {
-  opacity: 1; 
-  transition: opacity 0.5s ease-in-out;
-  transition-delay: 2s; 
-}
-
-.visible {
-  opacity: 1;
-}
-
-.hidden {
   opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.overlay:hover .description {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
   
