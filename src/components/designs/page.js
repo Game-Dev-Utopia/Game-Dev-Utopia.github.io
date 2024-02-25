@@ -119,21 +119,37 @@ const design = () => {
     }));
   };
 
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [fadeTimeout, setFadeTimeout] = useState(null);
 
   const handleDescriptionHover = (index) => {
     setHoveredIndex(index);
   };
 
   useEffect(() => {
-    const fadeTimeout = setTimeout(() => {
-      setHoveredIndex(null);
-    }, 2000);
+    if (hoveredIndex !== null) {
+      const timeout = setTimeout(() => {
+        setHoveredIndex(null);
+      }, 2000);
+
+      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
+      if (descriptionElement) {
+        descriptionElement.classList.add('fade-out');
+      }
+
+      setFadeTimeout(timeout);
+    }
 
     return () => {
       clearTimeout(fadeTimeout);
+
+      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
+      if (descriptionElement) {
+        descriptionElement.classList.remove('fade-out');
+      }
     };
-  }, [hoveredIndex]);
+  }, [hoveredIndex, fadeTimeout]);
+
   
 
   return (
@@ -207,18 +223,23 @@ const design = () => {
                 </Avatar>
                 <span>{developers[index % developers.length].name}</span>
               </div>
-                <div className="description">
-                  {showFullDescription[index]
-                    ? v_descriptions[index]
-                    : `${v_descriptions[index].slice(0, 70)}...`}
-                  <span
-                    className="read-more"
-                    onClick={() => toggleShowFullDescription(index)}
-                    style={{ background: "transparent", color: "white" }}
-                  >
-                    {showFullDescription[index] ? "   Read less" : "Read more"}
-                  </span>
-                </div>
+                <div className={`description ${showFullDescription[index] ? "visible" : "hidden"}`} >
+            {showFullDescription[index]
+              ? descriptions[index]
+              : `${descriptions[index].slice(0, 70)}...`}
+            <span
+              className="read-more"
+              onClick={() => {
+                toggleShowFullDescription(index);
+                setTimeout(() => {
+                  toggleShowFullDescription(index);
+                }, 2000); 
+              }}
+              style={{ background: "transparent", color: "white" }}
+            >
+              {showFullDescription[index] ? "   Read less" : "Read more"}
+            </span>
+          </div>
               </div>
               <div className="icons">
                 <div className="like-icon" onClick={() => handleLike(index)}>
