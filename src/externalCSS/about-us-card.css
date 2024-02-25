@@ -1,3 +1,40 @@
+.Card {
+    width: 16.667%;
+    min-width: theme('minWidth.min');
+    padding: 0.2%;
+    margin-left: -4%;
+    box-shadow: theme('boxShadow.2xl');
+    background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
+    /* border-radius: 10px; */
+    z-index: 0;
+    box-shadow: -5px 0px 10px black;
+}
+
+.Card:hover {
+    scale: theme('scale.110');
+    transition-duration: theme('transitionDuration.500');
+}
+
+
+.Card:hover ~ .Card {
+    transform: translateX(25%);
+    transition-duration: theme('transitionDuration.500');
+}
+
+.CardBGClip {
+    clip-path: polygon(
+        0 0, 
+        100% 0, 
+        100% 100%, 
+        0 85%
+        );
+}
+
+.Card:first {
+    margin-left: 0px;
+}
+
+
 @media (max-width: 654px) {
     .Mobile-Card {
         position: absolute;
@@ -13,24 +50,28 @@
 
     
     .Mobile-Card + .Mobile-Card {
+        /* rotate: 16deg; */
         transform: scale(0.78) translate(12.5%, -50%);
         display: flex;
     }
-
     .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        /* rotate: 14deg; */
         transform:  scale(0.82) translate(12.5%, -51%);
         display: flex;
     }
     .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        /* rotate: 12deg; */
         transform:  scale(0.86) translate(12.5%, -52%);
         display: flex;
     }
     .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
+        /* rotate: 0deg; */
         transform:  scale(0.9) translate(12.5%, -53%);
         display: flex;
     }
 
     .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card {
+        /* rotate: 0deg; */
         transform:  scale(0.9) translate(12.5%, -53%);
         display: flex;
     }

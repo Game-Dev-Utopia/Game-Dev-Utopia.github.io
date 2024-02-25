@@ -3,7 +3,30 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import * as FaIcons from 'react-icons/fa';
-import { useRef, useState } from 'react';
+import { useRef, useEffect, useState } from 'react';
+
+function useWindowSize() {
+  const [windowSize, setWindowSize] = useState({
+    width: undefined,
+    height: undefined,
+  });
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
+    }
+    
+    window.addEventListener("resize", handleResize);
+     
+    handleResize();
+    
+    return () => window.removeEventListener("resize", handleResize);
+  }, []); 
+  return windowSize;
+}
 
 const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     if (socialMedia.length != 2) {
@@ -34,21 +57,31 @@ const Card = ({ data, index, cardsCount}) => {
     const [touchEnd, setTouchEnd] = useState(0)
     const isFirstCard = (index == cardsCount-1);
 
+
+    const WinSize = useWindowSize();
+
+
     const onTouchStart = (e) => {
+        // if(WinSize.width >= 768)
+        //     return;
         setTouchEnd(0) // otherwise the swipe is fired even with usual touch events
         if (isFirstCard) setTouchStart(e.targetTouches[0].clientX);
     }
 
     const onTouchMove = (e) => {
+        // if(WinSize.width >= 768)
+        //     return;
         if (isFirstCard) {
             setTouchEnd(e.targetTouches[0].clientX);
             // e.target.style.transform = `translateX(${(-100 * (touchStart - touchEnd)/100)}%)`;
             ref.current.style.transform = `translate(${(-100 * (touchStart - touchEnd)/100)}%, -50%)`;
             ref.current.style.width = "80vw";
-        };
+        }
     };
 
     const onTouchEnd = () => {
+        if(WinSize.width >= 768)
+            return;
         setTouchStart(0);
         setTouchEnd(0);
         ref.current.style.transform = `translate(12.5%, -50%)`;
