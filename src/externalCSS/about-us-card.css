@@ -48,33 +48,27 @@
         background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
     }
 
-    
-    .Mobile-Card + .Mobile-Card {
-        /* rotate: 16deg; */
+    .Mobile-Card:nth-last-child(4){
+        rotate: 12deg;
         transform: scale(0.78) translate(12.5%, -50%);
         display: flex;
     }
-    .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        /* rotate: 14deg; */
+    .Mobile-Card:nth-last-child(3){
+        rotate: 8deg;
         transform:  scale(0.82) translate(12.5%, -51%);
         display: flex;
     }
-    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        /* rotate: 12deg; */
+    .Mobile-Card:nth-last-child(2){
+        rotate: 4deg;
         transform:  scale(0.86) translate(12.5%, -52%);
         display: flex;
     }
-    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card{
-        /* rotate: 0deg; */
+    .Mobile-Card:last-child{
+        rotate: 0deg;
         transform:  scale(0.9) translate(12.5%, -53%);
         display: flex;
     }
 
-    .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card {
-        /* rotate: 0deg; */
-        transform:  scale(0.9) translate(12.5%, -53%);
-        display: flex;
-    }
     /* .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card + .Mobile-Card { */
     /*     transform:  scale(0.9) translate(12.5%, -53%) rotate(10deg); */
     /*     display: flex; */
