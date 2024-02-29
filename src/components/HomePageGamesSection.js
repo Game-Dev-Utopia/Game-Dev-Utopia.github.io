@@ -16,7 +16,7 @@ const HomePageGame = () => {
     const [hover, setHover] = useState(false)
     const handleLeave = (e) => {
         setVideo(
-            (prev)=>{
+            ()=>{
                 let temp = [false,false,false]
                 return temp
             }
@@ -32,7 +32,6 @@ const HomePageGame = () => {
                 return temp
             }
         )
-        console.log(video)
         setHover(true)
     }
     return (
