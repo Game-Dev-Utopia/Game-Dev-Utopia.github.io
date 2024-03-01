@@ -6,6 +6,11 @@
     --foreground-rgb: 0, 0, 0;
     --background-start-rgb: 214, 219, 220;
     --background-end-rgb: 255, 255, 255;
+
+    --card-highlight: 147, 177, 166;
+    --card-foreground: 92, 131, 161;
+    --card-background-primary: 4, 13, 18;
+    --card-background-secondary: 24, 61, 61;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +18,11 @@
         --foreground-rgb: 255, 255, 255;
         --background-start-rgb: 0, 0, 0;
         --background-end-rgb: 0, 0, 0;
+
+        --card-highlight: 147, 177, 166;
+        --card-foreground: 92, 131, 161;
+        --card-background-primary: 4, 13, 18;
+        --card-background-secondary: 24, 61, 61;
     }
 }
 
@@ -34,6 +44,7 @@ body {
     }
 
     @import '../externalCSS/achievement-timeline.css';
+    @import '../externalCSS/about-us-card.css';
 
     /* Hide scrollbar for Chrome, Safari and Opera */
     .no-scrollbar::-webkit-scrollbar {
@@ -43,41 +54,5 @@ body {
     .no-scrollbar {
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
-    }
-
-    .Card {
-        width: 16.667%;
-        min-width: theme('minWidth.min');
-        padding: 0.1%;
-        margin-left: -4%;
-        /* border-radius: theme('borderRadius.xl'); */
-        box-shadow: theme('boxShadow.2xl');
-        background: linear-gradient(to bottom, #23141ddc, #ff5f1f6e);
-        border-radius: 10px;
-        z-index: 0;
-    }
-
-    .Card:hover {
-        scale: theme('scale.110');
-        transition-duration: theme('transitionDuration.500');
-    }
-
-
-    .Card:hover ~ .Card {
-        transform: translateX(25%);
-        transition-duration: theme('transitionDuration.500');
-    }
-
-    .CardBGClip {
-        clip-path: polygon(
-            0 0, 
-            100% 0, 
-            100% 100%, 
-            0 85%
-            );
-    }
-
-    .Card:first {
-        margin-left: 0px;
     }
 }
