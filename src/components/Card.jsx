@@ -74,8 +74,10 @@ const Card = ({ data, index, cardsCount}) => {
         if (isFirstCard) {
             setTouchEnd(e.targetTouches[0].clientX);
             // e.target.style.transform = `translateX(${(-100 * (touchStart - touchEnd)/100)}%)`;
-            ref.current.style.transform = `translate(${(-100 * (touchStart - touchEnd)/100)}%, -50%)`;
-            ref.current.style.width = "80vw";
+            if(touchStart > touchEnd) {
+                ref.current.style.transform = `translate(${(-100 * (touchStart - touchEnd)/100)}%, -50%)`;
+                ref.current.style.width = "80vw";
+            }
         }
     };
 
@@ -100,7 +102,7 @@ const Card = ({ data, index, cardsCount}) => {
             onTouchEnd={onTouchEnd}
             key={name} 
             ref={ref}
-            className={`Mobile-Card sm:Card sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
+            className={`Mobile-Card Card sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
         >
             <div className='bg-card-background-primary sm:hover:bg-[#00000055] transition-all duration-300 backdrop-blur-xl p-[5%] rounded-lg'> 
                 <div className="w-full h-auto" >   

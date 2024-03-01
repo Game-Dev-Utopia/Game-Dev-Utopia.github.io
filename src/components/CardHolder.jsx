@@ -42,7 +42,8 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
         if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right');
-        if (isLeftSwipe || isRightSwipe) {
+        // if (isLeftSwipe || isRightSwipe) {
+        if (isLeftSwipe) {
             moveLastToFront(data.data);
         }
         // if (isRightSwipe) {
