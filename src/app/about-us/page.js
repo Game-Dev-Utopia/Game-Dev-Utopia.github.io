@@ -16,7 +16,7 @@ const page = () => {
     console.log(topContributionsAndProjects);
 
     return (
-        <div className='bg-black'>
+        <div className='bg-gray-600'>
             <CardHolder datas={headCouncil} />
             <CardHolderDynamic datas={branches} />
             <CardHolder datas={ourTeams} />
