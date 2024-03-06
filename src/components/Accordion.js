@@ -8,7 +8,8 @@ function Accordion({
   id,
   img,
   active = false,
-  borderColor
+  borderColor,
+  stepsData
 }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
@@ -16,10 +17,12 @@ function Accordion({
     setAccordionOpen(active);
   }, []);
 
+ 
+
   return (
     <>
 
-      <div className="rounded-3xl drop-shadow-xl  overflow-hidden px-7 my-3 bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 border-2 p-px bg-gradient-to-b from-gray-950 to-transparent" style={{ borderTop: `2.5px solid ${borderColor}`, borderLeft: `1px solid ${borderColor}`, borderRight: `3.5px solid ${borderColor}` }}>
+      <div className="rounded-3xl drop-shadow-xl  overflow-hidden px-7 my-3 bg-gray-900  bg-clip-padding  backdrop-filter backdrop-blur-sm"  >
 
 
         <h2>
@@ -35,7 +38,7 @@ function Accordion({
               </span>
               {title}
             </span>
-            <svg className="fill-red-500 shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg">
+            <svg className=" shrink-0 ml-8" width="16" height="16" xmlns="http://www.w3.org/2000/svg" style={{ fill: ` ${borderColor}` }}>
               <rect y="7" width="16" height="2" rx="1" className={`ttransform origin-center transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
               <rect y="7" width="16" height="2" rx="1" className={`transform origin-center rotate-90 transition duration-200 ease-out ${accordionOpen && '!rotate-180'}`} />
             </svg>
@@ -47,11 +50,12 @@ function Accordion({
           id={`accordion-text-${id}`}
           role="region"
           aria-labelledby={`accordion-title-${id}`}
-          className={`grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] opacity-100  rounded-lg mb-10  overflow-hidden  bg-gray-700  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 ' : 'grid-rows-[0fr] opacity-100 px-7'}`}
+          className={`grid text-sm text-white overflow-hidden transition-all duration-300 ease-in-out ${accordionOpen ? 'grid-rows-[1fr] opacity-100  rounded-lg mb-10  overflow-hidden  bg-gray-900  bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 ' : 'grid-rows-[0fr] opacity-100 px-7'}`}
         >
           <div className="overflow-hidden">
 
-            <Form heading={title} image={img} />
+            <Form heading={title} image={img} stepsData={stepsData} />
+           
           </div>
         </div>
       </div>
