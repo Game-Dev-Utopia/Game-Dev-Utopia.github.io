@@ -1,4 +1,7 @@
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaDiscord } from "react-icons/fa6";
+import { IoGameController } from "react-icons/io5";
+import { faGamepad, faComments, faHandshakeSimple, faUserPlus, faPalette, faHandHoldingDollar } from "@fortawesome/free-solid-svg-icons";
+{/* <FontAwesomeIcon icon={faGamepad} /> */ }
 
 const socials = [
     {
@@ -41,11 +44,13 @@ const footerContents = [
                 arr: [
                     {
                         display: "Game Shelf",
-                        link: "/gameshelf"
+                        link: "/gameshelf",
+                        reactIcon: IoGameController
                     },
                     {
-                        display: "ArtWorks",
-                        link: "/artworks"
+                        display: "Art Works",
+                        link: "/artworks",
+                        icon: faPalette
                     }
                 ]
             },
@@ -53,10 +58,6 @@ const footerContents = [
                 name: "About Us",
                 link: "/aboutus"
             },
-            {
-                name: "Teams",
-                link: "/teams"
-            }
         ]
     },
     {
@@ -68,30 +69,38 @@ const footerContents = [
 
                     {
                         display: "FAQs",
-                        link: "/faqs"
+                        link: "/faqs",
+                        icon: faComments
                     },
                     {
                         display: "Join Us",
-                        link: "/joinus"
+                        link: "/joinus",
+                        icon: faUserPlus
                     },
                     {
                         display: "Support Us",
-                        link: "/supportus"
+                        link: "/supportus",
+                        icon: faHandHoldingDollar
                     },
                     {
                         display: "Become Our Partner",
-                        link: "/partner"
+                        link: "/partner",
+                        icon: faHandshakeSimple
                     }
                 ]
             },
             {
-                name: "CopyRights and Patents",
-                link: "/copyrights"
-            },
-            {
-                name: "Privacy Policy",
-                link: "/privacypolicy"
+                name: "Teams",
+                link: "/teams"
             }
+            // {
+            //     name: "CopyRights and Patents",
+            //     link: "/copyrights"
+            // },
+            // {
+            //     name: "Privacy Policy",
+            //     link: "/privacypolicy"
+            // }
         ]
     }
 ];

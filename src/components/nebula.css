@@ -1,0 +1,50 @@
+.nebula {
+    position: relative;
+    display: flex;
+    place-items: center;
+    border-radius: 50%;
+  }
+  
+  .nebula::before,
+  .nebula::after {
+    content: '';
+    position: absolute;
+  }
+  
+  .nebula::before {
+    height: 300px;
+    width: 480px;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+    background: radial-gradient(white, transparent);
+    background: linear-gradient(white, transparent);
+    background: transparent;
+    filter: blur(2px);
+    background: linear-gradient(to bottom right, transparent, #1a202c);
+    opacity: 0.1;
+  }
+  
+  .nebula::after {
+    height: 180px;
+    width: 240px;
+    transform: translateX(33.333%);
+    border-radius: 100%;
+    background: conic-gradient(from 90deg at 50% 50%, #1a202c, #0141ff, #1a202c);
+    opacity: 0.4;
+  }
+  
+  .nebula::before {
+    background: linear-gradient(to bottom right, transparent, #1a202c);
+    opacity: 0.1;
+  }
+  
+  .nebula::after {
+    background: conic-gradient(from 90deg at 50% 50%, #1a202c, #0141ff, #1a202c);
+    opacity: 0.4;
+  }
+  
+  .nebula::before {
+    height: 360px;
+  }
+  
+  

@@ -2,6 +2,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import { SidebarProvider } from '@/contexts/SidebarContextProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,9 +14,20 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Navbar />
-      <body className={inter.className}>{children}</body>
-      <Footer/>
+      <body className={inter.className}>
+        <SidebarProvider>
+
+          <div className='w-full flex'>
+            <div className='sm:w-[5%] z-50 sm:inline'>
+              <Navbar />
+            </div>
+            <div className='sm:w-[95%] w-full'>
+              {children}
+            </div>
+          </div>
+          <Footer />
+        </SidebarProvider>
+      </body>
     </html>
   )
 }

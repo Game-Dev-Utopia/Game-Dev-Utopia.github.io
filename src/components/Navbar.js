@@ -4,61 +4,62 @@ import * as FaIcons from 'react-icons/fa';
 import { SidebarData } from '../utilities/SidebarData';
 import { IconContext } from 'react-icons';
 import { ImCross } from "react-icons/im";
+import { RxCross2 } from "react-icons/rx";
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useSidebar } from '@/contexts/SidebarContextProvider';
 
 function Navbar() {
-    const [sidebar, setSidebar] = useState(false);
     const [navDescp, setNavDescp] = useState(false)
+    const { showSidebar } = useSidebar();
+    // console.log(isFooterVisible);
 
     const navToggle = () => {
-        setSidebar(true)
         setNavDescp(!navDescp)
     }
+    const pathname = usePathname();
 
+    const navClasses = "w-[5px] text-xl h-4 sm:h-12 text-white rotate-90 sm:rotate-0"
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
-                <div className='bg-black h-16 flex justify-start items-center fixed w-full z-50'>
-                    <span className='text-white px-4 text-xl'>GameDevUtopia</span>
-                </div>
-                <nav
-                    className={sidebar ?
-                        'bg-black flex justify-center z-50 fixed top-1/4 py-4 rounded-2xl left-1  border-2 border-white'
-                        :
-                        'bg-black z-50 flex justify-center fixed top-1/4 py-4 rounded-2xl -left-full  border-2 border-white'}
-                    onMouseEnter={() => setSidebar(true)}
-                    onMouseLeave={() => { setSidebar(false); setNavDescp(false) }}>
-                    <ul className='w-full'>
-                        {!navDescp ? (<li
-                            onClick={navToggle}
-                            className='flex justify-start gap-5 items-center pl-6 pr-6 pt-0 pb-4 text-xl my-1.5'>
-                            <FaIcons.FaBars />
+            {/* <div className='bg-black h-16 flex justify-start items-center w-full z-50'>
+                <span className='text-white px-4 text-xl'>GameDevUtopia</span>
+            </div> */}
+            {showSidebar && <nav
+                className={'sm:w-fit w-full max-sm:bottom-3 fixed sm:top-[20%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-2xl shadow-sm shadow-white sm:mx-1'}>
+                <ul className='w-full max-h-fit flex sm:flex-col items-center sm:items-start justify-evenly   '>
+                    {!navDescp ? (<li
+                        onClick={navToggle}
+                        className='sm:flex justify-start hidden gap-5 items-center pl-6 pr-6 pt-0 pb-1 text-xl my-1.5'>
+                        <FaIcons.FaBars color='white' />
 
-                        </li>)
-                            :
-                            (<li
-                                onClick={navToggle}
-                                className='flex justify-start gap-5 items-center pl-6 pr-6 pt-0 pb-4 text-xl my-1.5 text-white'>
-                                <ImCross onClick={navToggle} /> close
-                            </li>)}
-                        {SidebarData.map((item, index) => {
-                            return (
-                                <li key={index} className='flex justify-between gap-6 items-center pl-6 pr-6 pt-0 pb-4 text-xl my-1.5 h-12 text-white'>
-                                    <Link href={item.path}>
-                                        <div className='flex gap-5 items-center'>{item.icon}
-                                            {navDescp ? <div className=''>{item.title}</div> : null}
-                                        </div>
-                                    </Link>
+                    </li>)
+                        :
+                        (<li
+                            onClick={navToggle}
+                            className='flex justify-start gap-5 items-center pl-6 pr-6 pt-0 pb-1 text-xl my-1.5 text-white'>
+                            <RxCross2 onClick={navToggle} fontWeight={900} />
+                        </li>)}
+                    {SidebarData.map((item, index) => {
+                        return (
+                            <div key={index} className='flex flex-col-reverse sm:flex-row sm:justify-start sm:gap-4 items-center'>
+                                <li
+
+                                    className={pathname == item.path ? "rounded-lg bg-[#3d64ff]  " + navClasses : navClasses}
+                                >
                                 </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
-            </IconContext.Provider>
-            <div>
-                {!sidebar ? (<div className="font-semibold text-xl text-white z-50 bg-black rounded-r-full pr-2.5 py-2 left-1 pl-1.5 fixed top-1/2" onMouseOver={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)}>&gt;</div>) : ("")}
-            </div>
+                                <Link href={item.path}>
+                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-[#3d64ff] items-center text-xl' : 'flex justify-center gap-7 items-center text-xl text-white'}>{item.icon}
+                                        {navDescp ? <div className='text-lg pr-4 w-32'>{item.title}</div> : null}
+                                    </div>
+                                </Link>
+                            </div>
+                        );
+                    })}
+                </ul>
+            </nav>}
+
         </>
     );
 }
