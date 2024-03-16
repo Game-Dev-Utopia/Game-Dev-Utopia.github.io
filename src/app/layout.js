@@ -18,10 +18,10 @@ export default function RootLayout({ children }) {
         <SidebarProvider>
 
           <div className='w-full flex'>
-            <div className='sm:w-[5%] z-50 sm:inline'>
+            <div className='sm:w-[4%] z-50 sm:inline'>
               <Navbar />
             </div>
-            <div className='sm:w-[95%] w-full'>
+            <div className='sm:w-[90%] w-full'>
               {children}
             </div>
           </div>
