@@ -1,0 +1,74 @@
+{
+    "events": [
+        {
+            "eventName": "EventA",
+            "videoUrl": "https://example.com/tech-hackathon-2024",
+            "starCount": 4.5,
+            "prizes": [
+                {"PrizeName":"firstPlace","Prize":"$2500"},
+                {"PrizeName":"secondPlace","Prize": "$2000"},
+                {"PrizeName":"thirdPlace","Prize": "$1000"}
+            ],
+            "registrationDeadline": "2024-08-01",
+            "individualOrganizers": false,
+            "organizers": [
+                {
+                    "name": "Tech Co.",
+                    "email": "info@techco.com"
+                },
+                {
+                    "name": "Innovation Hub",
+                    "email": "contact@innovationhub.org"
+                }
+            ],
+            "rules": [
+                "Participants must be aged 18 or above.",
+                "Teams can have a maximum of 5 members."
+            ]
+        },
+        {
+            "eventName": "EventB",
+            "videoUrl": "https://example.com/startup-pitch-competition",
+            "starCount": 4.2,
+            "prizes": [
+                {"PrizeName":"firstPlace","Prize":"Investment Funding"},
+                {"PrizeName":"secondPlace","Prize": "Mentorship Program"},
+                {"PrizeName":"thirdPlace","Prize": "Networking Opportunities"}
+            ],
+            "registrationDeadline": "2024-09-15",
+            "individualOrganizers": true,
+            "organizers": [
+                {
+                    "name": "Jake",
+                    "designation": "President"
+                }
+            ],
+            "rules": [
+                "Startups must be less than 2 years old.",
+                "Each pitch should be within 10 minutes."
+            ]
+        },
+        {
+            "eventName": "Event C",
+            "videoUrl": "https://example.com/design-workshop-series",
+            "starCount": 4.8,
+            "prizes": [
+                {"PrizeName":"firstPlace","Prize": "Design Software License"},
+                {"PrizeName":"secondPlace","Prize": "Design Tool Kit"},
+                {"PrizeName":"thirdPlace","Prize": "Exclusive Webinar Access"}
+            ],
+            "registrationDeadline": "2024-10-30",
+            "individualOrganizers": false,
+            "organizers": [
+                {
+                    "name": "Creative Agency XYZ",
+                    "email": "info@creativeagencyxyz.com"
+                }
+            ],
+            "rules": [
+                "Open to designers of all levels.",
+                "Workshops will be held every Saturday for 4 weeks."
+            ]
+        }
+    ]
+}
