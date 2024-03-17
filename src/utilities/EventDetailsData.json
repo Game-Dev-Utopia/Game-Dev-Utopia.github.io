@@ -10,6 +10,8 @@
                 {"PrizeName":"thirdPlace","Prize": "$1000"}
             ],
             "registrationDeadline": "2024-08-01",
+            "startsIn": "2024-09-20",
+            "endsIn"  : "2024-5-30",
             "individualOrganizers": false,
             "organizers": [
                 {
@@ -29,13 +31,15 @@
         {
             "eventName": "EventB",
             "videoUrl": "https://example.com/startup-pitch-competition",
-            "starCount": 4.2,
+            "starCount": 3,
             "prizes": [
                 {"PrizeName":"firstPlace","Prize":"Investment Funding"},
                 {"PrizeName":"secondPlace","Prize": "Mentorship Program"},
                 {"PrizeName":"thirdPlace","Prize": "Networking Opportunities"}
             ],
             "registrationDeadline": "2024-09-15",
+            "startsIn": "2024-09-20",
+            "endsIn"  : "2024-3-30",
             "individualOrganizers": true,
             "organizers": [
                 {
@@ -51,13 +55,15 @@
         {
             "eventName": "Event C",
             "videoUrl": "https://example.com/design-workshop-series",
-            "starCount": 4.8,
+            "starCount": 2.1,
             "prizes": [
                 {"PrizeName":"firstPlace","Prize": "Design Software License"},
                 {"PrizeName":"secondPlace","Prize": "Design Tool Kit"},
                 {"PrizeName":"thirdPlace","Prize": "Exclusive Webinar Access"}
             ],
             "registrationDeadline": "2024-10-30",
+            "startsIn": "2024-09-20",
+            "endsIn"  : "2024-09-30",
             "individualOrganizers": false,
             "organizers": [
                 {

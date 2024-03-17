@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import Card from "../Card";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { FaTrophy } from "react-icons/fa";
 
