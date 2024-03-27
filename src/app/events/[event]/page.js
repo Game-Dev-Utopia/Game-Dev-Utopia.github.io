@@ -4,6 +4,7 @@ import eventsData from '@/utilities/EventDetailsData'
 import Accordian from '@/components/EventsDetails/Event-Details-Accordian';
 import Title from '@/components/EventsDetails/Event-Details-Title';
 import CountDown from '@/components/EventsDetails/Event-Details-CountDown';
+import Organisers from '@/components/EventsDetails/Event-Details-Organisers';
 
 const EventPageLayout = ({ params }) => {
     const videoUrl              = params.videoUrl;
@@ -23,6 +24,7 @@ const EventPageLayout = ({ params }) => {
             <Title name={eventName} rating={starCount} />
             <Accordian title={"Prizes"} datas={prizes}/>
             <CountDown deadLine={registrationDeadline} start={startsIn} end={endsIn}/>
+            <Organisers organisers={organizers}/>
             <Accordian title={"Rules"} datas={rules}/>
         </div>
     )

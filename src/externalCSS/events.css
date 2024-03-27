@@ -1,0 +1,5 @@
+.Rating:hover::after {
+    content: attr(rating-value);
+    position: absolute;
+    transform: translate(-100%, 0);
+}
