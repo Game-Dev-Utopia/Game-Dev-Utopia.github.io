@@ -16,16 +16,64 @@
             "organizers": [
                 {
                     "name": "Tech Co.",
-                    "email": "info@techco.com"
+                    "email": "info@techco.com",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                },
+                {
+                    "name": "Tech Co.",
+                    "email": "info@techco.com",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                },
+                {
+                    "name": "Tech Co.",
+                    "email": "info@techco.com",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 },
                 {
                     "name": "Innovation Hub",
-                    "email": "contact@innovationhub.org"
+                    "email": "contact@innovationhub.org",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
             ],
             "rules": [
                 "Participants must be aged 18 or above.",
                 "Teams can have a maximum of 5 members."
+            ],
+            "winners" : [
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                },
+                {
+                    "isTeam": "true",
+                    "teamName": "HellRiders",
+                    "teamMembers": [
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        }
+                    ]
+                },
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                }
             ]
         },
         {
@@ -44,7 +92,41 @@
             "organizers": [
                 {
                     "name": "Jake",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc=",
                     "designation": "President"
+                }
+            ],
+            "winners" : [
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                },
+                {
+                    "isTeam": "true",
+                    "teamName": "HellRiders",
+                    "teamMembers": [
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        }
+                    ]
+                },
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
             ],
             "rules": [
@@ -69,6 +151,39 @@
                 {
                     "name": "Creative Agency XYZ",
                     "email": "info@creativeagencyxyz.com",
+                    "desc": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                }
+            ],
+            "winners" : [
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
+                    "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                },
+                {
+                    "isTeam": "true",
+                    "teamName": "HellRiders",
+                    "teamMembers": [
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        },
+                        {
+                            "name": "Gowrish",
+                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                        }
+                    ]
+                },
+                {
+                    "isTeam": "false",
+                    "teamName": "HellRiders",
+                    "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
             ],

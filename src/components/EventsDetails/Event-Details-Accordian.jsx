@@ -39,7 +39,7 @@ const StaticDropDown = ({data,clicked,setClicked}) => {
                 <b>{data}</b>
             </div>
             
-            <IoMdArrowDropdown className={`ml-1 mr-1 text-Event-heading mt-1 scale-125 ${clicked ? "rotate-180" : "rotate-0"} transition-all duration-200`} />
+            <IoMdArrowDropdown className={`mx-1 text-Event-heading mt-1 scale-125 ${clicked ? "rotate-180" : "rotate-0"} transition-all duration-200`} />
         </div>
     );
 }
