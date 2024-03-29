@@ -1,5 +1,5 @@
 const OrgCard = ({ org }) => {
-    return <div className="relative text-center pt-[5%] w-[20vw] h-[40vh] bg-gray-900 rounded-br-3xl rounded-tl-3xl border-Event-outline border-2 hover:scale-110 transition-all">
+    return <div className="relative text-center w-[30vw] py-[5%] bg-gray-900 last:rounded-br-3xl first:rounded-tl-3xl border-Event-outline border-2 hover:scale-110 transition-all">
         <img
             src={org.image}
             alt="IMAGE"
@@ -19,7 +19,7 @@ const Organisers = ({ organisers }) => {
                 <p className="text-3xl text-Event-heading"><b>Organisers</b></p>
                 {/* <div className="bg-Event-heading w-[90%] h-[1px] mt-[50%] mr-0 ml-auto"></div> */}
             </div>
-            <div className="flex justify-evenly mt-20 mb-20">
+            <div className="flex justify-evenly my-20">
             {
                 organisers.map((org, i) => <OrgCard org={org}/>)
             }

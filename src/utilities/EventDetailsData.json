@@ -5,13 +5,22 @@
             "videoUrl": "https://example.com/tech-hackathon-2024",
             "starCount": 4.5,
             "prizes": [
-                {"PrizeName":"firstPlace","Prize":"$2500"},
-                {"PrizeName":"secondPlace","Prize": "$2000"},
-                {"PrizeName":"thirdPlace","Prize": "$1000"}
+                {
+                    "PrizeName": "firstPlace",
+                    "Prize": "$2500"
+                },
+                {
+                    "PrizeName": "secondPlace",
+                    "Prize": "$2000"
+                },
+                {
+                    "PrizeName": "thirdPlace",
+                    "Prize": "$1000"
+                }
             ],
             "registrationDeadline": "2024-08-01",
             "startsIn": "2024-09-20",
-            "endsIn"  : "2024-5-30",
+            "endsIn": "2024-5-30",
             "individualOrganizers": false,
             "organizers": [
                 {
@@ -43,16 +52,19 @@
                 "Participants must be aged 18 or above.",
                 "Teams can have a maximum of 5 members."
             ],
-            "winners" : [
+            "winners": [
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 },
                 {
                     "isTeam": "true",
                     "teamName": "HellRiders",
+                    "leader": {
+                        "name": "Gowrish",
+                        "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                    },
                     "teamMembers": [
                         {
                             "name": "Gowrish",
@@ -70,7 +82,6 @@
                 },
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
@@ -81,13 +92,22 @@
             "videoUrl": "https://example.com/startup-pitch-competition",
             "starCount": 3,
             "prizes": [
-                {"PrizeName":"firstPlace","Prize":"Investment Funding"},
-                {"PrizeName":"secondPlace","Prize": "Mentorship Program"},
-                {"PrizeName":"thirdPlace","Prize": "Networking Opportunities"}
+                {
+                    "PrizeName": "firstPlace",
+                    "Prize": "Investment Funding"
+                },
+                {
+                    "PrizeName": "secondPlace",
+                    "Prize": "Mentorship Program"
+                },
+                {
+                    "PrizeName": "thirdPlace",
+                    "Prize": "Networking Opportunities"
+                }
             ],
             "registrationDeadline": "2024-09-15",
             "startsIn": "2024-09-20",
-            "endsIn"  : "2024-3-30",
+            "endsIn": "2024-3-30",
             "individualOrganizers": true,
             "organizers": [
                 {
@@ -97,16 +117,19 @@
                     "designation": "President"
                 }
             ],
-            "winners" : [
+            "winners": [
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 },
                 {
                     "isTeam": "true",
                     "teamName": "HellRiders",
+                    "leader": {
+                        "name": "Gowrish",
+                        "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                    },
                     "teamMembers": [
                         {
                             "name": "Gowrish",
@@ -124,7 +147,6 @@
                 },
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
@@ -139,13 +161,22 @@
             "videoUrl": "https://example.com/design-workshop-series",
             "starCount": 2.1,
             "prizes": [
-                {"PrizeName":"firstPlace","Prize": "Design Software License"},
-                {"PrizeName":"secondPlace","Prize": "Design Tool Kit"},
-                {"PrizeName":"thirdPlace","Prize": "Exclusive Webinar Access"}
+                {
+                    "PrizeName": "firstPlace",
+                    "Prize": "Design Software License"
+                },
+                {
+                    "PrizeName": "secondPlace",
+                    "Prize": "Design Tool Kit"
+                },
+                {
+                    "PrizeName": "thirdPlace",
+                    "Prize": "Exclusive Webinar Access"
+                }
             ],
             "registrationDeadline": "2024-10-30",
             "startsIn": "2024-09-20",
-            "endsIn"  : "2024-4-30",
+            "endsIn": "2024-4-30",
             "individualOrganizers": false,
             "organizers": [
                 {
@@ -155,21 +186,20 @@
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
             ],
-            "winners" : [
+            "winners": [
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 },
                 {
                     "isTeam": "true",
                     "teamName": "HellRiders",
+                    "leader": {
+                        "name": "Gowrish",
+                        "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
+                    },
                     "teamMembers": [
-                        {
-                            "name": "Gowrish",
-                            "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
-                        },
                         {
                             "name": "Gowrish",
                             "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
@@ -182,7 +212,6 @@
                 },
                 {
                     "isTeam": "false",
-                    "teamName": "HellRiders",
                     "name": "Gowrish",
                     "image": "https://media.istockphoto.com/id/1357864202/photo/mandarine-orange-fruits-or-tangerines-isolated-on-white-background-fresh-mandarine-close-up.webp?b=1&s=170667a&w=0&k=20&c=7eEcfgZ2noRhb8eer8qX-gI_rhaO2Jfhb1Q6WqyEPFc="
                 }
