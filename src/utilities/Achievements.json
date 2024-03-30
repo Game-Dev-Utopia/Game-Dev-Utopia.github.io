@@ -1,0 +1,71 @@
+{
+  "top3Achievements": [
+    {
+      "title": "National Science Fair Champion",
+      "description": ["Won first place in the National Science Fair","Fair was hosted in Mumbai, Maharashtra"],
+      "ranked": true,
+      "rank": 1,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Published Research Paper",
+      "description": ["Published a research paper in a peer-reviewed journal","Hello world I am doing just fine hai."],
+      "ranked": false,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Marathon Finisher",
+      "description": ["Completed a marathon in under 4 hours"],
+      "ranked": true,
+      "rank": 3,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Chess Tournament Winner",
+      "description": ["Won a regional chess tournament"],
+      "ranked": true,
+      "rank": 2,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Volunteer of the Year",
+      "description": ["Recognized as the Volunteer of the Year for community service"],
+      "ranked": false,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Entrepreneurship Award",
+      "description": ["Received an award for outstanding entrepreneurial achievements"],
+      "ranked": true,
+      "rank": 1,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Art Exhibition Participant",
+      "description": ["Featured as an artist in a prestigious art exhibition"],
+      "ranked": false,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Debate Competition Finalist",
+      "description": ["Reached the finals of a national debate competition"],
+      "ranked": false,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Innovator of the Year",
+      "description": ["Named Innovator of the Year for groundbreaking contributions"],
+      "ranked": true,
+      "rank": 2,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    },
+    {
+      "title": "Best Employee Award",
+      "description": ["Received the Best Employee Award for exceptional performance"],
+      "ranked": false,
+      "image": "https://st.depositphotos.com/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg"
+    }
+  ]
+}
