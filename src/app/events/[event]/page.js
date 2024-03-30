@@ -1,12 +1,22 @@
 'use client';
 import { useRouter } from 'next/navigation'
 import eventsData from '@/utilities/EventDetailsData'
-import Accordian from '@/components/EventsDetails/Event-Details-Accordian';
 import Title from '@/components/EventsDetails/Event-Details-Title';
 import CountDown from '@/components/EventsDetails/Event-Details-CountDown';
 import Organisers from '@/components/EventsDetails/Event-Details-Organisers';
 import Prizes from '@/components/EventsDetails/Event-Details-Prizes';
-import EventsLowerHalf from '@/components/EventsDetails/Event-Details-Lower-Half';
+import { 
+    Accordion, 
+    AccordionItem, 
+    AccordionTrigger, 
+    AccordionContent 
+} from '@/components/ui/accordion';
+
+import Rules from '@/components/EventsDetails/Event-Details-Rules';
+import HintsAndTips from '@/components/EventsDetails/Event-Details-Hints-and-Tips';
+import Winners from '@/components/EventsDetails/Event-Details-Winners';
+import FAQ from '@/components/EventsDetails/Event-Details-FAQ';
+import Community from '@/components/EventsDetails/Event-Details-Community';
 
 const Break = () => {
     return (
@@ -27,21 +37,58 @@ const EventPageLayout = ({ params }) => {
     const startsIn              = params.startsIn;
     const endsIn                = params.endsIn;
     const individualOrganizers  = params.individualOrganizer;
-    const organizers            = params.organizers;
+    const organisers            = params.organizers;
     const rules                 = params.rules;
-    // console.log(videoUrl);
+    const faqs                  = params.faq;
 
     return (
-        <div className='block bg-black sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
+        <div className='block sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
             <Title name={eventName} rating={starCount} />
             <Break />
             <CountDown deadLine={registrationDeadline} start={startsIn} end={endsIn}/>
             <Break />
             <Prizes prizes={prizes} />
             <Break />
-            <Organisers organisers={organizers}/>
-            <Break />
-            <EventsLowerHalf />
+
+            <Accordion type="multiple" collapsible className="sm:w-[80%] md:w-[75%] lg:w-[100%] my-2 p-4 w-[100%] mx-auto">
+                <AccordionItem value="item-1">
+                    <AccordionTrigger>ORGANIZERS</AccordionTrigger>
+                    <AccordionContent className="">
+                        <Organisers organisers={organisers} />
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                    <AccordionTrigger>RULES</AccordionTrigger>
+                    <AccordionContent className="">
+                        <Rules rules={rules}/>
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                    <AccordionTrigger>HINTS AND TIPS</AccordionTrigger>
+                    <AccordionContent>
+                        <HintsAndTips />
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                    <AccordionTrigger>WINNERS</AccordionTrigger>
+                    <AccordionContent>
+                        {/* Winners will be displayed here after the event ends. */}
+                        <Winners />
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                    <AccordionTrigger>FAQs</AccordionTrigger>
+                    <AccordionContent className="max-h-96 overflow-y-scroll">
+                        <FAQ faqs={faqs} />
+                    </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                    <AccordionTrigger>COMMUNITY</AccordionTrigger>
+                    <AccordionContent>
+                        <Community />
+                    </AccordionContent>
+                </AccordionItem>
+            </Accordion >
         </div>
     )
 

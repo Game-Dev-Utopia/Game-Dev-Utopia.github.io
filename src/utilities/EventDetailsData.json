@@ -2,6 +2,16 @@
     "events": [
         {
             "eventName": "EventA",
+            "faq":  [
+                {
+                    "Q": "Is this event accessible?",
+                    "A": "Yes."
+                },
+                {
+                    "Q": "Location of the event?",
+                    "A": "Pune"
+                }
+            ],
             "videoUrl": "https://example.com/tech-hackathon-2024",
             "starCount": 4.5,
             "prizes": [
@@ -89,6 +99,16 @@
         },
         {
             "eventName": "EventB",
+            "faq":  [
+                {
+                    "Q": "Is this event accessible?",
+                    "A": "Yes."
+                },
+                {
+                    "Q": "Location of the event?",
+                    "A": "Pune"
+                }
+            ],
             "videoUrl": "https://example.com/startup-pitch-competition",
             "starCount": 3,
             "prizes": [
@@ -158,6 +178,16 @@
         },
         {
             "eventName": "Event C",
+            "faq":  [
+                {
+                    "Q": "Is this event accessible?",
+                    "A": "Yes."
+                },
+                {
+                    "Q": "Location of the event?",
+                    "A": "Pune"
+                }
+            ],
             "videoUrl": "https://example.com/design-workshop-series",
             "starCount": 2.1,
             "prizes": [
