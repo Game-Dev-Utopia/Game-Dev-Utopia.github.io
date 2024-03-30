@@ -12,7 +12,7 @@ const toDate = (time) => {
 
 const TimeElement = ({text, data}) => {
     return (
-        <div className="flex flex-col p-10 my-4 border-l-4">
+        <div className="flex flex-col sm:w-[10vw] w-[30vw] py-[3%] px-[2%] border-l-2 first:border-l-0">
             <p>{data}</p>
             <p>{text}</p>
         </div>
@@ -40,17 +40,14 @@ const CountDown = ({ deadLine, start, end }) => {
             <div className="m-10 text-center">
                 Registration Ends in {(new Date(toDate(deadLine))).toString()}
             </div>
-            <div className="flex flex-auto justify-center border-4 mx-4 my-10 text-2xl text-center rounded-3xl">
-                <div className="flex flex-col p-10 my-4">
-                    <p>Starts</p>
-                    <p>In</p>
-                </div>
+            <p className="text-center text-xl pb-[1%]">Event starts in</p>
+            <div className="flex flex-auto justify-center border-2 border-yellow-300 w-[90%] mx-[5%] sm:text-2xl text-lg text-center rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl">
                 <TimeElement text={"Days"} data={days} />
                 <TimeElement text={"Hours"} data={hours} />
                 <TimeElement text={"Minutes"} data={minutes} />
                 <TimeElement text={"Seconds"} data={seconds} />
-                <button className="bg-[#EFC95C] my-10 rounded-2xl p-2 text-black">Register</button>
             </div>
+            <button className="bg-[#EFC95C] my-10 rounded-2xl p-2 text-black w-[90vw] mx-[5vw] sm:w-[90%] sm:mx-[5%] sm:text-2xl">Register Here</button>
         </>
     )
 }

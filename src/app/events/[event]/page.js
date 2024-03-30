@@ -5,7 +5,17 @@ import Accordian from '@/components/EventsDetails/Event-Details-Accordian';
 import Title from '@/components/EventsDetails/Event-Details-Title';
 import CountDown from '@/components/EventsDetails/Event-Details-CountDown';
 import Organisers from '@/components/EventsDetails/Event-Details-Organisers';
-import Winners from '@/components/EventsDetails/Event-Details-Winners';
+import Prizes from '@/components/EventsDetails/Event-Details-Prizes';
+
+const Break = () => {
+    return (
+        <>
+            <br />
+            <hr />
+            <br />
+        </>
+    )
+}
 
 const EventPageLayout = ({ params }) => {
     const videoUrl              = params.videoUrl;
@@ -18,17 +28,18 @@ const EventPageLayout = ({ params }) => {
     const individualOrganizers  = params.individualOrganizer;
     const organizers            = params.organizers;
     const rules                 = params.rules;
-    const winners               = params.winners;
     // console.log(videoUrl);
 
     return (
-        <div className='block bg-Event w-full h-full'>
+        <div className='block bg-black sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
             <Title name={eventName} rating={starCount} />
-            <Accordian title={"Prizes"} datas={prizes}/>
+            <Break />
             <CountDown deadLine={registrationDeadline} start={startsIn} end={endsIn}/>
+            <Break />
+            <Prizes prizes={prizes} />
+            <Break />
             <Organisers organisers={organizers}/>
-            <Accordian title={"Rules"} datas={rules}/>
-            <Winners winners={winners} />
+            <Break />
         </div>
     )
 

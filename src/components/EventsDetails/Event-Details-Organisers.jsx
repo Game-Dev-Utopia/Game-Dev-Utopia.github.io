@@ -1,27 +1,33 @@
+import Accordian from "./Event-Details-Accordian"
+
 const OrgCard = ({ org }) => {
-    return <div className="relative text-center w-[30vw] py-[5%] bg-gray-900 last:rounded-br-3xl first:rounded-tl-3xl border-Event-outline border-2 hover:scale-110 transition-all">
-        <img
-            src={org.image}
-            alt="IMAGE"
-            className="w-[30%] absolute top-0 left-1/2 -translate-y-1/2 -translate-x-1/2 rounded-[50%] border-Event-outline border-2"
-        />
-        <p className="text-3xl">{org.name}</p>
-        <p className="text-xl">{org.email}</p>
-        <p className="mt-10 mx-4">{org.desc}</p>
+    return <div className="flex border-[1px] border-yellow-200 text-center rounded-lg sm:rounded-xl mb-[1%] mx-[5%] sm:mx-0 sm:hover:mx-[-3%] transition-all">
+        <div className="flex-1 flex items-center justify-center p-[1%] py-[2%]">
+            <img
+                src={org.image}
+                alt="IMAGE"
+                className="w-[70%] sm:w-[90%] rounded-[50%]"
+            />
+        </div>
+        <div className="flex-[5] sm:flex-[9] flex flex-col justify-center">
+            <p className="text-xl sm:text-3xl"><b>{org.name}</b></p>
+            <p className="text-sm opacity-80">{org.email}</p>
+            {/* <p className="text-sm">{org.desc}</p> */}
+        </div>
     </div>
 }
 
 const Organisers = ({ organisers }) => {
-
+    console.log(organisers);
     return (
-        <div className="mx-7">
-            <div className="flex">
-                <p className="text-3xl text-Event-heading"><b>Organisers</b></p>
+        <div className="mb-[5%]">
+            <div className="flex justify-center">
+                <p className="text-3xl sm:text-[3rem] text-Event-heading"><b>ORGANIZERS</b></p>
                 {/* <div className="bg-Event-heading w-[90%] h-[1px] mt-[50%] mr-0 ml-auto"></div> */}
             </div>
-            <div className="flex justify-evenly my-20">
+            <div className="flex flex-col justify-evenly mt-[5%]">
             {
-                organisers.map((org, i) => <OrgCard org={org}/>)
+                organisers.map((org, i) =><OrgCard org={org} key={i}/>)
             }
             </div>
         </div>

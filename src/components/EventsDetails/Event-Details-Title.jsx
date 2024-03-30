@@ -13,8 +13,8 @@ const Rating = ({ rating }) => {
 
     // Could have been done better
     return (
-        <div className="flex float-right transition-all" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
-            <p className={`${hovered ? 'opacity-100' : 'opacity-0 -translate-x-[100%]'} transition-all`}>{rating}</p>
+        <div className="flex float-right transition-all items-center" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+            <p className={`${hovered ? 'opacity-100' : 'opacity-0 -translate-x-[100%]'} transition-all justify-center`}>{rating}</p>
             {
                 stars.map((val, i) => {
                     if (i + 1 <= low)
@@ -34,20 +34,22 @@ const Rating = ({ rating }) => {
 
 const Title = ({ name, rating }) => {
     return (
-        <div className="text-3xl mx-7">
-            <iframe
-                src="https://www.youtube.com/embed/wNe9RP2yP2Y?si=a8FakfPTkFuBlZMa"
-                frameborder="0"
-                width="1920"
-                height="1080"
-                className="w-full"
-                allowfullscreen
-            />
-            <div className="text-Event-heading p-4">
+        <>
+            <div className="text-3xl relative pt-[56.25%] w-full overflow-hidden">
+                <iframe
+                    src="https://www.youtube.com/embed/wNe9RP2yP2Y?si=a8FakfPTkFuBlZMa"
+                    frameborder="0"
+                    width="1920"
+                    height="1080"
+                    className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
+                    allowfullscreen
+                />
+            </div>
+            <div className="text-Event-heading text-2xl p-4">
                 <b>{name}</b>
                 <Rating rating={rating} />
             </div>
-        </div>
+        </>
     )
 }
 
