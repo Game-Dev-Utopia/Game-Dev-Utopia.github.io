@@ -1,4 +1,9 @@
-import Accordian from "./Event-Details-Accordian"
+import {
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
+} from "@/components/ui/accordion"
 
 const OrgCard = ({ org }) => {
     return <div className="flex border-[1px] border-yellow-200 text-center rounded-lg sm:rounded-xl mb-[1%] mx-[5%] sm:mx-0 sm:hover:mx-[-3%] transition-all">

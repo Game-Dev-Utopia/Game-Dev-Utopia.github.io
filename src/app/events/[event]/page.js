@@ -6,6 +6,7 @@ import Title from '@/components/EventsDetails/Event-Details-Title';
 import CountDown from '@/components/EventsDetails/Event-Details-CountDown';
 import Organisers from '@/components/EventsDetails/Event-Details-Organisers';
 import Prizes from '@/components/EventsDetails/Event-Details-Prizes';
+import EventsLowerHalf from '@/components/EventsDetails/Event-Details-Lower-Half';
 
 const Break = () => {
     return (
@@ -40,6 +41,7 @@ const EventPageLayout = ({ params }) => {
             <Break />
             <Organisers organisers={organizers}/>
             <Break />
+            <EventsLowerHalf />
         </div>
     )
 

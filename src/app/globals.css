@@ -2,28 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-@import '../externalCSS/events.css';
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+  
+  /* scroll bar is currently disabled. Will change it whenever required. */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --foreground-rgb: 255, 255, 255;
+      --background-start-rgb: 0, 0, 0;
+      --background-end-rgb: 0, 0, 0;
+    }
+  }
+  
+  body {
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgb(var(--background-end-rgb))
+      )
+      rgb(var(--background-start-rgb));
+  }
+  
+  /* Footer Styles */  
+  /* idk why but both tailwind as well as this classes are required currently */
+  .linkedin{
+    grid-column-start: 2;
+    grid-row-start: 1;
+  }
+  
+  .linkedin:hover{
+    background: #0077b5;
+  }
+  
+  .insta{
+    grid-column-start: 1;
+    grid-row-start: 2;
+  }
+  
+  .insta:hover{
+    background: linear-gradient(45deg,#feda75, #fa7e1e ,#d62976,#962fbf, #4f5bd5);
+  }
+  
+  .twitter{
+    grid-column-start: 3;
+    grid-row-start: 2;
+  }
+  
+  .twitter:hover{
+    background: #fff;
+  }
+  
+  .discord{
+    grid-column-start: 2;
+    grid-row-start: 3;
+  }
+  
+  .discord:hover{
+    background: #7289da;
+  }
+  
+  /* Footer styles ends */
+  
+  .controller_screen{
+    box-shadow: 0px 1px 1px 1px rgba(255, 255, 255, 1)
+  }
