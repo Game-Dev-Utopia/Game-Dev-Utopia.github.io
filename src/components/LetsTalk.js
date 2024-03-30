@@ -3,7 +3,7 @@ import Accordion from "./Accordion";
 
 export default function LetsTalk({ data }) {
   const accData = data;
-  
+
 
   return (
     <main className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-no-repeat bg-cover backdrop-saturate-100 bg-hero">

@@ -22,7 +22,7 @@ function Accordion({
   return (
     <>
 
-      <div className="rounded-3xl drop-shadow-xl  overflow-hidden px-7 my-3 bg-gray-900  bg-clip-padding  backdrop-filter backdrop-blur-sm"  >
+      <div className="rounded-3xl drop-shadow-xl  overflow-hidden px-7 my-5 bg-gray-900  bg-clip-padding  backdrop-filter backdrop-blur-sm shadow-md shadow-[#f6df5d]"  >
 
 
         <h2>

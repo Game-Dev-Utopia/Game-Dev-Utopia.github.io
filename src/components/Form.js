@@ -10,7 +10,7 @@ export default function Form({ heading, image , stepsData }) {
     let formName ="add"+ heading.toLowerCase();
     formName =  formName.replace(/\s/g, '');
     console.log(formName);
-    const response =await  postRequestJson(`/api/form/${formName}`, formData);
+    const response = await  postRequestJson(`/api/form/${formName}`, formData);
     console.log(response);
 
 
