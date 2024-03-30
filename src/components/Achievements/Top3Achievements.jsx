@@ -3,8 +3,7 @@ import Image from "next/image"
 import { FaMedal } from "react-icons/fa";
 import CardBG from "@/utilities/Icons/AchievementIcon.svg"
 import { useState,useEffect } from "react";
-import { IoIosArrowDropleft } from "react-icons/io";
-import { IoIosArrowDropright } from "react-icons/io";
+import { MdDoubleArrow } from "react-icons/md";
 
 const DisplayRank = ({rank})=>{
     var color = "";
@@ -41,7 +40,7 @@ const AchievementCard = (props) => {
                 <div
                     className="py-4 px-5 max-h-6 text-lg xl:text-lg xl:ml-7"
                 >
-                    <ul className='Achievement-details w-[90%] m-auto  list-disc'> 
+                    <ul className='Achievement-details w-[90%] max-h-[140px] overflow-y-scroll m-auto  list-disc'> 
                         { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) }
                     </ul>
                 </div>
@@ -51,13 +50,13 @@ const AchievementCard = (props) => {
                         :<div/>
                 }
                 <div className="absolute lg:hidden top-[30%] -left-5 text-[50px] animate-pulse"> 
-                    <IoIosArrowDropleft />
+                    <MdDoubleArrow className="rotate-180"/> 
                     <div className="text-sm">
                         <i> swipe </i>
                     </div>
                 </div>
                 <div className="absolute lg:hidden top-[30%] -right-5 text-[50px] animate-pulse"> 
-                    <IoIosArrowDropright/> 
+                    <MdDoubleArrow />
                     <div className="text-sm">
                         <i> swipe </i>
                     </div>
@@ -158,7 +157,7 @@ const Top3Achievements = ({Top3Data}) =>{
     })
 
     return (
-        <div className="p-4">
+        <div className="p-0">
             <div className="hidden lg:grid m-auto p-0 lg:grid-cols-3 grid-rows-1  w-[50%] lg:w-[90%]">
                 <AchievementCard data={Top3Data[1]} scale={"90%"} />
                 <AchievementCard data={Top3Data[0]} scale={"100%"} />
