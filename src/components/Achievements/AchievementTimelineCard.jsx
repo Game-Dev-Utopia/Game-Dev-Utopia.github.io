@@ -18,7 +18,7 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%]  bottom-[40%] -translate-x-1/2 translate-y-1/2`}/>
+    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[43%]  lg:bottom-[40%] -translate-x-1/2 translate-y-1/2`}/>
 }
 
 const TimelineCard = ({ data , scrollCurrent, index }) => {
@@ -46,6 +46,7 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
     return (
         <div className={`List-Achievement transition-all duration-1000`}  ref={timelineCardRef}>
             <Image 
+                alt="Tag"
                 src={Tag}
                 width="300"
                 height="300"
@@ -65,8 +66,8 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
                 <div className='List-Achievement-detail-container'>
                     <div className='List-Achievement-detail-inner'>
                     </div>
-                    <h1 className='List-Achievement-title'><b>{data.title}</b></h1>
-                    <ul className='List-Achievement-details list-disc'> 
+                    <h1 className='List-Achievement-title text-lg lg:text-2xl'><b>{data.title}</b></h1>
+                    <ul className='List-Achievement-details text-sm lg:text-xl list-disc'> 
                         { data.description.map((detail, i) => <li key={i}>{detail}</li>) }
                     </ul>
                 </div>
