@@ -20,7 +20,7 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaMedal className={`absolute ${color} text-[400%] left-[50%] -translate-x-[50%] top-[78%] 2xl:top-[85%]`}/>
+    return <FaMedal className={`absolute ${color} text-[400%] left-[50%] -translate-x-[50%] top-[78%] 2xl:top-[80%]`}/>
 }
 
 const AchievementCard = (props) => {
@@ -28,18 +28,18 @@ const AchievementCard = (props) => {
     return( 
         <div className={`relative hover:scale-105 m-auto transition-all duration-150 ${(fade)?"opacity-0":"opacity-100"}`} style={{scale:props.scale}}>
             <div className="absolute w-full h-full">
-                <div className="m-auto text-center lg:text-2xl p-4 mt-[3%]">
+                <div className="m-auto font-bold text-center text-3xl lg:text-2xl p-4 mt-[3%]">
                     {props.data.title}
                 </div>
                 <Image 
                     src={props.data.image} 
                     width={"600"} 
                     height={"600"} 
-                    className="rounded-lg m-auto w-[60%] lg:w-[30%] xl:w-[60%]"
-                    alt={"Achievement Image"}
+                    className="rounded-lg m-auto w-[50%] lg:w-[30%] xl:w-[60%]"
+                    alt="Achievement Image"
                 />
                 <div
-                    className="py-4 px-5 text-sm xl:text-lg xl:ml-7"
+                    className="py-4 px-5 max-h-6 text-lg xl:text-lg xl:ml-7"
                 >
                     <ul className='Achievement-details w-[90%] m-auto  list-disc'> 
                         { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) }
@@ -50,6 +50,18 @@ const AchievementCard = (props) => {
                         <DisplayRank rank={props.data.rank}/>
                         :<div/>
                 }
+                <div className="absolute lg:hidden top-[30%] -left-5 text-[50px] animate-pulse"> 
+                    <IoIosArrowDropleft />
+                    <div className="text-sm">
+                        <i> swipe </i>
+                    </div>
+                </div>
+                <div className="absolute lg:hidden top-[30%] -right-5 text-[50px] animate-pulse"> 
+                    <IoIosArrowDropright/> 
+                    <div className="text-sm">
+                        <i> swipe </i>
+                    </div>
+                </div>
             </div>
             <Image 
                 src={CardBG}
@@ -77,7 +89,6 @@ const Top3Achievements = ({Top3Data}) =>{
     }
 
     const rightButton = () => {
-        console.log("subarashiii")
         setCardNum((cardNum + 1)%3);
         fade = false;
         setRightSwiping(false);
@@ -86,7 +97,6 @@ const Top3Achievements = ({Top3Data}) =>{
     }
 
     const leftButton = () => {
-        console.log(cardNum)
         if((cardNum - 1)%3 <= -1)
             setCardNum(2)
         else
@@ -159,8 +169,6 @@ const Top3Achievements = ({Top3Data}) =>{
                 className="grid lg:hidden m-auto p-0 lg:grid-cols-1 grid-rows-1 max-h-[700px]  w-[100%] lg:w-[80%] transition-all duration-300"
             > 
                 <AchievementCard arrow={true} fade={fade} data={Top3Data[cardNum]} scale={"100%"} />
-                <IoIosArrowDropleft className="absolute top-[25%] -left-1 text-[50px] animate-pulse"/>
-                <IoIosArrowDropright className="absolute top-[25%] -right-1 text-[50px] animate-pulse"/>
             </div>
         </div>
     )

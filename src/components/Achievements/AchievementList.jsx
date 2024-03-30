@@ -23,15 +23,15 @@ const AchievementsList = ({datas}) =>
     },[])
 
     return (
-        <>
-            <div ref={ScrollRef} className='max-h-[800px] Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2 mx-[0.5vw]'>
+        <div className='w-full'>
+            <div ref={ScrollRef} className='max-h-[800px] w-[85%] mx-[7%] Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2'>
                 <div  className='List-Timeline'>  
                     <br/>
                     <br/>
                     {datas.map((data, i) => <TimelineCard key={i} data={data} index={i} scrollCurrent={scrollCurrent}/> )}
                 </div>
             </div>
-        </>
+        </div>
     );
 
 }
