@@ -40,7 +40,7 @@ const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
     return (
         <>
             <div className="m-10 text-center">
-                Registration Ends in {(new Date(toDate(deadLine))).toString()}
+                Registration Ends on {(new Date(toDate(deadLine))).toString()}
             </div>
             <p className="text-center text-xl pb-[1%]">Event starts in</p>
             <div className="flex flex-auto justify-center border-2 border-yellow-300 w-[90%] mx-[5%] sm:text-2xl text-lg text-center rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl">
