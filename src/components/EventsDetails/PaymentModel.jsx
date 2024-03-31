@@ -2,7 +2,7 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect } from "react";
 
-const PaymentModel = ({ setIsOpen, isOpen, price }) => {
+const PaymentModel = ({ setIsOpen, isOpen, price, afterPayment }) => {
   const closeModal = () => {
     setIsOpen(false);
   };
@@ -30,7 +30,7 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
       console.error("Razorpay SDK not loaded yet");
       return;
     }
-  
+
     let options = {
       key: "rzp_test_UR1RXcKK4NZyYp",
       amount: price * 100,
@@ -38,20 +38,22 @@ const PaymentModel = ({ setIsOpen, isOpen, price }) => {
       name: "Game-Dev-Utopia",
       description: "Events Payment",
       image: "https://gamedevutopia.in/static/media/gdu_logo.7ecd244d3f80faa5df09.png",
-      handler: () => {
+      handler: (response) => {
         setIsOpen(false);
+        console.log(response.razorpay_payment_id)
         alert("Payment Successful");
+        afterPayment(response.razorpay_payment_id);
       },
       theme: {
         color: "#222",
         backdrop_color: "#222",
       },
     };
-  
+
     let razorPay = new window.Razorpay(options);
     razorPay.open();
   };
-  
+
   return (
     <>
       <Transition appear show={isOpen} as={Fragment}>

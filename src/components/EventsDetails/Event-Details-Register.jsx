@@ -1,8 +1,9 @@
 "use client";
 import React, { useState } from 'react'
 import PaymentModel from "./PaymentModel";
+import { ImCross } from 'react-icons/im';
 
-const EventPageRegister = ({ close }) => {
+const EventPageRegister = ({ close, price }) => {
     const [isValid, setisValid] = useState(false)
 
     const [details, setDetails] = useState({
@@ -15,7 +16,8 @@ const EventPageRegister = ({ close }) => {
         quality: '',
         steamAccount: '',
         itchAccount: '',
-        educationalDetails: ''
+        educationalDetails: '',
+        discordId: ''
     })
     const [gender, setGender] = useState('')
     const handlesetGender = (event) => {
@@ -28,19 +30,25 @@ const EventPageRegister = ({ close }) => {
         setSelectedValue(event.target.value);
     };
     const [isOpen, setIsOpen] = useState(false);
-    const [price, setPrice] = useState(100); // Set your price accordingly
 
     const openModal = () => {
         setIsOpen(true);
     };
 
-    const handleSubmit = () => {
-        setisValid(true)
+    const validateAndProceedForPayment = () => {
         if (details.name === '' || details.email === '' || details.nationality === '' || details.gender === '' || details.howDidYouFindUs === '') {
-            alert('Please fill all the required fields');
+            setisValid(true)
             return;
+        } else {
+            setisValid(false)
+            openModal();
         }
+    }
+
+    const handleSubmit = (paymentId) => {
+        details.paymentId = paymentId;
         console.log(details);
+        close();
     }
 
 
@@ -50,8 +58,13 @@ const EventPageRegister = ({ close }) => {
         <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
             <div className='z-50 flex flex-col justify-center font-semibold placeholder:text-sm placeholder:font-normal text-[#fff] items-center w-[98%] md:w-[30%] h-full my-4 px-4 py-2 mx-auto shadow shadow-gray-600 bg-zinc-900 rounded-xl'>
-                <div className='w-full'>
-                    <h1 className='text-xl font-bold text-center'>Register Now</h1>
+                <div className='w-full flex justify-center relative'>
+                    <h1 className='text-xl my-2 font-bold text-center'>
+                        Register Now
+                    </h1>
+                    <div className='absolute top-0 right-0 mt-2 mr-2'>
+                        <ImCross className='cursor-pointer' onClick={close} />
+                    </div>
                 </div>
                 <div className='overflow-auto'>
                     <div className='flex flex-col mx-auto gap-y-5'>
@@ -139,6 +152,15 @@ const EventPageRegister = ({ close }) => {
                             className='mx-2 p-2 text-sm font-normal rounded-lg text-white bg-black shadow shadow-gray-600'
                             placeholder='eg. Game Development'
                         />
+                        <label> Discord Id </label>
+                        <input
+                            type="text"
+                            name='discordId'
+                            value={details.discordId}
+                            onChange={(e) => setDetails({ ...details, discordId: e.target.value })}
+                            className='mx-2 p-2 text-sm font-normal rounded-lg text-white bg-black shadow shadow-gray-600'
+                            placeholder='account id'
+                        />
                         <label> Steam Account </label>
                         <input
                             type="text"
@@ -169,14 +191,15 @@ const EventPageRegister = ({ close }) => {
 
 
                     </div>
-                    <PaymentModel isOpen={isOpen} setIsOpen={setIsOpen} price={price} />
-                    <div className='mx-auto text-center'>
-                        <button className='p-2 my-4 mx-2 bg-[#f6df5d] text-black rounded-md' onClick={openModal}>
-                            Register
+                    <PaymentModel isOpen={isOpen} setIsOpen={setIsOpen} price={price} afterPayment={handleSubmit} />
+                    <div className='mx-auto my-4 text-center'>
+                        {isValid && <p className='text-xs text-red-500'>Please fill out all mandatory fields</p>}
+                        <button className='p-2 my-2 mx-2 bg-[#f6df5d] text-black rounded-md' onClick={validateAndProceedForPayment}>
+                            {price > 0 ? "Pay & " : ""}Register
                         </button>
-                        <button className='p-2 my-4 mx-2 bg-[#dcd8c2] text-black rounded-md' onClick={close}>
+                        {/* <button className='p-2 my-4 mx-2 bg-[#dcd8c2] text-black rounded-md' onClick={close}>
                             close
-                        </button>
+                        </button> */}
                     </div>
                 </div>
             </div>
