@@ -5,12 +5,12 @@ const toDate = (time) => {
     const year = parseInt(time.substring(0, 4));
     const month = parseInt(time.substring(5, 7));
     const day = parseInt(time.substring(8));
-    
+
     // for some reason month is 0 indexed
     return new Date(year, month - 1, day).getTime();
 }
 
-const TimeElement = ({text, data}) => {
+const TimeElement = ({ text, data }) => {
     return (
         <div className="flex flex-col sm:w-[10vw] w-[30vw] py-[3%] px-[2%] border-l-2 first:border-l-0">
             <p>{data}</p>
@@ -19,8 +19,10 @@ const TimeElement = ({text, data}) => {
     )
 }
 
-const CountDown = ({ deadLine, start, end }) => {
+const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
     const [distance, setDistance] = useState(toDate(end) - Date.now());
+
+
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -47,7 +49,7 @@ const CountDown = ({ deadLine, start, end }) => {
                 <TimeElement text={"Minutes"} data={minutes} />
                 <TimeElement text={"Seconds"} data={seconds} />
             </div>
-            <button className="bg-[#EFC95C] my-10 rounded-2xl p-2 text-black w-[90vw] mx-[5vw] sm:w-[90%] sm:mx-[5%] sm:text-2xl">Register Here</button>
+            <button onClick={() => openRegisterPage()} className="bg-[#EFC95C] my-10 rounded-2xl p-2 text-black w-[90vw] mx-[5vw] sm:w-[90%] sm:mx-[5%] sm:text-2xl">Register Here</button>
         </>
     )
 }
