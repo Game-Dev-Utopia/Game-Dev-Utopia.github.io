@@ -18,7 +18,7 @@ function Navbar() {
 
     return (
         <>
-            <IconContext.Provider value={{ color: '#fff' }}>
+            {/* <IconContext.Provider value={{ color: '#fff' }}> */}
                 <div className='bg-black h-16 flex justify-start items-center'>
                     <span className='text-white px-4 text-xl'>GameDevUtopia</span>
                 </div>
@@ -51,7 +51,7 @@ function Navbar() {
                         })}
                     </ul>
                 </nav>
-            </IconContext.Provider>
+            {/* </IconContext.Provider> */}
             <div>
                 {!sidebar ? (<div className="font-semibold absolute top-1/2 text-xl text-white bg-black rounded-r-full pr-2.5 py-2 left-1 pl-1.5" onMouseOver={() => setSidebar(true)} onMouseLeave={() => setSidebar(false)}>&gt;</div>) : ("")}
             </div>
