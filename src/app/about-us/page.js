@@ -1,7 +1,7 @@
-import CardHolder from '@/components/CardHolder'
-import CardHolderDynamic from '@/components/CardHolderDynamic'
+import CardHolder from '@/components/AboutUsCards/CardHolder'
+import CardHolderDynamic from '@/components/AboutUsCards/CardHolderDynamic'
 
-import Timeline from '@/components/Timeline';
+import Timeline from '@/components/HistoryTimeline/Timeline';
 
 import aboutUsData from '@/utilities/aboutUsPageData';
 import timelineData from '@/utilities/timelineData.js';
