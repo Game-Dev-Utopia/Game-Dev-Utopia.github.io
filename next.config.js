@@ -1,17 +1,28 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        remotePatterns: [
+    images:{
+        remotePatterns:[
             {
                 protocol: 'https',
+                hostname: '**.wixmp.com**',
+            },
+            {
+                protocol: 'https',
+                hostname: '**.shutterstock.com**',
+            },
+            {
+                protocol: 'https',
+                hostname: '**.vecteezy.com**',
+            },
+            {
+                protocol: 'https',
+                hostname: '**.freepik.com**',
+            },
+            {
                 hostname: 'st.depositphotos.com',
                 port: '',
                 pathname: '/1000141/3111/i/450/depositphotos_31113585-stock-photo-apple-with-slice.jpg',
             },
-        ],
-    },
-    images:{
-        remotePatterns:[
             {
                 protocol: 'https',
                 hostname: 'images.unsplash.com',
@@ -32,11 +43,6 @@ const nextConfig = {
                 hostname: 'images.pexels.com',
                 pathname: '**'
             },
-            {
-                protocol: 'https',
-                hostname: '',
-                pathname: '**'
-            }
         ]
     }
 }

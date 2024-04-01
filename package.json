@@ -20,9 +20,10 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.12.0",
-    "react-iframe": "^1.8.5",\
+    "sharp": "^0.33.2",
+    "react-iframe": "^1.8.5",
     "tailwind-merge": "^2.2.2",
-    "tailwindcss-animate": "^1.0.7"
+    "tailwindcss-animate": "^1.0.7",
     "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.2"
   },
