@@ -72,8 +72,6 @@
 @import '../externalCSS/events.css';
 
 body {
-  /* background-image: url('../../public/bg.svg'); */
-  /* background-position: unset; */
   box-sizing: border-box;
   color:white;
   @apply bg-zinc-900;
@@ -173,6 +171,10 @@ background: linear-gradient(to right, #333, #444);
   @apply absolute w-auto p-1 -top-8 z-10 left-0 min-w-max rounded-md shadow-md scale-0 duration-100 origin-left bg-gray-800 text-white text-xs font-semibold;
 }
 
+
+@layer components {
+     @import '../externalCSS/achevement-list.css';
+}
 a {
   font-weight: 500;
   color: #646cff;

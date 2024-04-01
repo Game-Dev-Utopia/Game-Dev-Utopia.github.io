@@ -22,6 +22,13 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      colors:{
+        'headings':'#fdb714',
+        'Achievement-primary' :'#0C0C0C',
+        'Achievement-heading' : '#F1DC90',
+        'Achievement-font' : '#FFFFFF',
+        'Achievement-outline': '#F2613F'
+      }
       colors: {
         'headings': '#fdb714',
         'Event': '#0C0C0C',
