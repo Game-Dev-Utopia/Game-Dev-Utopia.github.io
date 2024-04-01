@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React from 'react';
-import './GameDesignDetails.css';
 export default function GameDesignDetails() {
   const [selectedAwardIndex, setSelectedAwardIndex] = React.useState(0);
   const acheivementArray = [
