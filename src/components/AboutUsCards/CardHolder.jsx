@@ -36,12 +36,11 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
     const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
 
     const onTouchEnd = (e) => {
-        console.log(e);
         if (!touchStart || !touchEnd) return;
         const distance = touchStart - touchEnd;
         const isLeftSwipe = distance > minSwipeDistance;
         const isRightSwipe = distance < -minSwipeDistance;
-        if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right');
+        // if (isLeftSwipe || isRightSwipe) console.log('swipe', isLeftSwipe ? 'left' : 'right');
         // if (isLeftSwipe || isRightSwipe) {
         if (isLeftSwipe) {
             moveLastToFront(data.data);
