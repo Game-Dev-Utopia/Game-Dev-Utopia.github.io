@@ -1,0 +1,62 @@
+
+
+/* Mobile Design Settings + General Settings  */
+.List-Timeline{
+    position: relative;
+}
+
+.List-Achievement {
+    margin-top: 5%;
+    position: relative;
+}
+
+.List-Achievement-detail-container {
+    color: white;
+    background-color: #2f2f2f;
+    border-radius: 20px;
+    padding: 2%;
+}
+
+.List-Achievement-detail {
+    /* color: white; */
+    /* background-color: #0e081f; */
+    /* background: linear--radient(to right, #0e081f99, #0e081fff); */
+    /* background-color: yellow; */
+    width: 70.5%;
+    z-index: 0;
+    margin-left: 20%;
+    margin-top: 4%;
+    border-radius: 20px;
+    padding: 0.5%;
+    padding-right: 1%;
+    background: linear-gradient(to right, #2f2f2f, #73A885);
+    /* padding-left: 5%; */
+}
+
+
+.List-Achievement-details {
+    /* width: 70%; */
+    padding-left: 5%;
+
+    li {
+        margin-left: 1rem;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+}
+
+.List-Achievement-title {
+    font-size: 100%;
+    text-align: center;
+}
+
+.List-Timeline::before {
+    content: '';
+    position: absolute;
+    left: 10%;
+    transform : translateX(-50%);
+    height: 110%;
+    width: 7px;
+    background: #73A885;
+}
+
