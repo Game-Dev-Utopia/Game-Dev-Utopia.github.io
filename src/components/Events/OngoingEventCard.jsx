@@ -14,7 +14,7 @@ export default function EventCard({ events }) {
     const deadline = new Date(date);
     return ( 
       <main key={id} className="bg-slate-950 rounded-lg relative h-fit py-2 md:py-0 md:h-[85dvh] gap-12 z-[1] shadow-lg shadow-headings">
-        <div className=" flex items-center flex-col md:flex-row justify-around">
+        <div className=" flex items-center flex-col md:flex-row justify-between">
           <div className=" space-y-6 pl-2 py-2">
             <h1 className="montserrat-subrayada-bold text-4xl text-[#f1dc90]">
               {title.toUpperCase()}
@@ -28,7 +28,7 @@ export default function EventCard({ events }) {
           </div>
             <Timer deadline={deadline}/> 
         </div>
-        <div className="w-fit mx-auto relative mb-2 md:top-10">
+        <div className="w-fit mx-auto relative mb-2 md:top-32">
         <Carousel />
         </div>
         <Image src={imgUrl} fill={true} sizes="100%" alt="image" className="z-[-1] opacity-60 object-cover"/>

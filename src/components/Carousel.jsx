@@ -21,11 +21,11 @@ export default function Slider() {
         autoPlay={true}
         infiniteLoop={true}
         centerSlidePercentage={60}
-        className=" md:w-[45vw] m-2"
+        className=" md:w-[30vw]"
       >
         {data.map((item, index) => (
-          <div key={index} className=" p-2 bg-gray-900 rounded mx-2 shadow text-center">
-            <img src={item} alt="img" className="object-cover aspect-auto h-[30vh]" />
+          <div key={index} className=" bg-gray-900 rounded mx-2 shadow text-center">
+            <img src={item} alt="img" className="object-cover aspect-auto h-32" />
           </div>
         ))}
       </Carousel>

@@ -27,7 +27,7 @@ function Navbar() {
                 <span className='text-white px-4 text-xl'>GameDevUtopia</span>
             </div> */}
             {showSidebar && <nav
-                className={'sm:w-fit w-full max-sm:bottom-3 fixed sm:top-[20%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-2xl shadow-sm shadow-white sm:mx-1'}>
+                className={'sm:w-fit w-full max-sm:bottom-3 fixed sm:top-[20%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-2xl cursor-default shadow-sm shadow-white sm:mx-1'}>
                 <ul className='w-full max-h-fit flex sm:flex-col items-center sm:items-start justify-evenly   '>
                     {!navDescp ? (<li
                         onClick={navToggle}
@@ -39,7 +39,7 @@ function Navbar() {
                         (<li
                             onClick={navToggle}
                             className='flex justify-start gap-5 items-center pl-6 pr-6 pt-0 pb-1 text-xl my-1.5 text-white'>
-                            <RxCross2 onClick={navToggle} fontWeight={900} />
+                            <RxCross2 onClick={navToggle} fontWeight={900} /> <span>Close</span>
                         </li>)}
                     {SidebarData.map((item, index) => {
                         return (

@@ -17,11 +17,11 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <SidebarProvider>
 
-          <div className='w-full flex'>
-            <div className='sm:w-[4%] z-50 sm:inline'>
+          <div className='w-full bg-gray-900 flex'>
+            <div className=''>
               <Navbar />
             </div>
-            <div className='sm:w-[90%] w-full'>
+            <div className='w-screen md:w-[95vw] relative md:left-[5vw]'>
               {children}
             </div>
           </div>
