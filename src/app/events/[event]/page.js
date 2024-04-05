@@ -141,4 +141,4 @@ const Page = ({ params }) => {
     return <EventPageLayout params={event} />
 }
 
-export default page;
+export default Page;
