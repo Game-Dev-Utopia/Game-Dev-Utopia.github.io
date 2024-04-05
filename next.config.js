@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images:{
-        remotePatterns:[
+    output: 'export',
+    images: {
+        remotePatterns: [
             {
                 protocol: 'https',
                 hostname: '**.wixmp.com**',
