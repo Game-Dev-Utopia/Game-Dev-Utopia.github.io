@@ -1,6 +1,7 @@
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaDiscord } from "react-icons/fa6";
 import { IoGameController } from "react-icons/io5";
-import { faGamepad, faComments, faHandshakeSimple, faUserPlus, faPalette, faHandHoldingDollar } from "@fortawesome/free-solid-svg-icons";
+import { VscOrganization } from "react-icons/vsc";
+import { faGamepad, faComments, faHandshakeSimple, faUserPlus, faPalette, faHandHoldingDollar, faTrophy, faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 {/* <FontAwesomeIcon icon={faGamepad} /> */ }
 
 const socials = [
@@ -36,63 +37,58 @@ const footerContents = [
         title: "Quick Links",
         content: [
             {
-                name: "Achievements",
-                link: "/achievements"
+                display: "Achievements",
+                link: "/achievements",
+                icon: faTrophy
             },
             {
-                name: "Projects",
-                arr: [
-                    {
-                        display: "Game Shelf",
-                        link: "/gameshelf",
-                        reactIcon: IoGameController
-                    },
-                    {
-                        display: "Art Works",
-                        link: "/artworks",
-                        icon: faPalette
-                    }
-                ]
+                display: "Game Shelf",
+                link: "/games",
+                reactIcon: IoGameController
             },
             {
-                name: "About Us",
-                link: "/aboutus"
+                display: "Art Works",
+                link: "/designs",
+                icon: faPalette
             },
+            {
+                display: "About Us",
+                link: "/about-us",
+                reactIcon: VscOrganization
+            },
+            {
+                display: "Events",
+                link: "/events",
+                icon: faCalendarCheck
+            }
+
         ]
     },
     {
         title: "Let's Talk",
         content: [
-            {
-                name: "",
-                arr: [
 
-                    {
-                        display: "FAQs",
-                        link: "/faqs",
-                        icon: faComments
-                    },
-                    {
-                        display: "Join Us",
-                        link: "/joinus",
-                        icon: faUserPlus
-                    },
-                    {
-                        display: "Support Us",
-                        link: "/supportus",
-                        icon: faHandHoldingDollar
-                    },
-                    {
-                        display: "Become Our Partner",
-                        link: "/partner",
-                        icon: faHandshakeSimple
-                    }
-                ]
+            {
+                display: "FAQs",
+                link: "/letsTalk",
+                icon: faComments
             },
             {
-                name: "Teams",
-                link: "/teams"
+                display: "Join Us",
+                link: "/letsTalk",
+                icon: faUserPlus
+            },
+            {
+                display: "Support Us",
+                link: "/letsTalk",
+                icon: faHandHoldingDollar
+            },
+            {
+                display: "Become Our Partner",
+                link: "/letsTalk",
+                icon: faHandshakeSimple
             }
+
             // {
             //     name: "CopyRights and Patents",
             //     link: "/copyrights"
