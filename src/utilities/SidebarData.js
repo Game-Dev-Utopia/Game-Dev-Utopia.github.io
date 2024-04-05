@@ -1,7 +1,13 @@
 import React from 'react';
+import { IoGameController } from "react-icons/io5";
+import { VscOrganization } from "react-icons/vsc";
+import { faComments, faPalette, faTrophy, faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+{/* <FontAwesomeIcon icon={faCalendarCheck} /> */ }
 
 export const SidebarData = [
     {
@@ -11,33 +17,39 @@ export const SidebarData = [
         cName: 'nav-text'
     },
     {
-        title: 'Reports',
-        path: '/reports',
-        icon: <IoIcons.IoIosPaper />,
+        title: 'Games',
+        path: '/games',
+        icon: <IoGameController />,
         cName: 'nav-text'
     },
     {
-        title: 'Products',
-        path: '/products',
-        icon: <FaIcons.FaCartPlus />,
+        title: 'Designs',
+        path: '/designs',
+        icon: <FontAwesomeIcon icon={faPalette} />,
         cName: 'nav-text'
     },
     {
-        title: 'Team',
-        path: '/team',
-        icon: <IoIcons.IoMdPeople />,
+        title: 'Events',
+        path: '/events',
+        icon: <FontAwesomeIcon icon={faCalendarCheck} />,
         cName: 'nav-text'
     },
     {
-        title: 'Messages',
-        path: '/messages',
-        icon: <FaIcons.FaEnvelopeOpenText />,
+        title: 'Achievements',
+        path: '/achievements',
+        icon: <FontAwesomeIcon icon={faTrophy} />,
         cName: 'nav-text'
     },
     {
-        title: 'Support',
+        title: 'Lets Talk',
         path: '/letsTalk',
-        icon: <IoIcons.IoMdHelpCircle />,
+        icon: <FontAwesomeIcon icon={faComments} />,
+        cName: 'nav-text'
+    },
+    {
+        title: 'About Us',
+        path: '/about-us',
+        icon: <VscOrganization />,
         cName: 'nav-text'
     }
 ];
