@@ -41,10 +41,11 @@ export default function App() {
         <IconContext.Provider value={{ color: '#fff', size: "27" }}>
             <div ref={footer} id="footer"
                 // className="bg-[#602778] text-center text-white flex rounded-3xl lg:justify-between justify-center h-screen lg:py-10 border-y-2 border-gray-400"
-                className="bg-[#602778] text-center gap-y-1 text-white grid grid-cols-1 lg:grid-cols-8 rounded-3xl h-screen lg:h-fit border-y-2 border-gray-400"
+                className="text-center gap-y-1 relative top-16 text-white grid grid-cols-1 lg:grid-cols-8 rounded-3xl h-screen lg:h-fit border-y-2 border-gray-400"
                 style={{
                     backgroundColor: "#000",
                     padding: "3% 0 1% 0",
+                    margin: "3% 1% ",
                 }}>
 
 
@@ -73,17 +74,13 @@ export default function App() {
                             <div className="">
                                 {ele.content.map((list) =>
                                     <div key={list.name} className="my-4 text-lg">
-                                        {list.name !== "" ? <Link href={`${list.link}`}>{list.name}</Link> : ""}
-                                        <ul className="my-2 text-white text-justify relative lg:left-0 ">
-                                            {list.arr ? list.arr.map((e) =>
-                                                <li key={e.display}
-                                                    className="flex text-center justify-center lg:justify-start gap-2 items-center text-base my-2 rounded-lg mx-auto lg:mx-0">
-                                                    {e.icon && <FontAwesomeIcon icon={e.icon} />}
-                                                    {e.reactIcon && <e.reactIcon size={17} />}
-                                                    <Link href={`${e.link}`} className="text-left text-base rounded-lg px-4 py-1 w-44">{e.display}</Link>
-                                                </li>
-                                            ) : ""}
-                                        </ul>
+
+                                        <li key={list.display}
+                                            className="flex text-center justify-center lg:justify-start gap-2 items-center text-base my-2 rounded-lg mx-auto lg:mx-0">
+                                            {list.icon && <FontAwesomeIcon icon={list.icon} />}
+                                            {list.reactIcon && <list.reactIcon size={17} />}
+                                            <Link href={`${list.link}`} className="text-left decoration-transparent text-white text-base rounded-lg px-4 py-1 w-44">{list.display}</Link>
+                                        </li>
                                     </div>
                                 )}
                             </div>
@@ -91,7 +88,8 @@ export default function App() {
                     )}
 
                     <div className="lg:w-1/4 w-full text-center col-span-1 pb-8">
-                        <div className="relative col-start-4 flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[4]">
+                        <div
+                            className="relative col-start-4 flex place-items-center before:absolute before:h-[300px] before:w-[80px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-transparent before:to-transparent before:blur-3xl before:content-[''] after:absolute after:-z-20 after:h-[120px] after:w-[80px] after:translate-x-full after:bg-gradient-conic after:from-sky-400 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[4]">
                             <h1 className="text-3xl w-full font-extrabold lg:mt-7 h-full">GameDevUtopia</h1>
                         </div>
                     </div>
