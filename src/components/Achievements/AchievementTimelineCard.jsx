@@ -59,9 +59,6 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
             }
             <p className='text-center List-Achievement-time text-sm md:text-lg rounded-[1rem] px-3 '>{data.date}</p>
             <div 
-                style={{ 
-                    animation: (transparency >= 1) ? 'flipCardAnimRight 1s' : 'none'
-                }}
                 className='List-Achievement-detail text-[3vw] md:text-[0.9vw]'>
                 <div className='List-Achievement-detail-container'>
                     <div className='List-Achievement-detail-inner'>

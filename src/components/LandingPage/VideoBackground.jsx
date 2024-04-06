@@ -2,9 +2,9 @@
 
 const VideoBackground = ({videoPath}) => {
     return (
-      <div className="fixed inset-0 z-0 overflow-hidden">
+      <div className="inset-0 absolute  z-0 overflow-hidden">
         <video
-          className="w-full object-cover"
+          className="h-screen w-full aspect-square object-cover"
           src={videoPath}
           autoPlay
           muted
