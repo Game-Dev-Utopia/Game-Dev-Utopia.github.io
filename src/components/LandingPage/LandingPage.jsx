@@ -33,12 +33,13 @@ import Typewriter from "typewriter-effect";
     }, []);
     console.log(image1);
     return (
-    <div className="min-h-screen bg-cover bg-gray-200 bg-center overflow-none">
+        <div >
+    <div className="min-h-screen bg-cover  bg-gray-200 bg-center overflow-hidden">
     <VideoBackground videoPath={videoPath} />
     {(image1!=null && image2!=null && image3!=null)?<Diamonds image1={image1} image2={image2} image3={image3}/> :<> </> }
     
-    <div className='w-full sticky'>
-      <div className='text-9xl w-3/4  text-left font-bold text-yellow-500 ml-5 mt-12 sticky transform scale-y-150'>
+    <div className='w-full '>
+      <div className='text-9xl  w-3/4 text-left font-bold text-yellow-500 ml-5 mt-12  transform scale-y-150'>
         <Typewriter 
             options={{
                 strings: [
@@ -66,7 +67,7 @@ import Typewriter from "typewriter-effect";
     </button>
   
   </div>
-  
+  </div>
   );
 };
 
