@@ -55,7 +55,7 @@ const EventPageRegister = ({ close, price }) => {
     return (
 
 
-        <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
+        <div className='fixed left-0 w-full h-[43rem] top-[3.5rem] flex items-center justify-center z-50'>
             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
             <div className='z-50 flex flex-col justify-center font-semibold placeholder:text-sm placeholder:font-normal text-[#fff] items-center w-[98%] md:w-[30%] h-full my-4 px-4 py-2 mx-auto shadow shadow-gray-600 bg-zinc-900 rounded-xl'>
                 <div className='w-full flex justify-center relative'>

@@ -24,15 +24,15 @@ function Accordion({
 
   return (
     <>
-      <div className="rounded-3xl drop-shadow-xl overflow-hidden px-7 my-5 bg-white bg-opacity-10 bg-clip-padding backdrop-filter backdrop-blur-sm shadow-md shadow-cyan-500">
+      <div className="rounded-3xl drop-shadow-xl overflow-hidden px-7 my-5 bg-slate-800 bg-clip-padding backdrop-filter backdrop-blur-sm shadow-md shadow-cyan-500">
         <h2>
           <div
-            className="flex items-center justify-between w-full text-left font-semibold py-2 text-white outline-none"
+            className="flex items-center justify-between w-full text-left font-semibold py-2  text-white outline-none"
             onClick={handleClick}
             aria-expanded={accordionOpen}
             aria-controls={`accordion-text-${id}`}
           >
-            <span className="flex items-center font-bold text-xl">
+            <span className="flex items-center font-bold text-xl ">
               <span className="w-20 h-20 rounded-full mr-2">
                 <img src={img} alt="Profile" />
               </span>
