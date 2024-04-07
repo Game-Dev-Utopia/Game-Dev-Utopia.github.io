@@ -17,7 +17,7 @@ export default function Form({ heading, image , stepsData }) {
   };
 
   return (
-    <div className="body-font relative bg-clip-padding backdrop-filter bg-white bg-opacity-10 backdrop-blur flex flex-col md:flex-row">
+    <div className="body-font relative bg-clip-padding backdrop-filter bg-gray-950 flex flex-col md:flex-row">
       <div className="w-full md:w-4/12">
         <img src={image} alt="Your Image" className="h-3/5 m-auto mt-20" />
       </div>

@@ -3,7 +3,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "../components/Sponsers.css";
-@import "../components/Stepper.css";
+@import "../components/Letstalk/Stepper.css";
 @import "../components/Home.css";
 
 :root {
@@ -32,6 +32,10 @@
     --card-foreground: 92, 131, 161;
     --card-background-primary: 4, 13, 18;
     --card-background-secondary: 24, 61, 61;
+
+    --primary-color:linear-gradient(99deg, rgb(221, 36, 118) 0%, rgb(221, 36, 118) 0%, rgb(255, 81, 47) 100%, rgb(255, 81, 47) 100%);
+
+    --pink : 221,36,118;
   }
 }
 

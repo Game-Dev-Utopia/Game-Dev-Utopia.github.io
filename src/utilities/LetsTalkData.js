@@ -6,8 +6,12 @@ export const Lets_talkData = [
     img: "https://cdni.iconscout.com/illustration/premium/thumb/woman-login-into-banking-app-5194430-4341049.png",
     borderColor: "#44ff00",
     stepsData: [
-      { title: "Details", fields: ["Name", "Email", "PhoneNo"] },
-      { title: "Organisation Info", fields: ["OrgName", "Industry", "LinkedInUrl", "Description"] },
+      { title: "Details", fields: ["Name", "Email", {
+        "dropdownName": "Phone Number",
+        "options": ["+91", "+92"]
+      }] },
+      { title: "Organisation Info", fields: ["OrgName", {"dropdownName": "Industry",
+      "options": ["option 1", "option 2"]}, "LinkedInUrl", "Description"] },
       { title: "Business Idea", fields: ["Business Idea ", "Problem", "Solution", "Budget", "Team Size"] }
     ]
   },
@@ -30,8 +34,9 @@ export const Lets_talkData = [
     img: "https://fiftytwodigital.com/wp-content/uploads/2022/02/joinus.png",
     borderColor: "#fa2335",
     stepsData: [
-      { title: "Your Info", fields: ["Name", "Email", "Age", "Sex"] },
-      { title: "Step 2", fields: ["Qualification (DD)", "Occupation"] },
+      { title: "Your Info", fields: ["Name", "Email", "Age", "Gender"] },
+      { title: "Step 2", fields: [ {"dropdownName": "Qualification",
+      "options": ["Post Graduate", "Under Graduate", "Diploma","Secondary Education"]}, "Occupation"] },
       { title: "Reasons", fields: ["Why joinUs", "Role Preference"] }
     ]
   },
@@ -43,7 +48,9 @@ export const Lets_talkData = [
     borderColor: "#f59842",
     stepsData: [
       {
-        title: "info", fields: [" Name", " Email", " PhoneNo", " Query type", "Emergency type", "Message"
+        title: "info", fields: [" Name", " Email", " PhoneNo",{"dropdownName": "Query Type",
+        "options": ["option 1", "option 2"]}, {"dropdownName": "Emergency Type",
+        "options": ["option 1", "option 2"]}, "Message"
         ]
       },
 
@@ -57,7 +64,8 @@ export const Lets_talkData = [
     borderColor: "#b2f084",
     stepsData: [
       { title: "Basic Info ", fields: [" Name", " Email", " PhoneNo"] },
-      { title: "Organisation Info", fields: ["OrgName", "Industry", "LinkedInUrl", "Description"] },
+      { title: "Organisation Info", fields: ["OrgName", {"Industry": "Industry",
+      "options": ["option 1", "option 2"]}, "LinkedInUrl", "Description"] },
       { title: "Event Info", fields: ["Event Name", "Event Type", "Description", "Partnership Details", "Dates"] }
     ]
   },
