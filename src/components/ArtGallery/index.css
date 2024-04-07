@@ -1,6 +1,5 @@
 
 *{
-    background: #222;
     font-family: 'Open Sans';
   }
   
@@ -12,7 +11,7 @@
       box-sizing: border-box;
     }
     
-    h1 {
+    .design-page h1 {
       margin: 10px;
       color: yellow;
     }
