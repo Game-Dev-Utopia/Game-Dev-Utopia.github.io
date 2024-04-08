@@ -1,4 +1,5 @@
 .carousel-container {
+  width: 100vw;
   height: 150vh;
   position: relative;
   overflow: hidden;
