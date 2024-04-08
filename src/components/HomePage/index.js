@@ -28,7 +28,7 @@ const developers = [
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const handleDesign = () => {
     navigate('/design');
