@@ -41,11 +41,11 @@ export default function App() {
         <IconContext.Provider value={{ color: '#fff', size: "27" }}>
             <div ref={footer} id="footer"
                 // className="bg-[#602778] text-center text-white flex rounded-3xl lg:justify-between justify-center h-screen lg:py-10 border-y-2 border-gray-400"
-                className="text-center gap-y-1 relative top-16 text-white grid grid-cols-1 lg:grid-cols-8 rounded-3xl h-screen lg:h-fit border-y-2 border-gray-400"
+                className="text-center gap-y-1 relative top-[3.8rem] text-white grid grid-cols-1 lg:grid-cols-8 rounded-3xl h-screen lg:h-fit border-y-2 border-gray-400"
                 style={{
                     backgroundColor: "#000",
                     padding: "3% 0 1% 0",
-                    margin: "3% 1% ",
+                    margin: "1% 0.2% ",
                 }}>
 
 

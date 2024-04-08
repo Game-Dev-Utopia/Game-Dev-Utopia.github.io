@@ -14,7 +14,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={"bg-[#111827]"}>
+      <body className={"bg-slate-900"}>
         <SidebarProvider>
 
           {/* <div className='w-full bg-gray-900 flex'>
@@ -25,9 +25,9 @@ export default function RootLayout({ children }) {
   </div>
 </div> */}
           <div className='w-full'>
-            <div className='w-full bg-gray-900 flex'>
+            <div className='w-full bg-slate-900 flex'>
               <Navbar />
-              <div className='w-screen md:w-[95vw] relative top-16 md:left-[5vw]'>
+              <div className='w-screen md:w-[96.5vw] relative top-[3.8rem] sm:left-[3.5vw]'>
                 {children}
               </div>
             </div>

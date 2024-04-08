@@ -43,13 +43,13 @@ const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
                 Registration Ends on {(new Date(toDate(deadLine))).toString()}
             </div>
             <p className="text-center text-xl pb-[1%]">Event starts in</p>
-            <div className="flex flex-auto justify-center border-2 border-yellow-300 w-[90%] mx-[5%] sm:text-2xl text-lg text-center rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl">
+            <div className="flex flex-auto justify-center border-2 border-cyan-500 w-[90%] mx-[5%] sm:text-2xl text-lg text-center rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl">
                 <TimeElement text={"Days"} data={days} />
                 <TimeElement text={"Hours"} data={hours} />
                 <TimeElement text={"Minutes"} data={minutes} />
                 <TimeElement text={"Seconds"} data={seconds} />
             </div>
-            <button onClick={() => openRegisterPage()} className="bg-[#EFC95C] my-10 rounded-2xl p-2 text-black w-[90vw] mx-[5vw] sm:w-[90%] sm:mx-[5%] sm:text-2xl">Register Here</button>
+            <button onClick={() => openRegisterPage()} className="bg-cyan-500 my-10 rounded-2xl p-2 text-black w-[90vw] mx-[5vw] sm:w-[90%] sm:mx-[5%] sm:text-2xl">Register Here</button>
         </>
     )
 }

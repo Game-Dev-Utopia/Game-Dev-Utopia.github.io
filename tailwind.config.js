@@ -52,7 +52,12 @@ module.exports = {
         'Event-heading': '#F1DC90',
         'Event-font': '#FFFFFF',
         'Event-Accordian': '#D9D9D933',
-        'Event-outline': '#F2613F'
+        'Event-outline': '#F2613F',
+
+        'Trialprimary1': '#dd2476',
+        'Trialprimary2': '#ff512f',
+        'NeonOrange': '#ff5f1f',
+        'bglinear':'[linear-gradient(99deg, #dd2476 0%, #dd2476 0%, #ff512f 100%, #ff512f 100%)]',
       }
     },
   },

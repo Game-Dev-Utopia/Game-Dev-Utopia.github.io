@@ -3,7 +3,7 @@ import Designs from '@/components/DesignDetails'
 export default function Page(){
   return (
     <div>
-      <Games />
+       <Games />
       <Designs />
     </div>
   )

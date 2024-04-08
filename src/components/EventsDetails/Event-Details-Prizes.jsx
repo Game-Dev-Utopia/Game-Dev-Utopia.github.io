@@ -1,10 +1,10 @@
 import { FaTrophy } from "react-icons/fa";
 
-const Prize = ({name, prize, index}) => {
+const Prize = ({ name, prize, index }) => {
     var color = "text-amber-400"
-    if(index == 1) {
+    if (index == 1) {
         color = "text-lime-50"
-    } else if(index == 2) {
+    } else if (index == 2) {
         color = "text-yellow-700"
     }
 
@@ -33,23 +33,23 @@ const Prizes = ({ prizes }) => {
     return (
         <>
             <div className="flex justify-center mb-[5%]">
-                <p className="text-3xl sm:text-[3rem] text-Event-heading"><b>PRIZES</b></p>
+                <p className="text-3xl sm:text-[3rem] text-white"><b>PRIZES</b></p>
             </div>
             <div className="w-full flex justify-center items-end">
-                <Prize 
-                    name={prizes[1].PrizeName} 
+                <Prize
+                    name={prizes[1].PrizeName}
                     prize={prizes[1].Prize}
                     index={1}
                     key={1}
                 />
-                <Prize 
-                    name={prizes[0].PrizeName} 
+                <Prize
+                    name={prizes[0].PrizeName}
                     prize={prizes[0].Prize}
                     index={0}
                     key={0}
                 />
-                <Prize 
-                    name={prizes[2].PrizeName} 
+                <Prize
+                    name={prizes[2].PrizeName}
                     prize={prizes[2].Prize}
                     index={2}
                     key={2}

@@ -39,18 +39,20 @@ function Navbar() {
 
     return (
         <>
-            <div className='bg-black justify-between h-[4.3rem] px-2 flex fixed items-center w-full z-50'>
-                <div className='flex justify-center items-center'>
+            <div className='bg-black justify-between h-[3.5rem] px-2 flex fixed items-center w-full z-50'>
+                <Link href={"/"}>
+                    <div className='flex justify-center items-center'>
 
-                    <Image
-                        src={GduLogo}
-                        alt="gdulogo"
-                        width={35}
-                        height={35}
-                        className="mx-4 aspect-auto object-contain text-black"
-                    />
-                    <span className='text-white text-2xl'>GameDevUtopia</span>
-                </div>
+                        <Image
+                            src={GduLogo}
+                            alt="gdulogo"
+                            width={30}
+                            height={30}
+                            className="mx-4 aspect-auto object-contain text-black"
+                        />
+                        <span className='text-white text-2xl'>GameDevUtopia</span>
+                    </div>
+                </Link>
                 <FaIcons.FaBell className='absolute right-12' size={25} onClick={bellButtonHandler} />
                 <ToastContainer
                     position="top-right"
@@ -69,30 +71,37 @@ function Navbar() {
 
 
             {showSidebar && <nav
-                className={'sm:w-fit sm:h-[30rem] items-center w-full max-sm:bottom-3 fixed sm:top-[20%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-2xl cursor-default shadow-sm shadow-white sm:mx-1'}>
-                <ul className='w-full max-h-fit flex sm:gap-y-3 sm:flex-col items-center sm:items-start justify-evenly   '>
-                    {!navDescp ? (<li
-                        onClick={navToggle}
-                        className='sm:flex justify-start hidden gap-5 items-center pl-6 pr-6 pt-0 pb-1 text-xl my-1.5'>
-                        <FaIcons.FaBars color='white' />
+                className={'sm:w-fit sm:h-[33rem] items-center w-full max-sm:bottom-0.5 fixed sm:top-[17%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-xl cursor-default shadow-sm shadow-white sm:mx-0.5'}>
+                <ul className='w-full h-full flex sm:gap-y-4 sm:flex-col sm:items-start items-center justify-evenly sm:justify-center'>
 
-                    </li>)
+
+                    {!navDescp ?
+                        (<li
+                            onClick={navToggle}
+                            className='sm:flex hidden gap-5 px-4 pt-0 pb-1 text-lg my-1.5'>
+                            <FaIcons.FaBars color='white' />
+
+                        </li>)
                         :
                         (<li
                             onClick={navToggle}
-                            className='flex justify-start gap-5 items-center sm:px-6 pt-0 pb-1 text-xl my-0.5 text-white'>
+                            className='flex gap-5 sm:px-4 pt-0 pb-0.5 text-lg my-0.5 text-white'>
                             <RxCross2 onClick={navToggle} fontWeight={900} /> <span>Close</span>
                         </li>)}
+
+
                     {SidebarData.map((item, index) => {
                         return (
-                            <div key={index} className='flex flex-col-reverse sm:flex-row sm:justify-start sm:gap-4 items-center'>
+                            <div key={index} className='flex flex-col-reverse sm:flex-row justify-center sm:gap-y-4 sm:gap-x-2 items-center'>
                                 <li
 
-                                    className={pathname == item.path ? "rounded-lg bg-[#f3bc12]  " + navClasses : navClasses}
+                                    className={pathname === item.path ? "rounded-lg bg-[#f3bc12]  " + navClasses : navClasses}
                                 >
                                 </li>
                                 <Link href={item.path}>
-                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-[#f3bc12] items-center text-2xl' : 'flex justify-center sm:gap-7 items-center text-2xl text-white'}>
+                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-[#f3bc12] items-center text-[1.35rem]'
+                                        :
+                                        'flex justify-center sm:gap-7 items-center text-[1.35rem] text-white'}>
                                         {item.icon}
                                         {navDescp ? <div className='text-lg pr-4 w-40'>{item.title}</div> : null}
                                     </div>
