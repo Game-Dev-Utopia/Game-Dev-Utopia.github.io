@@ -1,3 +1,4 @@
+'use client';
 import HomePageGamesSection from "@/components/HomePageGamesSection";
 import LandingPage from "@/components/LandingPage/LandingPage";
 import Sponser_Card from "@/components/Sponser_Card";

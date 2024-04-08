@@ -1,33 +1,49 @@
-import React from 'react'
 
+import React, { useEffect, useState } from 'react'
+import { getRequest } from '@/api/api';
+import axios from "axios";
 const Sponser_Card = () => {
+    const [sponserData, setSponserData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+          try {
+            const response = await getRequest('api/sponser/getsponsers');
+            console.log("res", response);
+            setSponserData(response);
+          } catch (error) {
+            console.error('Error fetching sponser data:', error);
+            // Handle error (e.g., set an error state)
+          }
+        };
+      
+        fetchData();
+      }, []);
+      
+
     return (
         <>
-       <div className='outer_c'>
-       <div className='con' >
-            <div class="slider_1 bg-slate-900">
-                <div class="slide-track">
-                    <div class="slide">
-                        <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png"  />
+            <div className='outer_c'>
+                <div className='con' >
+                    <div class="slider_1 bg-slate-900">
+                        <div class="slide-track">
+                        {sponserData.map(sponsor => (
+                             <div class="slide">
+                             <img src={sponsor.logo}  />
+                         </div>
+                        ))}
+
+
+
+
+
+
+                        </div>
                     </div>
-
-                    <div class="slide">
-                        <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png"  />
-                    </div>
-
-                    <div class="slide">
-                        <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png"  />
-                    </div>
-
-                    
-                    
-
                 </div>
             </div>
-            </div>
-       </div>
 
-{/*
+            {/*
             <div class="slider_2">
                 <div class="slide-track">
                     <div class="slide">

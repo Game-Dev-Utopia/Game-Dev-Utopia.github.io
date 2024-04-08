@@ -6,10 +6,95 @@ export const Lets_talkData = [
     img: "https://cdni.iconscout.com/illustration/premium/thumb/woman-login-into-banking-app-5194430-4341049.png",
     borderColor: "#44ff00",
     stepsData: [
-      { title: "Basic Info", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "dropdown", options: ["+91", "+92"] }] },
-      { title: "Organisation Info", fields: [{ fieldName: "Org Name", inputType: "text" }, { fieldName: "Industry", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "LinkedIn Url", inputType: "text" }, { fieldName: "Description", inputType: "textarea" }] },
-      { title: "Business Idea", fields: [{ fieldName: "Business Idea", inputType: "textarea" }, { fieldName: "Problem", inputType: "textarea" }, { fieldName: "Solution", inputType: "textarea" }, { fieldName: "Budget", inputType: "text" }, { fieldName: "Team Size", inputType: "text" }] }
-    ]
+      {
+        title: "Basic Info",
+        fields: [
+          {
+            fieldName: "Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your name",
+          },
+          {
+            fieldName: "Email",
+            inputType: "text",
+            datatype: "email",
+            placeholder: "Enter your email",
+          },
+          {
+            fieldName: "Phone No",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your phone number[+91]",
+          },
+        ],
+      },
+      {
+        title: "Organisation Info",
+        fields: [
+          {
+            fieldName: "Org Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your organization name",
+          },
+          {
+            fieldName: "Industry",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["option 1", "option 2"],
+            placeholder: "Select your industry",
+          },
+          {
+            fieldName: "LinkedIn Url",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your LinkedIn URL",
+          },
+          {
+            fieldName: "Description",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your organization description",
+          },
+        ],
+      },
+      {
+        title: "Business Idea",
+        fields: [
+          {
+            fieldName: "Business Idea",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your business idea",
+          },
+          {
+            fieldName: "Problem",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Describe the problem you're solving",
+          },
+          {
+            fieldName: "Solution",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Describe your solution",
+          },
+          {
+            fieldName: "Budget",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your budget",
+          },
+          {
+            fieldName: "Team Size",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your team size",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Project Proposal",
@@ -18,10 +103,76 @@ export const Lets_talkData = [
     img: "https://cdni.iconscout.com/illustration/premium/thumb/login-page-4468581-3783954.png?f=webp",
     borderColor: "#ebf707",
     stepsData: [
-      { title: "Basic Info", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "text" }] },
-      { title: "Organisation Info", fields: [{ fieldName: "Org Name", inputType: "textarea" }, { fieldName: "Project Idea", inputType: "textarea" }] },
-      { title: "Project Details", fields: [{ fieldName: "Idea", inputType: "textarea" }, { fieldName: "Expected Budget", inputType: "text" }, { fieldName: "Team Size", inputType: "text" }, { fieldName: "Project Duration", inputType: "text" }] }
-    ]
+      {
+        title: "Basic Info",
+        fields: [
+          {
+            fieldName: "Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your name",
+          },
+          {
+            fieldName: "Email",
+            inputType: "text",
+            datatype: "email",
+            placeholder: "Enter your email",
+          },
+          {
+            fieldName: "Phone No",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your phone number[+91]",
+          },
+        ],
+      },
+      {
+        title: "Organisation Info",
+        fields: [
+          {
+            fieldName: "Org Name",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your organization name",
+          },
+          {
+            fieldName: "Project Idea",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your project idea",
+          },
+        ],
+      },
+      {
+        title: "Project Details",
+        fields: [
+          {
+            fieldName: "Idea",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your project idea",
+          },
+          {
+            fieldName: "Expected Budget",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your expected budget",
+          },
+          {
+            fieldName: "Team Size",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your team size",
+          },
+          {
+            fieldName: "Project Duration",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your project duration in months",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Join Us",
@@ -30,10 +181,78 @@ export const Lets_talkData = [
     img: "https://fiftytwodigital.com/wp-content/uploads/2022/02/joinus.png",
     borderColor: "#fa2335",
     stepsData: [
-      { title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Age", inputType: "text" }, { fieldName: "Gender", inputType: "text" }] },
-      { title: "Career Info", fields: [{ fieldName: "Qualification", inputType: "dropdown", options: ["Post Graduate", "Graduate", "Under Graduate", "Diploma", "Secondary Education"] }, { fieldName: "Occupation", inputType: "text" }] },
-      { title: "Reasons", fields: [{ fieldName: "Why JoinUs", inputType: "textarea" }, { fieldName: "Role Preference", inputType: "textarea" }] }
-    ]
+      {
+        title: "Basic Info",
+        fields: [
+          {
+            fieldName: "Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your name",
+          },
+          {
+            fieldName: "Email",
+            inputType: "text",
+            datatype: "email",
+            placeholder: "Enter your email",
+          },
+          {
+            fieldName: "Age",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your age",
+          },
+          {
+            fieldName: "Gender",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["Male", "Female", "Other"],
+            placeholder: "Select your gender",
+          },
+        ],
+      },
+      {
+        title: "Career Info",
+        fields: [
+          {
+            fieldName: "Qualification",
+            inputType: "dropdown",
+            datatype: "text",
+            options: [
+              "Post Graduate",
+              "Graduate",
+              "Under Graduate",
+              "Diploma",
+              "Secondary Education",
+            ],
+            placeholder: "Select your qualification",
+          },
+          {
+            fieldName: "Occupation",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your occupation",
+          },
+        ],
+      },
+      {
+        title: "Reasons",
+        fields: [
+          {
+            fieldName: "Why JoinUs",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter why you want to join us",
+          },
+          {
+            fieldName: "Role Preference",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your role preference",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Query",
@@ -43,10 +262,54 @@ export const Lets_talkData = [
     borderColor: "#f59842",
     stepsData: [
       {
-        title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "text" } ]},
-       { title: "Query", fields: [{ fieldName: "Query Type", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "Emergency Type", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "Message", inputType: "textarea" }]
+        title: "Basic Info",
+        fields: [
+          {
+            fieldName: "Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your name",
+          },
+          {
+            fieldName: "Email",
+            inputType: "text",
+            datatype: "email",
+            placeholder: "Enter your email",
+          },
+          {
+            fieldName: "Phone No",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your phone number",
+          },
+        ],
       },
-    ]
+      {
+        title: "Query",
+        fields: [
+          {
+            fieldName: "Query Type",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["option 1", "option 2"],
+            placeholder: "Select your query type",
+          },
+          {
+            fieldName: "Emergency Type",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["option 1", "option 2"],
+            placeholder: "Select your emergency type",
+          },
+          {
+            fieldName: "Message",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your message",
+          },
+        ],
+      },
+    ],
   },
   {
     title: "Event Host",
@@ -55,9 +318,94 @@ export const Lets_talkData = [
     img: "https://png.pngtree.com/png-vector/20220811/ourmid/pngtree-radio-show-host-and-guest-flat-color-vector-faceless-characters-png-image_5844342.png",
     borderColor: "#b2f084",
     stepsData: [
-      { title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "PhoneNo", inputType: "text" }] },
-      { title: "Organisation Info", fields: [{ fieldName: "OrgName", inputType: "text" }, { fieldName: "Industry", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "LinkedInUrl", inputType: "text" }, { fieldName: "Description", inputType: "textarea" }] },
-      { title: "Event Info", fields: [{ fieldName: "Event Name", inputType: "text" }, { fieldName: "Event Type", inputType: "text" }, { fieldName: "Event Description", inputType: "textarea" }, { fieldName: "Partnership Details", inputType: "text" }, { fieldName: "Dates", inputType: "text" }] }
-    ]
+      {
+        title: "Basic Info",
+        fields: [
+          {
+            fieldName: "Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your name",
+          },
+          {
+            fieldName: "Email",
+            inputType: "text",
+            datatype: "email",
+            placeholder: "Enter your email",
+          },
+          {
+            fieldName: "PhoneNo",
+            inputType: "text",
+            datatype: "number",
+            placeholder: "Enter your phone number[+91]",
+          },
+        ],
+      },
+      {
+        title: "Organisation Info",
+        fields: [
+          {
+            fieldName: "OrgName",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your organization name",
+          },
+          {
+            fieldName: "Industry",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["option 1", "option 2"],
+            placeholder: "Select your industry",
+          },
+          {
+            fieldName: "LinkedInUrl",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your LinkedIn URL",
+          },
+          {
+            fieldName: "Description",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your organization description",
+          },
+        ],
+      },
+      {
+        title: "Event Info",
+        fields: [
+          {
+            fieldName: "Event Name",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your event name",
+          },
+          {
+            fieldName: "Event Type",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your event type",
+          },
+          {
+            fieldName: "Event Description",
+            inputType: "textarea",
+            datatype: "text",
+            placeholder: "Enter your event description",
+          },
+          {
+            fieldName: "Partnership Details",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your partnership details",
+          },
+          {
+            fieldName: "Dates",
+            inputType: "text",
+            datatype: "text",
+            placeholder: "Enter your event dates",
+          },
+        ],
+      },
+    ],
   },
 ];

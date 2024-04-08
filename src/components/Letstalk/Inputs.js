@@ -28,7 +28,7 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           value={inputData[field.fieldName.toLowerCase()] || ''}
           onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value)}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
-          placeholder={field.fieldName}
+          placeholder={field.placeholder}
         />
       );
     } else if (field.inputType === 'dropdown' && Array.isArray(field.options)) {
@@ -51,13 +51,13 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
       return (
         <input
           key={index}
-          type="text"
+          type={field.datatype}
           id={field.fieldName.toLowerCase()}
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
           onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value)}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
-          placeholder={field.fieldName}
+          placeholder={field.placeholder}
         />
       );
     }

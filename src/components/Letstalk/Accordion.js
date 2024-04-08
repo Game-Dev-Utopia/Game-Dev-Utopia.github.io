@@ -10,6 +10,7 @@ function Accordion({
   stepsData,
   isOpen,
   onClick,
+  toastHandler
 }) {
   const [accordionOpen, setAccordionOpen] = useState(false);
 
@@ -80,7 +81,7 @@ function Accordion({
             }`}
         >
           <div className="overflow-hidden">
-            <Form heading={title} image={img} stepsData={stepsData} />
+            <Form heading={title} image={img} stepsData={stepsData} toastHandler={toastHandler} />
           </div>
         </div>
       </div>
