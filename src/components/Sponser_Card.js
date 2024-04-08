@@ -10,49 +10,42 @@ const Sponser_Card = () => {
                             <div className="slide">
                                 <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
                             </div>
-                            <div className='outer_c'>
-                                <div className='con' >
-                                    <div class="slider_1 bg-slate-900">
-                                        <div class="slide-track">
-                                            <div class="slide">
-                                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
-                                            </div>
 
-                                            <div className="slide">
-                                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
-                                            </div>
-
-                                            <div className="slide">
-                                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
-                                            </div>
-
-
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="slide">
+                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
                             </div>
 
-                            {/*
+                            <div className="slide">
+                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
+                            </div>
+
+                            <div className="slide">
+                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
+                            </div>
+
+                            <div className="slide">
+                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
+                            </div>
+
+                            <div className="slide">
+                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
+                            </div>
+
+                            <div className="slide">
+                                <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png" />
+                            </div>
+
+                            <div className="slide">
+                                <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png" />
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/*
             <div className="slider_2">
                 <div className="slide-track">
                     <div className="slide">
@@ -101,8 +94,8 @@ const Sponser_Card = () => {
             </div>
 
     */}
-                        </>
-                        )
+        </>
+    )
 }
 
-                        export default Sponser_Card
+export default Sponser_Card

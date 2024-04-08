@@ -337,9 +337,7 @@ body {
   clip-path: polygon(50% 0%, 100% 51%, 50% 100%, 0% 51%);
 }
 
-txt-grad
-bg-gradient
-bg-gradient-hover
+
 .txt-grad{
   @apply bg-gradient-to-r from-cyan-500 to-blue-500 bg-clip-text text-transparent
 }

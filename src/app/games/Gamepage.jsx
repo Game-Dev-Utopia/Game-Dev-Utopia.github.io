@@ -91,7 +91,7 @@ const Gamepage = () => {
       {/* Scrollable content section */}
       <div className="overflow-y-auto pt-16 z-10 relative">
         <div className="flex flex-wrap justify-center gap-y-10">
-          <Card item={item} />
+          {item.length > 0 ? <Card item={item} /> : <p className="text-white">Currently no games available for selected filters</p>}
         </div>
       </div>
     </div>

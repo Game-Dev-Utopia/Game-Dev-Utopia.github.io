@@ -11,7 +11,7 @@ const Winner = ({ image, prize, name, medalColor }) => {
                 <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <p className='mx-6 text-center'>
-                <span className='bg-grad bg-clip-text text-transparent'>{name}</span> <br />
+                <span className='txt-grad'>{name}</span> <br />
                 {prize} Prize
             </p>
         </div>
