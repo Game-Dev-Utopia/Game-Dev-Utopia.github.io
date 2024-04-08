@@ -71,8 +71,8 @@ function Navbar() {
 
 
             {showSidebar && <nav
-                className={'sm:w-fit sm:h-[33rem] items-center w-full max-sm:bottom-0.5 fixed sm:top-[17%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-xl cursor-default shadow-sm shadow-white sm:mx-0.5'}>
-                <ul className='w-full h-full flex sm:gap-y-4 sm:flex-col sm:items-start items-center justify-evenly sm:justify-center'>
+                className={'sm:w-fit sm:h-[30rem] items-center w-full max-sm:bottom-0.5 fixed sm:top-[17%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-xl cursor-default shadow-sm shadow-white sm:mx-0.5'}>
+                <ul className='w-full h-full flex sm:gap-y-3 sm:flex-col sm:items-start items-center justify-evenly sm:justify-center'>
 
 
                     {!navDescp ?
@@ -95,11 +95,11 @@ function Navbar() {
                             <div key={index} className='flex flex-col-reverse sm:flex-row justify-center sm:gap-y-4 sm:gap-x-2 items-center'>
                                 <li
 
-                                    className={pathname === item.path ? "rounded-lg bg-[#f3bc12]  " + navClasses : navClasses}
+                                    className={pathname === item.path ? "rounded-lg bg-cyan-500  " + navClasses : navClasses}
                                 >
                                 </li>
                                 <Link href={item.path}>
-                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-[#f3bc12] items-center text-[1.35rem]'
+                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-cyan-500 items-center text-[1.35rem]'
                                         :
                                         'flex justify-center sm:gap-7 items-center text-[1.35rem] text-white'}>
                                         {item.icon}
