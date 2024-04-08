@@ -1,9 +1,15 @@
+.container {
+  width: auto;
+  height: auto;
+}
+
 .carousel-container {
-  height: 150vh;
+  width: 100vw;
+  height: 140vh;
+  padding-top: 40px;
   position: relative;
   overflow: hidden;
-  padding: 20px;
-  transform: rotate(-5deg);
+  /* transform: rotate(-5deg); */
 }
 
 .content {
@@ -13,14 +19,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
+.container h1 {
   text-align: center;
   color: yellow;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-p {
+.container p {
   text-align: center;
   color: whitesmoke;
   font-size: 16px;
@@ -170,9 +176,6 @@ p {
 
 
 @media screen and (max-width: 768px) {
-  .carousel-container {
-    height: 100vh; 
-  }
 
   .carousel,
   .carousel2 {
@@ -200,7 +203,7 @@ p {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
   .carousel-container {
-    padding: 10px; 
+    padding-top: 10px; 
   }
 
   .content {
