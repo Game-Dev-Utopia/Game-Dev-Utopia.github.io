@@ -1,18 +1,14 @@
 export const Lets_talkData = [
   {
     title: "Business Proposal",
-    text: "If you go over your organisations or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.",
+    text: "If you go over your organisation's or user limit, a member of the team will reach out about bespoke pricing. In the meantime, our collaborative features won't appear in accounts or users that are over the 100-account or 1,000-user limit.",
     active: false,
     img: "https://cdni.iconscout.com/illustration/premium/thumb/woman-login-into-banking-app-5194430-4341049.png",
     borderColor: "#44ff00",
     stepsData: [
-      { title: "Details", fields: ["Name", "Email", {
-        "dropdownName": "Phone Number",
-        "options": ["+91", "+92"]
-      }] },
-      { title: "Organisation Info", fields: ["OrgName", {"dropdownName": "Industry",
-      "options": ["option 1", "option 2"]}, "LinkedInUrl", "Description"] },
-      { title: "Business Idea", fields: ["Business Idea ", "Problem", "Solution", "Budget", "Team Size"] }
+      { title: "Basic Info", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "dropdown", options: ["+91", "+92"] }] },
+      { title: "Organisation Info", fields: [{ fieldName: "Org Name", inputType: "text" }, { fieldName: "Industry", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "LinkedIn Url", inputType: "text" }, { fieldName: "Description", inputType: "textarea" }] },
+      { title: "Business Idea", fields: [{ fieldName: "Business Idea", inputType: "textarea" }, { fieldName: "Problem", inputType: "textarea" }, { fieldName: "Solution", inputType: "textarea" }, { fieldName: "Budget", inputType: "text" }, { fieldName: "Team Size", inputType: "text" }] }
     ]
   },
   {
@@ -22,9 +18,9 @@ export const Lets_talkData = [
     img: "https://cdni.iconscout.com/illustration/premium/thumb/login-page-4468581-3783954.png?f=webp",
     borderColor: "#ebf707",
     stepsData: [
-      { title: "Details", fields: ["Name", "Email", "PhoneNo"] },
-      { title: "Organisation Info", fields: ["OrgName", "Project Idea"] },
-      { title: "Project Details", fields: ["Idea", "Expected Budget", "Team Size", "Project Duration"] }
+      { title: "Basic Info", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "text" }] },
+      { title: "Organisation Info", fields: [{ fieldName: "Org Name", inputType: "textarea" }, { fieldName: "Project Idea", inputType: "textarea" }] },
+      { title: "Project Details", fields: [{ fieldName: "Idea", inputType: "textarea" }, { fieldName: "Expected Budget", inputType: "text" }, { fieldName: "Team Size", inputType: "text" }, { fieldName: "Project Duration", inputType: "text" }] }
     ]
   },
   {
@@ -34,10 +30,9 @@ export const Lets_talkData = [
     img: "https://fiftytwodigital.com/wp-content/uploads/2022/02/joinus.png",
     borderColor: "#fa2335",
     stepsData: [
-      { title: "Your Info", fields: ["Name", "Email", "Age", "Gender"] },
-      { title: "Step 2", fields: [ {"dropdownName": "Qualification",
-      "options": ["Post Graduate", "Under Graduate", "Diploma","Secondary Education"]}, "Occupation"] },
-      { title: "Reasons", fields: ["Why joinUs", "Role Preference"] }
+      { title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Age", inputType: "text" }, { fieldName: "Gender", inputType: "text" }] },
+      { title: "Career Info", fields: [{ fieldName: "Qualification", inputType: "dropdown", options: ["Post Graduate", "Graduate", "Under Graduate", "Diploma", "Secondary Education"] }, { fieldName: "Occupation", inputType: "text" }] },
+      { title: "Reasons", fields: [{ fieldName: "Why JoinUs", inputType: "textarea" }, { fieldName: "Role Preference", inputType: "textarea" }] }
     ]
   },
   {
@@ -48,12 +43,9 @@ export const Lets_talkData = [
     borderColor: "#f59842",
     stepsData: [
       {
-        title: "info", fields: [" Name", " Email", " PhoneNo",{"dropdownName": "Query Type",
-        "options": ["option 1", "option 2"]}, {"dropdownName": "Emergency Type",
-        "options": ["option 1", "option 2"]}, "Message"
-        ]
+        title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "Phone No", inputType: "text" } ]},
+       { title: "Query", fields: [{ fieldName: "Query Type", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "Emergency Type", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "Message", inputType: "textarea" }]
       },
-
     ]
   },
   {
@@ -63,10 +55,9 @@ export const Lets_talkData = [
     img: "https://png.pngtree.com/png-vector/20220811/ourmid/pngtree-radio-show-host-and-guest-flat-color-vector-faceless-characters-png-image_5844342.png",
     borderColor: "#b2f084",
     stepsData: [
-      { title: "Basic Info ", fields: [" Name", " Email", " PhoneNo"] },
-      { title: "Organisation Info", fields: ["OrgName", {"Industry": "Industry",
-      "options": ["option 1", "option 2"]}, "LinkedInUrl", "Description"] },
-      { title: "Event Info", fields: ["Event Name", "Event Type", "Description", "Partnership Details", "Dates"] }
+      { title: "Basic Info ", fields: [{ fieldName: "Name", inputType: "text" }, { fieldName: "Email", inputType: "text" }, { fieldName: "PhoneNo", inputType: "text" }] },
+      { title: "Organisation Info", fields: [{ fieldName: "OrgName", inputType: "text" }, { fieldName: "Industry", inputType: "dropdown", options: ["option 1", "option 2"] }, { fieldName: "LinkedInUrl", inputType: "text" }, { fieldName: "Description", inputType: "textarea" }] },
+      { title: "Event Info", fields: [{ fieldName: "Event Name", inputType: "text" }, { fieldName: "Event Type", inputType: "text" }, { fieldName: "Event Description", inputType: "textarea" }, { fieldName: "Partnership Details", inputType: "text" }, { fieldName: "Dates", inputType: "text" }] }
     ]
   },
-]
+];

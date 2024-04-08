@@ -5,7 +5,7 @@ const Sponser_Card = () => {
         <>
        <div className='outer_c'>
        <div className='con' >
-            <div class="slider_1 ">
+            <div class="slider_1 bg-slate-900">
                 <div class="slide-track">
                     <div class="slide">
                         <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png"  />
@@ -16,28 +16,10 @@ const Sponser_Card = () => {
                     </div>
 
                     <div class="slide">
-                        <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png"  />
-                    </div>
-
-                    <div class="slide">
                         <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png"  />
                     </div>
 
-                    <div class="slide">
-                        <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png"  />
-                    </div>
-
-                    <div class="slide">
-                        <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png"  />
-                    </div>
-
-                    <div class="slide">
-                        <img src="https://developers.google.com/static/analytics/images/terms/lockup_ic_Analytics_horiz_272px_wht.png"  />
-                    </div>
-
-                    <div class="slide">
-                        <img src="https://www.freeiconspng.com/thumbs/youtube-logo-png/white-youtube-logo-png-28.png"  />
-                    </div>
+                    
                     
 
                 </div>
