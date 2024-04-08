@@ -358,7 +358,7 @@ export const Lets_talkData = [
             placeholder: "Select your industry",
           },
           {
-            fieldName: "LinkedInUrl",
+            fieldName: "LinkedIn Url",
             inputType: "text",
             datatype: "text",
             placeholder: "Enter your LinkedIn URL",

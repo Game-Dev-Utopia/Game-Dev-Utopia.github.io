@@ -9,7 +9,9 @@ export const SidebarProvider = ({ children }) => {
 
     return (
         <SidebarContext.Provider value={{ showSidebar, setShowSidebar }}>
-            {children}
+            <div>
+                {children}
+            </div>
         </SidebarContext.Provider>
     );
 };
