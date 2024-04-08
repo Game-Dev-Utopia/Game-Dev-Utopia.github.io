@@ -28,7 +28,7 @@ const Sponser_Card = () => {
                     <div class="slider_1 bg-slate-900">
                         <div class="slide-track">
                         {sponserData.map(sponsor => (
-                             <div class="slide">
+                             <div class="slide" key={sponsor._id}>
                              <img src={sponsor.logo}  />
                          </div>
                         ))}

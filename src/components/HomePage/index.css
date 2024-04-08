@@ -1,3 +1,5 @@
+/*
+
 .container {
   width: auto;
   height: auto;
@@ -9,7 +11,6 @@
   padding-top: 40px;
   position: relative;
   overflow: hidden;
-  /* transform: rotate(-5deg); */
 }
 
 .content {
@@ -65,10 +66,7 @@
 }
 
 .box {
-  position: relative;
-  height: 300px; 
-  display: flex;
-  /* background-color: rgba(0, 0, 0, 0.5); */
+
   overflow: hidden;
   border-radius: 20px;
   z-index: 10;
@@ -232,6 +230,8 @@
     width: auto; 
   }
 }
+
+*/
 
 
 
