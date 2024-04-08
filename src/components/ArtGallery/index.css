@@ -7,11 +7,10 @@
       padding: 20px;
       justify-content: center;
       align-items: center;
-      background: #222;
-      box-sizing: border-box;
     }
     
     .design-page h1 {
+      font-size: 30px;
       margin: 10px;
       color: yellow;
     }
@@ -43,7 +42,6 @@
   
   .item, .video-item {
     position: relative;
-    background: #222;
     break-inside: avoid;
     margin-bottom: 10px;
     width: 100%;
