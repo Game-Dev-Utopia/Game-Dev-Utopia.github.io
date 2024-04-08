@@ -44,21 +44,21 @@ const Stepper = ({ stepsData, onSubmit }) => {
     // Clean up the formData before creating formDataObject
     const cleanFormData = {};
     ////console.log(formData);
-  
+
     // Iterate over each field in formData and clean up the field names
     Object.entries(formData).forEach(([fieldName, value]) => {
       const cleanedFieldName = fieldName.trim().replace(/\s+/g, '');
       cleanFormData[cleanedFieldName] = value;
     });
     console.log(cleanFormData);
-  
+
     // Create an empty formDataObject to store the organized data
     const formDataObject = {};
-  
+
     // Iterate over each step and its fields to organize the data
     stepsData.forEach(step => {
       const stepData = {};
-  
+
       // Iterate over each field in the step
       step.fields.forEach(field => {
         let fieldNameCamelCase;
@@ -71,36 +71,36 @@ const Stepper = ({ stepsData, onSubmit }) => {
           const formattedDropdownName = field.fieldName.trim().replace(/\s+/g, '');
           fieldNameCamelCase = formattedDropdownName.charAt(0).toUpperCase() + formattedDropdownName.slice(1);
         }
-  
+
         // Add the field data to stepData with camelCase field name
         stepData[fieldNameCamelCase] = cleanFormData[fieldNameCamelCase.toLowerCase()];
       });
-  
+
       // Add the stepData to formDataObject under the title of the step
       const stepTitle = step.title.replace(/\s+/g, '').toLowerCase();
       formDataObject[stepTitle] = stepData;
     });
-  
+
     // Pass formDataObject to the onSubmit callback or do further processing
     onSubmit(formDataObject);
-  
+
     // Clear all inputs
     setFormData({});
     setClearInputs(true);
-  
+
     // Reset stepper to step one
     setCurrentStep(0);
   };
-  
-  
-  
+
+
+
   return (
     <>
       <div className={`flex ${stepsData.length === 1 ? "justify-center" : "justify-between"}`}>
         {stepsData.map((step, i) => (
           <div
             key={i}
-            className={ `step-item  w-1/2 ${currentStep === i && "active"} ${i < currentStep ? "complete" : ""}`}
+            className={`step-item  w-1/2 ${currentStep === i && "active"} ${i < currentStep ? "complete" : ""}`}
           >
             <div className="step">
               {i < currentStep ? <TiTick size={24} /> : i + 1}

@@ -25,8 +25,11 @@ function Navbar() {
             pauseOnHover: true,
             draggable: true,
             progress: undefined,
-            theme: "dark",
+            theme: "coloured",
             transition: Bounce,
+            className: 'text-white bg-slate-800 rounded-lg shadow-lg p-2 font-bold',
+            progressStyle: { backgroundColor: '#06b6d4' }
+
         })
     )
 
@@ -85,7 +88,7 @@ function Navbar() {
                         :
                         (<li
                             onClick={navToggle}
-                            className='flex gap-5 sm:px-4 pt-0 pb-0.5 text-lg my-0.5 text-white'>
+                            className='flex gap-5 sm:items-center sm:px-4 pt-0 pb-0.5 text-lg my-0.5 text-white'>
                             <RxCross2 onClick={navToggle} fontWeight={900} /> <span>Close</span>
                         </li>)}
 
@@ -94,12 +97,11 @@ function Navbar() {
                         return (
                             <div key={index} className='flex flex-col-reverse sm:flex-row justify-center sm:gap-y-4 sm:gap-x-2 items-center'>
                                 <li
-
-                                    className={pathname === item.path ? "rounded-lg bg-cyan-500  " + navClasses : navClasses}
+                                    className={pathname === item.path ? "rounded-lg bg-grad " + navClasses : navClasses}
                                 >
                                 </li>
                                 <Link href={item.path}>
-                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-cyan-500 items-center text-[1.35rem]'
+                                    <div className={pathname == item.path ? 'flex justify-center sm:gap-7 text-cyan-400 items-center text-[1.35rem]'
                                         :
                                         'flex justify-center sm:gap-7 items-center text-[1.35rem] text-white'}>
                                         {item.icon}
