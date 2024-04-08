@@ -58,7 +58,7 @@ function Accordion({
                 width="16"
                 height="2"
                 rx="1"
-                className={`transform origin-center rotate-90 transition duration-200 ease-out ${!accordionOpen ? "rotate-180" : ""
+                className={`transform origin-center transition duration-200 ease-out ${!accordionOpen ? "rotate-90" : ""
                   }`}
               />
             </svg>

@@ -80,6 +80,7 @@ export default function HomePageGamesSection() {
     return (
         <section >
             <h2 className="text-5xl text-headings">Games</h2>
+            
             <div>
                 <HomePageGame />
             </div>
