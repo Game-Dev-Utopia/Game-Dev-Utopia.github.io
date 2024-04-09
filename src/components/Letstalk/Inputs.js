@@ -55,6 +55,7 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           id={field.fieldName.toLowerCase()}
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
+          maxLength={field.max}
           onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value)}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
           placeholder={field.placeholder}
