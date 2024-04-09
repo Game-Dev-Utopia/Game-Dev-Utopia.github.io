@@ -1,3 +1,5 @@
+ import formattedCountries from "@/components/Letstalk/CountryCode";
+
 export const Lets_talkData = [
   {
     title: "Business Proposal",
@@ -27,7 +29,7 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+123", "+93", "+94", "+95",],
+            options: formattedCountries,
             placeholder: "Select your Country Code",
           },
           {
@@ -51,10 +53,9 @@ export const Lets_talkData = [
           },
           {
             fieldName: "Industry",
-            inputType: "dropdown",
+            inputType: "text",
             datatype: "text",
-            options: ["option 1", "option 2"],
-            placeholder: "Select your industry",
+            placeholder: "Enter your Industry category",
             max:6000
           },
           {
@@ -143,7 +144,7 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+123", "+93", "+94", "+95",],
+           options: formattedCountries,
             placeholder: "Select your Country Code",
           },
           {
@@ -199,7 +200,7 @@ export const Lets_talkData = [
             max:100
           },
           {
-            fieldName: "Project Duration",
+            fieldName: "Project Duration[In months]",
             inputType: "text",
             datatype: "number",
             placeholder: "Enter your project duration in months",
@@ -323,7 +324,7 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+123", "+93", "+94", "+95",],
+           options: formattedCountries,
             placeholder: "Select your Country Code",
           },
           {
@@ -391,7 +392,7 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+123", "+93", "+94", "+95",],
+           options: formattedCountries,
             placeholder: "Select your Country Code",
           },
           {
@@ -415,10 +416,9 @@ export const Lets_talkData = [
           },
           {
             fieldName: "Industry",
-            inputType: "dropdown",
+            inputType: "text",
             datatype: "text",
-            options: ["option 1", "option 2"],
-            placeholder: "Select your industry",
+            placeholder: "Enter your Industry category",
           },
           {
             fieldName: "LinkedIn URL",

@@ -23,7 +23,9 @@ const Sponser_Card = () => {
 
     return (
         <>
+        <h1 className='txt-grad font-bold text-center text-6xl'>Sponsers</h1>
             <div className='outer_c'>
+                
                 <div className='con' >
                     <div class="slider_1 bg-slate-900">
                         <div class="slide-track">

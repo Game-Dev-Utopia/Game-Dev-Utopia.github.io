@@ -2,11 +2,8 @@ import { useEffect, useState } from "react";
 import Stepper from "./Stepper";
 import { postRequestJson } from "@/api/api";
 
-
-
 export default function Form({ heading, image, stepsData , toastHandler}) {
-
- 
+  //console.log("lits"+formattedCountries)
 
   const handleSubmit = async (formData) => {
     console.log(formData);
