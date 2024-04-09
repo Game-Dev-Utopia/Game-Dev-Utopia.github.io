@@ -66,16 +66,16 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
   const [selectDownloadable, setSelectDownloadable] = React.useState(false)
   return (
-    <div className='flex flex-wrap  py-5 justify-center bg-slate-900'>
+    <div className='flex flex-wrap pb-2 sm:pb-1 justify-center bg-slate-900'>
       {
         menu.map((val, i) => (
           <div
             key={i}
-            className={`text-white my-2 w-[32%] h-1/6 sm:w-auto px-2 mx-0.5 sm:mx-1 cursor-pointer shadow-sm bg-grad-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${'hover:shadow-lg'}`}>
+            className={`text-white my-2 w-[32%] sm:w-auto px-1 mx-0.5 sm:mx-1 cursor-pointer shadow-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${'hover:shadow-lg'}`}>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex justify-center text-center mx-auto items-center outline-none font-medium text-sm ">
                 {val.title}
-                <TiArrowSortedDown className="flex items-center sm:mt-1" />
+                <TiArrowSortedDown className="flex items-center sm:mt-1 ml-[0.2rem]" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
@@ -105,7 +105,7 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
       }
 
 
-      <div className={`ml-1 my-2 text-center px-5 rounded-full items-center inline-flex text-sm font-medium ${select.Downloadable ?
+      <div className={`sm:ml-1 mx-0.5 my-2 text-center px-5 max-sm:w-[32%] rounded-full items-center inline-flex text-sm font-medium ${select.Downloadable ?
         " bg-grad text-white"
         :
         "shadow-sm bg-slate-800 shadow-gray-600 hover:bg-slate-600"}`}
@@ -123,7 +123,7 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
 
       <div
-        className={`${filterCount > 0 ? "visible" : "invisible"} mx-2 my-2 p-1 px-3 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
+        className={`${filterCount > 0 ? "visible" : "invisible"} sm:mx-1.5 mx-0.5 max-sm:w-[32%] my-2 p-1 px-4 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
         onClick={() => {
           clearFilters();
           const keys = ['RPG', 'Puzzle', 'Racing', 'Fighting', 'Aiming', 'Mobile', 'Laptop', 'Quick', 'Heavy', '2D', '3D', 'Downloadable'];

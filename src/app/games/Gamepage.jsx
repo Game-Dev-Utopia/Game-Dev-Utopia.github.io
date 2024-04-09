@@ -77,7 +77,7 @@ const Gamepage = () => {
 
   return (
     <div className='bg-slate-900 sm:min-h-screen'>
-      <div className="sticky top-[3rem] z-20 ">
+      <div className="sticky top-[3.5rem] z-20 ">
         <Filter
           menu={menu}
           addToFilterList={addFilters}
