@@ -66,18 +66,16 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
   const [selectDownloadable, setSelectDownloadable] = React.useState(false)
   return (
-    <div className='flex flex-wrap  pt-12 justify-center mb-10 bg-slate-900'>
+    <div className='flex flex-wrap  py-5 justify-center bg-slate-900'>
       {
         menu.map((val, i) => (
           <div
             key={i}
-            className={`text-white p-1 my-2 px-3 mx-1 cursor-pointer shadow-sm bg-grad-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${
-              'hover:shadow-lg '
-            }`}>
+            className={`text-white my-2 w-[32%] h-1/6 sm:w-auto px-2 mx-0.5 sm:mx-1 cursor-pointer shadow-sm bg-grad-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${'hover:shadow-lg'}`}>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex justify-center items-center outline-none font-medium text-sm ">
+              <DropdownMenuTrigger className="flex justify-center text-center mx-auto items-center outline-none font-medium text-sm ">
                 {val.title}
-                <TiArrowSortedDown className="flex items-center mt-1 mx- text-" />
+                <TiArrowSortedDown className="flex items-center sm:mt-1" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
@@ -107,10 +105,10 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
       }
 
 
-      <div className={`${select.Downloadable ?
-        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium bg-grad text-white"
+      <div className={`ml-1 my-2 text-center px-5 rounded-full items-center inline-flex text-sm font-medium ${select.Downloadable ?
+        " bg-grad text-white"
         :
-        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium shadow-sm bg-slate-800 shadow-gray-600"}`}
+        "shadow-sm bg-slate-800 shadow-gray-600 hover:bg-slate-600"}`}
         onClick={() => {
           setSelect((prev) => ({ ...prev, ["Downloadable"]: !prev["Downloadable"] }))
           if (!select["Downloadable"]) {
