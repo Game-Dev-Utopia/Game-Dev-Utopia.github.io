@@ -1,6 +1,4 @@
-/*
-
-.container {
+.c-container {
   width: auto;
   height: auto;
 }
@@ -20,14 +18,14 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.container h1 {
+.c-container h1 {
   text-align: center;
   color: yellow;
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.container p {
+.c-container p {
   text-align: center;
   color: whitesmoke;
   font-size: 16px;
@@ -231,7 +229,7 @@
   }
 }
 
-*/
+
 
 
 
