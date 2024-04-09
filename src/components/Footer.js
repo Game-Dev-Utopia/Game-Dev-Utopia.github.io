@@ -64,7 +64,7 @@ export default function App() {
                 > */}
                 <div
                     // style={{ backgroundImage: "linear-gradient(to right top, #10254f,  #1f2035, #1f1e29, #000000)" }}
-                    className="grid bgsl900 grid-cols-1 lg:grid-cols-6 lg:col-span-6 col-span-1 col-start-1 bg-inherit items-center lg:h-fit lg:py-4 gap-4 bg-slate-950 lg:px-20 rounded-xl">
+                    className="grid bg-slate-900 grid-cols-1 lg:grid-cols-6 lg:col-span-6 col-span-1 col-start-1 bg-inherit items-center lg:h-fit lg:py-4 gap-4 lg:px-20 rounded-xl">
 
 
                     {footerContents.map((ele, id) =>
@@ -72,9 +72,9 @@ export default function App() {
                             <h2 className="text-2xl font-semibold my-4">{ele.title}</h2>
                             <div className="">
                                 {ele.content.map((list, i) =>
-                                    <div key={i} className="my-4 text-lg group">
-                                        <Link href={`${list.link}`} className="flex text-center justify-center lg:justify-start gap-2 items-center text-base my-2 rounded-lg mx-auto lg:mx-0">
-                                            <li className="decoration-transparent hover:text-cyan-400 text-white px-4 py-1 flex text-center justify-center lg:justify-start gap-2 items-center text-base my-2 lg:my-0 rounded-lg mx-auto lg:mx-0">
+                                    <div key={i} className="sm:my-4 text-lg group">
+                                        <Link href={`${list.link}`} className="flex gap-1 text-base max-sm:my-2 rounded-lg lg:mx-0 mx-auto">
+                                            <li className="hover:text-cyan-400 text-white px-4 py-1 flex sm:justify-center gap-2 items-center mx-auto text-base my-2 lg:my-0 lg:mx-0">
                                                 {list.icon && <FontAwesomeIcon icon={list.icon} />}
                                                 {list.reactIcon && <list.reactIcon size={17}
                                                     className="text-white group-hover:text-cyan-400"
@@ -100,7 +100,7 @@ export default function App() {
 
                 <div className="lg:w-[180px] my-4 lg:my-0 grid justify-center items-center px-2 col-start-1 col-span-2 lg:col-span-1"
                 >
-                    <div className="flex lg:grid lg:grid-cols-3 lg:grid-rows-3 text-white">
+                    <div className="flex max-sm:gap-2 lg:grid lg:grid-cols-3 lg:grid-rows-3 text-white">
                         {socials.map((e) =>
                             <SocialSection
                                 key={e.handle}

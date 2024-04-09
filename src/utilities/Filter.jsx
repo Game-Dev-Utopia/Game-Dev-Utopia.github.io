@@ -66,18 +66,16 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
   const [selectDownloadable, setSelectDownloadable] = React.useState(false)
   return (
-    <div className='flex flex-wrap  pt-12 justify-center mb-10 bg-slate-900'>
+    <div className='flex flex-wrap pb-2 sm:pb-1 justify-evenly md:justify-center bg-slate-900'>
       {
         menu.map((val, i) => (
           <div
             key={i}
-            className={`text-white p-1 my-2 px-3 mx-1 cursor-pointer shadow-sm bg-grad-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${
-              'hover:shadow-lg '
-            }`}>
+            className={`text-white my-2 w-[48%] min-[375px]:w-[32%] sm:w-auto px-1 sm:mx-1 cursor-pointer shadow-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${'hover:shadow-lg'}`}>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex justify-center items-center outline-none font-medium text-sm ">
+              <DropdownMenuTrigger className="flex h-8 justify-center max-[400px]:text-xs mx-auto items-center outline-none font-medium text-sm ">
                 {val.title}
-                <TiArrowSortedDown className="flex items-center mt-1 mx- text-" />
+                <TiArrowSortedDown className="flex items-center mt-1 ml-[0.2rem]" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
@@ -107,10 +105,10 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
       }
 
 
-      <div className={`${select.Downloadable ?
-        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium bg-grad text-white"
+      <div className={`sm:ml-1 mx-0.5 my-2 h-8 text-center justify-center w-[48%] min-[375px]:w-[30%] md:w-auto max-[400px]:px-5 sm:px-5 max-[400px]:text-xs rounded-full items-center inline-flex text-sm font-medium shadow-sm shadow-gray-600 ${select.Downloadable ?
+        " bg-grad text-white"
         :
-        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium shadow-sm bg-slate-800 shadow-gray-600"}`}
+        "bg-slate-800 hover:bg-slate-600"}`}
         onClick={() => {
           setSelect((prev) => ({ ...prev, ["Downloadable"]: !prev["Downloadable"] }))
           if (!select["Downloadable"]) {
@@ -125,7 +123,7 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
 
       <div
-        className={`${filterCount > 0 ? "visible" : "invisible"} mx-2 my-2 p-1 px-3 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
+        className={`${filterCount > 0 ? "visible" : "invisible"} sm:mx-1.5 h-8 mx-0.5 w-[48%] md:w-auto min-[375px]:w-[30%] justify-center text-center max-[400px]:text-xs my-2 p-1 sm:px-4 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
         onClick={() => {
           clearFilters();
           const keys = ['RPG', 'Puzzle', 'Racing', 'Fighting', 'Aiming', 'Mobile', 'Laptop', 'Quick', 'Heavy', '2D', '3D', 'Downloadable'];
