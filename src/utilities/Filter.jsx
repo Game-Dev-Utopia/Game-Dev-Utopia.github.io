@@ -66,16 +66,18 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
   const [selectDownloadable, setSelectDownloadable] = React.useState(false)
   return (
-    <div className='flex flex-wrap justify-center mb-10 py-1 bg-slate-900'>
+    <div className='flex flex-wrap  pt-12 justify-center mb-10 bg-slate-900'>
       {
         menu.map((val, i) => (
           <div
             key={i}
-            className={`text-white p-1 my-2 px-3 mx-1 cursor-pointer shadow-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full `}>
+            className={`text-white p-1 my-2 px-3 mx-1 cursor-pointer shadow-sm bg-grad-sm bg-grad-hover justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${
+              'hover:shadow-lg '
+            }`}>
             <DropdownMenu>
-              <DropdownMenuTrigger className="flex justify-center items-center outline-none font-medium text-sm">
+              <DropdownMenuTrigger className="flex justify-center items-center outline-none font-medium text-sm ">
                 {val.title}
-                <TiArrowSortedDown className="flex items-center mt-1 mx-1" />
+                <TiArrowSortedDown className="flex items-center mt-1 mx- text-" />
               </DropdownMenuTrigger>
 
               <DropdownMenuContent>
@@ -106,9 +108,9 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
 
 
       <div className={`${select.Downloadable ?
-        "ml-1 my-2 text-center h-12 px-5 rounded-full items-center inline-flex text-sm font-medium bg-grad text-white"
+        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium bg-grad text-white"
         :
-        "ml-1 my-2 text-center h-12 px-5 rounded-full items-center inline-flex text-sm font-medium shadow-sm bg-grad-hover bg-slate-800 shadow-gray-600"}`}
+        "ml-1 my-2 text-center md:h-12 px-5 rounded-full items-center inline-flex text-sm font-medium shadow-sm bg-slate-800 shadow-gray-600"}`}
         onClick={() => {
           setSelect((prev) => ({ ...prev, ["Downloadable"]: !prev["Downloadable"] }))
           if (!select["Downloadable"]) {
