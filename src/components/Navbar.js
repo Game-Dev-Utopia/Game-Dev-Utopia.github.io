@@ -53,10 +53,10 @@ function Navbar() {
                             height={30}
                             className="mx-4 aspect-auto object-contain text-black"
                         />
-                        <span className='text-white text-2xl'>GameDevUtopia</span>
+                        <span className='text-white text-lg sm:text-2xl'>GameDevUtopia</span>
                     </div>
                 </Link>
-                <FaIcons.FaBell className='absolute right-12' size={25} onClick={bellButtonHandler} />
+                <FaIcons.FaBell className='absolute sm:right-12 right-6 max-sm:w-5 max-sm:h-5' size={25} onClick={bellButtonHandler} />
                 <ToastContainer
                     position="top-right"
                     autoClose={2000}

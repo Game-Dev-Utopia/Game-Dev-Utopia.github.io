@@ -74,7 +74,7 @@ export default function App() {
                                 {ele.content.map((list, i) =>
                                     <div key={i} className="sm:my-4 text-lg group">
                                         <Link href={`${list.link}`} className="flex gap-1 text-base max-sm:my-2 rounded-lg lg:mx-0 mx-auto">
-                                            <li className="hover:text-cyan-400 text-white px-4 py-1 flex sm:justify-center gap-2 items-center mx-autox` text-base my-2 lg:my-0 lg:mx-0">
+                                            <li className="hover:text-cyan-400 text-white px-4 py-1 flex sm:justify-center gap-2 items-center mx-auto text-base my-2 lg:my-0 lg:mx-0">
                                                 {list.icon && <FontAwesomeIcon icon={list.icon} />}
                                                 {list.reactIcon && <list.reactIcon size={17}
                                                     className="text-white group-hover:text-cyan-400"
