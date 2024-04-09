@@ -1,6 +1,7 @@
 "use client"
 import React, { useState } from 'react';
 // import { useNavigate } from "react-router-dom";
+import Link from 'next/link'; // Import Link from next/link
 import './index.css';
 import design1 from "../images/design1.jpg";
 import design2 from "../images/design2.jpeg";
@@ -28,14 +29,10 @@ const developers = [
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  // const navigate = useNavigate();
-
-  const handleDesign = () => {
-    navigate('/design');
-  }
+  
 
   return (
-    <div className='container'>
+    <div className='c-container'>
       <div className='content'>
         <h1>Design Section</h1>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy
@@ -47,12 +44,13 @@ const Carousel = ({ speed }) => {
           {images.map((image, index) => (
             <div key={index} className='box-wrapper'>
               <div className="box">
+              <Link href="/designs" passHref>
                 <img
                   src={image}
                   alt={`Image ${index}`}
                   className="carousel-image"
-                  onClick={handleDesign}
                 />
+                </Link>
                 <div className="avatar-container">
                   <Avatar
                     alt={`Avatar ${index}`}
@@ -73,12 +71,13 @@ const Carousel = ({ speed }) => {
           {images.map((image, index) => (
             <div key={index} className='box-wrapper'>
               <div className="box">
+              <Link href="/designs" passHref>
                 <img
                   src={image}
                   alt={`Image ${index}`}
                   className="carousel-image"
-                  onClick={handleDesign}
                 />
+                </Link>
                 <div className="avatar-container">
                   <Avatar
                     alt={`Avatar ${index}`}
