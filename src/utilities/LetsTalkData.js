@@ -27,14 +27,14 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+92", "+93", "+94", "+95",],
+            options: ["+91", "+123", "+93", "+94", "+95",],
             placeholder: "Select your Country Code",
           },
           {
             fieldName: "Phone No",
             inputType: "text",
             datatype: "number",
-            placeholder: "Enter your phone number[+91]",
+            placeholder: "Enter your phone number",
             max:10
           },
         ],
@@ -58,7 +58,7 @@ export const Lets_talkData = [
             max:6000
           },
           {
-            fieldName: "LinkedIn Url",
+            fieldName: "LinkedIn URL",
             inputType: "text",
             datatype: "text",
             placeholder: "Enter your LinkedIn URL",
@@ -143,14 +143,14 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+92", "+93", "+94", "+95",],
+            options: ["+91", "+123", "+93", "+94", "+95",],
             placeholder: "Select your Country Code",
           },
           {
             fieldName: "Phone No",
             inputType: "text",
             datatype: "number",
-            placeholder: "Enter your phone number[+91]",
+            placeholder: "Enter your phone number",
             max:10
           },
         ],
@@ -323,7 +323,7 @@ export const Lets_talkData = [
             fieldName: "Country Code",
             inputType: "dropdown",
             datatype: "text",
-            options: ["+91", "+92", "+93", "+94", "+95",],
+            options: ["+91", "+123", "+93", "+94", "+95",],
             placeholder: "Select your Country Code",
           },
           {
@@ -388,10 +388,10 @@ export const Lets_talkData = [
             max:200
           },
           {
-            fieldName: "PhoneNo",
+            fieldName: "Phone No",
             inputType: "text",
             datatype: "number",
-            placeholder: "Enter your phone number[+91]",
+            placeholder: "Enter your phone number",
             max:10
           },
         ],
@@ -414,7 +414,7 @@ export const Lets_talkData = [
             placeholder: "Select your industry",
           },
           {
-            fieldName: "LinkedIn Url",
+            fieldName: "LinkedIn URL",
             inputType: "text",
             datatype: "text",
             placeholder: "Enter your LinkedIn URL",
