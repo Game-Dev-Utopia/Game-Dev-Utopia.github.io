@@ -13,7 +13,7 @@ export default function LetsTalk({ data }) {
   const toastHandler = () => {
     console.log("toast"),
 
-    toast('🎉🎉Form Submitted!!!', {
+    toast('🎉🎉 Form Submitted!!!', {
       position: "top-right",
       autoClose: 2000,
       hideProgressBar: false,

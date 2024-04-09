@@ -278,7 +278,7 @@ export const Lets_talkData = [
         title: "Reasons",
         fields: [
           {
-            fieldName: "Why JoinUs",
+            fieldName: "Why Join Us",
             inputType: "textarea",
             datatype: "text",
             placeholder: "Enter why you want to join us",
@@ -386,6 +386,13 @@ export const Lets_talkData = [
             datatype: "email",
             placeholder: "Enter your email",
             max:200
+          },
+          {
+            fieldName: "Country Code",
+            inputType: "dropdown",
+            datatype: "text",
+            options: ["+91", "+123", "+93", "+94", "+95",],
+            placeholder: "Select your Country Code",
           },
           {
             fieldName: "Phone No",
