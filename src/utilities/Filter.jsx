@@ -105,10 +105,10 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
       }
 
 
-      <div className={`sm:ml-1 mx-0.5 my-2 h-8 text-center justify-center w-[48%] min-[375px]:w-[30%] md:w-auto max-[400px]:px-5 sm:px-5 max-[400px]:text-xs rounded-full items-center inline-flex text-sm font-medium shadow-sm shadow-gray-600 ${select.Downloadable ?
+      <div className={`sm:ml-1 mx-0.5 sm:bg-grad-hover my-2 h-8 text-center cursor-pointer justify-center w-[48%] min-[375px]:w-[30%] md:w-auto max-[400px]:px-5 sm:px-5 max-[400px]:text-xs rounded-full items-center inline-flex text-sm font-medium shadow-sm shadow-gray-600 ${select.Downloadable ?
         " bg-grad text-white"
         :
-        "bg-slate-800 hover:bg-slate-600"}`}
+        "bg-slate-800 hover:bg-slate-600 sm:hover:bg-gradient-to-r sm:from-cyan-500 sm:to-blue-500"}`}
         onClick={() => {
           setSelect((prev) => ({ ...prev, ["Downloadable"]: !prev["Downloadable"] }))
           if (!select["Downloadable"]) {

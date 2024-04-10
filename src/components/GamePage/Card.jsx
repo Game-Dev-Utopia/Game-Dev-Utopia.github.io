@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 
 import Like from "./Like"
 import Save from "./Save"
+import { Avatar, AvatarImage } from '../ui/avatar'
 
 const Card = ({ item }) => {
   return (
@@ -11,29 +12,51 @@ const Card = ({ item }) => {
         <div className='w-36 max-h-16 pb-2 font-bold border-white animate-glow border-2 px-3 rounded-2xl pt-1 text-overflow-ellipsis whitespace-no-wrap overflow-hidden text-center'>{val.title}
         </div>
         <div
-          className="relative flex-col group rounded-3xl cursor-pointer overflow-hidden bg-slate-800 duration-500 w-64 h-[24rem] shadow shadow-gray-600 mx-5 text-gray-50 p-5  grid justify-items-center bottom-3 z-10 "
+          className="relative flex-col group rounded-3xl cursor-pointer overflow-hidden bg-slate-800 duration-500 w-64 h-[26rem] shadow shadow-gray-600 mx-5 text-gray-50 p-5  grid justify-items-center bottom-3 z-10 "
         >
           <div className="text-center grid justify-items-center absolute -top-4 my-0  pt-3 px-3 border-solid border-l-2 border-r-2 "></div>
           <div className="">
             <div
-              className=" rounded-3xl w-full h-[16rem] bg-blue-400"
+              className=" rounded-3xl w-full h-[15.5rem] bg-blue-400"
             >
 
-              <img src={val.img} className='h-full w-full rounded-3xl border-solid '></img>
+
+              {/* make image fir according to landscape also */}
+              {/* https://images.firstpost.com/uploads/2022/10/BGMI-was-banned-in-July-this-year.-Will-the-battle-royale-make-a-comeback-this-year.jpg?im=FitAndFill=(596,336) */}
+              <img src={val.img} className='h-full w-full rounded-3xl border-solid'></img>
               <div className='left-0 absolute px-2 pb-8 ml-4 '><Like /></div>
               <div className='right-0 absolute pb-8  px-2'><Save /></div>
             </div>
             <div
-              className="absolute w-full left-0 p-5 pt-2 overflow-hidden   my-4"
-            >
-              <div
-                className="absolute -z-10 left-0 w-64 h-28 "
-              >
+              className="absolute w-full left-0 px-5 py-2 overflow-hidden my-4">
+              {/* <div className="absolute -z-10 left-0 w-64 h-28 ">
+              </div> */}
 
+              <div className="text-sm font-bold flex gap-2 items-center w-full my-1">
+                {/* <img src={val.developer_id[0].profilePhoto} alt='pfp' className='h-5 w-5 rounded-full' /> */}
+                {
+                  val.developer_id.length == 1 ?
+                    <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 my-2 relative rounded-full border-[5px] border-slate-800' />
+                    : val.developer_id.length == 2 ?
+                      <div className='overflow-visible'>
+                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
+                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
+                      </div>
+                      :
+                      <div className='overflow-visible'>
+                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
+                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
+                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] -left-1.5 border-[5px] border-slate-800' />
+                        {/* <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' /> */}
+                      </div>
+                }
+                {
+                  val.developer_id.length == 1 ? val.developer_id[0].name.split(" ")[0]
+                    : val.developer_id.length === 2
+                      ? `${val.developer_id[0].name.split(" ")[0]} and ${val.developer_id[1].name.split(" ")[0]}`
+                      : `${val.developer_id[0].name.split(" ")[0]} and ${val.developer_id.length - 1} others`}
               </div>
-
-              <span className="text-xl font-bold ">{val.category}</span>
-              <p className="w-56 duration-500 line-clamp-2">
+              <p className="w-56 duration-500 font-normal line-clamp-2">
                 {val.description}
               </p>
             </div>

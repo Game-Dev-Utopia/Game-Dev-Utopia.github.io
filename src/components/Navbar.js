@@ -10,7 +10,6 @@ import GduLogo from "../../public/GduLogo.png"
 import Image from 'next/image';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { IoMdCloseCircle } from 'react-icons/io';
 
 function Navbar() {
     const [navDescp, setNavDescp] = useState(false)
@@ -18,11 +17,11 @@ function Navbar() {
     // console.log(isFooterVisible);
 
     const CloseButton = ({ closeToast }) => (
-      <IoMdCloseCircle className='text-2xl me-4' onClick={closeToast} />
-      );
+        <RxCross2 className='text-lg me-4' onClick={closeToast} />
+    );
 
     const bellButtonHandler = () => (
-        toast('🎉🎉Coming Soon!!!', {
+        toast('🎉🎉 Coming Soon!!!', {
             position: "top-right",
             autoClose: 2000,
             hideProgressBar: false,
@@ -32,8 +31,8 @@ function Navbar() {
             progress: undefined,
             theme: "coloured",
             transition: Bounce,
-            className: 'text-white bg-slate-800 rounded-lg shadow-lg p-2 font-bold',
-            progressStyle: { backgroundColor: '#06b6d4' }
+            className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
+            progressStyle: { backgroundColor: '#26C6DA' }
 
         })
     )

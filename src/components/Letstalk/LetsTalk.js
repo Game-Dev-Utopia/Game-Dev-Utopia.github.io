@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Accordion from "./Accordion";
 import { Bounce, ToastContainer, toast } from 'react-toastify';
-//import 'react-toastify/dist/ReactToastify.css';
-import { IoMdCloseCircle } from 'react-icons/io';
+import { RxCross2 } from "react-icons/rx";
+// import 'react-toastify/dist/ReactToastify.css';
 
 export default function LetsTalk({ data }) {
   const [openAccordionIndex, setOpenAccordionIndex] = useState(-1);
@@ -11,8 +11,8 @@ export default function LetsTalk({ data }) {
     setOpenAccordionIndex((prevIndex) => (prevIndex === index ? -1 : index));
   };
   const CloseButton = ({ closeToast }) => (
-    <IoMdCloseCircle className='text-2xl me-4' onClick={closeToast} />
-    );
+    <RxCross2 className='text-lg me-4' onClick={closeToast} />
+  );
 
   const toastHandler = () => {
     console.log("toast"),
@@ -27,8 +27,8 @@ export default function LetsTalk({ data }) {
         progress: undefined,
         theme: "dark",
         transition: Bounce,
-        className: 'text-white bg-slate-900 rounded-lg shadow-lg p-2 font-bold',
-        progressStyle: { backgroundColor: '#06b6d4' }
+        className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
+        progressStyle: { backgroundColor: '#26C6DA' }
       });
   };
 
