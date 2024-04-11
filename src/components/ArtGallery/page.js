@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import Link from 'next/link'; 
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShareIcon from '@mui/icons-material/Share';
 import Avatar from "@mui/material/Avatar";
@@ -11,14 +10,17 @@ const ArtGallery = () => {
   const [galleryData, setGalleryData] = useState([]);
 
   useEffect(() => {
-
-    axios.get('api/design/adddesign')
-      .then(response => {
-        setGalleryData(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    const galleryData = async () => {
+      try {
+        const response = await getRequest('api/design/getdesigns');
+        console.log("res", response);
+        setGalleryData(response);
+      } catch (error) {
+        console.error('Error fetching design data:', error);
+      }
+    };
+  
+    galleryData();
   }, []);
 
   
@@ -55,14 +57,6 @@ const ArtGallery = () => {
         return newShares;
       });
     }
-  };
-
-  const handleImageClick = () => {
-    navigate("/designs");
-  };
-
-  const handleVideoClick = () => {
-    navigate("/designs");
   };
 
   const handleVideoEnded = (event, index) => {
@@ -118,15 +112,15 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
       <div className="image-gallery">
         {galleryData.map((item, index) => (
           <div key={index} className={`item img${index + 1}`}>
-            <img src={item.image} alt={`Image ${index + 1}`} onClick={handleImageClick} />
+            <Link href = '/designs' passHref><img src={item.design} alt={`Image ${index + 1}`}  /></Link>
             <div className="overlay" >
               <div className="content" style={{ background: "transparent", color: "white" }}>
                 <div className="title">{item.title}</div>
                 <div className="developer-info">
                   <Avatar sx={{ width: 32, height: 32 }}>
-                    {developers[index % developers.length].name[0]}
+                    {galleryData.developers[index % galleryData.developers.length].name[0]}
                   </Avatar>
-                  <span>{developers[index % developers.length].name}</span>
+                  <span>{galleryData.developers[index % galleryData.developers.length].name}</span>
                 </div>
               <div className="description">
                   {showFullDescription[index]
@@ -159,23 +153,24 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
       <div className="video-gallery">
         {galleryData.map((video, index) => (
           <div key={index} className={`video-item video${index + 1}`}>
+            <Link href = '/designs' passHref>
             <video
               autoPlay
               muted
-              onClick={handleVideoClick}
               onEnded={(e) => handleVideoEnded(e, index)}
             >
-              <source src={item.video} type="video/mp4" />
+              <source src={item.play_url} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
+            </Link>
             <div className="overlay">
               <div className="content" style={{ background: "transparent", color: "white" }}>
                 <div className="title">{item.title}</div>
                 <div className="developer-info">
                 <Avatar sx={{ width: 32, height: 32 }}>
-                  {developers[index % developers.length].name[0]}
+                  {galleryData.developers[index % galleryData.developers.length].name[0]}
                 </Avatar>
-                <span>{developers[index % developers.length].name}</span>
+                <span>{galleryData.developers[index % galleryData.developers.length].name}</span>
               </div>
                 <div className={`description ${showFullDescription[index] ? "visible" : "hidden"}`} >
             {showFullDescription[index]

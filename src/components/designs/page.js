@@ -1,258 +1,122 @@
+/* eslint-disable @next/next/no-img-element */
 "use client"
-import React, { useEffect, useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import design1 from "/public/images/design1.jpg";
-import design2 from "/public/images/design2.jpeg";
-import design3 from "/public/images/design3.jpeg";
-import design4 from "/public/images/design4.jpg";
-import design5 from "/public/images/design5.jpg";
-import design6 from "/public/images/design6.jpg";
-import design7 from "/public/images/design7.jpg";
-import v1 from "/public/images/vdo1.mp4";
-import v2 from "/public/images/render1.mp4";
-import v3 from '/public/images/render2.mp4';
-import v4 from "/public/images/render3.mp4";
-import v5 from "/public/images/render4.mp4";
-import v6 from "/public/images/render5.mp4";
-import v7 from "/public/images/render6.mp4";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import ShareIcon from '@mui/icons-material/Share';
-import Avatar from "@mui/material/Avatar";
-import "../designs/index.css";
+import React, { useState } from "react";
+import "./index.css"; 
+import { FaPlay,FaShare,FaComment } from "react-icons/fa";
+import { IoMdDownload } from "react-icons/io";
+import { AiFillLike } from "react-icons/ai";
 
-const Design = () => {
-  // const navigate = useNavigate();
-  const images = [design1, design2, design3, design4, design5, design6,design7, design1, design2, design3, design4, design5, design6, design7];
-  const videos = [v1, v2, v3, v4, v5, v6, v7];
-  const descriptions = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-
+const Games = () => {
+  const genre = ["action","adventure","indie"]
+  const [itemIndex,setItemIndex] = useState(0)
+  const reactFacts = [
+    "ReactJS is a JavaScript library for building user interfaces.",
+    "It was developed by Facebook and is now open-source.",
+    "ReactJS uses a virtual DOM to improve app performance.",
+    "Components are the building blocks in a React application.",
+    "ReactJS allows for the creation of reusable UI components.",
+    "It uses JSX, a syntax extension for JavaScript.",
+    "ReactJS can be used for developing both web and mobile applications.",
+    "State and props are used to manage data in React.",
+    "ReactJS uses a unidirectional data flow which makes it easier to debug."
   ];
+  const [data, setData] = useState({
+    likes: 100,
+    comments: 100,
+    shares: 90,
+    downloads: 90
+  });
 
-  const v_descriptions = [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-
-  ];
-
-  const developers = [
-    { name: "John Doe" },
-    { name: "Jane Smith" },
-  ];
-  
-  const [likes, setLikes] = useState({});
-  const [liked, setLiked] = useState({});
-  const [shared, setShared] = useState({});
-  const [shares, setShares] = useState({});
-  const [showFullDescription, setShowFullDescription] = useState({});
-
-  useEffect(() => {
-    const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
-    const savedShares = JSON.parse(localStorage.getItem("shares")) || {};
-    setLikes(savedLikes);
-    setShares(savedShares);
-  }, []);
-
-  const handleLike = (index) => {
-    if (!liked[index]) {
-      setLiked((prevLiked) => ({ ...prevLiked, [index]: true }));
-      setLikes((prevLikes) => {
-        const newLikes = { ...prevLikes, [index]: (prevLikes[index] || 0) + 1 };
-        localStorage.setItem("likes", JSON.stringify(newLikes));
-        return newLikes;
-      });
-    }
+  const handleLike = () => {
+    setData(prev=>({...prev,likes:prev.likes+1}))
   };
-
-  const handleShare = (index) => {
-    if (!shared[index]) {
-      setShared((prevShared) => ({ ...prevShared, [index]: true }));
-      setShares((prevShares) => {
-        const newShares = { ...prevShares, [index]: (prevShares[index] || 0) + 1 };
-        localStorage.setItem("shares", JSON.stringify(newShares));
-        return newShares;
-      });
-    }
-  };
-
-  const handleImageClick = () => {
-    navigate("/test");
-  };
-
-  const handleVideoClick = () => {
-    navigate("/test");
-  };
-
-  const handleVideoEnded = (event, index) => {
-    const videoElement = event.target;
-    videoElement.currentTime = 0;
-    videoElement.play();
-  };
-
-  const toggleShowFullDescription = (index) => {
-    setShowFullDescription((prevShowFullDescription) => ({
-      ...prevShowFullDescription,
-      [index]: !prevShowFullDescription[index],
-    }));
-  };
-
-const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [fadeTimeout, setFadeTimeout] = useState(null);
-
-  const handleDescriptionHover = (index) => {
-    setHoveredIndex(index);
-  };
-
-  useEffect(() => {
-    if (hoveredIndex !== null) {
-      const timeout = setTimeout(() => {
-        setHoveredIndex(null);
-      }, 2000);
-
-      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
-      if (descriptionElement) {
-        descriptionElement.classList.add('fade-out');
-      }
-
-      setFadeTimeout(timeout);
-    }
-
-    return () => {
-      clearTimeout(fadeTimeout);
-
-      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
-      if (descriptionElement) {
-        descriptionElement.classList.remove('fade-out');
-      }
-    };
-  }, [hoveredIndex, fadeTimeout]);
-
   
 
   return (
-    <div className="design-page">
-      <h1>Designs</h1>
-      <hr />
-
-      <div className="image-gallery">
-        {images.map((image, index) => (
-          <div key={image} className={`item img${index + 1}`}>
-            <img src={image} alt={`Image ${index + 1}`} onClick={handleImageClick} />
-            <div className="overlay" >
-              <div className="content" style={{ background: "transparent", color: "white" }}>
-                <div className="title">Title {index + 1}</div>
-                <div className="developer-info">
-                <Avatar sx={{ width: 32, height: 32 }}>
-                  {developers[index % developers.length].name[0]}
-                </Avatar>
-                <span>{developers[index % developers.length].name}</span>
-              </div>
-              <div className="description">
-                  {showFullDescription[index]
-                    ? v_descriptions[index]
-                    : `${v_descriptions[index].slice(0, 70)}...`}
-                  <span
-                    className="read-more"
-                    onClick={() => toggleShowFullDescription(index)}
-                    style={{ background: "transparent", color: "white" }}
-                  >
-                    {showFullDescription[index] ? "   Read less" : "Read more"}
-                  </span>
-                </div>
-              </div>
-              <div className="icons">
-                <div className="like-icon" onClick={() => handleLike(index)}>
-                  <FavoriteBorderIcon style={{ background: "transparent" }} />
-                  <span className="like-count">{likes[index] || 0}</span>
-                </div>
-                <div className="share-icon" onClick={() => handleShare(index)}>
-                  <ShareIcon style={{ background: "transparent" }} />
-                  <span className="share-count">{shares[index] || 0}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      <div className="video-gallery">
-        {videos.map((video, index) => (
-          <div key={index} className={`video-item video${index + 1}`}>
-            <video
-              autoPlay
-              muted
-              onClick={handleVideoClick}
-              onEnded={(e) => handleVideoEnded(e, index)}
-            >
-              <source src={video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-            <div className="overlay">
-              <div className="content" style={{ background: "transparent", color: "white" }}>
-                <div className="title">Video Title {index + 1}</div>
-                <div className="developer-info">
-                <Avatar sx={{ width: 32, height: 32 }}>
-                  {developers[index % developers.length].name[0]}
-                </Avatar>
-                <span>{developers[index % developers.length].name}</span>
-              </div>
-                <div className={`description ${showFullDescription[index] ? "visible" : "hidden"}`} >
-            {showFullDescription[index]
-              ? descriptions[index]
-              : `${descriptions[index].slice(0, 70)}...`}
-            <span
-              className="read-more"
-              onClick={() => {
-                toggleShowFullDescription(index);
-                setTimeout(() => {
-                  toggleShowFullDescription(index);
-                }, 2000); 
-              }}
-              style={{ background: "transparent", color: "white" }}
-            >
-              {showFullDescription[index] ? "   Read less" : "Read more"}
-            </span>
-          </div>
-              </div>
-              <div className="icons">
-                <div className="like-icon" onClick={() => handleLike(index)}>
-                  <FavoriteBorderIcon style={{ background: "transparent" }} />
-                  <span className="like-count">{likes[index] || 0}</span>
-                </div>
-                <div className="share-icon" onClick={() => handleShare(index)}>
-                  <ShareIcon style={{ background: "transparent" }} />
-                  <span className="share-count">{shares[index] || 0}</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+    <>
+      <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] game-section-top">
+        <div className="video-game-wrapper bg-gradient">
+        <div className="carousel-container px-6 py-[20px]">
+  <div className="carousel-wrapper">
+    <div className="carousel">
+      {reactFacts.map((fact, index) => (
+        <div key={index} className="carousel-item" onMouseOver={()=>setItemIndex(index)}>
+          <img src={'/images/image-4.png'} alt="Image 1" />
+        </div>
+      ))}
     </div>
+  </div>
+</div>
+
+          <div className="video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
+            <iframe height='400' width="600" src="https://www.youtube.com/embed/EBYCOAgWhtw" 
+            title="YouTube video player" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            allowFullScreen={true}></iframe>
+            <span><p className="pt-7 px-2">{reactFacts[itemIndex]} {reactFacts[((itemIndex+1)%(reactFacts.length-1))]} {reactFacts[((itemIndex+2)%(reactFacts.length-1))]}</p></span>
+          </div>
+          
+
+          <div className="game-info px-6 py-[20px] card border-l-2 border-slate-300 border-opacity-20">
+            <div className="game-Info h-full">
+              <div className="thumbnail">
+                <img src={'/images/image-23.png'} alt="Game Thumbnail" />
+              </div>
+              <p className="py-6">
+                 Lorem Ipsum has been the industry&apos;s standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it. 
+              </p>
+              <div className="buttons flex gap-2 my-2">
+                <button className="p-3 group gap-1 text-sm">
+                  <FaPlay />
+                  <span className="tooltip group-hover:scale-100">
+                  <p>Play</p>
+                  </span>
+                  </button>
+                <button className="py-2 group gap-1 flex items-center text-sm">
+                  <FaShare />
+                  <span>{data.shares}</span>
+                  <span className="tooltip group-hover:scale-100">
+                  <p>Share</p>
+                  </span>
+                  </button>
+                  <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
+                <button className="py-2 group gap-1 items-center text-sm flex">
+                      <IoMdDownload />
+                    <span>{data.downloads}</span>
+                    <span className="tooltip group-hover:scale-100">
+                  <p>Download</p>
+                  </span>
+                </button>
+                    </a>
+                <button className="py-2 flex items-center group text-sm" onClick={handleLike}>
+                  <AiFillLike />
+                  <span>{data.likes}</span>
+                  <span className="tooltip group-hover:scale-100">
+                  <p>Like</p>
+                  </span>
+                </button>
+
+                <button className="py-2 flex items-center group gap-1 text-sm">
+                  <FaComment />
+                  <span>{data.comments}</span>
+                  <span className="tooltip group-hover:scale-100">
+                  <p>Comment</p>
+                  </span>
+                </button>
+              </div>
+              <div className="flex gap-2 relative top-3">
+                {genre.map((item) => (
+                  <span key={item} className="border-yellow-700 border-2 py-1 rounded-full bg-slate-900 text-gray-300 text-xs px-2">{item}</span>))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 };
 
-export default Design;
+export default Games;
+

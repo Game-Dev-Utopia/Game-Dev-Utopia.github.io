@@ -1,215 +1,214 @@
+/* body {
+  padding: 10px;
+  padding: 0;
+  background-color: black;
+  position: relative;
+} */
+
+/* body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/Vector\ 1361.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  filter: blur(5px); 
+  opacity: 0.5; 
+  z-index: -1;
+} */
+
+
+/* .game-page {
+  margin-top: 10px;
+  display: flex;
+  padding: 30px;
+  margin-left: 20px;
+} */
+
+
+
+.game-section-top{
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/images/games_section_bg_illustration.jpg');
+  /* 
+  Following tag can be used for attributing the creator of the image
+  <a href="https://www.freepik.com/free-vector/abstract-red-circle-black-background-technology_32996404.htm#fromView=search&term=website+background&track=ais&regularType=vector&page=1&position=29&uuid=64627bbf-4df9-473a-a346-8e5dfc1e52f5">Image by flatart</a> on Freepik 
   
-  .design-page {
-      padding: 20px;
-      justify-content: center;
-      align-items: center;
-      background: #222;
-      box-sizing: border-box;
-    }
-    
-    .design-page h1 {
-      margin: 10px;
-      color: yellow;
-    }
-    
-    .image-gallery {
-  
-        width: 1220px;
-        margin: 20px auto;
-        columns: 4;
-        column-gap: 10px;
-  } 
-  
-  .video-gallery {
-    width: 1220px;
-    margin: 10px auto;
-    columns: 3;
-    column-gap: 10px;
-  }
-  
-    
-    .image-gallery>.item img, 
-    .video-gallery>.video-item video {
-  
-      max-width: 100%;
-      border-radius: 15px;
-      transition: 0.3s ease-in-out;
-    }
-    
-  
-  .item, .video-item {
-    position: relative;
-    background: #222;
-    break-inside: avoid;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 95%;
-    padding: 10px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    opacity: 0;
-  }
-  
-  
-  .developer-info {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 10px;
-    background: transparent;
-    color: white;
-  }
-  
-  .developer-info span {
-    margin-left: 8px;
-    background: transparent;
-  }
-  
-  .title,
-  .icons, .description {
-    background: transparent;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0;
-    transition: 0.3s ease-in-out;
-  }
-  
-  .content>.description {
-    font-size: 12px;
-    font-weight: lighter;
-  }
-  
-  .icons > span, .read-more {
-    cursor: pointer;
-  }
-  
-  .read-more {
-    font-weight: 700;
-    color: aquamarine;
-  }
-  
-  
-  .like-icon,
-  .share-icon {
-    background: transparent;
-    display: block;
-    color: white;
-    cursor: pointer;
-    margin-top: 5px;
-  }
-  
-  .like-icon, .share-icon {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-  }
-  
-  .like-count, .share-count {
-    background: transparent;
-    color: white;
-    font-size: 14px;
-  }
-  
-  .like-icon:hover .like-count,
-  .like-icon:hover, .share-icon:hover  {
-    color: aquamarine;
-  }
-  
-  .item:hover .description, .video-item:hover .description {
-  opacity: 1;
-  animation: fade-out 5s ;
+  */
+  background-position: center;
+  background-color: rgba(0,0,0,1);
+  border-radius: 1rem;
 }
 
-.description {
+.video-game-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: auto;
+  height: auto;
+  border-radius: 50%;
+}
+
+.video-card {
+  flex: 1;
+  /* background-image: linear-gradient(to right, rgba(17, 3, 3, 0.518), rgba(14, 5, 5, 0.523)); */
+  /* border-radius: 20px; */
+  /* padding: 20px; */
+  /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
+  width: auto;
+  height: fit-content;
+  align-items: center;
+}
+
+.game-Info {
+  flex: 1;
+  /* background-image: linear-gradient(to right, rgba(17, 3, 3, 0.518), rgba(14, 5, 5, 0.523)); */
+  /* border-radius: 20px; */
+  /* padding: 8px; */
+  /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
+  width: auto;
+  color: white;
+}
+
+.game-info .thumbnail img {
+  padding: 0;
+  width: 100%; 
+  height: auto; 
+  border-radius: 20px 20px 0 0 ;
+}
+
+.buttons {
+  align-items: center;
+}
+
+button {
+  /* background-image: linear-gradient(to right, rgba(240, 240, 240, 0.3), rgba(100, 100, 100, 0.5));
+  flex-wrap: wrap;
+  padding: 10px 10px 10px 10px;
+  margin: 5px;
+  background-color: blue;
+  color: antiquewhite;
+  border-radius: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; */
+  @apply px-2 py-1 duration-200 text-lg bg-[#202020] rounded-md hover:bg-[#fdb714] hover:text-black;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(60, 6, 6, 0.2);
+}
+
+/* .like-symbol,
+.comment-symbol {
+  font-size: 15px;
+} */
+
+
+.carousel-container {
+  position: relative;
+  /* width: 100%; */
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-type: y mandatory;
+  width:fit-content;
+}
+
+.carousel-item {
+  scroll-snap-align: start;
+  flex: 0 0 auto;
+  width: fit-content;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.carousel-item img {
+  margin-bottom: 5px;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1;
+}
+
+/* .carousel-item span {
+  position: absolute;
+  top: 50%;
+  left: 49%;
+  width: 95%;
+  height: 100%;
+  transform: translate(-50%, -50%);
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
+  color: white;
+  transition:  0.3s ease-in-out;
+  
+} */
+
+.carousel-item:hover img {
+  /* transform: scale(2) ; */
+  border:2px solid purple;
+  cursor: pointer;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 0;
+  margin-right: -40px;
 }
 
-.overlay:hover .description {
+/* .carousel-item:hover span {
+  font-size: 14px;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-}
+  z-index: 999;
+} */
 
-@keyframes fade-out {
-  0% {
-    opacity: 1;
+
+@media (max-width: 800px) {
+  .game-page {
+    display: block;
+    padding: 10px;
+    margin-left: 10px;
   }
-  100% {
-    opacity: 0;
+  .video-game-wrapper{
+    display: block;
+  }
+
+  .video-card {
+    margin: 5px;
+    width: auto; 
+    height: auto;
+  }
+
+  .game-info {
+    margin: 5px;
+    width: auto; 
+    height: auto;
+  }
+
+  button {
+    padding: 8px 15px;
+    margin: 5px;
+    margin-left: 10px;
   }
 }
-
-  
-    
-  .item:hover img, .video-item:hover video {
-      filter: brightness(0.5);
-      transform: scale(1.1);
-      cursor: pointer;
-      z-index: 999;
-  
-    }
-    
-    .item:hover .title,  .item:hover .icons, .item:hover .overlay, 
-    .video-item:hover .title,  .video-item:hover .icons, .video-item:hover .overlay {
-      transition: 0.3s ease-in-out;
-      opacity: 1;
-    }
-    
-    @media (max-width: 768px) {
-      .image-gallery {
-        width: 1100px;
-        margin: 20px auto;
-        columns: 3;
-      }
-  
-      .item, .video-item {
-        break-inside: avoid;
-      }
-  
-      .video-gallery {
-        width: 1100px;
-        margin: 20px auto;
-        columns: 2;
-      }
-  
-      .overlay{
-        opacity: 1;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .image-gallery {
-        width: 100%;
-        max-width: 400px; 
-        margin: 20px auto;
-        columns: 2;
-      }
-  
-      .video-gallery {
-        width: 100%;
-        max-width: 400px; 
-        margin: 20px auto;
-        columns: 1;
-      }
-  
-      .overlay{
-        opacity: 1;
-      }
-    }
-  
-    /* ---------------------------------------------------------------------------------------------------------------------------- */
-    
-   
-    
-    
-   
-    
-      
