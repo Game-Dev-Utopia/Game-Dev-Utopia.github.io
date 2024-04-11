@@ -24,36 +24,16 @@ const DisplayRank = ({rank})=>{
 
 const AchievementImages = ({data})=>{
     return(
-        <div className={`flex-col sm:flex items-center sm:justify-center p-5 w-full`}>
-            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='mx-auto rounded-md aspect-square m-3' key={i}/>) }
+        <div className={`flex-col flex sm:flex-row items-center sm:justify-center p-5 w-full`}>
+            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='sm:mx-5 mx-auto rounded-md aspect-square m-3' key={i}/>) }
         </div>
     )
 }
 
 const TimelineCard = ({ data , scrollCurrent, index }) => {
-    const timelineCardRef = useRef(0);
-    const [transparency,setTransparency] = useState(0);
-
-
-    useEffect(() => {
-        if(scrollCurrent && timelineCardRef) {
-            var scrollVal = ((scrollCurrent.scrollTop + scrollCurrent.clientHeight/1.5 - timelineCardRef.current.offsetTop)/timelineCardRef.current.clientHeight);
-
-            if(scrollVal > 0 && scrollVal < 1)
-                scrollVal = 1
-
-            setTransparency(scrollVal);
-        }
-        else{
-            if(index == 0)
-                setTransparency(1);
-
-        }
-    }, )
-
 
     return (
-        <div className={`List-Achievement transition-all duration-1000`}  ref={timelineCardRef}>
+        <div className={`List-Achievement transition-all duration-1000`} >
             <Image 
                 alt="Tag"
                 src={Tag}
