@@ -18,7 +18,7 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[43%]  lg:bottom-[43%] -translate-x-1/2 translate-y-1/2`}/>
+    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[44%]  lg:bottom-[43%] -translate-x-1/2 translate-y-1/2`}/>
 }
 
 
