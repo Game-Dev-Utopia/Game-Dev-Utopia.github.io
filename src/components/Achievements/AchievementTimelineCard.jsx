@@ -24,8 +24,8 @@ const DisplayRank = ({rank})=>{
 
 const AchievementImages = ({data})=>{
     return(
-        <div className={`lg:flex justify-center p-5 w-full`}>
-            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='rounded-md aspect-square m-3' key={i}/>) }
+        <div className={`flex-col sm:flex items-center sm:justify-center p-5 w-full`}>
+            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='mx-auto rounded-md aspect-square m-3' key={i}/>) }
         </div>
     )
 }
