@@ -36,11 +36,11 @@
 
 .List-Achievement-details {
     /* width: 70%; */
-    padding-left: 5%;
+    /* padding-left: 5%; */
 
     li {
-        margin-left: 1rem;
-        padding-left: 1rem;
+        /* margin-left: 1rem; */
+        /* padding-left: 1rem; */
         padding-top: 1rem;
     }
 }

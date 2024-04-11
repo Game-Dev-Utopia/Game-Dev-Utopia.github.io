@@ -18,7 +18,16 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[43%]  lg:bottom-[40%] -translate-x-1/2 translate-y-1/2`}/>
+    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[43%]  lg:bottom-[43%] -translate-x-1/2 translate-y-1/2`}/>
+}
+
+
+const AchievementImages = ({data})=>{
+    return(
+        <div className={`flex justify-center p-5 w-full`}>
+            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='rounded-md aspect-square m-3' key={i}/>) }
+        </div>
+    )
 }
 
 const TimelineCard = ({ data , scrollCurrent, index }) => {
@@ -63,8 +72,9 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
                 <div className='List-Achievement-detail-container'>
                     <div className='List-Achievement-detail-inner'>
                     </div>
-                    <h1 className='List-Achievement-title text-lg lg:text-2xl'><b>{data.title}</b></h1>
-                    <ul className='List-Achievement-details text-sm lg:text-xl list-disc'> 
+                    <AchievementImages data={data}/>
+                    <h1 className='text-center text-xl lg:text-2xl'><b>{data.title}</b></h1>
+                    <ul className='List-Achievement-details text-sm lg:text-lg list-none text-center'> 
                         { data.description.map((detail, i) => <li key={i}>{detail}</li>) }
                     </ul>
                 </div>
