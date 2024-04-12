@@ -23,7 +23,7 @@ const DisplayRank = ({rank})=>{
 }
 
 const AchievementCard = (props) => {
-
+    console.log(props);
     return( 
         <div className={`min-w-[200px] relative hover:scale-105 py-4 m-auto transition-all duration-150 ${(fade)?"opacity-0":"opacity-100"}`} style={{scale:props.scale}}>
             <div className="absolute w-full h-full">
