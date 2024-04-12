@@ -1,9 +1,9 @@
-import Games from '@/components/Games'
+import Designp1 from '@/components/designs/page.js'
 import Designs from '@/components/DesignDetails'
 export default function Page(){
   return (
     <div>
-      <Games />
+       <Designp1 />
       <Designs />
     </div>
   )

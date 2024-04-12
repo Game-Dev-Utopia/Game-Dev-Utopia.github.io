@@ -1,4 +1,5 @@
-import LetsTalk from "@/components/LetsTalk"
+'use client';
+import LetsTalk from "@/components/Letstalk/LetsTalk"
 import { Lets_talkData } from "@/utilities/LetsTalkData"
 
 const page = () => {

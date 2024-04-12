@@ -24,7 +24,7 @@ const AchievementsList = ({datas}) =>
 
     return (
         <div className='w-full'>
-            <div ref={ScrollRef} className='max-h-[800px] w-[85%] mx-[7%] Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2'>
+            <div ref={ScrollRef} className='max-h-[500px] lg:max-h-[800px] w-[85%] mx-[7%] Scroll no-scrollbar h-[90vh] overflow-y-scroll overflow-x-hidden transition-all rounded-[2rem] md:rounded-[5rem] border-2'>
                 <div  className='List-Timeline'>  
                     <br/>
                     <br/>

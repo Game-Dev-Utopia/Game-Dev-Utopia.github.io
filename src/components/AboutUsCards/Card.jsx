@@ -102,9 +102,9 @@ const Card = ({ data, index, cardsCount}) => {
             onTouchEnd={onTouchEnd}
             key={name} 
             ref={ref}
-            className={`Mobile-Card Card sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
+            className={`Mobile-Card Card backdrop-blur-3xl bg-cyan-500 sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
         >
-            <div className='bg-card-background-primary sm:hover:bg-[#00000055] transition-all duration-300 backdrop-blur-xl p-[5%] rounded-lg'> 
+            <div className='bg-slate-800 transition-all duration-300 p-[5%] rounded-lg'> 
                 <div className="w-full h-auto" >   
                     {<Image
                         width={640}
@@ -129,7 +129,7 @@ const Card = ({ data, index, cardsCount}) => {
                         {designation != "" &&
                             <h3 className='text-xl sm:text-sm text-gray-400'>{designation}</h3>
                         }
-                        <p className={`text-xl sm:text-lg ${!designation && "text-2xl sm:text-xl leading-8"}`} >{desc}</p>
+                        <p className={`text-xl max-h-[8rem] overflow-y-scroll sm:text-lg ${!designation && "text-2xl sm:text-xl leading-8"}`} >{desc}</p>
                     </div>
                 </div>
                 <br />

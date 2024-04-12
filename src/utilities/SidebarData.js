@@ -1,7 +1,7 @@
 import React from 'react';
 import { IoGameController } from "react-icons/io5";
 import { VscOrganization } from "react-icons/vsc";
-import { faComments, faPalette, faTrophy, faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
+import { faComments, faPalette, faTrophy, faCalendarCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
 import * as FaIcons from 'react-icons/fa';
 import * as AiIcons from 'react-icons/ai';
 import * as IoIcons from 'react-icons/io';
@@ -24,7 +24,7 @@ export const SidebarData = [
     },
     {
         title: 'Designs',
-        path: '/designs',
+        path: '/art-gallery',
         icon: <FontAwesomeIcon icon={faPalette} />,
         cName: 'nav-text'
     },
@@ -49,7 +49,7 @@ export const SidebarData = [
     {
         title: 'About Us',
         path: '/about-us',
-        icon: <VscOrganization />,
+        icon: <FontAwesomeIcon icon={faUsers} />,
         cName: 'nav-text'
     }
 ];

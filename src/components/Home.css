@@ -1,16 +1,11 @@
-body {
-    align-items: center;
-    background: #E3E3E3;
-    height: 100vh;
 
-}
 .outer_c{
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .con{
-    width: 80%;
+    width: 90%;
 }
 
 @-webkit-keyframes scroll_1 {
@@ -19,7 +14,7 @@ body {
     }
 
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(250px * 3));
     }
 }
 
@@ -29,14 +24,14 @@ body {
     }
 
     100% {
-        transform: translateX(calc(-250px * 7));
+        transform: translateX(calc(250px * 3));
     }
 }
 
 
 
 .slider_1 {
-    background: #000;
+    background:"" ;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
     height: 100px;
     margin: auto;
@@ -48,7 +43,7 @@ body {
 
 .slider_1::before,
 .slider_1::after {
-    background: linear-gradient(to right, black 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(to right, #0f172a 0%, rgba(0, 0, 0, 0) 100%);
     content: "";
     height: 100px;
     position: absolute;
@@ -68,16 +63,16 @@ body {
 }
 
 .slider_1 .slide-track {
-    -webkit-animation: scroll_1 40s linear infinite;
-    animation: scroll_1 40s linear infinite;
+    -webkit-animation: scroll_1 20s linear infinite;
+    animation: scroll_1 20s linear infinite;
     display: flex;
-    width: calc(250px * 14);
+    width: calc(250px * 6);
 }
 
 .slider_1 .slide {
     height: 100px;
     width: 250px;
-    background: #251f1f;
+    background: #1e293b;
     margin: 0px 50px;
     padding: 10px;
     display: inline-block;
@@ -85,7 +80,7 @@ body {
 .slider_1 .slide img{
     height: 80px;
     width: 230px;
-    background: #000;
+    background:#111827;
     display: block;
 }
 

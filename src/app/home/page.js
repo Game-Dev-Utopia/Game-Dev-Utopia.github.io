@@ -1,3 +1,4 @@
+'use client';
 import Sponser_Card from '@/components/Sponser_Card'
 import React from 'react'
 

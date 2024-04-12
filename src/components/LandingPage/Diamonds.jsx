@@ -3,8 +3,8 @@ import Image from 'next/image';
 
 const Diamonds = ({image1,image2,image3})=>
 {
-    console.log("From diamonds");
-    console.log(image1,image2,image3);
+    //console.log("From diamonds");
+    //console.log(image1,image2,image3);
     
     return(
         <>

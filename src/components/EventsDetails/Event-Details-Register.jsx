@@ -55,11 +55,11 @@ const EventPageRegister = ({ close, price }) => {
     return (
 
 
-        <div className='fixed top-0 left-0 w-full h-full flex items-center justify-center z-50'>
+        <div className='fixed left-0 w-full h-[43rem] top-[3.5rem] flex items-center justify-center z-50'>
             <div className='absolute top-0 left-0 w-full h-full bg-black opacity-50'></div>
-            <div className='z-50 flex flex-col justify-center font-semibold placeholder:text-sm placeholder:font-normal text-[#fff] items-center w-[98%] md:w-[30%] h-full my-4 px-4 py-2 mx-auto shadow shadow-gray-600 bg-zinc-900 rounded-xl'>
-                <div className='w-full flex justify-center relative'>
-                    <h1 className='text-xl my-2 font-bold text-center'>
+            <div className='z-50 flex flex-col justify-center font-semibold placeholder:text-sm placeholder:font-normal text-[#fff] items-center w-[98%] md:w-[30%] h-full my-4 px-4 py-2 mx-auto shadow shadow-gray-600 bg-slate-900 rounded-xl'>
+                <div className='w-full flex justify-center relative border-b border-b-cyan-500'>
+                    <h1 className='text-xl my-2 font-bold text-center txt-grad'>
                         Register Now
                     </h1>
                     <div className='absolute top-0 right-0 mt-2 mr-2'>
@@ -68,7 +68,7 @@ const EventPageRegister = ({ close, price }) => {
                 </div>
                 <div className='overflow-auto'>
                     <div className='flex flex-col mx-auto gap-y-5'>
-                        <h3 className='text-lg underline text-center my-4'> Personal Details</h3>
+                        <h3 className='text-lg underline text-center my-4 txt-grad font-semibold'> Personal Details</h3>
                         <label> Name <span className='text-red-500'>*</span> </label>
                         <input
                             type="text"
@@ -142,7 +142,7 @@ const EventPageRegister = ({ close, price }) => {
 
 
                         <hr />
-                        <h3 className='text-lg underline text-center my-4'> Additional Details</h3>
+                        <h3 className='text-lg underline text-center my-4 txt-grad font-semibold'> Additional Details</h3>
                         <label> What are you awesome at? </label>
                         <input
                             type="text"
@@ -194,7 +194,7 @@ const EventPageRegister = ({ close, price }) => {
                     <PaymentModel isOpen={isOpen} setIsOpen={setIsOpen} price={price} afterPayment={handleSubmit} />
                     <div className='mx-auto my-4 text-center'>
                         {isValid && <p className='text-xs text-red-500'>Please fill out all mandatory fields</p>}
-                        <button className='p-2 my-2 mx-2 bg-[#f6df5d] text-black rounded-md' onClick={validateAndProceedForPayment}>
+                        <button className='p-2 my-2 mx-2 bg-grad text-black font-bold rounded-md' onClick={validateAndProceedForPayment}>
                             {price > 0 ? "Pay & " : ""}Register
                         </button>
                         {/* <button className='p-2 my-4 mx-2 bg-[#dcd8c2] text-black rounded-md' onClick={close}>

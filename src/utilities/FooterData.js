@@ -1,14 +1,14 @@
 import { FaInstagram, FaXTwitter, FaLinkedinIn, FaDiscord } from "react-icons/fa6";
 import { IoGameController } from "react-icons/io5";
 import { VscOrganization } from "react-icons/vsc";
-import { faGamepad, faComments, faHandshakeSimple, faUserPlus, faPalette, faHandHoldingDollar, faTrophy, faCalendarCheck } from "@fortawesome/free-solid-svg-icons";
+import { faGamepad, faComments, faHandshakeSimple, faUserPlus, faPalette, faHandHoldingDollar, faTrophy, faCalendarCheck, faUsers } from "@fortawesome/free-solid-svg-icons";
 {/* <FontAwesomeIcon icon={faGamepad} /> */ }
 
 const socials = [
     {
         handle: "LinkedIn",
         logo: <FaLinkedinIn />,
-        classes: "linkedin  col-start-2 col-span-2",
+        classes: "linkedin col-start-2 col-span-2",
         path: "https://www.linkedin.com/company/gamedevutopia/",
     },
     {
@@ -48,13 +48,13 @@ const footerContents = [
             },
             {
                 display: "Art Works",
-                link: "/designs",
+                link: "/art-gallery",
                 icon: faPalette
             },
             {
                 display: "About Us",
                 link: "/about-us",
-                reactIcon: VscOrganization
+                icon: faUsers
             },
             {
                 display: "Events",

@@ -42,6 +42,8 @@ export default function HomePageGamesSection() {
                     </swiper-slide> */}
                     </swiper-container> 
                 </div>
+            <div>
+                <HomePageGame />
             </div>
         </section>
     )

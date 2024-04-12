@@ -19,45 +19,48 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaMedal className={`absolute ${color} text-[400%] left-[50%] -translate-x-[50%] top-[78%] 2xl:top-[80%]`}/>
+    return <FaMedal className={`absolute ${color} text-[300%] left-[50%] -translate-x-[50%] top-[77%] 2xl:top-[80%]`}/>
 }
 
 const AchievementCard = (props) => {
-
+    console.log(props);
     return( 
-        <div className={`relative hover:scale-105 m-auto transition-all duration-150 ${(fade)?"opacity-0":"opacity-100"}`} style={{scale:props.scale}}>
+        <div className={`min-w-[200px] relative hover:scale-105 py-4 m-auto transition-all duration-150 ${(fade)?"opacity-0":"opacity-100"}`} style={{scale:props.scale}}>
             <div className="absolute w-full h-full">
-                <div className="m-auto font-bold text-center text-3xl lg:text-2xl p-4 mt-[3%]">
+                <div className="m-auto font-bold text-center text-[1.35rem]  lg:text-2xl p-4 mt-[3%]">
                     {props.data.title}
                 </div>
                 <Image 
                     src={props.data.image} 
                     width={"600"} 
                     height={"600"} 
-                    className="rounded-lg m-auto w-[50%] lg:w-[30%] xl:w-[60%]"
+                    className="rounded-lg m-auto w-[40%] lg:w-[30%] xl:w-[60%]"
                     alt="Achievement Image"
                 />
                 <div
                     className="py-4 px-5 max-h-6 text-lg xl:text-lg xl:ml-7"
                 >
-                    <ul className='Achievement-details w-[90%] max-h-[140px] overflow-y-scroll m-auto  list-disc'> 
+                    <ul className='Achievement-details text-lg lg:text-lg w-[90%] max-h-[30vw] lg:max-h-[12vw] h-full  overflow-y-scroll m-auto  list-disc'> 
                         { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) }
                     </ul>
                 </div>
+
+            </div>
+            <div className="absolute w-full h-full">
                 {
                     (props.data.ranked)?
                         <DisplayRank rank={props.data.rank}/>
                         :<div/>
                 }
-                <div className="absolute lg:hidden top-[30%] -left-5 text-[50px] animate-pulse"> 
+                <div className="absolute lg:hidden top-[30%] left-1 text-[50px] animate-pulse"> 
                     <MdDoubleArrow className="rotate-180"/> 
-                    <div className="text-sm">
+                    <div className="text-sm text-center">
                         <i> swipe </i>
                     </div>
                 </div>
-                <div className="absolute lg:hidden top-[30%] -right-5 text-[50px] animate-pulse"> 
+                <div className="absolute lg:hidden top-[30%] right-1 text-[50px] animate-pulse"> 
                     <MdDoubleArrow />
-                    <div className="text-sm">
+                    <div className="text-sm text-center">
                         <i> swipe </i>
                     </div>
                 </div>
@@ -96,10 +99,10 @@ const Top3Achievements = ({Top3Data}) =>{
     }
 
     const leftButton = () => {
-        if((cardNum - 1)%3 <= -1)
-            setCardNum(2)
+        if((cardNum - 1) < 0)
+            setCardNum(Top3Data.length - 1)
         else
-            setCardNum((cardNum - 1)%3)
+            setCardNum(cardNum - 1)
 
         fade = false;
         setLeftSwiping(false);
@@ -134,6 +137,15 @@ const Top3Achievements = ({Top3Data}) =>{
         {
             setRightSwiping(true)
         }            
+        else
+        {
+
+            fade = false;
+            setLeftSwiping(false);
+            setRightSwiping(false);
+            clearInterval(intervalId)
+            
+        }
     }
 
     useEffect(() => {
