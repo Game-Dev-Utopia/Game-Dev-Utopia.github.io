@@ -41,7 +41,8 @@ const AchievementCard = (props) => {
                     className="py-4 px-5 max-h-6 text-lg xl:text-lg xl:ml-7"
                 >
                     <ul className='Achievement-details text-lg lg:text-lg w-[90%] max-h-[30vw] lg:max-h-[12vw] h-full  overflow-y-scroll m-auto  list-disc'> 
-                        { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) }
+                        {/* { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) } */}
+                        <li>{props.data.description}</li>
                     </ul>
                 </div>
 
