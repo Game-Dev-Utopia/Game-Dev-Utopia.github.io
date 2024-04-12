@@ -948,7 +948,7 @@
 
 
 const formattedCountries = countryData.map(country => `${country.code} ${country.name}`);
-console.log(formattedCountries);
+//console.log(formattedCountries);
 
 export default formattedCountries;
 

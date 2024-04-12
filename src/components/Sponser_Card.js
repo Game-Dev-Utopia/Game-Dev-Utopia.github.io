@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { getRequest } from '@/api/api';
 import axios from "axios";
+
 const Sponser_Card = () => {
     const [sponserData, setSponserData] = useState([]);
 

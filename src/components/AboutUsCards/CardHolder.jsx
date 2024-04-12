@@ -51,6 +51,7 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
     }
 
     const data = datas[selectedNum];
+    //console.log(data);
     return (
         <div>
             <div className={`w-fit h-fit m-auto text-3xl`}>

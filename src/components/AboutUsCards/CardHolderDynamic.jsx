@@ -19,7 +19,7 @@ const StaticDropDown = ({data,setClicked}) => {
     return(
         <div className={`flex justify-evenly rounded-lg p-4`} onClick={setClicked}>
             <div className="flex mx-2">
-                <b>{data.title}</b>
+                <b className="txt-grad">{data.title}</b>
             </div>
             <IoMdArrowDropdown className="ml-1 mr-1 mt-1 scale-125" />
         </div>
@@ -27,6 +27,7 @@ const StaticDropDown = ({data,setClicked}) => {
 }
 
 const DropDown = ({datas,currIndex,selectCurrIndex}) => {
+    console.log(datas);
 
     const [clicked,setClicked] = useState(false);
     const [OnHover,setOnHover] = useState(false);
