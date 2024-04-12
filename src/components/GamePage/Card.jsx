@@ -23,7 +23,7 @@ const Card = ({ item }) => {
 
               {/* make image fir according to landscape also */}
               {/* https://images.firstpost.com/uploads/2022/10/BGMI-was-banned-in-July-this-year.-Will-the-battle-royale-make-a-comeback-this-year.jpg?im=FitAndFill=(596,336) */}
-              <img src={val.img} className='h-full w-full rounded-3xl border-solid'></img>
+              <img src={val.thumbnail} className='h-full w-full rounded-3xl border-solid'></img>
               <div className='left-0 absolute px-2 pb-8 ml-4 '><Like /></div>
               <div className='right-0 absolute pb-8  px-2'><Save /></div>
             </div>
@@ -33,28 +33,28 @@ const Card = ({ item }) => {
               </div> */}
 
               <div className="text-sm font-bold flex gap-2 items-center w-full my-1">
-                {/* <img src={val.developer_id[0].profilePhoto} alt='pfp' className='h-5 w-5 rounded-full' /> */}
+                {/* <img src={val.developer_ids[0].profilePhoto} alt='pfp' className='h-5 w-5 rounded-full' /> */}
                 {
-                  val.developer_id.length == 1 ?
-                    <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 my-2 relative rounded-full border-[5px] border-slate-800' />
-                    : val.developer_id.length == 2 ?
+                  val.developer_ids.length == 1 ?
+                    <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 my-2 relative rounded-full border-[5px] border-slate-800' />
+                    : val.developer_ids.length == 2 ?
                       <div className='overflow-visible'>
-                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
-                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
+                        <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
+                        <img src={val.developer_ids[1].profilePhoto ? val.developer_ids[1].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
                       </div>
                       :
                       <div className='overflow-visible'>
-                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
-                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
-                        <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] -left-1.5 border-[5px] border-slate-800' />
-                        {/* <img src="https://github.com/shadcn.png" alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' /> */}
+                        <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
+                        <img src={val.developer_ids[1].profilePhoto ? val.developer_ids[1].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
+                        <img src={val.developer_ids[2].profilePhoto ? val.developer_ids[2].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full absolute top-1 bg-slate-800 z-[-5] -left-1.5 border-[5px] border-slate-800' />
+                        {/* <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 my-2 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' /> */}
                       </div>
                 }
                 {
-                  val.developer_id.length == 1 ? val.developer_id[0].name.split(" ")[0]
-                    : val.developer_id.length === 2
-                      ? `${val.developer_id[0].name.split(" ")[0]} and ${val.developer_id[1].name.split(" ")[0]}`
-                      : `${val.developer_id[0].name.split(" ")[0]} and ${val.developer_id.length - 1} others`}
+                  val.developer_ids.length == 1 ? val.developer_ids[0].name.split(" ")[0]
+                    : val.developer_ids.length === 2
+                      ? `${val.developer_ids[0].name.split(" ")[0]} and ${val.developer_ids[1].name.split(" ")[0]}`
+                      : `${val.developer_ids[0].name.split(" ")[0]} and ${val.developer_ids.length - 1} others`}
               </div>
               <p className="w-56 duration-500 font-normal line-clamp-2">
                 {val.description}
