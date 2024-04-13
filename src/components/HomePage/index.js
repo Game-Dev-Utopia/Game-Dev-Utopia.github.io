@@ -73,10 +73,10 @@ const Carousel = ({ speed }) => {
                     alt={`Avatar ${index}`}
                     sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                   >
-                    {design.title}
+                    {design.title[0]}
                   </Avatar>
                   <div className="developer-info">
-                    <span>{design.developer_id}</span>
+                    <span>{design.description}</span>
                   </div>
                 </div>
               </div>
@@ -108,10 +108,10 @@ const Carousel = ({ speed }) => {
                       alt={`Avatar ${index}`}
                       sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                     >
-                      {design.title}
+                      {design.title[0]}
                     </Avatar>
                     <div className="developer-info">
-                      <span>{design.developer_id}</span>
+                      <span>{design.description}</span>
                     </div>
                   </div>
                 </div>

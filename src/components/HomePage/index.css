@@ -140,7 +140,7 @@
 
 .developer-info {
   position: absolute;
-  width: auto;
+  width: 12rem;
   bottom: 5px;
   left: 50px;
   color: white;
@@ -149,9 +149,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   z-index: 10;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
-
 
 .carousel:hover, .carousel2:hover {
   cursor: pointer;
