@@ -31,7 +31,6 @@ const Carousel = ({ speed }) => {
   const remainingImages = designData.slice(10);
   const secondCarouselImages = remainingImages.slice(0, 10);
 
-  // Function to determine if a URL is for an image or a video
   const getFileType = (url) => {
     const fileExtension = url.split('.').pop().toLowerCase();
     if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileExtension)) {
