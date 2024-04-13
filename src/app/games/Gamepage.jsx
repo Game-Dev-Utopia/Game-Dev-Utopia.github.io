@@ -65,10 +65,10 @@ const Gamepage = () => {
 
   useEffect(() => {
     const filteredGames = Data.filter((game) =>
-      ((!filters.Aiming && !filters.Puzzle && !filters.Fighting && !filters.RPG && !filters.Racing) || game.category.some(category => filters[category])) &&
+      ((!filters.Aiming && !filters.Puzzle && !filters.Fighting && !filters.RPG && !filters.Racing) || game.categories.some(category => filters[category])) &&
       ((!filters.Heavy && !filters.Quick) || filters[game.size]) &&
       ((!filters['2D'] && !filters['3D']) || filters[game.dimension]) &&
-      ((!filters.Mobile && !filters.Laptop) || filters[game.device]) &&
+      ((!filters.Mobile && !filters.Laptop) || game.device.some(device => filters[device])) &&
       (!filters.Downloadable || game.downloadable === true)
     )
 

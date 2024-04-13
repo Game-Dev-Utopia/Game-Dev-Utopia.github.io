@@ -2,13 +2,13 @@
     .Card {
         width: 16.667%;
         min-width: theme('minWidth.min');
-        padding: 0.2%;
+        /* padding: 0.2%; */
         margin-left: -4%;
         box-shadow: theme('boxShadow.2xl');
-        background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
+        /* background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary))); */
         /* border-radius: 10px; */
         z-index: 0;
-        box-shadow: -5px 0px 10px black;
+        box-shadow: 0px 2px 5px rgb(6, 182, 212);
     }
 
     .Card:hover {
@@ -41,13 +41,13 @@
     .Card {
         width: 16.667%;
         min-width: theme('minWidth.min');
-        padding: 0.2%;
+        /* padding: 0.2%; */
         margin-left: -4%;
         box-shadow: theme('boxShadow.2xl');
         background: linear-gradient(to bottom, #23141ddc, rgb(var(--card-background-secondary)));
         /* border-radius: 10px; */
         z-index: 0;
-        box-shadow: -5px 0px 10px black;
+        box-shadow: 0px 2px 5px rgb(6, 182, 212);
     }
     .Mobile-Card {
         position: absolute;

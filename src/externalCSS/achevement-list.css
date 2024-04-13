@@ -12,7 +12,7 @@
 
 .List-Achievement-detail-container {
     color: white;
-    background-color: #2f2f2f;
+    background-color: theme(backgroundColor.slate.800);
     border-radius: 20px;
     padding: 2%;
 }
@@ -27,9 +27,8 @@
     margin-left: 20%;
     margin-top: 4%;
     border-radius: 20px;
-    padding: 0.5%;
-    padding-right: 1%;
-    background: linear-gradient(to right, #2f2f2f, #73A885);
+    box-shadow: 0px 2px 5px rgb(6, 182, 212);
+    /* background: linear-gradient(to right, #2f2f2f, theme(backgroundColor.cyan.500)); */
     /* padding-left: 5%; */
 }
 
@@ -57,6 +56,6 @@
     transform : translateX(-50%);
     height: 110%;
     width: 7px;
-    background: #73A885;
+    background: theme(backgroundColor.cyan.800);
 }
 
