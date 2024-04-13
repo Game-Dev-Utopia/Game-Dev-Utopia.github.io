@@ -25,7 +25,8 @@ const DisplayRank = ({rank})=>{
 const AchievementImages = ({data})=>{
     return(
         <div className={`flex-col flex sm:flex-row items-center sm:justify-center p-5 w-full`}>
-            { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='sm:mx-5 mx-auto rounded-md aspect-square m-3' key={i}/>) }
+            {/* { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='sm:mx-5 mx-auto rounded-md aspect-square m-3' key={i}/>) } */}
+            <Image width={100} height={100} src={data.image}  className='sm:mx-5 mx-auto rounded-md aspect-square m-3' />
         </div>
     )
 }
@@ -55,7 +56,8 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
                     <AchievementImages data={data}/>
                     <h1 className='text-center text-xl lg:text-2xl'><b>{data.title}</b></h1>
                     <ul className='List-Achievement-details text-lg lg:text-lg list-none text-center p-2'> 
-                        { data.description.map((detail, i) => <li key={i}>{detail}</li>) }
+                        {/* { data.description.map((detail, i) => <li key={i}>{detail}</li>) } */}
+                        <li>{data.description}</li>
                     </ul>
                 </div>
             </div>
