@@ -28,10 +28,10 @@ const Sponser_Card = () => {
             <div className='outer_c'>
                 
                 <div className='con' >
-                    <div class="slider_1 bg-slate-900">
-                        <div class="slide-track">
+                    <div className="slider_1 bg-slate-900">
+                        <div className="slide-track">
                         {sponserData.map(sponsor => (
-                             <div class="slide" key={sponsor._id}>
+                             <div className="slide" key={sponsor._id}>
                              <img src={sponsor.logo}  />
                          </div>
                         ))}
@@ -42,9 +42,9 @@ const Sponser_Card = () => {
             </div>
 
 {/*
-            <div class="slider_2">
-                <div class="slide-track">
-                    <div class="slide">
+            <div className="slider_2">
+                <div className="slide-track">
+                    <div className="slide">
                         <img src="https://cdn.neowin.com/forum/uploads/post-58955-1099936083_thumb.jpg"  />
                     </div>
                     <div className="slide">

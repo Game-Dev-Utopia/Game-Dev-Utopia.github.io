@@ -15,7 +15,7 @@ export default function HomePageCarousel({ images }){
       </button>
       <div className="w-96 overflow-hidden">
         <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}>
-          {images.map((image, index) => (
+        {images.map((image, index) => (
             <div key={index} className={`w-32 h-32 flex-shrink-0 ${index === currentIndex ? 'scale-125' : 'scale-100'}`}>
               <img src={image} alt={`carousel-${index}`} className="w-full h-full object-cover rounded-lg" />
             </div>
@@ -28,4 +28,3 @@ export default function HomePageCarousel({ images }){
     </div>
   );
 };
-
