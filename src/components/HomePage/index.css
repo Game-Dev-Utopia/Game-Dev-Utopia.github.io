@@ -34,20 +34,20 @@
 
 .carousel {
   display: flex;
-  animation: carousel-animation 50s linear infinite; 
+  animation: carousel-animation 20s linear infinite; 
   width: fit-content;
 }
 
 .carousel2 {
   margin-top: 5rem;
   display: flex;
-  animation: carousel-animation2 50s linear infinite; 
+  animation: carousel-animation2 20s linear infinite; 
   width: fit-content;
 }
 
 @keyframes carousel-animation {
   from {
-    transform: translateX(-50%);
+    transform: translateX(-75%);
   }
   to {
     transform: translateX(0);
@@ -59,12 +59,14 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(-75%);
   }
 }
 
 .box {
-
+  position: relative;
+  width: 300px;
+  height: 250px;
   overflow: hidden;
   border-radius: 20px;
   z-index: 10;
@@ -84,10 +86,10 @@
   align-items: center;
 }
 
-.carousel-image {
+.carousel-image, .carousel-video {
   border-radius: 20px;
-  width: auto; 
-  max-height: 100%; 
+  width: 300px; 
+  max-height: 300px; 
   display: flex;
   overflow: hidden;
   object-fit: cover; 
@@ -126,15 +128,6 @@
   filter: blur(10px); 
 }
 
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 .avatar-container {
   position: absolute;
@@ -187,7 +180,7 @@
     font-size: 14px; 
   }
 
-  .carousel-image {
+  .carousel-image, .carousel-video {
     max-height: 200px; 
   }
 
@@ -219,7 +212,7 @@
     font-size: 16px; 
   }
 
-  .carousel-image {
+  .carousel-image, .carousel-video {
     max-height: 200px; 
   }
 
@@ -228,8 +221,4 @@
     width: auto; 
   }
 }
-
-
-
-
 

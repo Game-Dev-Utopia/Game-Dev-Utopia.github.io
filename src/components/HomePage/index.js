@@ -1,29 +1,46 @@
-"use client"
 import React, { useState, useEffect } from 'react';
-import Link from 'next/link'; 
+import Link from 'next/link';
 import './index.css';
+import { getRequest } from '@/api/api';
 import Avatar from "@mui/material/Avatar";
-
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [design, setDesign] = useState();
+  const [designData, setDesignData] = useState([]);
 
-  const [designData, setdesignData] = useState([]);
+  const handleVideoEnded = (event, index) => {
+    const videoElement = event.target;
+    videoElement.currentTime = 0;
+    videoElement.play();
+  };
 
   useEffect(() => {
-    const designData = async () => {
+    const fetchData = async () => {
       try {
         const response = await getRequest('api/design/getdesigns');
-        console.log("res", response);
-        setdesignData(response);
+        console.log("SSM: ", response);
+        setDesignData(response);
       } catch (error) {
         console.error('Error fetching design data:', error);
       }
     };
-  
-    designData();
+    fetchData();
   }, []);
+
+  const imagesInFirstCarousel = designData.slice(0, 10);
+  const remainingImages = designData.slice(10);
+  const secondCarouselImages = remainingImages.slice(0, 10);
+
+  // Function to determine if a URL is for an image or a video
+  const getFileType = (url) => {
+    const fileExtension = url.split('.').pop().toLowerCase();
+    if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileExtension)) {
+      return 'image';
+    } else if (['mp4', 'webm', 'ogg', 'mkv', 'mov'].includes(fileExtension)) {
+      return 'video';
+    }
+    return 'unknown';
+  };
 
   return (
     <div className='c-container'>
@@ -35,25 +52,32 @@ const Carousel = ({ speed }) => {
       </div>
       <div className="carousel-container">
         <div className="carousel" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {designData.map((image, index) => (
+          {imagesInFirstCarousel.map((design, index) => (
             <div key={index} className='box-wrapper'>
               <div className="box">
-              <Link href="/designs" passHref>
-                <img
-                  src={image}
-                  alt={`Image ${index}`}
-                  className="carousel-image"
-                />
+                <Link href="/designs" passHref>
+                  {getFileType(design.designs[0]) === 'video' ? (
+                    <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
+                      <source src={design.designs[0]} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={design.designs[0]}
+                      alt={`Image ${index}`}
+                      className="carousel-image"
+                    />
+                  )}
                 </Link>
                 <div className="avatar-container">
                   <Avatar
                     alt={`Avatar ${index}`}
                     sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                   >
-                    {designData.developers[index % designData.developers.length].name[0]}
+                    {design.title}
                   </Avatar>
                   <div className="developer-info">
-                    <span>{designData.developers[index % designData.developers.length].name}</span>
+                    <span>{design.developer_id}</span>
                   </div>
                 </div>
               </div>
@@ -61,32 +85,41 @@ const Carousel = ({ speed }) => {
           ))}
         </div>
 
-        <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {designData.map((image, index) => (
-            <div key={index} className='box-wrapper'>
-              <div className="box">
-              <Link href="/designs" passHref>
-                <img
-                  src={image}
-                  alt={`Image ${index}`}
-                  className="carousel-image"
-                />
-                </Link>
-                <div className="avatar-container">
-                  <Avatar
-                    alt={`Avatar ${index}`}
-                    sx={{ width: 40, height: 40, border: '2px solid yellow' }}
-                  >
-                    {designData.developers[index % designData.developers.length].name[0]}
-                  </Avatar>
-                  <div className="developer-info">
-                    <span>{designData.developers[index % designData.developers.length].name}</span>
+        {secondCarouselImages.length > 0 && (
+          <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {secondCarouselImages.map((design, index) => (
+              <div key={index} className='box-wrapper'>
+                <div className="box">
+                  <Link href="/designs" passHref>
+                    {getFileType(design.designs[0]) === 'video' ? (
+                      <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
+                        <source src={design.designs[0]} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <img
+                        src={design.designs[0]}
+                        alt={`Image ${index}`}
+                        className="carousel-image"
+                      />
+                    )}
+                  </Link>
+                  <div className="avatar-container">
+                    <Avatar
+                      alt={`Avatar ${index}`}
+                      sx={{ width: 40, height: 40, border: '2px solid yellow' }}
+                    >
+                      {design.title}
+                    </Avatar>
+                    <div className="developer-info">
+                      <span>{design.developer_id}</span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
