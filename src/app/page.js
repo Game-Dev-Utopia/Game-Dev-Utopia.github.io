@@ -5,7 +5,11 @@ import LandingPage from "@/components/LandingPage/LandingPage";
 import Sponser_Card from "@/components/Sponser_Card";
 import HomePageDesignSection from "@/components/HomePage/index.js";
 import HomePageCarousel from "@/components/HomePageCarousel";
-
+import EmblaCarousel from "@/components/Carousel/EmblaCarousel";
+import '../styles/embla.css'
+const OPTIONS = { loop: true }
+const SLIDE_COUNT = 5
+const SLIDES = Array.from(Array(SLIDE_COUNT).keys())
 
 const images = [
   "https://plus.unsplash.com/premium_photo-1675257062614-c1da6b8d83ee?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Z2FtaW5nfGVufDB8fDB8fHww",
@@ -20,7 +24,8 @@ export default function Home() {
   return (
     <>
       <LandingPage />
-      <HomePageCarousel images={images}/>
+      {/* <HomePageCarousel images={images}/> */}
+      <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <HomePageDesignSection />
       <Sponser_Card />
     </>
