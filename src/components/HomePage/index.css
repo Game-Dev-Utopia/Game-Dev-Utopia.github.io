@@ -47,7 +47,7 @@
 
 @keyframes carousel-animation {
   from {
-    transform: translateX(-75%);
+    transform: translateX(calc(-70% - 12px));
   }
   to {
     transform: translateX(0);
@@ -59,7 +59,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-75%);
+    transform: translateX(calc(-75% - 12px));
   }
 }
 
@@ -89,7 +89,7 @@
 .carousel-image, .carousel-video {
   border-radius: 20px;
   width: 300px; 
-  max-height: 300px; 
+  height: 250px; 
   display: flex;
   overflow: hidden;
   object-fit: cover; 
@@ -180,12 +180,12 @@
   }
 
   .carousel-image, .carousel-video {
-    max-height: 200px; 
+    width: 100px;
   }
 
   .box {
-    height: 200px; 
-    width: auto; 
+    height: 100px; 
+    width: 100px; 
   }
 }
 
@@ -212,12 +212,13 @@
   }
 
   .carousel-image, .carousel-video {
-    max-height: 200px; 
+    width: 200px;
+    height: 200px; 
   }
 
   .box {
-    height: 250px; 
-    width: auto; 
+    height: 200px; 
+    width: 200px; 
   }
 }
 
