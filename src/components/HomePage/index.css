@@ -34,20 +34,20 @@
 
 .carousel {
   display: flex;
-  animation: carousel-animation 50s linear infinite; 
+  animation: carousel-animation 20s linear infinite; 
   width: fit-content;
 }
 
 .carousel2 {
   margin-top: 5rem;
   display: flex;
-  animation: carousel-animation2 50s linear infinite; 
+  animation: carousel-animation2 20s linear infinite; 
   width: fit-content;
 }
 
 @keyframes carousel-animation {
   from {
-    transform: translateX(-50%);
+    transform: translateX(calc(-70% - 12px));
   }
   to {
     transform: translateX(0);
@@ -59,12 +59,14 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-75% - 12px));
   }
 }
 
 .box {
-
+  position: relative;
+  width: 300px;
+  height: 250px;
   overflow: hidden;
   border-radius: 20px;
   z-index: 10;
@@ -76,18 +78,18 @@
 .box-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
   z-index: 10;
   object-fit: cover; 
   justify-content: center;
   align-items: center;
 }
 
-.carousel-image {
+.carousel-image, .carousel-video {
   border-radius: 20px;
-  width: auto; 
-  max-height: 100%; 
+  width: 300px; 
+  height: 250px; 
   display: flex;
   overflow: hidden;
   object-fit: cover; 
@@ -127,15 +129,6 @@
 }
 
 
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .avatar-container {
   position: absolute;
   display: flex-inline;
@@ -147,7 +140,7 @@
 
 .developer-info {
   position: absolute;
-  width: auto;
+  width: 12rem;
   bottom: 5px;
   left: 50px;
   color: white;
@@ -156,9 +149,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   z-index: 10;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 }
-
 
 .carousel:hover, .carousel2:hover {
   cursor: pointer;
@@ -187,13 +179,13 @@
     font-size: 14px; 
   }
 
-  .carousel-image {
-    max-height: 200px; 
+  .carousel-image, .carousel-video {
+    width: 100px;
   }
 
   .box {
-    height: 200px; 
-    width: auto; 
+    height: 100px; 
+    width: 100px; 
   }
 }
 
@@ -219,17 +211,14 @@
     font-size: 16px; 
   }
 
-  .carousel-image {
-    max-height: 200px; 
+  .carousel-image, .carousel-video {
+    width: 200px;
+    height: 200px; 
   }
 
   .box {
-    height: 250px; 
-    width: auto; 
+    height: 200px; 
+    width: 200px; 
   }
 }
-
-
-
-
 

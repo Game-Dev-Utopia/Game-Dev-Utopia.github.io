@@ -1,10 +1,5 @@
-
-*{
-    font-family: 'Open Sans';
-  }
   
   .design-page {
-      padding: 20px;
       justify-content: center;
       align-items: center;
     }
@@ -23,16 +18,9 @@
         column-gap: 10px;
   } 
   
-  .video-gallery {
-    width: 1220px;
-    margin: 10px auto;
-    columns: 3;
-    column-gap: 10px;
-  }
-  
     
     .image-gallery>.item img, 
-    .video-gallery>.video-item video {
+    .video-item video {
   
       max-width: 100%;
       border-radius: 15px;
@@ -175,12 +163,7 @@
       .item, .video-item {
         break-inside: avoid;
       }
-  
-      .video-gallery {
-        width: 1100px;
-        margin: 20px auto;
-        columns: 2;
-      }
+
   
       .overlay{
         opacity: 1;
@@ -194,13 +177,7 @@
         margin: 20px auto;
         columns: 2;
       }
-  
-      .video-gallery {
-        width: 100%;
-        max-width: 400px; 
-        margin: 20px auto;
-        columns: 1;
-      }
+
   
       .overlay{
         opacity: 1;

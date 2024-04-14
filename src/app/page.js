@@ -21,6 +21,7 @@ export default function Home() {
     <>
       <LandingPage />
       <HomePageCarousel images={images}/>
+      <HomePageDesignSection />
       <Sponser_Card />
     </>
   )
