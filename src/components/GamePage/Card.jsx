@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import Like from "./Like"
 import Save from "./Save"
 import { Avatar, AvatarImage } from '../ui/avatar'
+import Collaborators from './Collaborators'
 
 const Card = ({ item }) => {
   return (
@@ -32,30 +33,7 @@ const Card = ({ item }) => {
               {/* <div className="absolute -z-10 left-0 w-64 h-28 ">
               </div> */}
 
-              <div className="text-sm font-bold flex gap-2 items-center w-full my-1">
-                {/* <img src={val.developer_ids[0].profilePhoto} alt='pfp' className='h-5 w-5 rounded-full' /> */}
-                {
-                  val.developer_ids.length == 1 ?
-                    <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 relative rounded-full border-[5px] border-slate-800' />
-                    : val.developer_ids.length == 2 ?
-                      <div className='overflow-visible'>
-                        <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
-                        <img src={val.developer_ids[1].profilePhoto ? val.developer_ids[1].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
-                      </div>
-                      :
-                      <div className='overflow-visible'>
-                        <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' />
-                        <img src={val.developer_ids[1].profilePhoto ? val.developer_ids[1].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full absolute top-1 bg-slate-800 z-[-5] left-7 border-[5px] border-slate-800' />
-                        <img src={val.developer_ids[2].profilePhoto ? val.developer_ids[2].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full absolute top-1 bg-slate-800 z-[-5] -left-1.5 border-[5px] border-slate-800' />
-                        {/* <img src={val.developer_ids[0].profilePhoto ? val.developer_ids[0].profilePhoto : "https://github.com/shadcn.png"} alt='pfp' className='h-9 w-9 mx-1.5 rounded-full z-20 relative -left-2 border-[5px] border-slate-800' /> */}
-                      </div>
-                }
-                {
-                  val.developer_ids.length == 1 ? val.developer_ids[0].name.split(" ")[0]
-                    : val.developer_ids.length === 2
-                      ? `${val.developer_ids[0].name.split(" ")[0]} and ${val.developer_ids[1].name.split(" ")[0]}`
-                      : `${val.developer_ids[0].name.split(" ")[0]} and ${val.developer_ids.length - 1} others`}
-              </div>
+              <Collaborators developersArray={val.developer_ids} />
               <p className="w-56 font-normal line-clamp-2">
                 {val.description}
               </p>
