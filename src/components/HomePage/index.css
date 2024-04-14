@@ -78,8 +78,8 @@
 .box-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 25px;
-  margin-right: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
   z-index: 10;
   object-fit: cover; 
   justify-content: center;

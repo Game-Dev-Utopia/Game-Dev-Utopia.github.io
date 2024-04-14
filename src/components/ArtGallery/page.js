@@ -6,6 +6,7 @@ import ShareIcon from '@mui/icons-material/Share';
 import Avatar from "@mui/material/Avatar";
 import { getRequest } from '@/api/api';
 import "./index.css";
+import Collaborators from "../GamePage/Collaborators";
 
 const ArtGallery = () => {
   const [galleryData, setGalleryData] = useState([]);
@@ -142,10 +143,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
               <div className="content" style={{ background: "transparent", color: "white" }}>
                 <div className="title">{item.title}</div>
                 <div className="developer-info">
-                  <Avatar sx={{ width: 32, height: 32 }}>
-                    {galleryData.developers_id}
-                  </Avatar>
-                  <span>{galleryData.developers_id}</span>
+                  <span><Collaborators developersArray={item.developer_ids} /></span>
                 </div>
               <div className="description">
                   {showFullDescription[index]

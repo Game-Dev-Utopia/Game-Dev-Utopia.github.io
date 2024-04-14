@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-
 import Like from "./Like"
 import Save from "./Save"
 import { Avatar, AvatarImage } from '../ui/avatar'

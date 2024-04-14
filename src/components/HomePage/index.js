@@ -3,6 +3,7 @@ import Link from 'next/link';
 import './index.css';
 import { getRequest } from '@/api/api';
 import Avatar from "@mui/material/Avatar";
+import Collaborators from '../GamePage/Collaborators';
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -73,10 +74,10 @@ const Carousel = ({ speed }) => {
                     alt={`Avatar ${index}`}
                     sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                   >
-                    {design.title[0]}
+                    <Collaborators developersArray={design.developer_ids} />
                   </Avatar>
                   <div className="developer-info">
-                    <span>{design.description}</span>
+                    <span><Collaborators developersArray={design.developer_ids} /></span>
                   </div>
                 </div>
               </div>
@@ -108,10 +109,10 @@ const Carousel = ({ speed }) => {
                       alt={`Avatar ${index}`}
                       sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                     >
-                      {design.title[0]}
+                      <Collaborators developersArray={design.developer_ids} />
                     </Avatar>
                     <div className="developer-info">
-                      <span>{design.description}</span>
+                      <span><Collaborators developersArray={design.developer_ids} /></span>
                     </div>
                   </div>
                 </div>
