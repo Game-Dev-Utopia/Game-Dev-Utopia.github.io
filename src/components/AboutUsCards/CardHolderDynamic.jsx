@@ -27,7 +27,7 @@ const StaticDropDown = ({data,setClicked}) => {
 }
 
 const DropDown = ({datas,currIndex,selectCurrIndex}) => {
-    console.log(datas);
+    //console.log(datas);
 
     const [clicked,setClicked] = useState(false);
     const [OnHover,setOnHover] = useState(false);
@@ -61,6 +61,7 @@ const DropDown = ({datas,currIndex,selectCurrIndex}) => {
 
 
 const CardHolder = ({ datas, selectedNum = 0 }) => {
+    //console.log("data"+datas);
 
     const moveLastToFront = (arr) => {
         arr.unshift(arr.pop());
