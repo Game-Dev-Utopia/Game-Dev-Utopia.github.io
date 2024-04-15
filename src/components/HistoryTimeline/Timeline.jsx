@@ -25,7 +25,7 @@ const Timeline = ({ datas }) => {
 
   return (
     <>
-      <h1 className="text-[10vw] sm:text-[8vw] text-center">
+      <h1 className="text-[6vw] sm:text-[4vw] text-center">
         <b>History Timeline</b>
       </h1>
       <p className="text-center text-2xl my-20 mx-auto">

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import { register } from 'swiper/element/bundle'
 import styles from '../styles/HomePageGame.module.css'
 import { useEffect, useState } from 'react'
+
 export default function HomePageGamesSection() {
     useEffect(() => {
         register();
@@ -36,7 +37,7 @@ export default function HomePageGamesSection() {
                 </div>
                 </div>
             <div>
-                <HomePageGame />
+                {/* <HomePageGame />  */}
             </div>
         </section>
     )
