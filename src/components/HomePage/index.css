@@ -47,7 +47,7 @@
 
 @keyframes carousel-animation {
   from {
-    transform: translateX(calc(-70% - 12px));
+    transform: translateX(calc(-64% - 12px));
   }
   to {
     transform: translateX(0);
@@ -59,7 +59,7 @@
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-75% - 12px));
+    transform: translateX(calc(-64% - 12px));
   }
 }
 
@@ -78,8 +78,8 @@
 .box-wrapper {
   position: relative;
   display: inline-block;
-  margin-left: 20px;
-  margin-right: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
   z-index: 10;
   object-fit: cover; 
   justify-content: center;
@@ -171,7 +171,18 @@
   }
 
   .avatar-container {
-    bottom: 20px; 
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .box-wrapper {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .avatar-container .developer-info {
+    margin-top: 5px; 
+    margin-left: 0;
   }
 
   .developer-info {
@@ -180,12 +191,13 @@
   }
 
   .carousel-image, .carousel-video {
-    width: 100px;
+    width: 200px;
+    height: 200px;
   }
 
   .box {
-    height: 100px; 
-    width: 100px; 
+    height: 200px; 
+    width: 200px; 
   }
 }
 
@@ -204,7 +216,9 @@
   }
 
   .avatar-container {
+    position: relative;
     left: 40px; 
+    bottom: 40px;
   }
 
   .developer-info {
