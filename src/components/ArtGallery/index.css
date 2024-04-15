@@ -136,8 +136,6 @@
     opacity: 0;
   }
 }
-
-  
     
   .item:hover img, .video-item:hover video {
       filter: brightness(0.5);
@@ -153,11 +151,11 @@
       opacity: 1;
     }
     
-    @media (max-width: 768px) {
+    @media screen and (min-width: 480px) and (max-width: 768px) {
       .image-gallery {
-        width: 1100px;
+        width: auto;
         margin: 20px auto;
-        columns: 3;
+        columns: 2;
       }
   
       .item, .video-item {
@@ -170,12 +168,12 @@
       }
     }
     
-    @media (max-width: 480px) {
+    @media screen and (max-width: 480px) {
       .image-gallery {
         width: 100%;
         max-width: 400px; 
         margin: 20px auto;
-        columns: 2;
+        columns: 1;
       }
 
   
