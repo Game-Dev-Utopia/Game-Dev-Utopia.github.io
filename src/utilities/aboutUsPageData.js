@@ -2,7 +2,7 @@ const aboutUsData = {
 
     headCouncilData: [
         {
-            title: "Head Council",
+            title: "Board Members",
             data: [
 
                 {

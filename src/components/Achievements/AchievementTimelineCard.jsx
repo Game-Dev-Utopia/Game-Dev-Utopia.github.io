@@ -18,33 +18,23 @@ const DisplayRank = ({rank})=>{
             break;
     }
 
-    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[43%]  lg:bottom-[40%] -translate-x-1/2 translate-y-1/2`}/>
+    return <FaTrophy className={`absolute ${color} text-[400%] w-[6%] lg:w-[4%] h-auto z-20 absolute rounded-[10%] left-[10%] bottom-[44%]  lg:bottom-[43%] -translate-x-1/2 translate-y-1/2`}/>
+}
+
+
+const AchievementImages = ({data})=>{
+    return(
+        <div className={`flex-col flex sm:flex-row items-center sm:justify-center p-5 w-full`}>
+            {/* { data.image.map((img, i) => <Image width={100} height={100} src={img} alt={i} className='sm:mx-5 mx-auto rounded-md aspect-square m-3' key={i}/>) } */}
+            <Image width={100} height={100} src={data.image}  className='sm:mx-5 mx-auto rounded-md aspect-square m-3' />
+        </div>
+    )
 }
 
 const TimelineCard = ({ data , scrollCurrent, index }) => {
-    const timelineCardRef = useRef(0);
-    const [transparency,setTransparency] = useState(0);
-
-
-    useEffect(() => {
-        if(scrollCurrent && timelineCardRef) {
-            var scrollVal = ((scrollCurrent.scrollTop + scrollCurrent.clientHeight/1.5 - timelineCardRef.current.offsetTop)/timelineCardRef.current.clientHeight);
-
-            if(scrollVal > 0 && scrollVal < 1)
-                scrollVal = 1
-
-            setTransparency(scrollVal);
-        }
-        else{
-            if(index == 0)
-                setTransparency(1);
-
-        }
-    }, )
-
 
     return (
-        <div className={`List-Achievement transition-all duration-1000`}  ref={timelineCardRef}>
+        <div className={`List-Achievement transition-all duration-1000`} >
             <Image 
                 alt="Tag"
                 src={Tag}
@@ -63,9 +53,11 @@ const TimelineCard = ({ data , scrollCurrent, index }) => {
                 <div className='List-Achievement-detail-container'>
                     <div className='List-Achievement-detail-inner'>
                     </div>
-                    <h1 className='List-Achievement-title text-lg lg:text-2xl'><b>{data.title}</b></h1>
-                    <ul className='List-Achievement-details text-sm lg:text-xl list-disc'> 
-                        { data.description.map((detail, i) => <li key={i}>{detail}</li>) }
+                    <AchievementImages data={data}/>
+                    <h1 className='text-center text-xl lg:text-2xl'><b>{data.title}</b></h1>
+                    <ul className='List-Achievement-details text-lg lg:text-lg list-none text-center p-2'> 
+                        {/* { data.description.map((detail, i) => <li key={i}>{detail}</li>) } */}
+                        <li>{data.description}</li>
                     </ul>
                 </div>
             </div>

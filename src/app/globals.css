@@ -30,8 +30,8 @@
 
     --card-highlight: 147, 177, 166;
     --card-foreground: 92, 131, 161;
-    --card-background-primary: 4, 13, 18;
-    --card-background-secondary: 24, 61, 61;
+    --card-background-primary: theme(backgroundColor.slate.800);
+    --card-background-secondary: theme(backgroundColor.cyan.500);
 
     --primary-color:linear-gradient(99deg, rgb(221, 36, 118) 0%, rgb(221, 36, 118) 0%, rgb(255, 81, 47) 100%, rgb(255, 81, 47) 100%);
 

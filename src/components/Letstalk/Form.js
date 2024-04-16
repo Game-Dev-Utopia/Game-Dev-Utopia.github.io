@@ -2,19 +2,19 @@ import { useEffect, useState } from "react";
 import Stepper from "./Stepper";
 import { postRequestJson } from "@/api/api";
 
-
-
 export default function Form({ heading, image, stepsData , toastHandler}) {
-
- 
+  //console.log("lits"+formattedCountries)
 
   const handleSubmit = async (formData) => {
     console.log(formData);
-    let formName = "add" + heading.toLowerCase();
+    let formName = heading.toLowerCase();
     formName = formName.replace(/\s/g, '');
     console.log(formName);
-    const response = await postRequestJson(`/api/form/${formName}`, formData);
-    console.log(response);
+
+    const responseObj = {formName: formName, response:formData};
+    console.log(responseObj);
+    const response = await postRequestJson(`/api/form/addform`, responseObj);
+    //console.log(response);
 
     toastHandler();
 

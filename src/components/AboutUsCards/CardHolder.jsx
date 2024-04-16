@@ -5,7 +5,7 @@ import Card from "./Card";
 
 const StaticDropDown = ({ data, index }) => {
     return (
-        <div className={`block rounded-lg bg-card-background-secondary p-5`}>
+        <div className={`block rounded-lg p-5`}>
             <b>{data.title}</b>
         </div>
     );
@@ -51,6 +51,7 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
     }
 
     const data = datas[selectedNum];
+    //console.log(data);
     return (
         <div>
             <div className={`w-fit h-fit m-auto text-3xl`}>
@@ -60,9 +61,9 @@ const CardHolder = ({ datas, selectedNum = 0 }) => {
                 onTouchStart={onTouchStart}
                 onTouchMove={onTouchMove}
                 onTouchEnd={onTouchEnd}
-                className="min-h-screen no-scrollbar relative overflow-x-auto flex flex-row"
+                className="min-h-[80vh] no-scrollbar relative overflow-x-auto flex flex-row"
             >
-                <div className="sm:flex justify-center absolute top-1/2 -translate-y-1/2 p-[10%] sm:p-0">
+                <div className="sm:flex justify-center absolute top-1/2 -translate-y-[60%] py-[10%] sm:p-0">
                     { data.data.map((val,i) => <Card data={val} index={i} cardsCount={data.data.length} key={i}/>) }
                 </div>
             </div>

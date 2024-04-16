@@ -36,18 +36,18 @@ function Timer({ deadline }) {
   };
 
   return (
-    <section className='flex md:gap-2 justify-center items-center my-6 bg-stone-800 bg-opacity-20 backdrop-blur font-bold px-8 min-w-fit mx-1 py-2 rounded-lg'>
-        <img src="timer.svg" className='h-16 invert' alt="timer_design" />
+    <section className='flex md:gap-1 justify-center items-center my-6 bg-stone-800 bg-opacity-20 backdrop-blur font-bold px-8 min-w-fit mx-2 py-1 rounded-lg'>
+        <img src="timer.svg" className='h-12 invert' alt="timer_design" />
       <span>
       <h1 className='text-center text-[#F1DC90] font-serif text-lg'>Remaining Time</h1>
-      <div className='text-sm md:text-xl flex p-2'>
-        {days > 0 && <span className='flex flex-col items-center p-2'>{getTimeString(days, ':')} <div className='text-xs md:text-sm text-gray-500'>Days</div></span>}
-        {hours > 0 && <span className='flex flex-col items-center p-2'>{getTimeString(hours, ':')}  <div className='text-xs md:text-sm text-gray-500'>Hrs</div></span>}
-        <span className='flex flex-col items-center p-2'>{getTimeString(minutes, ':')}  <div className='text-xs md:text-sm text-gray-500'>Min</div></span>
-        <span className='flex flex-col items-center p-2'>{getTimeString(seconds, '')}  <div className='text-xs md:text-sm text-gray-500'>Sec</div></span>
+      <div className='text-sm md:text-xl flex p-1'>
+        {days > 0 && <span className='flex flex-col items-center p-1'>{getTimeString(days, ':')} <div className='text-xs md:text-sm text-gray-500'>Days</div></span>}
+        {hours > 0 && <span className='flex flex-col items-center p-1'>{getTimeString(hours, ':')}  <div className='text-xs md:text-sm text-gray-500'>Hrs</div></span>}
+        <span className='flex flex-col items-center p-1'>{getTimeString(minutes, ':')}  <div className='text-xs md:text-sm text-gray-500'>Min</div></span>
+        <span className='flex flex-col items-center p-1'>{getTimeString(seconds, '')}  <div className='text-xs md:text-sm text-gray-500'>Sec</div></span>
       </div>
       </span>
-        <img src="timer.svg" className='h-16 invert' alt="timer_design" />
+        <img src="timer.svg" className='h-12 invert' alt="timer_design" />
     </section>
   );
 }

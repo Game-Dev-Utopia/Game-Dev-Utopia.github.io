@@ -55,7 +55,7 @@ const Gamepage = () => {
 
   async function fetchData() {
     const response = await getRequest('/api/game/getallgames')
-    console.log(response.games)
+    // console.log(response.games)
     setData(response.games)
   }
 
@@ -65,10 +65,10 @@ const Gamepage = () => {
 
   useEffect(() => {
     const filteredGames = Data.filter((game) =>
-      ((!filters.Aiming && !filters.Puzzle && !filters.Fighting && !filters.RPG && !filters.Racing) || filters[game.category]) &&
+      ((!filters.Aiming && !filters.Puzzle && !filters.Fighting && !filters.RPG && !filters.Racing) || game.categories.some(category => filters[category])) &&
       ((!filters.Heavy && !filters.Quick) || filters[game.size]) &&
       ((!filters['2D'] && !filters['3D']) || filters[game.dimension]) &&
-      ((!filters.Mobile && !filters.Laptop) || filters[game.device]) &&
+      ((!filters.Mobile && !filters.Laptop) || game.device.some(device => filters[device])) &&
       (!filters.Downloadable || game.downloadable === true)
     )
 
@@ -77,7 +77,7 @@ const Gamepage = () => {
 
   return (
     <div className='bg-slate-900 sm:min-h-screen'>
-      <div className="sticky top-12 z-20 ">
+      <div className="sticky top-[3.5rem] z-20 ">
         <Filter
           menu={menu}
           addToFilterList={addFilters}
@@ -89,7 +89,7 @@ const Gamepage = () => {
       </div>
 
       {/* Scrollable content section */}
-      <div className="overflow-y-auto pt-16 z-10 relative">
+      <div className="overflow-y-auto py-16 z-10 relative">
         <div className="flex flex-wrap justify-center gap-y-10">
           {item.length > 0 ? <Card item={item} /> : <p className="text-white">Currently no games available for selected filters</p>}
         </div>

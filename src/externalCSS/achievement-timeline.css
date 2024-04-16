@@ -7,7 +7,7 @@ from {
 
 to { 
     transform: rotateY(0); 
-    box-shadow: 0px 0px 100px 0px rgba(255, 255, 0, 0.2);
+    box-shadow: 0px 0px 100px 0px rgba(6,182,212,0.2);
 }
 
 }
@@ -24,7 +24,7 @@ to {
 
 .Achievement-detail-container {
     color: white;
-    background-color: #2f2f2f;
+    background-color: theme(backgroundColor.slate.800);
     border-radius: 20px;
     padding: 2%;
 }
@@ -41,7 +41,7 @@ to {
     border-radius: 20px;
     padding: 0.5%;
     padding-right: 1%;
-    background: linear-gradient(to right, #2f2f2f, #E5BD1A);
+    background: linear-gradient(to right, theme(backgroundColor.slate.800), theme(backgroundColor.cyan.500));
     /* padding-left: 5%; */
 }
 
@@ -51,7 +51,7 @@ to {
     width: 5.5%;
     height: 5vh;
     /* background: linear-gradient(to right, #0e081f, #0e081f, #0e081f00, #0e081f00); */
-    background-color: #E5BD1AFF;
+    background-color: theme(backgroundColor.cyan.500);
     z-index: 0;
     top: 50%;
     left: 94%;
@@ -98,7 +98,7 @@ to {
     transform : translateX(-50%);
     height: 110%;
     width: 7px;
-    background: #E5BD1A;
+    background: theme(backgroundColor.cyan.800);
 }
 
 
@@ -153,14 +153,14 @@ to {
             margin-right: 10.3%;
             padding-left: 0.5%;
             /* background: linear-gradient(to left, #0e081f, #E5BD1A); */
-            background: linear-gradient(to left, #2f2f2f, #E5BD1A);
+            background: linear-gradient(to left, theme(backgroundColor.slate.800), theme(backgroundColor.cyan.500));
             /* border-left: 20px solid #E5BD1A; */
             /* border-right: none; */
             transform-origin: 0%;
         }
 
         .Achievement-tag {
-            background-color: #E5BD1AFF;
+            background-color: theme(backgroundColor.cyan.500);
             transform: translate(0%,-50%);
             /* background: linear-gradient(to left, #0e081f, #0e081f, #0e081f00, #0e081f00); */
             clip-path: polygon(
@@ -183,7 +183,7 @@ to {
         transform : translateX(-50%);
         height: 110%;
         width: 10px;
-        background: #E5BD1A;
+        background: theme(backgroundColor.cyan.800);
     }
 }
 

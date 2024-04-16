@@ -55,7 +55,12 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           id={field.fieldName.toLowerCase()}
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
-          onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value)}
+          maxLength={field.max}
+
+          onChange={(e) => {
+            const inputValue = e.target.value.slice(0, field.max); // Limit input value to maximum length
+            handleInputChange(field.fieldName.toLowerCase(), inputValue);
+          }}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
           placeholder={field.placeholder}
         />

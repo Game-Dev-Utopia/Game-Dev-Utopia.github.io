@@ -1,35 +1,46 @@
-"use client"
-import React, { useState } from 'react';
-// import { useNavigate } from "react-router-dom";
-import Link from 'next/link'; // Import Link from next/link
+import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import './index.css';
-import design1 from "../images/design1.jpg";
-import design2 from "../images/design2.jpeg";
-import design3 from "../images/design3.jpeg";
-import design4 from "../images/design4.jpg";
-import design5 from "../images/design5.jpg";
-import design6 from "../images/design6.jpg";
-import design7 from "../images/design7.jpg";
+import { getRequest } from '@/api/api';
 import Avatar from "@mui/material/Avatar";
-
-const images = [
-  design1, design2, design3, design4, design5, design6, design7,
-  design1, design2, design3, design4, design5, design6, design7,
-  design1, design2, design3, design4, design5, design6, design7,
-  design1, design2, design3, design4, design5, design6, design7,
-];
-
-const developers = [
-  { name: "Developer 1" },
-  { name: "Developer 2" },
-  { name: "Developer 3" },
-  { name: "Developer 4" },
-  { name: "Developer 5" },
-];
+import Collaborators from '../GamePage/Collaborators';
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
+  const [designData, setDesignData] = useState([]);
+
+  const handleVideoEnded = (event, index) => {
+    const videoElement = event.target;
+    videoElement.currentTime = 0;
+    videoElement.play();
+  };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await getRequest('api/design/getdesigns');
+        console.log("SSM: ", response);
+        setDesignData(response);
+      } catch (error) {
+        console.error('Error fetching design data:', error);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const imagesInFirstCarousel = designData.slice(0, 10);
+  const remainingImages = designData.slice(10);
+  const secondCarouselImages = remainingImages.slice(0, 10);
+
+  const getFileType = (url) => {
+    const fileExtension = url.split('.').pop().toLowerCase();
+    if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileExtension)) {
+      return 'image';
+    } else if (['mp4', 'webm', 'ogg', 'mkv', 'mov'].includes(fileExtension)) {
+      return 'video';
+    }
+    return 'unknown';
+  };
 
   return (
     <div className='c-container'>
@@ -40,26 +51,33 @@ const Carousel = ({ speed }) => {
         </p>
       </div>
       <div className="carousel-container">
-        <div className="carousel" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {images.map((image, index) => (
+        <div className="carousel1" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+          {imagesInFirstCarousel.map((design, index) => (
             <div key={index} className='box-wrapper'>
               <div className="box">
-              <Link href="/designs" passHref>
-                <img
-                  src={image}
-                  alt={`Image ${index}`}
-                  className="carousel-image"
-                />
+                <Link href="/designs" passHref>
+                  {getFileType(design.designs[0]) === 'video' ? (
+                    <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
+                      <source src={design.designs[0]} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <img
+                      src={design.designs[0]}
+                      alt={`Image ${index}`}
+                      className="carousel-image"
+                    />
+                  )}
                 </Link>
                 <div className="avatar-container">
                   <Avatar
                     alt={`Avatar ${index}`}
                     sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                   >
-                    {developers[index % developers.length].name[0]}
+                    <Collaborators developersArray={design.developer_ids} />
                   </Avatar>
                   <div className="developer-info">
-                    <span>{developers[index % developers.length].name}</span>
+                    <span><Collaborators developersArray={design.developer_ids} /></span>
                   </div>
                 </div>
               </div>
@@ -67,32 +85,41 @@ const Carousel = ({ speed }) => {
           ))}
         </div>
 
-        <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {images.map((image, index) => (
-            <div key={index} className='box-wrapper'>
-              <div className="box">
-              <Link href="/designs" passHref>
-                <img
-                  src={image}
-                  alt={`Image ${index}`}
-                  className="carousel-image"
-                />
-                </Link>
-                <div className="avatar-container">
-                  <Avatar
-                    alt={`Avatar ${index}`}
-                    sx={{ width: 40, height: 40, border: '2px solid yellow' }}
-                  >
-                    {developers[index % developers.length].name[0]}
-                  </Avatar>
-                  <div className="developer-info">
-                    <span>{developers[index % developers.length].name}</span>
+        {secondCarouselImages.length > 0 && (
+          <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {secondCarouselImages.map((design, index) => (
+              <div key={index} className='box-wrapper'>
+                <div className="box">
+                  <Link href="/designs" passHref>
+                    {getFileType(design.designs[0]) === 'video' ? (
+                      <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
+                        <source src={design.designs[0]} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    ) : (
+                      <img
+                        src={design.designs[0]}
+                        alt={`Image ${index}`}
+                        className="carousel-image"
+                      />
+                    )}
+                  </Link>
+                  <div className="avatar-container">
+                    <Avatar
+                      alt={`Avatar ${index}`}
+                      sx={{ width: 40, height: 40, border: '2px solid yellow' }}
+                    >
+                      <Collaborators developersArray={design.developer_ids} />
+                    </Avatar>
+                    <div className="developer-info">
+                      <span><Collaborators developersArray={design.developer_ids} /></span>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
