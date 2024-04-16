@@ -51,7 +51,7 @@ const Carousel = ({ speed }) => {
         </p>
       </div>
       <div className="carousel-container">
-        <div className="carousel" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        <div className="carousel1" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {imagesInFirstCarousel.map((design, index) => (
             <div key={index} className='box-wrapper'>
               <div className="box">

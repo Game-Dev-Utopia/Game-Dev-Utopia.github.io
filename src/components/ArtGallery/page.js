@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from 'next/link'; 
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import { FaFire } from 'react-icons/fa';
 import ShareIcon from '@mui/icons-material/Share';
 import Avatar from "@mui/material/Avatar";
 import { getRequest } from '@/api/api';
@@ -160,7 +161,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
               </div>
               <div className="icons">
                 <div className="like-icon" onClick={() => handleLike(index)}>
-                  <FavoriteBorderIcon style={{ background: "transparent" }} />
+                  <FaFire style={{ background: "transparent" }} />
                   <span className="like-count">{likes[index] || 0}</span>
                 </div>
                 <div className="share-icon" onClick={() => handleShare(index)}>

@@ -15,7 +15,7 @@
   padding: 20px;
   margin-top: 20px;
   border-radius: 10px;
-  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .c-container h1 {
@@ -32,7 +32,7 @@
   line-height: 1.6;
 }
 
-.carousel {
+.carousel1 {
   display: flex;
   animation: carousel-animation 20s linear infinite; 
   width: fit-content;
@@ -152,7 +152,7 @@
   /* white-space: nowrap; */
 }
 
-.carousel:hover, .carousel2:hover {
+.carousel1:hover, .carousel2:hover {
   cursor: pointer;
   animation-play-state: paused;
 }
@@ -165,7 +165,7 @@
 
 @media screen and (max-width: 768px) {
 
-  .carousel,
+  .carousel1,
   .carousel2 {
     animation-duration: 30s; 
   }
@@ -210,7 +210,7 @@
     padding: 15px; 
   }
 
-  .carousel,
+  .carousel1,
   .carousel2 {
     animation-duration: 40s; 
   }
