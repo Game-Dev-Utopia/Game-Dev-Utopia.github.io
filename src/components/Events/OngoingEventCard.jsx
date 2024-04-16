@@ -3,6 +3,7 @@ import Image from "next/image";
 import {imageContainer} from '../../styles/events_page.module.css'
 import Timer from "../Timer";
 import Carousel from '@/components/Carousel';
+import Link from "next/link";
 /**
  *
  * @param {Array} props
@@ -25,6 +26,7 @@ export default function EventCard({ events }) {
                 : description+" "}
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta deserunt commodi veniam ipsum quia ex a laboriosam, placeat nostrum cum.
             </p>
+            <Link href={"/events"}><button className="my-2 text-[#f1dc90] font-bold text-xl">REGISTER</button></Link>
           </div>
             <Timer deadline={deadline}/> 
         </div>

@@ -20,6 +20,7 @@ const LandingPage = () => {
             setImage2(img2);
             setImage3(img3);
             setVideoPath(video);
+            console.log("Response: ",response)
             //console.log(video)
         } catch (error) {
             console.log(error.message);

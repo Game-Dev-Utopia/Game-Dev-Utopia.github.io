@@ -25,6 +25,7 @@ export default function Home() {
     <>
       <LandingPage />
       {/* <HomePageCarousel images={images}/> */}
+      <h1 className="w-fit mx-auto font-semibold text-xl text-[yellow] my-2">Games</h1>
       <EmblaCarousel slides={SLIDES} options={OPTIONS} />
       <HomePageDesignSection />
       <Sponser_Card />

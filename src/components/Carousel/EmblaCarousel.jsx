@@ -7,6 +7,7 @@ import {
 } from './EmblaCarouselArrowButtons'
 import { DotButton, useDotButton } from './EmblaCarouselDotButton'
 import Image from 'next/image'
+import Collaborators from '../GamePage/Collaborators'
 
 const TWEEN_FACTOR_BASE = 0.52
 
@@ -89,7 +90,7 @@ const EmblaCarousel = (props) => {
       .on('reInit', setTweenFactor)
       .on('reInit', tweenScale)
       .on('scroll', tweenScale)
-  }, [emblaApi, tweenScale])
+  }, [emblaApi, tweenScale,setTweenFactor,setTweenNodes])
 
   return (
     <div className="embla">
@@ -97,8 +98,12 @@ const EmblaCarousel = (props) => {
         <div className="embla__container">
           {slides.map((index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                <Image src="https://picsum.photos/600/400" width={600} height={400} alt="carousel-img" />
+              <div className="embla__slide__number relative">
+                <span className='absolute z-10 bottom-0 px-2 bg-slate-900/50 w-full'>
+                <h1 className='text-xl'>Developer name</h1>
+                <p>Lorem ipsum dolor sit amet.</p>
+                </span>
+                <Image src="https://picsum.photos/600/400" fill={true} alt="carousel-img" />
               </div>
             </div>
           ))}
@@ -111,7 +116,7 @@ const EmblaCarousel = (props) => {
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
         </div>
 
-        <div className="embla__dots">
+        {/* <div className="embla__dots">
           {scrollSnaps.map((_, index) => (
             <DotButton
               key={index}
@@ -121,7 +126,7 @@ const EmblaCarousel = (props) => {
               )}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </div>
   )

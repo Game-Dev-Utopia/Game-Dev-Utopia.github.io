@@ -18,7 +18,6 @@ export default function Slider() {
         showIndicators={false}
         centerMode
         useKeyboardArrows={true}
-        autoPlay={true}
         infiniteLoop={true}
         centerSlidePercentage={60}
         className=" md:w-[30vw]"
