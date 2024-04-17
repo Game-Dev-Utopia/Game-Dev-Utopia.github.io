@@ -11,16 +11,22 @@ const LandingPage = () => {
     const [image1, setImage1] = useState(null);
     const [image2, setImage2] = useState(null);
     const [image3, setImage3] = useState(null);
-
+    const [description, setDescription] = useState(null);
     const getLinks = async () => {
         try {
             const response = await getRequest("/api/hero");
-            const { img1, img2, img3, video } = response[0];
+            const video=response[0].bgVideo;
+            const diamondImages=response[0].diamondTilesImgs;
+            const img1=diamondImages[0];
+            const img2=diamondImages[1];
+            const img3=diamondImages[2];
+            const desc=response[0].description;
             setImage1(img1);
             setImage2(img2);
             setImage3(img3);
             setVideoPath(video);
-            console.log("Response: ",response)
+            setDescription(desc);
+            // console.log("Response: ",response)
             //console.log(video)
         } catch (error) {
             console.log(error.message);
@@ -58,7 +64,7 @@ const LandingPage = () => {
                 </div>
 
                 <div className='my-5 sm:mt-20 sm:w-1/2 sm:text-2xl mx-2 px-2 sm:ml-10'>
-                    <p className='h-1/2 sticky text-base sm:text-2xl text-white flex items-center justify-center'>Designs that dazzle, games that enthrall. Welcome to our world where creativity meets play. Unleash your imagination and dive into endless possibilities</p>
+                    <p className='h-1/2 sticky text-base sm:text-2xl text-white flex items-center justify-center'>{description}</p>
                 </div>
                 <Link href="/designs">
 
