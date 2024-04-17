@@ -96,14 +96,14 @@ const EmblaCarousel = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {slides.map((item,index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__number relative">
-                <span className='absolute z-10 bottom-0 px-2 bg-slate-900/50 w-full'>
-                <h1 className='text-xl'>Developer name</h1>
-                <p>Lorem ipsum dolor sit amet.</p>
+                <Image src={item.thumbnail} fill={true} alt="carousel-img" />
+                <span className='absolute z-10 bottom-0 px-2 bg-slate-900/30 w-full '>
+                <Collaborators developersArray={item.developer_ids}/>
+                <h1 className='text-xl'>{item.title}</h1>
                 </span>
-                <Image src="https://picsum.photos/600/400" fill={true} alt="carousel-img" />
               </div>
             </div>
           ))}

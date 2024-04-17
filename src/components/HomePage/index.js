@@ -46,9 +46,7 @@ const Carousel = ({ speed }) => {
     <div className='c-container'>
       <div className='content'>
         <h1>Design Section</h1>
-        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&apos;s standard dummy
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-        </p>
+        <p>Welcome to our creative hub where Blender and Photoshop work hand in hand to shape virtual worlds and stunning visuals. With Blender, we sculpt, texture, and animate game assets, while Photoshop adds depth to our digital artistry. Join us in unlocking the boundless potential of Blender and Photoshop for gaming and art.</p>
       </div>
       <div className="carousel-container">
         <div className="carousel1" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
