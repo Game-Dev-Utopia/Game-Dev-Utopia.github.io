@@ -1,6 +1,6 @@
 @media (min-width: 654px) {
     .Card {
-        width: 16.667%;
+        /* width: 16.667%; */
         min-width: theme('minWidth.min');
         /* padding: 0.2%; */
         margin-left: -4%;
@@ -9,6 +9,8 @@
         /* border-radius: 10px; */
         z-index: 0;
         box-shadow: 0px 2px 5px rgb(6, 182, 212);
+        width: 305px;
+        height: 550px;
     }
 
     .Card:hover {
@@ -35,11 +37,13 @@
         margin-left: 0px;
     }
 }
-
+.innercard{
+    height: 100%;
+}
 @media (max-width: 654px) {
 
     .Card {
-        width: 16.667%;
+        /* width: 16.667%; */
         min-width: theme('minWidth.min');
         /* padding: 0.2%; */
         margin-left: -4%;
@@ -48,6 +52,8 @@
         /* border-radius: 10px; */
         z-index: 0;
         box-shadow: 0px 2px 5px rgb(6, 182, 212);
+        width: 255px;
+        height: 550px;
     }
     .Mobile-Card {
         position: absolute;
