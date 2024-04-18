@@ -13,10 +13,10 @@ const OPTIONS = { loop: true }
 
 let SLIDES = []
 async function fetchGames() {
-  await axios.get('/api/game/getallgames')
+  await axios.get('/api/game/homepagegames')
     .then((response) => {
       const { games } = response.data;
-      SLIDES = games.slice(0, 5)
+      SLIDES = games
     })
     .catch((error) => {
       console.log(error)
@@ -40,14 +40,14 @@ export default function Home() {
       <LandingPage />
       {/* <HomePageCarousel images={images}/> */}
       <section id="games relative space-y-4 z-10">
-        <h1 className="w-fit mx-auto text-2xl text-[yellow] my-2">Games</h1>
+        <h1 className="w-fit mx-auto txt-grad font-bold text-center text-3xl my-10">Games</h1>
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <span className="grid place-items-center">
-          <Link href="/games" className="font-semibold text-xl p-2 ">
-            <button>
-            See More &rarr;
+          <Link href="/games" className="font-semibold text-lg p-2 ">
+            <button className="bg-grad py-1 rounded-full">
+              See More &rarr;
             </button>
-            </Link>
+          </Link>
         </span>
       </section>
       <HomePageDesignSection />

@@ -18,7 +18,7 @@ const Carousel = ({ speed }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await getRequest('api/design/getdesigns');
+        const response = await getRequest('api/design/homepagedesigns');
         console.log("SSM: ", response);
         setDesignData(response);
       } catch (error) {
@@ -28,9 +28,9 @@ const Carousel = ({ speed }) => {
     fetchData();
   }, []);
 
-  const imagesInFirstCarousel = designData.slice(0, 10);
-  const remainingImages = designData.slice(10);
-  const secondCarouselImages = remainingImages.slice(0, 10);
+  const imagesInFirstCarousel = designData.slice(0, 7);
+  const remainingImages = designData.slice(7);
+  const secondCarouselImages = remainingImages.slice(0, 7);
 
   const getFileType = (url) => {
     const fileExtension = url.split('.').pop().toLowerCase();
@@ -43,49 +43,15 @@ const Carousel = ({ speed }) => {
   };
 
   return (
-    <div className='c-container'>
-      <div className='content'>
-        <h1>Design Section</h1>
-        <p>Welcome to our creative hub where Blender and Photoshop work hand in hand to shape virtual worlds and stunning visuals. With Blender, we sculpt, texture, and animate game assets, while Photoshop adds depth to our digital artistry. Join us in unlocking the boundless potential of Blender and Photoshop for gaming and art.</p>
-      </div>
-      <div className="carousel-container">
-        <div className="carousel1" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {imagesInFirstCarousel.map((design, index) => (
-            <div key={index} className='box-wrapper'>
-              <div className="box">
-                <Link href="/designs" passHref>
-                  {getFileType(design.designs[0]) === 'video' ? (
-                    <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
-                      <source src={design.designs[0]} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <img
-                      src={design.designs[0]}
-                      alt={`Image ${index}`}
-                      className="carousel-image"
-                    />
-                  )}
-                </Link>
-                <div className="avatar-container">
-                  <Avatar
-                    alt={`Avatar ${index}`}
-                    sx={{ width: 40, height: 40, border: '2px solid yellow' }}
-                  >
-                    <Collaborators developersArray={design.developer_ids} />
-                  </Avatar>
-                  <div className="developer-info">
-                    <span><Collaborators developersArray={design.developer_ids} /></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          ))}
+    <>
+      <div className='c-container'>
+        <div className='content my-10'>
+          <h1 className='txt-grad font-bold text-center text-3xl'>Design</h1>
+          <p>Welcome to our creative hub where Blender and Photoshop work hand in hand to shape virtual worlds and stunning visuals. With Blender, we sculpt, texture, and animate game assets, while Photoshop adds depth to our digital artistry. Join us in unlocking the boundless potential of Blender and Photoshop for gaming and art.</p>
         </div>
-
-        {secondCarouselImages.length > 0 && (
-          <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-            {secondCarouselImages.map((design, index) => (
+        <div className="carousel-container">
+          <div className="carousel1" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+            {imagesInFirstCarousel.map((design, index) => (
               <div key={index} className='box-wrapper'>
                 <div className="box">
                   <Link href="/designs" passHref>
@@ -117,9 +83,51 @@ const Carousel = ({ speed }) => {
               </div>
             ))}
           </div>
-        )}
+
+          {secondCarouselImages.length > 0 && (
+            <div className="carousel2" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+              {secondCarouselImages.map((design, index) => (
+                <div key={index} className='box-wrapper'>
+                  <div className="box">
+                    <Link href="/designs" passHref>
+                      {getFileType(design.designs[0]) === 'video' ? (
+                        <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
+                          <source src={design.designs[0]} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      ) : (
+                        <img
+                          src={design.designs[0]}
+                          alt={`Image ${index}`}
+                          className="carousel-image"
+                        />
+                      )}
+                    </Link>
+                    <div className="avatar-container">
+                      <Avatar
+                        alt={`Avatar ${index}`}
+                        sx={{ width: 40, height: 40, border: '2px solid yellow' }}
+                      >
+                        <Collaborators developersArray={design.developer_ids} />
+                      </Avatar>
+                      <div className="developer-info">
+                        <span><Collaborators developersArray={design.developer_ids} /></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+        </div>
       </div>
-    </div>
+      <Link href="/art-gallery" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
+        <button className="bg-grad mx-auto text-center rounded-full py-1">
+          See More &rarr;
+        </button>
+      </Link>
+    </>
   );
 };
 
