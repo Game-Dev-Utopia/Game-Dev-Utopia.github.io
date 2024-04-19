@@ -9,7 +9,7 @@
   /* height: 140vh; */
   padding-top: 20px;
   position: relative;
-  /* overflow: hidden; */
+  overflow-x: hidden;
 }
 
 .content {
