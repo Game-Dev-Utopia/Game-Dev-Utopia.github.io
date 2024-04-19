@@ -38,9 +38,9 @@ const EmblaCarousel = (props) => {
         <div className={`embla__container ${slides.length > 0 ? "h-[325px]" : ""}`}>
           {slides.map((item, i) => (
             <>
-              <div key={i} className='embla__slide flex justify-center items-center z-20 font-bold '>
-                {/* <div className='max-w-[16rem] max-h-16 font-bold border-white animate-glow border-2 px-3 rounded-xl py-1 pb-3 text-overflow-ellipsis whitespace-no-wrap overflow-hidden text-center'>{item.title}
-                </div> */}
+              <div key={i} className='embla__slide flex flex-col justify-center items-center z-20 font-bold '>
+                <div className='max-w-[12rem] max-h-16 font-bold border-white animate-glow border-2 px-3 rounded-xl py-1 pb-3 text-overflow-ellipsis whitespace-no-wrap overflow-hidden text-center'>{item.title}
+                </div>
                 <div
                   className="embla__slide__number relative flex-col group rounded-2xl  overflow-hidden bg-slate-800 duration-500 w-60 h-[18rem] shadow shadow-gray-600 mx-5 text-gray-50 p-2.5 grid justify-items-center bottom-3 z-10 "
                 >
@@ -63,9 +63,6 @@ const EmblaCarousel = (props) => {
               </div> */}
 
                       <Collaborators developersArray={item.developer_ids} />
-                      <p className="w-56 font-bold text-lg">
-                        {item.title}
-                      </p>
                     </div>
                   </div>
                 </div>
