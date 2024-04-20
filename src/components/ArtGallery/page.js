@@ -1,7 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
 import Link from 'next/link'; 
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import { FaFire } from 'react-icons/fa';
 import ShareIcon from '@mui/icons-material/Share';
 import Avatar from "@mui/material/Avatar";

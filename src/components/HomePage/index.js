@@ -69,12 +69,12 @@ const Carousel = ({ speed }) => {
                     )}
                   </Link>
                   <div className="avatar-container">
-                    <Avatar
+                    {/* <Avatar
                       alt={`Avatar ${index}`}
                       sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                     >
                       <Collaborators developersArray={design.developer_ids} />
-                    </Avatar>
+                    </Avatar> */}
                     <div className="developer-info">
                       <span><Collaborators developersArray={design.developer_ids} /></span>
                     </div>
@@ -104,12 +104,12 @@ const Carousel = ({ speed }) => {
                       )}
                     </Link>
                     <div className="avatar-container">
-                      <Avatar
+                      {/* <Avatar
                         alt={`Avatar ${index}`}
                         sx={{ width: 40, height: 40, border: '2px solid yellow' }}
                       >
                         <Collaborators developersArray={design.developer_ids} />
-                      </Avatar>
+                      </Avatar> */}
                       <div className="developer-info">
                         <span><Collaborators developersArray={design.developer_ids} /></span>
                       </div>

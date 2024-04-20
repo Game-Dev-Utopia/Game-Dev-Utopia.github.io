@@ -1,52 +1,17 @@
-/* body {
-  padding: 10px;
-  padding: 0;
-  background-color: black;
-  position: relative;
-} */
-
-/* body::before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('/images/Vector\ 1361.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-  filter: blur(5px); 
-  opacity: 0.5; 
-  z-index: -1;
-} */
-
-
-/* .game-page {
-  margin-top: 10px;
-  display: flex;
-  padding: 30px;
-  margin-left: 20px;
-} */
-
-
-
-.game-section-top{
+/* This is the index.css file */
+.design-section-top{
   position: relative;
   background-size: cover;
   background-repeat: no-repeat;
   background-image: url('/images/games_section_bg_illustration.jpg');
-  /* 
-  Following tag can be used for attributing the creator of the image
-  <a href="https://www.freepik.com/free-vector/abstract-red-circle-black-background-technology_32996404.htm#fromView=search&term=website+background&track=ais&regularType=vector&page=1&position=29&uuid=64627bbf-4df9-473a-a346-8e5dfc1e52f5">Image by flatart</a> on Freepik 
-  
-  */
+  /* Following tag can be used for attributing the creator of the image
+  <a href="https://www.freepik.com/free-vector/abstract-red-circle-black-background-technology_32996404.htm#fromView=search&term=website+background&track=ais&regularType=vector&page=1&position=29&uuid=64627bbf-4df9-473a-a346-8e5dfc1e52f5">Image by flatart</a> on Freepik */
   background-position: center;
   background-color: rgba(0,0,0,1);
   border-radius: 1rem;
 }
 
-.video-game-wrapper {
+.video-design-wrapper {
   display: flex;
   justify-content: space-between;
   width: auto;
@@ -54,49 +19,31 @@
   border-radius: 50%;
 }
 
-.video-card {
+.des-video-card {
   flex: 1;
-  /* background-image: linear-gradient(to right, rgba(17, 3, 3, 0.518), rgba(14, 5, 5, 0.523)); */
-  /* border-radius: 20px; */
-  /* padding: 20px; */
-  /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
   width: auto;
   height: fit-content;
   align-items: center;
 }
 
-.game-Info {
+.des-thumbnail-container {
   flex: 1;
-  /* background-image: linear-gradient(to right, rgba(17, 3, 3, 0.518), rgba(14, 5, 5, 0.523)); */
-  /* border-radius: 20px; */
-  /* padding: 8px; */
-  /* box-shadow: 0 4px 8px rgba(67, 15, 15, 0.7); */
   width: auto;
   color: white;
 }
 
-.game-info .thumbnail img {
+.des-thumbnail img {
   padding: 0;
-  width: 100%; 
-  height: auto; 
-  border-radius: 20px 20px 0 0 ;
+  width: 100%;
+  height: auto;
+  border-radius: 20px 20px 0 0;
 }
 
-.buttons {
+.des-buttons {
   align-items: center;
 }
 
 button {
-  /* background-image: linear-gradient(to right, rgba(240, 240, 240, 0.3), rgba(100, 100, 100, 0.5));
-  flex-wrap: wrap;
-  padding: 10px 10px 10px 10px;
-  margin: 5px;
-  background-color: blue;
-  color: antiquewhite;
-  border-radius: 10px;
-  font-size: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; */
   @apply px-2 py-1 duration-200 text-lg bg-[#202020] rounded-md hover:bg-[#fdb714] hover:text-black;
 }
 
@@ -106,20 +53,13 @@ button:hover {
   box-shadow: 0 8px 16px rgba(60, 6, 6, 0.2);
 }
 
-/* .like-symbol,
-.comment-symbol {
-  font-size: 15px;
-} */
-
-
-.carousel-container {
+.des-carousel-container {
   position: relative;
-  /* width: 100%; */
   height: 80vh;
   overflow-y: scroll;
 }
 
-.carousel-wrapper {
+.des-carousel-wrapper {
   display: flex;
   flex-direction: column;
   scroll-snap-type: y mandatory;
@@ -127,88 +67,141 @@ button:hover {
   scrollbar-width: thin;
 }
 
-.carousel-container::-webkit-scrollbar {
+.des-carousel-container::-webkit-scrollbar {
   display: none;
 }
 
-.carousel {
+.des-carousel {
   margin-top: 5px;
   display: flex;
-  flex-direction: column;
-  scroll-snap-type: y mandatory;
-  width:fit-content;
+  flex-direction: column; /* Change to horizontal */
+  scroll-snap-type: y mandatory; /* Change to horizontal */
+  width: fit-content;
 }
 
-.carousel-item {
+.des-carousel-item {
   scroll-snap-align: start;
   flex: 0 0 auto;
   width: fit-content;
-  margin-bottom: 5px;
+  margin-bottom: 5px; /* Change to horizontal */
   position: relative;
 }
 
-.carousel-item img {
-  margin-bottom: 5px;
+.des-carousel-item img {
+  margin-right: 5px; /* Change to horizontal */
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 }
 
-/* .carousel-item span {
-  position: absolute;
-  top: 50%;
-  left: 49%;
-  width: 95%;
-  height: 100%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));
-  color: white;
-  transition:  0.3s ease-in-out;
-  
-} */
-
-.carousel-item:hover img {
-  /* transform: scale(2) ; */
-  border:2px solid purple;
+.des-carousel-item:hover img {
+  border: 2px solid purple;
   cursor: pointer;
   position: relative;
   z-index: 2;
   margin-bottom: 0;
-  margin-right: -40px;
+  margin-right: 0; /* Change to horizontal */
 }
 
-/* .carousel-item:hover span {
-  font-size: 14px;
-  opacity: 1;
-  z-index: 999;
-} */
-
-
-@media (max-width: 800px) {
-  .game-page {
+@media (max-width: 480px) {
+  .design-section-top {
     display: block;
     padding: 10px;
     margin-left: 10px;
   }
-  .video-game-wrapper{
+
+  .video-design-wrapper {
     display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse; /* Reversing the sequence */
   }
 
-  .video-card {
+  .des-thumbnail-container {
     margin: 5px;
-    width: auto; 
+    width: 100%;
     height: auto;
   }
 
-  .game-info {
+  .des-video-card {
     margin: 5px;
-    width: auto; 
-    height: auto;
+    width: 100%;
+    height: 100%;
   }
 
-  button {
-    padding: 8px 15px;
-    margin: 5px;
+  .des-carousel {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row; /* Change to horizontal */
+    scroll-snap-type: x mandatory; /* Change to horizontal */
+    width: fit-content;
+  }
+
+  .des-carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .des-carousel-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+  }
+
+  .des-carousel-item img {
+    width: 120px;
+    height: 100px;
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 800px) {
+  .design-section-top {
+    display: block;
+    padding: 10px;
     margin-left: 10px;
+    height: fit-content;
+  }
+
+  .video-design-wrapper {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse; /* Reversing the sequence */
+  }
+
+  .des-thumbnail-container {
+    margin: 5px;
+    width: 100%;
+    height: auto;
+  }
+
+  .des-video-card {
+    margin: 5px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .des-carousel {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row; /* Change to horizontal */
+    scroll-snap-type: x mandatory; /* Change to horizontal */
+    width: fit-content;
+  }
+
+  .des-carousel-container {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .des-carousel-item {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 5px;
+  }
+
+  .des-carousel-item img {
+    width: 150px;
+    height: 100px;
   }
 }
