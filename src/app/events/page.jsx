@@ -4,77 +4,81 @@ import { events } from '@/data/event_details';
 import PastEvents from '@/components/Events/PastEvents';
 import Search from '@/components/Search';
 import UpcomingEvents from '@/components/UpcomingEvents';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react'; // Import useState
 import axios from '../../api/axios';
 
-let categorizedEvents = {};
-const {ongoing,past,upcoming} = events
-let eventsArray = []
+export default function Page() {
+  const [categorizedEvents, setCategorizedEvents] = useState({
+    past: [],
+    ongoing: [],
+    upcoming: []
+  });
 
-const categorize = (events)=>{
-  const today = new Date();
+  useEffect(() => {
+    async function getEvents() {
+      try {
+        const response = await axios.get('/api/event/getallevents');
+        const eventsArray = response.data;
+        const categorizedEvents = categorize(eventsArray);
+        setCategorizedEvents(categorizedEvents);
+      } catch (error) {
+        console.error("Error fetching events:", error);
+      }
+    }
+    getEvents();
+  }, []);
 
-  const pastEvents = [];
+  // Function to categorize events
+  const categorize = (events) => {
+    const today = new Date();
+    const pastEvents = [];
     const ongoingEvents = [];
     const upcomingEvents = [];
 
     events.forEach(event => {
-        const eventStartsIn = new Date(event.startsIn);
-        const eventEndsIn = new Date(event.endsIn);
+      const eventStartsIn = new Date(event.startsIn);
+      const eventEndsIn = new Date(event.endsIn);
 
-        if (eventEndsIn < today) {
-            pastEvents.push(event);
-        } else if (eventStartsIn <= today && eventEndsIn >= today) {
-            ongoingEvents.push(event);
-        } else {
-            upcomingEvents.push(event);
-        }
+      if (eventEndsIn < today) {
+        pastEvents.push(event);
+      } else if (eventStartsIn <= today && eventEndsIn >= today) {
+        ongoingEvents.push(event);
+      } else {
+        upcomingEvents.push(event);
+      }
     });
 
     return {
-        past: pastEvents,
-        ongoing: ongoingEvents,
-        upcoming: upcomingEvents
+      past: pastEvents,
+      ongoing: ongoingEvents,
+      upcoming: upcomingEvents
     };
-}
-
-async function getEvents(){
-const response = await axios.get('/api/event/getallevents');
-eventsArray=response.data;
-categorizedEvents = categorize(eventsArray);
-console.log(categorizedEvents.ongoing);
-}
-
-export default function Page() {
-  useEffect(()=>{
-    getEvents();
-  },[])
+  }
 
   return (
     <div className='bg-gray-900 p-4 space-y-8'>
-        <Search />
+      <Search />
       <section>
-        <EventCard events={ongoing}/>
+        <EventCard events={categorizedEvents.ongoing}/> {/* Pass categorizedEvents */}
       </section>
       <section>
-      <span className='flex gap-2 items-center'>
-            <h1 className='text-3xl'>UPCOMING EVENTS</h1>
-            <div className='px-2 flex-1 h-[5px] bg-[#f1dc90]'></div>
-            </span>
-            <div>
-              <UpcomingEvents upcoming={upcoming}/>
-            </div>
+        <span className='flex gap-2 items-center'>
+          <h1 className='text-3xl'>UPCOMING EVENTS</h1>
+          <div className='px-2 flex-1 h-[5px] bg-[#f1dc90]'></div>
+        </span>
+        <div>
+          <UpcomingEvents upcoming={categorizedEvents.upcoming}/> {/* Pass categorizedEvents */}
+        </div>
       </section>
-        <section>
-            <span className='flex gap-2 items-center'>
-            <h1 className='text-3xl'>THROWBACKS</h1>
-            <div className='px-2 flex-1 h-[5px] bg-[#f1dc90]'></div>
-            </span>
-            <div>
-                <PastEvents past = {past}/>
-            </div>
-        </section>
+      <section>
+        <span className='flex gap-2 items-center'>
+          <h1 className='text-3xl'>THROWBACKS</h1>
+          <div className='px-2 flex-1 h-[5px] bg-[#f1dc90]'></div>
+        </span>
+        <div>
+          <PastEvents past={categorizedEvents.past}/> {/* Pass categorizedEvents */}
+        </div>
+      </section>
     </div>
-  )
+  );
 }
-
