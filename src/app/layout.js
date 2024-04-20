@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
           <div className='w-full'>
             <div className='w-full bg-slate-900 flex'>
               <Navbar />
-              <div className='w-screen md:w-[96.5vw] relative top-[3.8rem] sm:left-[3.5vw]'>
+              <div className='w-screen  md:w-[96.5vw] relative top-[3.8rem] sm:left-[3.5vw]'>
                 {children}
               </div>
             </div>

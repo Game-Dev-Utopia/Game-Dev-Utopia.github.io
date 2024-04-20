@@ -1,26 +1,26 @@
 .c-container {
   width: auto;
   height: auto;
+  margin: 0% 0% 5% 0%;
 }
 
 .carousel-container {
   width: 100vw;
-  height: 140vh;
-  padding-top: 40px;
+  /* height: 140vh; */
+  padding-top: 20px;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .content {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .c-container h1 {
   text-align: center;
-  color: yellow;
   font-size: 24px;
   margin-bottom: 10px;
 }

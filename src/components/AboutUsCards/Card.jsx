@@ -29,34 +29,38 @@ function useWindowSize() {
 }
 
 function extractUsername(url) {
-    let username = null;
-    const githubRegex = /github.com\/([^/]+)/;
-    const instagramRegex = /instagram.com\/([^/]+)/;
-    const linkedinRegex = /linkedin.com\/in\/([^/]+)/;
-    const emailRegex = /(?:mailto:)?([^@]+)/;
+  let username = null;
+  const githubRegex = /github.com\/([^/?]+)/;
+  const instagramRegex = /instagram.com\/([^/?]+)/;
+  const linkedinRegex = /linkedin.com\/in\/([^/?]+)/;
+  const emailRegex = /(?:mailto:)?([^@]+)/;
 
-    if (githubRegex.test(url)) {
-        username = url.match(githubRegex)[1];
-    } else if (instagramRegex.test(url)) {
-        username = url.match(instagramRegex)[1];
-    } else if (linkedinRegex.test(url)) {
-        username = url.match(linkedinRegex)[1];
-    } else if (emailRegex.test(url)) {
-        username = url.match(emailRegex)[1];
-    }
+  if (githubRegex.test(url)) {
+    username = url.match(githubRegex)[1];
+  } else if (instagramRegex.test(url)) {
+    username = url.match(instagramRegex)[1];
+  } else if (linkedinRegex.test(url)) {
+    username = url.match(linkedinRegex)[1];
+  } else if (emailRegex.test(url)) {
+    username = url.match(emailRegex)[1];
+  }
 
-    return username;
+  return username;
 }
 
 const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
-//console.log("social media " + socialMedia);
-
-
+  console.log("social media " + socialMedia);
   var handle = socialMedia;
   console.log("handle " + handle);
   var link = handle;
-  var fullhandle = extractUsername(socialMedia);
-  console.log("full handle " + fullhandle);
+
+  var fullhandle = socialMedia && extractUsername(socialMedia);
+  {
+    socialMedia && console.log("full handle " + fullhandle);
+    var max_handle_size = 7;
+    if (fullhandle.length > max_handle_size)
+      handle = fullhandle.substring(0, max_handle_size - 1) + "...";
+  }
 
   return (
     <Link
@@ -67,7 +71,7 @@ const SocialMediaHandle = ({ socialMediaIcon, socialMedia }) => {
     >
       <div className="text-xl">{socialMediaIcon}</div>
       <div className="pl-1 text-[2.8vw] mx-1 my-auto sm:text-[0.6vw]  block hover:block ">
-        <b>{fullhandle}</b>
+        <b>{handle}</b>
       </div>
     </Link>
   );
@@ -112,11 +116,15 @@ const Card = ({ data, index, cardsCount }) => {
   };
 
   const name = data.name;
-  const designation = data.responsibilities.join(" | ");;
+  const designation = data.responsibilities.join(" | ");
   const desc = data.intro;
-  const profileImageURL = data.profileImageURL ? data.profileImageURL : "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg";
+  const profileImageURL = data.profileImageURL
+    ? data.profileImageURL
+    : "https://static.vecteezy.com/system/resources/previews/029/271/069/original/avatar-profile-icon-in-flat-style-female-user-profile-illustration-on-isolated-background-women-profile-sign-business-concept-vector.jpg";
 
-  const bgImageURL = data.bgImageURL  ? data.bgImageURL : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0";
+  const bgImageURL = data.bgImageURL
+    ? data.bgImageURL
+    : "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/8aa232c4-f9c7-4417-984d-226afb4e830d/dar360x-9d1aa30d-55fb-42df-a9b9-47fd1a84decf.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzhhYTIzMmM0LWY5YzctNDQxNy05ODRkLTIyNmFmYjRlODMwZFwvZGFyMzYweC05ZDFhYTMwZC01NWZiLTQyZGYtYTliOS00N2ZkMWE4NGRlY2YucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.7O1V8vunJyfSW8A56UVGCeYvNu87jRaU1_CtmZTQrY0";
 
   return (
     <div
@@ -127,7 +135,7 @@ const Card = ({ data, index, cardsCount }) => {
       ref={ref}
       className={`Mobile-Card Card backdrop-blur-3xl bg-cyan-500 sm:w-[16.667%] sm:transition-all sm:animate-[cardShuffleIn_1s] rounded-lg`}
     >
-      <div className="bg-slate-800 transition-all duration-300 p-[5%] rounded-lg">
+      <div className="bg-slate-800 transition-all duration-300 p-4  rounded-lg innercard">
         <div className="w-full h-auto">
           {
             <Image
@@ -143,13 +151,14 @@ const Card = ({ data, index, cardsCount }) => {
           className={`relative ${!profileImageURL ? "mt-[0%]" : "mt-[15%]"}`}
         >
           {profileImageURL && (
-            <div className="absolute w-1/4 h-auto -translate-y-[150%] flex-1 m-[5%] ml-[1%]">
+            <div className="absolute w-[100px] h-auto -translate-y-[150%] flex-1 m-[5%] ml-[1%]">
               <Image
                 className="rounded-[50%] "
-                width={640}
-                height={360}
+                width={80}
+                height={80}
                 src={profileImageURL}
                 alt="ProfileIMG"
+                style={{ height: "80px", width: "80px" }}
               />
             </div>
           )}
@@ -176,7 +185,7 @@ const Card = ({ data, index, cardsCount }) => {
           </div>
         </div>
         <br />
-        { (
+        {
           <>
             <div className="flex justify-evenly px-[8%]">
               <SocialMediaHandle
@@ -203,7 +212,7 @@ const Card = ({ data, index, cardsCount }) => {
               />
             </div>
           </>
-        )}
+        }
       </div>
     </div>
   );

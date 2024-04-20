@@ -8,40 +8,42 @@ const Sponser_Card = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-          try {
-            const response = await getRequest('api/sponser/getsponsers');
-            console.log("res", response);
-            setSponserData(response);
-          } catch (error) {
-            console.error('Error fetching sponser data:', error);
-            // Handle error (e.g., set an error state)
-          }
+            try {
+                const response = await getRequest('api/sponser/getsponsers');
+                console.log("res", response);
+                setSponserData(response);
+            } catch (error) {
+                console.error('Error fetching sponser data:', error);
+                // Handle error (e.g., set an error state)
+            }
         };
-      
+
         fetchData();
-      }, []);
-      
+    }, []);
+
 
     return (
         <>
-        <h1 className='txt-grad font-bold text-center text-6xl'>Sponsers</h1>
+            <h1 className='txt-grad font-bold text-center text-3xl'>Partners & Sponsers</h1>
             <div className='outer_c'>
-                
+
                 <div className='con' >
-                    <div className="slider_1 bg-slate-900">
-                        <div className="slide-track">
-                        {sponserData.map(sponsor => (
-                             <div className="slide" key={sponsor._id}>
-                             <img src={sponsor.logo}  />
-                         </div>
-                        ))}
+                    <div className="slider_1 ">
+                        <div className="slide-track bg-slate-800">
+
+                            {sponserData.map(sponsor => (
+                                <div className="slide" key={sponsor._id}>
+                                    <img src={sponsor.logo} />
+                                    <p className='text-center sponser_name mt-1'>{sponsor.name} <br></br> {sponsor.owner}</p>
+                                </div>
+                            ))}
 
                         </div>
                     </div>
                 </div>
             </div>
 
-{/*
+            {/*
             <div className="slider_2">
                 <div className="slide-track">
                     <div className="slide">
