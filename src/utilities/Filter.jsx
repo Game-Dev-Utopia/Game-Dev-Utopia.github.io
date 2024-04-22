@@ -13,13 +13,20 @@ import { RxCross2 } from "react-icons/rx";
 const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, clearFilters }) => {
 
   const [select, setSelect] = React.useState({
-    RPG: false,
     Puzzle: false,
-    Racing: false,
-    Fighting: false,
-    Aiming: false,
+    Action: false,
+    Survival: false,
+    Strategy: false,
+    Adventure: false,
+    Platformer: false,
+    Shooting: false,
+    Stealth: false,
+    Incremental: false,
+    Simulation: false,
+    RPG: false,
+    Casual: false,
     Mobile: false,
-    Laptop: false,
+    PC: false,
     Quick: false,
     Heavy: false,
     '2D': false,
@@ -32,11 +39,18 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
     {
       title: "Category",
       values: [
-        { id: 1, name: "RPG" },
-        { id: 2, name: "Puzzle" },
-        { id: 3, name: "Racing" },
-        { id: 4, name: "Fighting" },
-        { id: 5, name: "Aiming" },
+        { "id": 1, "name": "Puzzle" },
+        { "id": 2, "name": "Action" },
+        { "id": 3, "name": "Survival" },
+        { "id": 4, "name": "Strategy" },
+        { "id": 5, "name": "Adventure" },
+        { "id": 6, "name": "Platformer" },
+        { "id": 7, "name": "Shooting" },
+        { "id": 8, "name": "Stealth" },
+        { "id": 9, "name": "Incremental" },
+        { "id": 10, "name": "Simulation" },
+        { "id": 11, "name": "RPG" },
+        { "id": 12, "name": "Casual" }
       ]
     },
     {
@@ -57,7 +71,7 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
       title: "Device",
       values: [
         { id: 1, name: "Mobile" },
-        { id: 2, name: "Laptop" },
+        { id: 2, name: "PC" },
       ]
     }
   ]
@@ -126,7 +140,27 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
         className={`${filterCount > 0 ? "visible" : "invisible"} sm:mx-1.5 h-8 mx-0.5 w-[48%] md:w-auto min-[375px]:w-[30%] justify-center text-center max-[400px]:text-xs my-2 p-1 sm:px-4 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
         onClick={() => {
           clearFilters();
-          const keys = ['RPG', 'Puzzle', 'Racing', 'Fighting', 'Aiming', 'Mobile', 'Laptop', 'Quick', 'Heavy', '2D', '3D', 'Downloadable'];
+          const keys = [
+            "Puzzle",
+            "Action",
+            "Survival",
+            "Strategy",
+            "Adventure",
+            "Platformer",
+            "Shooting",
+            "Stealth",
+            "Incremental",
+            "Simulation",
+            "RPG",
+            "Casual",
+            'Mobile',
+            'PC',
+            'Quick',
+            'Heavy',
+            '2D',
+            '3D',
+            'Downloadable'
+          ];
           setSelect(keys.reduce((obj, key) => ({ ...obj, [key]: false }), {}));
         }}>
         <RxCross2 size={20} />

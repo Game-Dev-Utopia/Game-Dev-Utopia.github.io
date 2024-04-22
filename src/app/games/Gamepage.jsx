@@ -11,13 +11,20 @@ const Gamepage = () => {
   const menu = [...new Set(Data.map((val) => val.category))]
 
   const [filters, setFilters] = useState({
-    RPG: false,
     Puzzle: false,
-    Racing: false,
-    Fighting: false,
-    Aiming: false,
+    Action: false,
+    Survival: false,
+    Strategy: false,
+    Adventure: false,
+    Platformer: false,
+    Shooting: false,
+    Stealth: false,
+    Incremental: false,
+    Simulation: false,
+    RPG: false,
+    Casual: false,
     Mobile: false,
-    Laptop: false,
+    PC: false,
     Quick: false,
     Heavy: false,
     '2D': false,
@@ -37,13 +44,20 @@ const Gamepage = () => {
   }
   const clearAllFilters = () => {
     setFilters({
-      RPG: false,
       Puzzle: false,
-      Racing: false,
-      Fighting: false,
-      Aiming: false,
+      Action: false,
+      Survival: false,
+      Strategy: false,
+      Adventure: false,
+      Platformer: false,
+      Shooting: false,
+      Stealth: false,
+      Incremental: false,
+      Simulation: false,
+      RPG: false,
+      Casual: false,
       Mobile: false,
-      Laptop: false,
+      PC: false,
       Quick: false,
       Heavy: false,
       '2D': false,
@@ -65,10 +79,11 @@ const Gamepage = () => {
 
   useEffect(() => {
     const filteredGames = Data.filter((game) =>
-      ((!filters.Aiming && !filters.Puzzle && !filters.Fighting && !filters.RPG && !filters.Racing) || game.categories.some(category => filters[category])) &&
+      ((!filters.Action && !filters.Puzzle && !filters.Survival && !filters.Strategy && !filters.Adventure && !filters.Platformer && !filters.Shooting && !filters.Stealth && !filters.Incremental && !filters.Simulation && !filters.RPG && !filters.Casual)
+        || game.categories.some(category => filters[category])) &&
       ((!filters.Heavy && !filters.Quick) || filters[game.size]) &&
       ((!filters['2D'] && !filters['3D']) || filters[game.dimension]) &&
-      ((!filters.Mobile && !filters.Laptop) || game.device.some(device => filters[device])) &&
+      ((!filters.Mobile && !filters.PC) || game.device.some(device => filters[device])) &&
       (!filters.Downloadable || game.downloadable === true)
     )
 
