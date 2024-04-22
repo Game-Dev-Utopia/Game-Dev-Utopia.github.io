@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./AboutUs.css";
 import MemberCard from './MemberCard';
 import MobileComp from './MobileComp';
@@ -6,13 +6,37 @@ import MobileComp from './MobileComp';
 const TeamSection = ({ data }) => {
     const [selectedItem, setSelectedItem] = useState(null);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const [isScrollEnabled, setIsScrollEnabled] = useState(false);
+    const containerRef = useRef(null);
 
-    // Initialize selected item with the first item from data array
     useEffect(() => {
         if (data.length > 0) {
             setSelectedItem(data[0]);
         }
     }, [data]);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsScrollEnabled(entry.isIntersecting);
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 1.0,
+            }
+        );
+
+        if (containerRef.current) {
+            observer.observe(containerRef.current);
+        }
+
+        return () => {
+            if (containerRef.current) {
+                observer.unobserve(containerRef.current);
+            }
+        };
+    }, []);
 
     const toggleDropdown = () => {
         setIsDropdownOpen(!isDropdownOpen);
@@ -26,7 +50,7 @@ const TeamSection = ({ data }) => {
     const renderDropdown = () => {
         if (isDropdownOpen) {
             return (
-                <div className="dropdown-options text-center bg-gray-800 sm:w-9/12 md:w-1/2  mx-auto px-4">
+                <div className="dropdown-options text-center bg-gray-900 sm:w-9/12 md:w-1/3  mx-auto px-4">
                     {data.map((section, index) => (
                         <div key={index} onClick={() => handleSelectItem(section)} className="dropdown-option txt-grad font-bold md:text-2xl sm:text-xl border-b-2 border-slate-500 p-2 cursor-pointer">
                             {section.title}
@@ -55,13 +79,13 @@ const TeamSection = ({ data }) => {
 
     return (
         <>
-            <div className="mb-4">
+            <div className="mb-2">
                 <div className="container flex justify-center mx-auto pt-8">
                     <div>
                         {data.length > 1 ? (
                             <div className="dropdown">
                                 <button onClick={toggleDropdown} className="md:text-4xl sm:text-2xl text-center txt-grad font-extrabold mx-auto">
-                                    {selectedItem ? selectedItem.title : data[0].title} <span className="dropdown-arrow">{isDropdownOpen ? '▲' : '▼'}</span>
+                                    {selectedItem ? selectedItem.title : data[0].title} <span className="dropdown-arrow md:text-2xl sm:text-xl">{isDropdownOpen ? '▲' : '▼'}</span>
                                 </button>
                             </div>
                         ) : (
@@ -72,7 +96,7 @@ const TeamSection = ({ data }) => {
 
                 {renderDropdown()}
 
-                <div className="bg-slate-800 sm:py-4 md:py-16  transition-all my-2 ease-in-out overflow-x-hidden overflow-y-scroll rounded-md mx-9 max-h-[70vh]">
+                <div ref={containerRef} className={`bg-slate-900 sm:py-4 md:py-16 transition-all my-2 ease-in-out overflow-x-hidden overflow-y-${isScrollEnabled ? 'scroll' : 'hidden'} rounded-md mx-9 max-h-[70vh]`}>
                     <div className="mx-5">
                         <div className='sm:hidden flex items-center justify-between flex-wrap'>
                             {renderDatamob()}

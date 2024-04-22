@@ -27,19 +27,25 @@ const AboutUsNew = () => {
     }, []);
     return (
         <>
-            {isLoading && !aboutUsData ? (
+            {isLoading  ? (
                 <p>Loading...</p>
             ) : (
                 <>
-                   {Object.keys(aboutUsData).map((index, i) => {
-                    return <TeamSection data={aboutUsData[index]} key={i} />
-                   })}
+                    {Object.keys(aboutUsData).map((index, i) => {
+                        
+                            return <TeamSection data={aboutUsData[index]} key={i} />
+                        
+                    })}
                 </>
             )}
 
+            {isLoading  ? (
+                <p>Loading...</p>
+            ) : (
+                <Timeline datas={timelineData.timeline} />
+            )}
 
 
-            {timelineData && <Timeline datas={timelineData.timeline} />}
         </>
     )
 }
