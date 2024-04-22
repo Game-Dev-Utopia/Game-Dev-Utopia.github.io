@@ -2,12 +2,14 @@
 
 
 import AboutUs from '@/components/AboutUsCards/AboutUs';
+import AboutUsNew from '@/components/AboutUsCards/AboutUsNew';
 
 const page = () => {
     
 
     return (
-        <AboutUs />
+        // <AboutUs />
+        <AboutUsNew />
     )
 }
 
