@@ -8,6 +8,7 @@
   width: 100vw;
   /* height: 140vh; */
   padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
   overflow-x: hidden;
 }
@@ -142,7 +143,6 @@
   position: absolute;
   width: 12rem;
   bottom: 5px;
-  left: 50px;
   color: white;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.5);
