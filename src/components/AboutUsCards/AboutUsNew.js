@@ -16,7 +16,7 @@ const AboutUsNew = () => {
                 const response2 = await getRequest("/api/timeline/getalltimelines");
                 setTimelineData(response2);
                 setIsLoading(false); // Set isLoading to false after data is fetched
-                //console.log("ab" + aboutUsData);
+                //console.log("ab" , aboutUsData);
             } catch (error) {
                 console.error("Error fetching data:", error);
                 // Handle error (e.g., set an error state)
@@ -27,19 +27,20 @@ const AboutUsNew = () => {
     }, []);
     return (
         <>
-            {isLoading  ? (
+            {isLoading ? (
                 <p>Loading...</p>
             ) : (
                 <>
                     {Object.keys(aboutUsData).map((index, i) => {
                         
-                            return <TeamSection data={aboutUsData[index]} key={i} />
+                            return <TeamSection data={aboutUsData[index]} key={i} />;
                         
                     })}
                 </>
+
             )}
 
-            {isLoading  ? (
+            {isLoading ? (
                 <p>Loading...</p>
             ) : (
                 <Timeline datas={timelineData.timeline} />

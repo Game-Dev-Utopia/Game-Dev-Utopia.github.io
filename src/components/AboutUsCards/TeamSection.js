@@ -18,7 +18,7 @@ const TeamSection = ({ data }) => {
     useEffect(() => {
         const observer = new IntersectionObserver(
             ([entry]) => {
-                setIsScrollEnabled(entry.isIntersecting);
+                setIsScrollEnabled(entry.intersectionRatio >= 1);
             },
             {
                 root: null,
@@ -79,6 +79,7 @@ const TeamSection = ({ data }) => {
 
     return (
         <>
+        
             <div className="mb-2">
                 <div className="container flex justify-center mx-auto pt-8">
                     <div>
@@ -96,7 +97,7 @@ const TeamSection = ({ data }) => {
 
                 {renderDropdown()}
 
-                <div ref={containerRef} className={`bg-slate-900 sm:py-4 md:py-16 transition-all my-2 ease-in-out overflow-x-hidden overflow-y-${isScrollEnabled ? 'scroll' : 'hidden'} rounded-md mx-9 max-h-[70vh]`}>
+                <div ref={containerRef} className={`bg-slate-900 sm:pt-4 md:pt-16 transition-all mt-2 ease-in-out overflow-x-hidden overflow-y-${isScrollEnabled ? 'scroll' : 'hidden'} rounded-md mx-9 max-h-[70vh]`}>
                     <div className="mx-5">
                         <div className='sm:hidden flex items-center justify-between flex-wrap'>
                             {renderDatamob()}
