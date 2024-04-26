@@ -29,7 +29,7 @@ const Timeline = ({ datas }) => {
         <b>History Timeline</b>
       </h1>
       <p className="text-center text-2xl my-20 mx-auto">
-      Explore the evolution of gaming magic with Gamedevutopia History Timeline. Journey through the milestones, from pixelated pioneers to immersive virtual worlds, tracing the artistry, technology, and culture that shaped gaming as we know it. Whether you're a seasoned gamer or a curious newcomer, uncover the stories behind your favorite titles and the visionaries who brought them to life.
+      Explore the evolution of gaming magic with Gamedevutopia History Timeline. Journey through the milestones, from pixelated pioneers to immersive virtual worlds, tracing the artistry, technology, and culture that shaped gaming as we know it. Whether youre a seasoned gamer or a curious newcomer, uncover the stories behind your favorite titles and the visionaries who brought them to life.
       </p>
       <div
         ref={ScrollRef}
