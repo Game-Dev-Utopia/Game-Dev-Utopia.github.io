@@ -31,44 +31,47 @@ const AchievementCard = (props) => {
   //props = props.data;
   return (
     <div
-      className={`min-w-[200px] relative hover:scale-105 py-4 m-auto transition-all duration-150 ${
+      className={`min-w-[180px] relative hover:scale-105 py-4 m-auto transition-all duration-150 ${
         fade ? "opacity-0" : "opacity-100"
       }`}
       style={{ scale: props.scale }}
     >
       <div className="absolute w-full h-full">
-        <div className="m-auto font-bold text-center text-[1.35rem]  lg:text-2xl p-4 mt-[3%]">
+        <div className="m-auto font-bold text-center text-[1.5rem]  lg:text-2xl p-4 mt-[3%]">
           {props.data.title}
         </div>
         <Image
           src={props.data.image}
-          width={"600"}
-          height={"600"}
-          className="rounded-lg m-auto w-[40%] lg:w-[30%] xl:w-[60%]"
+          width={"800"}
+          height={"800"}
+          className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
           alt="Achievement Image"
         />
-        <div className="py-4 px-5 max-h-6 text-lg xl:text-lg xl:ml-7">
-          <ul className="Achievement-details text-lg lg:text-lg w-[90%] max-h-[30vw] lg:max-h-[12vw] h-full  overflow-y-scroll m-auto  list-disc">
-            {/* { props.data.description.map((detail, i) => <li key={i}>{detail}</li>) } */}
-            <li>{props.data.description}</li>
-          </ul>
+        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
+          <div className="Achievement-details text-md lg:text-lg w-[90%] max-h-[130px] lg:max-h-[130px]  transition-all m-auto list-none">
+            
+            <p className="h-full scroll overflow-y-scroll">{props.data.description}</p>
+          </div>
         </div>
+
       </div>
+
       <div className="absolute w-full h-full">
         {props.data.ranked ? <DisplayRank rank={props.data.rank} /> : <div />}
-        <div className="absolute lg:hidden top-[30%] left-1 text-[50px] animate-pulse">
+        <div className="absolute lg:hidden top-[30%] left-1 text-[30px] animate-pulse">
           <MdDoubleArrow className="rotate-180" />
           <div className="text-sm text-center">
             <i> swipe </i>
           </div>
         </div>
-        <div className="absolute lg:hidden top-[30%] right-1 text-[50px] animate-pulse">
+        <div className="absolute lg:hidden top-[30%] right-1 text-[30px] animate-pulse">
           <MdDoubleArrow />
           <div className="text-sm text-center">
             <i> swipe </i>
           </div>
         </div>
       </div>
+
       <Image
         src={CardBG}
         className="w-full h-full"
@@ -168,7 +171,7 @@ const Top3Achievements = ({ Top3Data }) => {
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
-        className="grid lg:hidden m-auto p-0 lg:grid-cols-1 grid-rows-1 max-h-[700px]  w-[100%] lg:w-[80%] transition-all duration-300"
+        className="grid lg:hidden m-auto p-0 lg:grid-cols-1 grid-rows-1 max-h-[700px]  w-[90%] lg:w-[80%] transition-all duration-300"
       >
         <AchievementCard
           arrow={true}

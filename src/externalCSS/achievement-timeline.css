@@ -78,11 +78,13 @@ to {
 .Achievement-details {
     /* width: 70%; */
     padding-left: 5%;
+    height: 130px;
+    overflow-y: scroll;
 
-    li {
+    p {
         margin-left: 1rem;
-        padding-left: 1rem;
-        padding-top: 1rem;
+        padding-left: 0.5rem;
+        padding-top: 0.5rem;
     }
 }
 
