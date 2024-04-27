@@ -15,7 +15,7 @@ const ArtGallery = () => {
     const galleryData = async () => {
       try {
         const response = await getRequest('api/design/getdesigns');
-        console.log("SSM:", response);
+        //console.log("SSM:", response);
         setGalleryData(response);
       } catch (error) {
         console.error('Error fetching design data:', error);
