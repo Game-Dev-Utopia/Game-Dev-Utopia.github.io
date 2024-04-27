@@ -34,6 +34,7 @@ const EventPageLayout = ({ params }) => {
     const videoUrl = params.videoUrl;
     const eventName = params.eventName;
     const starCount = params.starCount;
+    const id = params._id;
     const prizes = params.prizes;
     const registrationDeadline = params.registrationDeadline;
     const startsIn = params.startsIn;
