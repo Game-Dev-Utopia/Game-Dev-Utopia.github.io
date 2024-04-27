@@ -126,7 +126,9 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
           <div key={index} className={`item img${index + 1}`}>
             <Link href="/designs" passHref>
                   {getFileType(item.designs[0]) === 'video' ? (
-                    <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${index + 1}`}
+                    <video loop
+              onMouseEnter={(e) => e.target.play()}
+              onMouseLeave={(e) => e.target.pause()} muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${index + 1}`}
                     style={{ borderRadius: '15px' }}>
                       <source src={item.designs[0]} type="video/mp4" />
                       Your browser does not support the video tag.

@@ -20,7 +20,7 @@ export default function PastEvents({ past }) {
       >
         &larr; Back
       </button>
-      <Modal close={close} images={images} setIsOpen={setIsOpen} />
+      <Modal close={close} past={past} setIsOpen={setIsOpen} />
     </>
   ) : (
     <span className="flex md:flex-row flex-col items-center justify-center md:justify-between space-x-2 space-y-2">
