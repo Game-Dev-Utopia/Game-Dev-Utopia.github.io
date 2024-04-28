@@ -122,7 +122,7 @@ const Carousel = ({ speed }) => {
 
         </div>
       </div>
-      <Link href="/art-gallery" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
+      <Link href="/designs" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
         <button className="bg-grad mx-auto text-center rounded-full py-1">
           See More &rarr;
         </button>

@@ -48,7 +48,7 @@ const footerContents = [
             },
             {
                 display: "Art Works",
-                link: "/art-gallery",
+                link: "/designs",
                 icon: faPalette
             },
             {

@@ -1,14 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React from 'react';
-export default function GameDesignDetails() {
+export default function GameDesignDetails({designData}) {
   const [selectedAwardIndex, setSelectedAwardIndex] = React.useState(0);
-  const acheivementArray = [
-    "This is a placeholder sentence created for the purpose of filling space in a document or visual presentation.",
-    "Placeholder text helps to demonstrate what the final content might look like in the finished product or design.",
-    "The quick brown fox jumps over the lazy dog, providing a sentence that uses every letter in the alphabet.",
-    "Lorem ipsum is a type of placeholder text used in the publishing and typesetting industry for previewing layouts."
-  ];
+  const acheivementArray =designData.achievements;
   return (
     <section className="game-design-details">
       <div className="grid grid-cols-2 gap-3 mx-2 pt-4">
@@ -20,10 +15,7 @@ export default function GameDesignDetails() {
             <div className='glass2'></div>
           </div>
           <p className='py-6 text-white'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea sit
-            suscipit sapiente, labore magnam ad numquam ratione amet iusto
-            explicabo ipsum facere iure, voluptatibus consectetur voluptas animi
-            totam voluptatem minimainim.
+            {designData.description}
           </p>
         </div>
         <div className="section-content p-6 h-full rounded-2xl bg-[url('/images/games_section_bg_illustration.jpg')] bg-no-repeat bg-right  hover:scale-[1.01] hover:shadow-md hover:shadow-[#fdb714] duration-200">
