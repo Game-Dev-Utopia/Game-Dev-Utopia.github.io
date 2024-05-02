@@ -19,6 +19,7 @@ import FAQ from '@/components/EventsDetails/Event-Details-FAQ';
 import Community from '@/components/EventsDetails/Event-Details-Community';
 import EventPageRegister from '@/components/EventsDetails/Event-Details-Register';
 import { useEffect, useState } from 'react';
+import { getRequest } from '@/api/api';
 
 const Break = () => {
     return (
@@ -30,19 +31,60 @@ const Break = () => {
     )
 }
 
-const EventPageLayout = ({ params }) => {
-    const videoUrl = params.videoUrl;
-    const eventName = params.eventName;
-    const starCount = params.starCount;
-    const id = params._id;
-    const prizes = params.prizes;
-    const registrationDeadline = params.registrationDeadline;
-    const startsIn = params.startsIn;
-    const endsIn = params.endsIn;
-    const individualOrganizers = params.individualOrganizer;
-    const organisers = params.organizers;
-    const rules = params.rules;
-    const faqs = params.faq;
+// individualOrganizers: false, rules: Array(0), _id: '661e96eaa3f0be4f46d601d6', eventName: 'Voxel Battle Competition', imageURL: 'https://res.cloudinary.com/dnl11kvcm/image/upload/v1712819101/events_data/voxel_ayqmkl.jpg', …}
+// endsIn
+// : 
+// "2021-02-25T00:00:00.000Z"
+// eventName
+// : 
+// "Voxel Battle Competition"
+// faq
+// : 
+// []
+// imageURL
+// : 
+// "https://res.cloudinary.com/dnl11kvcm/image/upload/v1712819101/events_data/voxel_ayqmkl.jpg"
+// individualOrganizers
+// : 
+// false
+// organizers
+// : 
+// []
+// prizes
+// : 
+// []
+// rules
+// : 
+// []
+// startsIn
+// : 
+// "2021-02-19T00:00:00.000Z"
+// winners
+// : 
+// []
+// _id
+// : 
+// "661e96eaa3f0be4f46d601d6"
+
+const EventPageLayout = ({ eventArray }) => {
+    console.log(eventArray);
+    const imageURL = eventArray?.imageURL
+    const eventName = eventArray.eventName;
+    const id = eventArray._id;
+    const prizes = eventArray.prizes;
+    const registrationDeadline = eventArray.registrationDeadline;
+    const startsIn = eventArray.startsIn;
+    const endsIn = eventArray.endsIn;
+    const individualOrganizers = eventArray.individualOrganizer;
+    const organisers = eventArray.organizers;
+    const rules = eventArray.rules;
+    const faqs = eventArray.faq;
+    const starCount = 4.3
+
+    // Convert the dates to Date objects
+    const startsInDate = new Date(startsIn);
+    const endsInDate = new Date(endsIn);
+    const currentDate = new Date();
 
     const [openRegisterModal, setOpenRegisterModal] = useState(false);
     const handleOpenModal = () => {
@@ -52,6 +94,8 @@ const EventPageLayout = ({ params }) => {
     const handleCloseModal = () => {
         setOpenRegisterModal(false);
     }
+
+
 
     useEffect(() => {
         // Add body-no-scroll class to body element when modal is opened
@@ -67,14 +111,24 @@ const EventPageLayout = ({ params }) => {
         };
     }, [openRegisterModal]);
 
+
+    // Check if the dates are in the future and if they are present in the data
+    const shouldRenderCountdown = (startsIn && startsInDate > currentDate) || (endsIn && endsInDate > currentDate);
+
+
     return (
         <div className='block sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
             <Title name={eventName} rating={starCount} />
             <Break />
             {openRegisterModal === true && <EventPageRegister close={handleCloseModal} />}
-            <CountDown deadLine={registrationDeadline} start={startsIn} end={endsIn} openRegisterPage={handleOpenModal} />
+            {(true) && <CountDown
+                deadLine={registrationDeadline}
+                start={startsIn}
+                end={endsIn}
+                openRegisterPage={handleOpenModal}
+            />}
             <Break />
-            <Prizes prizes={prizes} />
+            {prizes.length > 0 && <Prizes prizes={prizes} />}
             <Break />
 
 
@@ -101,7 +155,12 @@ const EventPageLayout = ({ params }) => {
                     <AccordionTrigger>WINNERS</AccordionTrigger>
                     <AccordionContent>
                         {/* Winners will be displayed here after the event ends. */}
-                        <Winners />
+                        {(!shouldRenderCountdown || Winners.length > 0) ?
+                            <Winners />
+                            :
+                            <p>Winners will be displayed here after the event ends.</p>
+                        }
+
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
@@ -124,22 +183,24 @@ const EventPageLayout = ({ params }) => {
 
 
 const Page = ({ params }) => {
-    const router = useRouter(); // Whats this for?
-    const eventName = params.event;
-    var event = null;
+    const id = params.id;
+    console.log(id);
 
-
-    for (let index = 0; index < eventsData.events.length; index++) {
-        const element = eventsData.events[index];
-        if (element.eventName.replace(" ", "").toLowerCase() == eventName.toLowerCase())
-            event = element;
-
-    }
-    // console.log(event);
-    if (event == null)
-        return <p>{eventName}: Does not exist </p>
-
-    return <EventPageLayout params={event} />
+    const [event, setEvent] = useState(undefined);
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const response = await getRequest(`/api/event/getevent/${id}`)
+                console.log(response);
+                setEvent(response);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        fetchData();
+    }, [])
+    return event ? <EventPageLayout eventArray={event} />
+        : <></>
 }
 
 export default Page;

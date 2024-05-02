@@ -7,6 +7,7 @@ export default function PastEvents({ past }) {
   const close = () => {
     setIsOpen(false);
   };
+  console.log(past);
   const newEvents = past.slice(0, 3);
   const images = past.map((event) => event.imageURL);
   const [isOpen, setIsOpen] = useState(false);
