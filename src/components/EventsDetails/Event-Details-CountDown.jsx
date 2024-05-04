@@ -14,7 +14,7 @@ const TimeElement = ({ text, data }) => {
 const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
     const toDate = (time) => {
         if (!time) return
-        console.log(time);
+        // console.log(time);
         const year = parseInt(time.substring(0, 4));
         const month = parseInt(time.substring(5, 7));
         const day = parseInt(time.substring(8));
@@ -22,7 +22,7 @@ const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
         // for some reason month is 0 indexed
         return new Date(year, month - 1, day).getTime();
     }
-    console.log(end);
+    // console.log(end);
     const [distance, setDistance] = useState(toDate(end) - Date.now());
 
 
@@ -40,10 +40,12 @@ const CountDown = ({ deadLine, start, end, openRegisterPage }) => {
         return () => clearInterval(interval);
     }, []);
 
+    const deadline = (new Date(toDate(deadLine))).toString();
+
     return (
         <>
             <div className="m-10 text-center">
-                Registration Ends on {(new Date(deadLine)).toString()}
+                Registration Ends on {deadline}
             </div>
             <p className="text-center text-xl pb-[1%]">Event starts in</p>
             <div className="flex flex-auto justify-center border-2 border-cyan-500 w-[90%] mx-[5%] sm:text-2xl text-lg text-center rounded-tr-xl rounded-bl-xl rounded-tl-3xl rounded-br-3xl">

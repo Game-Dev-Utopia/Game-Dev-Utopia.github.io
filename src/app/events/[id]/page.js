@@ -79,7 +79,7 @@ const EventPageLayout = ({ eventArray }) => {
     const organisers = eventArray.organizers;
     const rules = eventArray.rules;
     const faqs = eventArray.faq;
-    const starCount = 4.3
+    const starCount = 4.3;
 
     // Convert the dates to Date objects
     const startsInDate = new Date(startsIn);
@@ -118,21 +118,27 @@ const EventPageLayout = ({ eventArray }) => {
 
     return (
         <div className='block sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
-            <Title name={eventName} rating={starCount} />
+            <Title name={eventName} rating={starCount} imgURL={imageURL} />
             <Break />
             {openRegisterModal === true && <EventPageRegister close={handleCloseModal} />}
-            {(true) && <CountDown
-                deadLine={registrationDeadline}
-                start={startsIn}
-                end={endsIn}
-                openRegisterPage={handleOpenModal}
-            />}
-            <Break />
-            {prizes.length > 0 && <Prizes prizes={prizes} />}
-            <Break />
+            {shouldRenderCountdown && <>
+                <CountDown
+                    deadLine={registrationDeadline}
+                    start={startsIn}
+                    end={endsIn}
+                    openRegisterPage={handleOpenModal}
+                />
+                <Break />
+            </>}
 
-
-            <Accordion type="multiple" collapsible className="sm:w-[80%] md:w-[75%] lg:w-[100%] my-2 p-4 w-[100%] mx-auto">
+            {
+                (prizes.length > 0) &&
+                <>
+                    <Prizes prizes={prizes} />
+                    <Break />
+                </>
+            }
+            <Accordion type="multiple" collapsible="true" className="sm:w-[80%] md:w-[75%] lg:w-[100%] my-2 p-4 w-[100%] mx-auto">
                 <AccordionItem value="item-1">
                     <AccordionTrigger>ORGANIZERS</AccordionTrigger>
                     <AccordionContent className="">
@@ -155,7 +161,7 @@ const EventPageLayout = ({ eventArray }) => {
                     <AccordionTrigger>WINNERS</AccordionTrigger>
                     <AccordionContent>
                         {/* Winners will be displayed here after the event ends. */}
-                        {(!shouldRenderCountdown || Winners.length > 0) ?
+                        {(shouldRenderCountdown || Winners.length > 0) ?
                             <Winners />
                             :
                             <p>Winners will be displayed here after the event ends.</p>
@@ -166,7 +172,11 @@ const EventPageLayout = ({ eventArray }) => {
                 <AccordionItem value="item-5">
                     <AccordionTrigger>FAQs</AccordionTrigger>
                     <AccordionContent className="max-h-96 overflow-y-scroll">
-                        <FAQ faqs={faqs} />
+                        {(faqs.length > 0) ?
+                            <FAQ faqs={faqs} />
+                            :
+                            <h1>No FAQs Provided</h1>
+                        }
                     </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-6">
