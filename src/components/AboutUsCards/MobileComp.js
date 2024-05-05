@@ -20,7 +20,7 @@ const MobileComp = ({ data }) => {
     return (
         <>
             <div className='mt-5 mx-2'>
-                <div className="w-20 h-20" onClick={openModal}>
+                <div className="w-20 h-20 m-auto items-center" onClick={openModal}>
                     <img src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
                 </div>
                 <div className="mt-1">
