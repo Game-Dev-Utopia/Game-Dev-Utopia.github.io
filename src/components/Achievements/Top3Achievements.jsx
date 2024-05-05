@@ -21,7 +21,7 @@ const DisplayRank = ({ rank }) => {
 
   return (
     <FaMedal
-      className={`absolute ${color} text-[300%] left-[50%] -translate-x-[50%] top-[77%] 2xl:top-[80%]`}
+      className={`absolute ${color} text-[350%] left-[50%] -translate-x-[50%] top-[83%] 2xl:top-[83%]`}
     />
   );
 };
@@ -36,27 +36,7 @@ const AchievementCard = (props) => {
       }`}
       style={{ scale: props.scale }}
     >
-      <div className="absolute w-full h-full">
-        <div className="m-auto font-bold text-center text-[1.5rem]  lg:text-2xl p-4 mt-[3%]">
-          {props.data.title}
-        </div>
-        <Image
-          src={props.data.image}
-          width={"800"}
-          height={"800"}
-          className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
-          alt="Achievement Image"
-        />
-        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
-          <div className="Achievement-details text-md lg:text-lg w-[90%] max-h-[130px] lg:max-h-[130px]  transition-all m-auto list-none">
-            
-            <p className="h-full scroll overflow-y-scroll">{props.data.description}</p>
-          </div>
-        </div>
-
-      </div>
-
-      <div className="absolute w-full h-full">
+     <div className="absolute w-full h-full">
         {props.data.ranked ? <DisplayRank rank={props.data.rank} /> : <div />}
         <div className="absolute lg:hidden top-[30%] left-1 text-[30px] animate-pulse">
           <MdDoubleArrow className="rotate-180" />
@@ -71,13 +51,33 @@ const AchievementCard = (props) => {
           </div>
         </div>
       </div>
+      <div className="absolute w-full h-full">
+        <div className="m-auto font-bold text-center text-[1.5rem]  lg:text-2xl p-4 mt-[3%]">
+          {props.data.title}
+        </div>
+        <Image
+          src={props.data.image}
+          width={"800"}
+          height={"800"}
+          className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
+          alt="Achievement Image"
+        />
+        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
+          <div className="text-md overflow-y-scroll lg:text-lg w-[90%] max-h-[200px] lg:max-h-[180px]  transition-all m-auto list-none">
+            {props.data.description}
+            <br/>
+            <br/>
+          </div>
+          <div className="relative w-full h-8 -top-5 bg-slate-800/20 backdrop-blur-[2px]">
+          </div>
+        </div>
 
-      <Image
-        src={CardBG}
-        className="w-full h-full"
-        alt="Background Image for Card"
-        height={"1000"}
-        width={"1000"}
+      </div>
+
+     
+
+      <div
+        className="max-w-[500px] w-[80vw] h-[600px] bg-slate-800 border-slate-500 border-4 rounded-lg"
       />
     </div>
   );
