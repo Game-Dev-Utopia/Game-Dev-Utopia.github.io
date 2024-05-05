@@ -21,7 +21,7 @@ const DisplayRank = ({ rank }) => {
 
   return (
     <FaMedal
-      className={`absolute ${color} text-[350%] left-[50%] -translate-x-[50%] top-[83%] 2xl:top-[83%]`}
+      className={`absolute ${color} text-[300%] left-[50%] -translate-x-[50%] top-[77%] 2xl:top-[80%]`}
     />
   );
 };
@@ -36,8 +36,10 @@ const AchievementCard = (props) => {
       }`}
       style={{ scale: props.scale }}
     >
-     <div className="absolute w-full h-full">
-        {props.data.ranked ? <DisplayRank rank={props.data.rank} /> : <div />}
+
+
+      <div className="absolute w-full h-full">
+        {1 ? <DisplayRank rank={props.data.rank} /> : <div />}
         <div className="absolute lg:hidden top-[30%] left-1 text-[30px] animate-pulse">
           <MdDoubleArrow className="rotate-180" />
           <div className="text-sm text-center">
@@ -63,21 +65,22 @@ const AchievementCard = (props) => {
           alt="Achievement Image"
         />
         <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
-          <div className="text-md overflow-y-scroll lg:text-lg w-[90%] max-h-[200px] lg:max-h-[180px]  transition-all m-auto list-none">
+          <div className="fade-Text text-md scroll overflow-y-scroll lg:text-lg w-[90%]  max-h-[80px] lg:max-h-[130px]  transition-all m-auto list-none">
             {props.data.description}
             <br/>
             <br/>
           </div>
-          <div className="relative w-full h-8 -top-5 bg-slate-800/20 backdrop-blur-[2px]">
-          </div>
+          {/* <div className="relative bg-slate-700/30 backdrop-blur-sm w-full h-[40px] -translate-y-[90%] lg:-translate-y-[50%]"/> */}
         </div>
 
       </div>
 
-     
-
-      <div
-        className="max-w-[500px] w-[80vw] h-[600px] bg-slate-800 border-slate-500 border-4 rounded-lg"
+      <Image
+        src={CardBG}
+        className="w-full h-full"
+        alt="Background Image for Card"
+        height={"1000"}
+        width={"1000"}
       />
     </div>
   );
