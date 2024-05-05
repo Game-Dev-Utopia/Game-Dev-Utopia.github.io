@@ -3,12 +3,13 @@ import Like from "./Like"
 import Save from "./Save"
 import { Avatar, AvatarImage } from '../ui/avatar'
 import Collaborators from './Collaborators'
+import Link from 'next/link'
 
 const Card = ({ item }) => {
   return (
     item.map((val, i) => (
-
-      <div key={i} className='relative hover:scale-110 grid justify-items-center z-20 font-bold '>
+      <Link key={i} href={`/games/${val._id}`}>
+      <div className='relative hover:scale-110 grid justify-items-center z-20 font-bold '>
         <div className='max-w-[16rem] max-h-16 font-bold border-white animate-glow border-2 px-3 rounded-xl py-1 pb-3 text-overflow-ellipsis whitespace-no-wrap overflow-hidden text-center'>{val.title}
         </div>
         <div
@@ -41,7 +42,7 @@ const Card = ({ item }) => {
         </div>
 
       </div>
-
+      </Link>
     ))
   )
 }

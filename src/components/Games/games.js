@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React from 'react';
-export default function GameDesignDetails({designData}) {
+export default function GameDesignDetails({gameData}) {
   const [selectedAwardIndex, setSelectedAwardIndex] = React.useState(0);
-  const acheivementArray =designData.achievements;
+  const acheivementArray =gameData.achievements;
   return (
     <section className="game-design-details">
       <div className="grid grid-cols-2 gap-3 mx-2 pt-4">
@@ -15,7 +15,7 @@ export default function GameDesignDetails({designData}) {
             <div className='glass2'></div>
           </div>
           <p className='py-6 text-white'>
-            {designData.description}
+            {gameData.description}
           </p>
         </div>
         <div className="section-content p-6 h-full rounded-2xl bg-[url('/images/games_section_bg_illustration.jpg')] bg-no-repeat bg-right  hover:scale-[1.01] hover:shadow-md hover:shadow-[#fdb714] duration-200">
@@ -42,7 +42,6 @@ export default function GameDesignDetails({designData}) {
           </p>
         </div>
       </div>
-
     </section>
   );
 }

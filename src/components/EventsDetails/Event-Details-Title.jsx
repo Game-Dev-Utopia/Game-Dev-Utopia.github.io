@@ -32,19 +32,24 @@ const Rating = ({ rating }) => {
     );
 }
 
-const Title = ({ name, rating }) => {
+const Title = ({ name, rating, imgURL, vidURL }) => {
     return (
         <>
-            <div className="text-3xl relative pt-[56.25%] w-full overflow-hidden">
-                <iframe
-                    src="https://www.youtube.com/embed/wNe9RP2yP2Y?si=a8FakfPTkFuBlZMa"
-                    frameborder="0"
-                    width="1920"
-                    height="1080"
-                    className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
-                    allowfullscreen
-                />
-            </div>
+            {imgURL ? 
+                <div>
+                    <img src={imgURL} alt={name} />
+                </div> :
+                <div className="text-3xl relative pt-[56.25%] w-full overflow-hidden">
+                    <iframe
+                        src={vidURL}
+                        frameborder="0"
+                        width="1920"
+                        height="1080"
+                        className="absolute top-0 bottom-0 left-0 right-0 w-full h-full"
+                        allowfullscreen
+                    />
+                </div>
+            }
             <div className="text-white text-2xl p-4">
                 <b>{name}</b>
                 <Rating rating={rating} />

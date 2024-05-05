@@ -15,7 +15,7 @@ const ArtGallery = () => {
     const galleryData = async () => {
       try {
         const response = await getRequest('api/design/getdesigns');
-        //console.log("SSM:", response);
+        console.log("SSM:", response);
         setGalleryData(response);
       } catch (error) {
         console.error('Error fetching design data:', error);
@@ -124,7 +124,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
       <div className="image-gallery">
         {galleryData.map((item, index) => (
           <div key={index} className={`item img${index + 1}`}>
-            <Link href="/designs" passHref>
+            <Link href={`/designs/${item._id}`} passHref>
                   {getFileType(item.designs[0]) === 'video' ? (
                     <video loop
               onMouseEnter={(e) => e.target.play()}

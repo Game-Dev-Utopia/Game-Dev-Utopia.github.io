@@ -6,7 +6,8 @@ import { FaPlay,FaShare,FaComment } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
 
-const Design = () => {
+
+const Design = ({designData}) => {
   const genre = ["action","adventure","indie"];
   const [itemIndex, setItemIndex] = useState(0);
   const reactFacts = [
@@ -22,7 +23,6 @@ const Design = () => {
   ];
   const [data, setData] = useState({
     likes: 100,
-    comments: 100,
     shares: 90,
     downloads: 90
   });
@@ -30,19 +30,18 @@ const Design = () => {
   const handleLike = () => {
     setData(prev=>({...prev,likes:prev.likes+1}));
   };
-
+  console.log("Design Data:", designData.designs[0]);
   return (
     <>
       <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] design-section-top">
         <div className="video-design-wrapper bg-gradient">
           <div className="des-thumbnail-container px-6 py-[20px]">
             <div className="des-thumbnail">
-              <img src={'/images/image-23.png'} alt="Game Thumbnail" />
+              <img src={designData.designs[0]} alt="Game Thumbnail" />   
+              
             </div>
             <p className="py-6 text-white">
-              Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it. 
+              {designData.title}
             </p>
             <div className="des-buttons flex gap-2 my-2">
               <button className="p-3 group gap-1 text-sm">
@@ -74,14 +73,6 @@ const Design = () => {
                   <p>Like</p>
                 </span>
               </button>
-
-              <button className="py-2 flex items-center group gap-1 text-sm">
-                <FaComment />
-                <span>{data.comments}</span>
-                <span className="tooltip group-hover:scale-100">
-                  <p>Comment</p>
-                </span>
-              </button>
             </div>
             <div className="flex gap-2 relative top-3">
               {genre.map((item) => (
@@ -90,7 +81,7 @@ const Design = () => {
           </div>
 
           <div className="des-video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
-            <iframe height='400' width="600" src="https://www.youtube.com/embed/EBYCOAgWhtw" 
+            <iframe height='400' width="600" src={designData.designs[itemIndex]} 
               title="YouTube video player" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen={true}></iframe>
@@ -100,9 +91,9 @@ const Design = () => {
           <div className="des-carousel-container px-6 py-[20px]">
             <div className="des-carousel-wrapper">
               <div className="des-carousel">
-                {reactFacts.map((fact, index) => (
+                {designData.designs.map((design, index) => (
                   <div key={index} className="des-carousel-item" onMouseOver={() => setItemIndex(index)}>
-                    <img src={'/images/image-4.png'} alt="Image 1" />
+                    <img src={design} alt="Image 1" />
                   </div>
                 ))}
               </div>

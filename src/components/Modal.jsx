@@ -10,7 +10,7 @@ export default function Modal({ past, close, setIsOpen }) {
           const { _id, imageURL } = event;
           const isVideoURL = /\.(mp4|webm|ogg)$/i.test(imageURL);
           return (
-            <Link key={index} href={`/events/${_id}`}>
+            <Link key={index} href={`/events/${_id}`} passHref>
               {isVideoURL ? (
                 // Render video if videoURL exists
                 <video
