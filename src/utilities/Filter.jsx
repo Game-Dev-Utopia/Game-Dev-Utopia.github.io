@@ -120,15 +120,12 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
               className={`text-white my-2 min-w-fit sm:w-auto px-1 sm:mx-1 cursor-pointer shadow-sm bg-grad-hover sm:justify-center items-center bg-slate-800 shadow-gray-600 rounded-full  ${'hover:shadow-lg'}`}>
               <DropdownMenu>
                 <DropdownMenuTrigger
-                  className="h-7 flex items-center justify-center outline-none font-medium text-sm "
-                  onTouchMove={(e) => e.preventDefault()}>
+                  className="h-7 flex items-center justify-center outline-none font-medium text-sm ">
                   {val.title}
                   <TiArrowSortedDown className="ml-0.5 relative top-[5%] sm:top-[12%]" />
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent
-                  onScroll={(event) => event.preventDefault()}
-                >
+                <DropdownMenuContent>
                   {val.values.map((value, item) => (
                     <DropdownMenuCheckboxItem
                       onSelect={(event) => event.preventDefault()}
@@ -173,7 +170,7 @@ const Filter = ({ addToFilterList, setItem, removeFromFilterList, filterCount, c
         </div>
 
         <div
-          className={`${filterCount > 0 ? "hidden sm:flex sm:visible items-center" : "invisible"} sm:mx-1.5 h-7 mx-0.5 min-w-fit justify-center text-center max-[400px]:text-xs my-2 px-3 sm:px-4 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
+          className={`${filterCount > 0 ? "hidden sm:flex sm:visible items-center" : "sm:invisible max-[640px]:hidden"} sm:mx-1.5 h-7 mx-0.5 min-w-fit justify-center text-center max-[400px]:text-xs my-2 px-3 sm:px-4 flex items-center font-medium text-sm gap-2 cursor-pointer shadow-sm bg-grad-hover bg-slate-800  shadow-gray-600 rounded-full`}
           onClick={clrFiltersFn}>
           <RxCross2 size={18} />
           Clear Filters
