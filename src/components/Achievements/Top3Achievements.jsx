@@ -36,28 +36,10 @@ const AchievementCard = (props) => {
       }`}
       style={{ scale: props.scale }}
     >
-      <div className="absolute w-full h-full">
-        <div className="m-auto font-bold text-center text-[1.5rem]  lg:text-2xl p-4 mt-[3%]">
-          {props.data.title}
-        </div>
-        <Image
-          src={props.data.image}
-          width={"800"}
-          height={"800"}
-          className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
-          alt="Achievement Image"
-        />
-        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
-          <div className="Achievement-details text-md lg:text-lg w-[90%] max-h-[130px] lg:max-h-[130px]  transition-all m-auto list-none">
-            
-            <p className="h-full scroll overflow-y-scroll">{props.data.description}</p>
-          </div>
-        </div>
 
-      </div>
 
       <div className="absolute w-full h-full">
-        {props.data.ranked ? <DisplayRank rank={props.data.rank} /> : <div />}
+        {1 ? <DisplayRank rank={props.data.rank} /> : <div />}
         <div className="absolute lg:hidden top-[30%] left-1 text-[30px] animate-pulse">
           <MdDoubleArrow className="rotate-180" />
           <div className="text-sm text-center">
@@ -70,6 +52,27 @@ const AchievementCard = (props) => {
             <i> swipe </i>
           </div>
         </div>
+      </div>
+      <div className="absolute w-full h-full">
+        <div className="m-auto font-bold text-center text-[1.5rem]  lg:text-2xl p-4 mt-[3%]">
+          {props.data.title}
+        </div>
+        <Image
+          src={props.data.image}
+          width={"800"}
+          height={"800"}
+          className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
+          alt="Achievement Image"
+        />
+        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
+          <div className="fade-Text text-md scroll overflow-y-scroll lg:text-lg w-[90%]  max-h-[80px] lg:max-h-[130px]  transition-all m-auto list-none">
+            {props.data.description}
+            <br/>
+            <br/>
+          </div>
+          {/* <div className="relative bg-slate-700/30 backdrop-blur-sm w-full h-[40px] -translate-y-[90%] lg:-translate-y-[50%]"/> */}
+        </div>
+
       </div>
 
       <Image

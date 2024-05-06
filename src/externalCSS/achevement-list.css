@@ -5,6 +5,10 @@
     position: relative;
 }
 
+.fade-Text {
+    -webkit-mask-image: linear-gradient(180deg, #000 60%, transparent);
+}
+
 .List-Achievement {
     margin-top: 5%;
     position: relative;
