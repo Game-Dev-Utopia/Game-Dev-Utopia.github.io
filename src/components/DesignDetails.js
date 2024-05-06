@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React from 'react';
+
 export default function GameDesignDetails({designData}) {
   const [selectedAwardIndex, setSelectedAwardIndex] = React.useState(0);
   const acheivementArray =designData.achievements;
@@ -42,7 +43,6 @@ export default function GameDesignDetails({designData}) {
           </p>
         </div>
       </div>
-
     </section>
   );
 }
