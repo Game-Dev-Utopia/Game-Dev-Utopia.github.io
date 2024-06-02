@@ -24,7 +24,7 @@ export const SidebarData = [
     },
     {
         title: 'Designs',
-        path: '/art-gallery',
+        path: '/designs',
         icon: <FontAwesomeIcon icon={faPalette} />,
         cName: 'nav-text'
     },

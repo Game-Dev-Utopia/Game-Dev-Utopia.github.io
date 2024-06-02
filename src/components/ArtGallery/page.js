@@ -125,7 +125,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
       <div className="image-gallery">
         {galleryData.map((item, index) => (
           <div key={index} className={`item img${index + 1}`}>
-            <Link href="/designs" passHref>
+            <Link href={`/designs/${item._id}`} passHref>
                   {getFileType(item.designs[0]) === 'video' ? (
                     <video loop
               onMouseEnter={(e) => e.target.play()}

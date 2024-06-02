@@ -55,7 +55,7 @@ const Carousel = ({ speed }) => {
             {imagesInFirstCarousel.map((design, index) => (
               <div key={index} className='box-wrapper'>
                 <div className="box">
-                  <Link href="/designs" passHref>
+                  <Link href={`/designs/${design._id}`} passHref>
                     {getFileType(design.designs[0]) === 'video' ? (
                       <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
                         <source src={design.designs[0]} type="video/mp4" />
@@ -91,7 +91,7 @@ const Carousel = ({ speed }) => {
               {secondCarouselImages.map((design, index) => (
                 <div key={index} className='box-wrapper'>
                   <div className="box">
-                    <Link href="/designs" passHref>
+                    <Link href={`/designs/${design._id}`} passHref>
                       {getFileType(design.designs[0]) === 'video' ? (
                         <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
                           <source src={design.designs[0]} type="video/mp4" />
@@ -125,7 +125,7 @@ const Carousel = ({ speed }) => {
 
         </div>
       </div>
-      <Link href="/art-gallery" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
+      <Link href="/designs" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
         <button className="bg-grad mx-auto text-center rounded-full py-1">
           See More &rarr;
         </button>

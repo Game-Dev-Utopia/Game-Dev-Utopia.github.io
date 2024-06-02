@@ -1,4 +1,3 @@
-/* This is the index.css file */
 .design-section-top{
   position: relative;
   background-size: cover;
@@ -9,22 +8,30 @@
   background-position: center;
   background-color: rgba(0,0,0,1);
   border-radius: 1rem;
+  width: fit-content;
+  height: fit-content;
 }
 
 .video-design-wrapper {
   display: flex;
   justify-content: space-between;
-  width: auto;
-  height: auto;
   border-radius: 50%;
 }
 
 .des-video-card {
-  flex: 1;
+  flex: 3;
   width: auto;
-  height: fit-content;
+  height: auto;
   align-items: center;
 }
+
+.des-video-card video {
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
 
 .des-thumbnail-container {
   flex: 1;
@@ -32,9 +39,9 @@
   color: white;
 }
 
-.des-thumbnail img {
+.des-thumbnail img, .des-thumbnail video {
   padding: 0;
-  width: 100%;
+  width: auto;
   height: auto;
   border-radius: 20px 20px 0 0;
 }
@@ -55,7 +62,7 @@ button:hover {
 
 .des-carousel-container {
   position: relative;
-  height: 80vh;
+  height: auto;
   overflow-y: scroll;
 }
 
@@ -74,65 +81,82 @@ button:hover {
 .des-carousel {
   margin-top: 5px;
   display: flex;
-  flex-direction: column; /* Change to horizontal */
-  scroll-snap-type: y mandatory; /* Change to horizontal */
-  width: fit-content;
+  flex-direction: column; 
+  scroll-snap-type: y mandatory; 
+  width: fit-content; 
 }
 
 .des-carousel-item {
   scroll-snap-align: start;
   flex: 0 0 auto;
-  width: fit-content;
-  margin-bottom: 5px; /* Change to horizontal */
+  width: 150px;
+  height: 100px; 
+  margin-bottom: 5px;
   position: relative;
+  overflow: hidden;
 }
 
-.des-carousel-item img {
-  margin-right: 5px; /* Change to horizontal */
+.des-carousel-item img, .des-carousel-item video {
+  width: 100%;
+  height: 100%; 
+  border-radius: 12px;
+  object-fit: cover;
   transition: transform 0.3s ease-in-out;
   z-index: 1;
 }
 
-.des-carousel-item:hover img {
+.des-carousel-item:hover img, .des-carousel-item:hover video {
   border: 2px solid purple;
   cursor: pointer;
   position: relative;
   z-index: 2;
   margin-bottom: 0;
-  margin-right: 0; /* Change to horizontal */
+  margin-right: 0; 
 }
 
 @media (max-width: 480px) {
   .design-section-top {
     display: block;
     padding: 10px;
-    margin-left: 10px;
   }
 
   .video-design-wrapper {
     display: block;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse; /* Reversing the sequence */
+    flex-direction: column-reverse; 
+  }
+
+  .video-item video{
+    width: 100%;
+    height: 40%; 
+    border-radius: 15px;
+    object-fit: cover;
   }
 
   .des-thumbnail-container {
     margin: 5px;
     width: 100%;
-    height: auto;
+    height: 40%;
+  }
+
+  .des-thumbnail img,
+  .des-thumbnail video {
+    width: auto;
+    height: 40%; 
   }
 
   .des-video-card {
     margin: 5px;
     width: 100%;
-    height: 100%;
+    height: 40%;
   }
 
   .des-carousel {
     margin-top: 5px;
     display: flex;
-    flex-direction: row; /* Change to horizontal */
-    scroll-snap-type: x mandatory; /* Change to horizontal */
+    flex-direction: row; 
+    scroll-snap-type: x mandatory; 
     width: fit-content;
   }
 
@@ -147,11 +171,13 @@ button:hover {
     margin-right: 5px;
   }
 
-  .des-carousel-item img {
+  .des-carousel-item img, .des-carousel-item video {
     width: 120px;
     height: 100px;
     border-radius: 12px;
   }
+
+  
 }
 
 @media (min-width: 481px) and (max-width: 800px) {
@@ -166,7 +192,7 @@ button:hover {
     display: block;
     align-items: center;
     justify-content: center;
-    flex-direction: column-reverse; /* Reversing the sequence */
+    flex-direction: column-reverse; 
   }
 
   .des-thumbnail-container {
@@ -181,11 +207,18 @@ button:hover {
     height: 100%;
   }
 
+  .video-item video{
+    width: 100%;
+    height: 30%; 
+    border-radius: 15px;
+    object-fit: cover;
+  }
+
   .des-carousel {
     margin-top: 5px;
     display: flex;
-    flex-direction: row; /* Change to horizontal */
-    scroll-snap-type: x mandatory; /* Change to horizontal */
+    flex-direction: row; 
+    scroll-snap-type: x mandatory; 
     width: fit-content;
   }
 
@@ -200,7 +233,7 @@ button:hover {
     margin-right: 5px;
   }
 
-  .des-carousel-item img {
+  .des-carousel-item img, .des-carousel-item video {
     width: 150px;
     height: 100px;
   }

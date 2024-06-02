@@ -52,7 +52,7 @@ const TeamSection = ({ data }) => {
             return (
                 <div className="dropdown-options text-center bg-gray-900 sm:w-9/12 md:w-1/3  mx-auto px-4">
                     {data.map((section, index) => (
-                        <div key={index} onClick={() => handleSelectItem(section)} className="dropdown-option txt-grad font-bold md:text-2xl sm:text-xl border-b-2 border-slate-500 p-2 cursor-pointer">
+                        <div key={index} onClick={() => handleSelectItem(section)} className="dropdown-option txt-grad font-bold md:text-2xl sm:text-sm border-b-2 border-slate-500 md:p-2 sm:p-1 cursor-pointer">
                             {section.title}
                         </div>
                     ))}
@@ -85,12 +85,12 @@ const TeamSection = ({ data }) => {
                     <div>
                         {data.length > 1 ? (
                             <div className="dropdown">
-                                <button onClick={toggleDropdown} className="md:text-4xl sm:text-2xl text-center txt-grad font-extrabold mx-auto">
-                                    {selectedItem ? selectedItem.title : data[0].title} <span className="dropdown-arrow md:text-2xl sm:text-xl">{isDropdownOpen ? '▲' : '▼'}</span>
+                                <button onClick={toggleDropdown} className="md:text-4xl sm:text-xl text-center txt-grad font-extrabold mx-auto">
+                                    {selectedItem ? selectedItem.title : data[0].title} <span className="dropdown-arrow md:text-2xl sm:text-lg">{isDropdownOpen ? '▲' : '▼'}</span>
                                 </button>
                             </div>
                         ) : (
-                            <h1 className="md:text-4xl sm:text-2xl text-center txt-grad font-extrabold mx-auto">{data[0].title}</h1>
+                            <h1 className="md:text-4xl sm:text-3xl text-center txt-grad font-extrabold mx-auto">{data[0].title}</h1>
                         )}
                     </div>
                 </div>
@@ -98,8 +98,8 @@ const TeamSection = ({ data }) => {
                 {renderDropdown()}
 
                 <div ref={containerRef} className={`bg-slate-900 sm:pt-4 md:pt-16 transition-all mt-2 ease-in-out overflow-x-hidden overflow-y-${isScrollEnabled ? 'scroll' : 'hidden'} rounded-md mx-9 max-h-[70vh]`}>
-                    <div className="mx-5">
-                        <div className='sm:hidden flex items-center justify-between flex-wrap'>
+                    <div className="md:mx-5">
+                        <div className='sm:hidden grid grid-cols-2 justify-between'>
                             {renderDatamob()}
                         </div>
 

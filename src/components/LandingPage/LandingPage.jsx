@@ -66,7 +66,7 @@ const LandingPage = () => {
                 <div className='my-5 sm:mt-20 sm:w-1/2 sm:text-2xl mx-2 px-2 sm:ml-10'>
                     <p className='h-1/2 sticky text-base sm:text-2xl text-white flex items-center justify-center'>{description}</p>
                 </div>
-                <Link href="/art-gallery">
+                <Link href="/designs">
 
                     <button className="text-center my-4 sm:my-5 mx-10 transform px-8 py-2 bg-slate-900 bg-opacity-50 bg-grad-hover hover:shadow-lg hover:shadow-slate-900 text-white text-2xl rounded-2xl shadow-md sm:h-16 sm:w-72 ">
                         Designs

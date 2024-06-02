@@ -26,10 +26,10 @@ const Timeline = ({ datas }) => {
   return (
     <>
       <div className="p-5">
-        <h1 className="text-[6vw] sm:text-[4vw] text-center txt-grad">
+        <h1 className="md:text-4xl sm:text-3xl text-center font-bold txt-grad">
           <b>History Timeline</b>
         </h1>
-        <p className="text-center md:text-2xl sm:text-sm my-10 mx-auto">
+        <p className="text-center md:text-xl sm:text-sm my-10 mx-auto">
           Explore the evolution of gaming magic with Gamedevutopia History
           Timeline. Journey through the milestones, from pixelated pioneers to
           immersive virtual worlds, tracing the artistry, technology, and

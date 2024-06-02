@@ -7,20 +7,9 @@ import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
 import Image from "next/image";
 
-const Games = () => {
+const Games = ({gameData}) => {
   const genre = ["action","adventure","indie"];
   const [itemIndex, setItemIndex] = useState(0);
-  const reactFacts = [
-    "ReactJS is a JavaScript library for building user interfaces.",
-    "It was developed by Facebook and is now open-source.",
-    "ReactJS uses a virtual DOM to improve app performance.",
-    "Components are the building blocks in a React application.",
-    "ReactJS allows for the creation of reusable UI components.",
-    "It uses JSX, a syntax extension for JavaScript.",
-    "ReactJS can be used for developing both web and mobile applications.",
-    "State and props are used to manage data in React.",
-    "ReactJS uses a unidirectional data flow which makes it easier to debug."
-  ];
   const [data, setData] = useState({
     likes: 100,
     comments: 100,
@@ -31,7 +20,7 @@ const Games = () => {
   const handleLike = () => {
     setData(prev=>({...prev,likes:prev.likes+1}));
   };
-
+  console.log(gameData);
   return (
     <>
       <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] game-section-top">
@@ -41,9 +30,7 @@ const Games = () => {
               <Image fill={true} src={'/images/image-23.png'} alt="Game Thumbnail" />
             </div>
             <p className="py-6 text-white">
-              Lorem Ipsum has been the industry&apos;s standard dummy
-              text ever since the 1500s, when an unknown printer took a galley
-              of type and scrambled it. 
+              {gameData.title} 
             </p>
             <div className="buttons flex gap-2 my-2">
               <button className="p-3 group gap-1 text-sm">
@@ -59,7 +46,7 @@ const Games = () => {
                   <p>Share</p>
                 </span>
               </button>
-              <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
+              <a href={gameData.download_url} target="_blank">
                 <button className="py-2 group gap-1 items-center text-sm flex">
                   <IoMdDownload />
                   <span>{data.downloads}</span>
@@ -91,17 +78,17 @@ const Games = () => {
           </div>
 
           <div className="video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
-            <iframe height='400' width="600" src="https://www.youtube.com/embed/EBYCOAgWhtw" 
+            <iframe height='400' width="600" src={gameData.media[itemIndex]}
               title="YouTube video player" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
               allowFullScreen={true}></iframe>
-            <span><p className="pt-7 px-2 text-white">{reactFacts[itemIndex]} {reactFacts[((itemIndex + 1) % (reactFacts.length - 1))]}</p></span>
+            <span><p className="pt-7 px-2 text-white">{}</p></span>
           </div>
           
           <div className="carousel-container px-6 py-[20px]">
             <div className="carousel-wrapper">
               <div className="g-carousel">
-                {reactFacts.map((fact, index) => (
+                {gameData.media.map((media, index) => (
                   <div key={index} className="carousel-item" onMouseOver={() => setItemIndex(index)}>
                     <Image fill={true} src={'/images/image-4.png'} alt="Image 1" />
                   </div>
