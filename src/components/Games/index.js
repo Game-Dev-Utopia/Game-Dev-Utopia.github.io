@@ -5,6 +5,7 @@ import "./index.css";
 import { FaPlay,FaShare,FaComment } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
+import Image from "next/image";
 
 const Games = () => {
   const genre = ["action","adventure","indie"];
@@ -37,7 +38,7 @@ const Games = () => {
         <div className="video-game-wrapper bg-gradient">
           <div className="thumbnail-container px-6 py-[20px]">
             <div className="thumbnail">
-              <img src={'/images/image-23.png'} alt="Game Thumbnail" />
+              <Image fill={true} src={'/images/image-23.png'} alt="Game Thumbnail" />
             </div>
             <p className="py-6 text-white">
               Lorem Ipsum has been the industry&apos;s standard dummy
@@ -102,7 +103,7 @@ const Games = () => {
               <div className="g-carousel">
                 {reactFacts.map((fact, index) => (
                   <div key={index} className="carousel-item" onMouseOver={() => setItemIndex(index)}>
-                    <img src={'/images/image-4.png'} alt="Image 1" />
+                    <Image fill={true} src={'/images/image-4.png'} alt="Image 1" />
                   </div>
                 ))}
               </div>

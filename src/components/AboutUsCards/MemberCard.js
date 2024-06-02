@@ -2,6 +2,7 @@ import React from 'react'
 import { FaGithub, FaInstagram, FaLinkedin, FaPhone, FaPhoneSquare, FaTwitter, FaVoicemail } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MemberCard = ({ data }) => {
     var profile = data.profileImageURL ? data.profileImageURL : "https://pics.craiyon.com/2023-07-20/4e251c98f18f4fbf904265d4f2f02e2b.webp";
@@ -14,7 +15,7 @@ const MemberCard = ({ data }) => {
                 <div className="rounded overflow-hidden shadow-md bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600 ">
                     <div className="absolute -mt-20 w-full flex justify-center">
                         <div className="h-32 w-32">
-                            <img src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
+                            <Image src={profile} fill={true} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
                         </div>
                     </div>
                     <div className="px-6 mt-16">

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Modal({ past, close, setIsOpen }) {
   return (
@@ -23,9 +24,10 @@ export default function Modal({ past, close, setIsOpen }) {
                 />
               ) : (
                 // Render image if no videoURL
-                <img
+                <Image
                   src={imageURL}
                   alt={'image' + index}
+                  fill={true}
                   className='hover:scale-[1.05] transition-all duration-100'
                 />
               )}

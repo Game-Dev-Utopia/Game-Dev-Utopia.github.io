@@ -3,6 +3,7 @@ import { FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 import { FaPhoneSquare } from 'react-icons/fa';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const MobileComp = ({ data }) => {
     var profile = data.profileImageURL ? data.profileImageURL : "https://pics.craiyon.com/2023-07-20/4e251c98f18f4fbf904265d4f2f02e2b.webp";
@@ -21,7 +22,7 @@ const MobileComp = ({ data }) => {
         <>
             <div className='mt-5 mx-2'>
                 <div className="w-20 h-20" onClick={openModal}>
-                    <img src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
+                    <Image src={profile} fill={true} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
                 </div>
                 <div className="mt-1">
                     <h1 className="font-bold text-white text-[10px] text-center ">{data.name}</h1>
@@ -39,7 +40,7 @@ const MobileComp = ({ data }) => {
                         <div className="rounded overflow-hidden shadow-md bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600">
                             <div className="absolute -mt-20 w-full flex justify-center">
                                 <div className="h-32 w-32">
-                                    <img src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
+                                    <Image fill={true} src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
                                 </div>
                             </div>
                             <div className="px-6 mt-16">

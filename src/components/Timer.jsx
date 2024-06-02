@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+/* eslint-disable @next/next/no-Image-element */
 "use client";
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 function Timer({ deadline }) {
@@ -37,7 +38,7 @@ function Timer({ deadline }) {
 
   return (
     <section className='flex md:gap-1 justify-center items-center my-6 bg-stone-800 bg-opacity-20 backdrop-blur font-bold px-8 min-w-fit mx-2 py-1 rounded-lg'>
-        <img src="timer.svg" className='h-12 invert' alt="timer_design" />
+        <Image src="timer.svg" fill={true} className='h-12 invert' alt="timer_design" />
       <span>
       <h1 className='text-center text-[#F1DC90] font-serif text-lg'>Remaining Time</h1>
       <div className='text-sm md:text-xl flex p-1'>
@@ -47,7 +48,7 @@ function Timer({ deadline }) {
         <span className='flex flex-col items-center p-1'>{getTimeString(seconds, '')}  <div className='text-xs md:text-sm text-gray-500'>Sec</div></span>
       </div>
       </span>
-        <img src="timer.svg" className='h-12 invert' alt="timer_design" />
+        <Image fill={true} src="timer.svg" className='h-12 invert' alt="timer_design" />
     </section>
   );
 }

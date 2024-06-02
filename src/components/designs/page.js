@@ -5,6 +5,7 @@ import "./index.css";
 import { FaPlay,FaShare,FaComment } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
+import Image from "next/image";
 
 const Design = () => {
   const genre = ["action","adventure","indie"];
@@ -37,7 +38,7 @@ const Design = () => {
         <div className="video-design-wrapper bg-gradient">
           <div className="des-thumbnail-container px-6 py-[20px]">
             <div className="des-thumbnail">
-              <img src={'/images/image-23.png'} alt="Game Thumbnail" />
+              <Image src={'/images/image-23.png'} fill={true} alt="Game Thumbnail" />
             </div>
             <p className="py-6 text-white">
               Lorem Ipsum has been the industry&apos;s standard dummy
@@ -102,7 +103,7 @@ const Design = () => {
               <div className="des-carousel">
                 {reactFacts.map((fact, index) => (
                   <div key={index} className="des-carousel-item" onMouseOver={() => setItemIndex(index)}>
-                    <img src={'/images/image-4.png'} alt="Image 1" />
+                    <Image fill={true} src={'/images/image-4.png'} alt="Image 1" />
                   </div>
                 ))}
               </div>

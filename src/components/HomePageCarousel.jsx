@@ -1,7 +1,7 @@
 /* eslint-disable react/display-name */
 "use client"
 import React, { useState } from 'react';
-
+import Image from 'next/image';
 export default function HomePageCarousel({ images }){
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -17,7 +17,7 @@ export default function HomePageCarousel({ images }){
         <div className="flex transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 33.33}%)` }}>
         {images.map((image, index) => (
             <div key={index} className={`w-32 h-32 flex-shrink-0 ${index === currentIndex ? 'scale-125' : 'scale-100'}`}>
-              <img src={image} alt={`carousel-${index}`} className="w-full h-full object-cover rounded-lg" />
+              <Image src={image} fill={true} alt={`carousel-${index}`} className="w-full h-full object-cover rounded-lg" />
             </div>
           ))}
         </div>

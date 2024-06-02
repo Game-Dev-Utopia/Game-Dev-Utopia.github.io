@@ -4,6 +4,7 @@ import './index.css';
 import { getRequest } from '@/api/api';
 import Avatar from "@mui/material/Avatar";
 import Collaborators from '../GamePage/Collaborators';
+import Image from 'next/image';
 
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -61,8 +62,9 @@ const Carousel = ({ speed }) => {
                         Your browser does not support the video tag.
                       </video>
                     ) : (
-                      <img
+                      <Image
                         src={design.designs[0]}
+                        fill={true}
                         alt={`Image ${index}`}
                         className="carousel-image"
                       />
@@ -96,9 +98,10 @@ const Carousel = ({ speed }) => {
                           Your browser does not support the video tag.
                         </video>
                       ) : (
-                        <img
+                        <Image
                           src={design.designs[0]}
                           alt={`Image ${index}`}
+                          fill={true}
                           className="carousel-image"
                         />
                       )}

@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Image from 'next/image';
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -23,8 +24,8 @@ export default function Slider() {
         className=" md:w-[30vw]"
       >
         {data.map((item, index) => (
-          <div key={index} className=" bg-gray-900 rounded mx-2 shadow text-center">
-            <img src={item} alt="img" className="object-cover aspect-auto h-32" />
+          <div key={index} className=" bg-gray-900 rounded relative h-32 mx-2 shadow text-center">
+            <Image src={item} fill={true} alt="img" className="object-cover aspect-auto" />
           </div>
         ))}
       </Carousel>

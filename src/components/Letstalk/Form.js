@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Stepper from "./Stepper";
 import { postRequestJson } from "@/api/api";
+import Image from "next/image";
 
 export default function Form({ heading, image, stepsData , toastHandler}) {
   //console.log("lits"+formattedCountries)
@@ -26,7 +27,7 @@ export default function Form({ heading, image, stepsData , toastHandler}) {
 
       <div className="body-font relative bg-clip-padding backdrop-filter bg-[#0f172a] flex flex-col md:flex-row">
         <div className="w-full md:w-4/12">
-          <img src={image} alt="Your Image" className="h-3/5 m-auto mt-20" />
+          <Image src={image} fill={true} alt="Your Image" className="h-3/5 m-auto mt-20" />
         </div>
 
         <div className="w-full md:w-4/6 container mx-auto px-5 py-12">

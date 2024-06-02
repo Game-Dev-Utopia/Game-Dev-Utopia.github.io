@@ -7,6 +7,7 @@ import Avatar from "@mui/material/Avatar";
 import { getRequest } from '@/api/api';
 import "./index.css";
 import Collaborators from "../GamePage/Collaborators";
+import Image from "next/image";
 
 const ArtGallery = () => {
   const [galleryData, setGalleryData] = useState([]);
@@ -134,7 +135,8 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
                       Your browser does not support the video tag.
                     </video>
                   ) : (
-                    <img
+                    <Image
+                    fill={true}
                       src={item.designs[0]}
                       alt={`Image ${index}`}
                       className={`item img${index + 1}`}
@@ -174,7 +176,6 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
           </div>
         ))}
       </div>
-      
     </div>
   );
 };

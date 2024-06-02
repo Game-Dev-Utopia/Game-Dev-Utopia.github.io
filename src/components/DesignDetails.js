@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
+import Image from 'next/image';
 import React from 'react';
 export default function GameDesignDetails() {
   const [selectedAwardIndex, setSelectedAwardIndex] = React.useState(0);
@@ -38,7 +39,7 @@ export default function GameDesignDetails() {
               <span
                 onClick={() => setSelectedAwardIndex(i)}
                 className={`relative p-3 rounded-md mx-2 duration-100 ${(selectedAwardIndex === i) ? 'border-2 border-[#fdb714] border-opacity-50' : 'border-2 border-transparent'}`} key={item}>
-                <img src="/trophy.svg" alt="trophy" />
+                <Image fill={true} src="/trophy.svg" alt="trophy" />
                 <p className='text-lg absolute p-2 -top-2 -right-2'>
                   🥇
                 </p>
