@@ -34,7 +34,7 @@ const Sponser_Card = () => {
 
                             {sponserData.map(sponsor => (
                                 <div className="slide" key={sponsor._id}>
-                                    <Image src={sponsor.logo} fill={true}/>
+                                    <Image src={`/images/sponser/${sponsor.name}.png`} height="100" width="220" />
                                     <p className='text-center sponser_name mt-1'>{sponsor.name} <br></br> {sponsor.owner}</p>
                                 </div>
                             ))}
