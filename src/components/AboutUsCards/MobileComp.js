@@ -6,7 +6,16 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 const MobileComp = ({ data }) => {
-    var profile = data.profileImageURL ? data.profileImageURL : "https://pics.craiyon.com/2023-07-20/4e251c98f18f4fbf904265d4f2f02e2b.webp";
+    // var profile = data.profileImageURL ? data.profileImageURL : "https://pics.craiyon.com/2023-07-20/4e251c98f18f4fbf904265d4f2f02e2b.webp";
+    const [imageSrc, setImageSrc] = useState(`/images/aboutus/${data.name}.jpg`);
+
+    useEffect(() => {
+        setImageSrc(`/images/aboutus/${data.name}.jpg`);
+    }, [data]);
+
+    const handleImageError = () => {
+        setImageSrc('/images/aboutus/profile.webp');
+    };
     const [modalOpen, setModalOpen] = useState(false);
     const designation = data.bodies[0].responsibilities.join(" | ");
 
@@ -20,15 +29,26 @@ const MobileComp = ({ data }) => {
 
     return (
         <>
-            <div className='mt-5 mx-2'>
-                <div className="w-20 h-20" onClick={openModal}>
-                    <Image src={profile} fill={true} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
+            <div className='mt-5 mx-auto'>
+                <div className="w-20 h-20 flex items-center justify-center rounded-full overflow-hidden" onClick={openModal}>
+                    <Image
+                        src={imageSrc}
+                        width="128"
+                        height="128"
+                        alt="Member Photo"
+                        role="img"
+                        className="object-cover shadow-md"
+                        onError={handleImageError}
+                    />
                 </div>
+
                 <div className="mt-1">
-                    <h1 className="font-bold text-white text-[10px] text-center ">{data.name}</h1>
-                    <p className="text-white font-semibold text-[8px] text-center">{designation.substring(0,10) }...</p>
+                    <h1 className="font-bold text-white text-[10px] text-center">{data.name}</h1>
+                    <p className="text-white font-semibold text-[8px] text-center">{designation.substring(0, 10)}...</p>
                 </div>
             </div>
+
+
 
             {modalOpen && (
                 <div
@@ -40,7 +60,15 @@ const MobileComp = ({ data }) => {
                         <div className="rounded overflow-hidden shadow-md bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600">
                             <div className="absolute -mt-20 w-full flex justify-center">
                                 <div className="h-32 w-32">
-                                    <Image fill={true} src={profile} alt="Member Photo" role="img" className="rounded-full object-fit h-full w-full shadow-md" />
+                                    <Image
+                                        src={imageSrc}
+                                        alt="Member Photo"
+                                        role="img"
+                                        className="rounded-full object-cover h-full w-full shadow-md"
+                                        width="128"
+                                        height="128"
+                                        onError={handleImageError}
+                                    />
                                 </div>
                             </div>
                             <div className="px-6 mt-16">

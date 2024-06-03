@@ -26,6 +26,10 @@ const DisplayRank = ({ rank }) => {
 };
 
 const AchievementImages = ({ data }) => {
+  const [imageSrc, setImageSrc] = useState(`/images/achievements/${data.title}.jpg`);
+    const handleImageError = () => {
+        setImageSrc('/images/achievements/demo.jpg');
+    };
   return (
     <div
       className={`flex-col flex sm:flex-row items-center sm:justify-center p-5 w-full`}
@@ -34,8 +38,9 @@ const AchievementImages = ({ data }) => {
       <Image
         width={100}
         height={100}
-        src={data.image}
+        src={imageSrc}
         className="sm:mx-5 mx-auto rounded-md aspect-square m-3"
+        onError={handleImageError}
       />
     </div>
   );
