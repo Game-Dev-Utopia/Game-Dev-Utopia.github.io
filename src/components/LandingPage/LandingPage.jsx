@@ -27,7 +27,7 @@ const LandingPage = () => {
             setVideoPath(video);
             setDescription(desc);
             // console.log("Response: ",response)
-            //console.log(video)
+            // console.log(video)
         } catch (error) {
             console.log(error.message);
         }
@@ -35,7 +35,7 @@ const LandingPage = () => {
 
     useEffect(() => {
         try {
-            getLinks();
+            // getLinks();
         } catch (error) {
             console.log(error.message);
         }
@@ -89,3 +89,6 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
+
+
+//Note : Uncomment the getLinks() function after successful working of cloudinary

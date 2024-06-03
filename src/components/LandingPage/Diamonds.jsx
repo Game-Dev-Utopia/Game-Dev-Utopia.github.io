@@ -1,6 +1,5 @@
 "use client"
 import Image from 'next/image';
-
 const Diamonds = ({image1,image2,image3})=>
 {
     //console.log("From diamonds");
@@ -17,7 +16,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image1}
+                            // src={image1}
+                            src='/images/home_page_thumbnails/first.jpg'
                             className={`w-[250px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -32,7 +32,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image2}
+                            // src={image2}
+                            src='/images/home_page_thumbnails/second.png'
                             className={`w-[250px] h-[250px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -46,7 +47,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image3}
+                            // src={image3}
+                            src='/images/home_page_thumbnails/third.jpeg'
                             className={`w-[250px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -65,7 +67,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image1}
+                            // src={image1}
+                            src='/images/home_page_thumbnails/first.jpg'
                             className={`w-[150px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -79,7 +82,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image2}
+                            // src={image2}
+                            src='/images/home_page_thumbnails/second.png'
                             className={`w-[150px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -92,7 +96,8 @@ const Diamonds = ({image1,image2,image3})=>
                             width={200}
                             height={200}
                             alt="Coding Image"
-                            src={image3}
+                            // src={image3}
+                            src='/images/home_page_thumbnails/third.jpeg'
                             className={`w-[150px] aspect-square DiamondClipPath`}
                         />
                     </div>
@@ -102,3 +107,5 @@ const Diamonds = ({image1,image2,image3})=>
     )
 }
 export default Diamonds
+
+// Note : After working of cloudinary, I will replace the image1, image2, image3 with the image1, image2, image3
