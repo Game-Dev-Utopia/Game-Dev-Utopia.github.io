@@ -58,9 +58,9 @@ const AchievementCard = (props) => {
           {props.data.title}
         </div>
         <Image
-          src={props.data.image}
+          src={`/images/${props.data.title}.webp`}
           width={"800"}
-          height={"800"}
+          height={"200"}
           className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
           alt="Achievement Image"
         />
