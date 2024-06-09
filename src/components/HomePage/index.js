@@ -9,6 +9,8 @@ import Image from 'next/image';
 const Carousel = ({ speed }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [designData, setDesignData] = useState([]);
+  const [imageError, setImageError] = useState({});
+
 
   const handleVideoEnded = (event, index) => {
     const videoElement = event.target;
@@ -43,6 +45,14 @@ const Carousel = ({ speed }) => {
     return 'unknown';
   };
 
+  const handleImageError = (index, isDefaultImage = false) => {
+    if (isDefaultImage) {
+      setImageError((prevErrors) => ({ ...prevErrors, defaultImage: true }));
+    } else {
+      setImageError((prevErrors) => ({ ...prevErrors, [index]: true }));
+    }
+  };
+
   return (
     <>
       <div className='c-container'>
@@ -57,17 +67,19 @@ const Carousel = ({ speed }) => {
                 <div className="box">
                   <Link href={`/designs/${design._id}`} passHref>
                     {getFileType(design.designs[0]) === 'video' ? (
-                      <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
-                        <source src={design.designs[0]} type="video/mp4" />
-                        Your browser does not support the video tag.
+                      <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video" onError={() => handleImageError(index)}>
+                        <source src={imageError[index] ? '/images/nope-not-here.webp' : design.designs[0]} type="video/mp4" />
+                          Your browser does not support the video tag.
                       </video>
                     ) : (
+
                       <Image
-                        src={design.designs[0]}
-                        fill={true}
-                        alt={`Image ${index}`}
-                        className="carousel-image"
-                      />
+                      src={imageError[index] ? '/images/nope-not-here.webp' : design.designs[0]}
+                      alt={`Image ${index}`}
+                      fill={true}
+                      className="carousel-image"
+                      onError={() => handleImageError(index)}
+                    />
                     )}
                   </Link>
                   <div className="avatar-container">
@@ -93,16 +105,17 @@ const Carousel = ({ speed }) => {
                   <div className="box">
                     <Link href={`/designs/${design._id}`} passHref>
                       {getFileType(design.designs[0]) === 'video' ? (
-                        <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video">
-                          <source src={design.designs[0]} type="video/mp4" />
-                          Your browser does not support the video tag.
+                        <video autoPlay muted onEnded={(e) => handleVideoEnded(e, index)} className="carousel-video" onError={() => handleImageError(index)}>
+                          <source src={imageError[index] ? '/images/nope-not-here.webp' : design.designs[0]} type="video/mp4" />
+                              Your browser does not support the video tag.
                         </video>
                       ) : (
                         <Image
-                          src={design.designs[0]}
-                          alt={`Image ${index}`}
-                          fill={true}
-                          className="carousel-image"
+                        src={imageError[index] ? '/images/nope-not-here.webp' : design.designs[0]}
+                        alt={`Image ${index}`}
+                        fill={true}
+                        className="carousel-image"
+                        onError={() => handleImageError(index + 7)}
                         />
                       )}
                     </Link>
