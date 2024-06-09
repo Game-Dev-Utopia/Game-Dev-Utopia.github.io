@@ -36,7 +36,7 @@ function Accordion({
           >
             <span className="flex items-center font-bold text-xl ">
               <span className="w-20 h-20 rounded-full mr-2">
-                <Image src={img} fill={true} style={{height:'80px',width:'80px'}} alt="Profile" />
+                <Image src={img}  height={80} width={80} style={{height:'80px',width:'80px'}} alt="Profile" />
               </span>
               {title}
             </span>

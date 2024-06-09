@@ -58,14 +58,14 @@ const AchievementCard = (props) => {
           {props.data.title}
         </div>
         <Image
-          src={props.data.image}
+          src={`/images/${props.data.title}.webp`}
           width={"800"}
-          height={"800"}
+          height={"200"}
           className="rounded-lg m-auto w-[80%] md:h-[200px] sm:h[150px] lg:w-[80%] xl:w-[80%]"
           alt="Achievement Image"
         />
-        <div className="py-4 px-3 max-h-6 text-lg xl:text-lg xl:ml-7">
-          <div className="fade-Text text-md scroll overflow-y-scroll lg:text-lg w-[90%]  max-h-[80px] lg:max-h-[130px]  transition-all m-auto list-none">
+        <div className="py-4 px-3 max-h-6 xl:ml-7">
+          <div className="fade-Text scroll overflow-y-scroll lg:text-lg  sm:text-sm w-[90%]  max-h-[80px] lg:max-h-[130px]  transition-all m-auto list-none">
             {props.data.description}
             <br/>
             <br/>
