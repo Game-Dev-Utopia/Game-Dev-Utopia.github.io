@@ -1,14 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
 import React, { useState } from "react";
-import "./index.css"; 
-import { FaPlay,FaShare,FaComment } from "react-icons/fa";
+import "./index.css";
+import { FaPlay, FaShare, FaComment } from "react-icons/fa";
 import { IoMdDownload } from "react-icons/io";
 import { AiFillLike } from "react-icons/ai";
 import Image from "next/image";
 
-const Games = ({gameData}) => {
-  const genre = ["action","adventure","indie"];
+const Games = ({ gameData }) => {
+  const genre = ["action", "adventure", "indie"];
   const [itemIndex, setItemIndex] = useState(0);
   const [data, setData] = useState({
     likes: 100,
@@ -18,7 +18,7 @@ const Games = ({gameData}) => {
   });
 
   const handleLike = () => {
-    setData(prev=>({...prev,likes:prev.likes+1}));
+    setData(prev => ({ ...prev, likes: prev.likes + 1 }));
   };
   console.log(gameData);
   return (
@@ -27,10 +27,10 @@ const Games = ({gameData}) => {
         <div className="video-game-wrapper bg-gradient">
           <div className="thumbnail-container px-6 py-[20px]">
             <div className="thumbnail">
-              <Image fill={true} src={'/images/image-23.png'} alt="Game Thumbnail" />
+              <Image width={250} height={100} src={'/images/image-23.png'} alt="Game Thumbnail" />
             </div>
             <p className="py-6 text-white">
-              {gameData.title} 
+              {gameData.title}
             </p>
             <div className="buttons flex gap-2 my-2">
               <button className="p-3 group gap-1 text-sm">
@@ -79,12 +79,12 @@ const Games = ({gameData}) => {
 
           <div className="video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
             <iframe height='400' width="600" src={gameData.media[itemIndex]}
-              title="YouTube video player" 
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              title="YouTube video player"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen={true}></iframe>
-            <span><p className="pt-7 px-2 text-white">{}</p></span>
+            <span><p className="pt-7 px-2 text-white">{ }</p></span>
           </div>
-          
+
           <div className="carousel-container px-6 py-[20px]">
             <div className="carousel-wrapper">
               <div className="g-carousel">
@@ -96,7 +96,7 @@ const Games = ({gameData}) => {
               </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </>
