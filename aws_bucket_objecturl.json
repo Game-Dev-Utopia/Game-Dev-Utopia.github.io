@@ -1,0 +1,952 @@
+{
+    "website-data": [
+        {
+            "filename": "",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/"
+        }
+    ],
+    "website-data/achievements_data": [
+        {
+            "filename": "IIITK.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IIITK.jpeg"
+        },
+        {
+            "filename": "IIITNagpur_Winner.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IIITNagpur_Winner.jpeg"
+        },
+        {
+            "filename": "IITHyderabad_Rank1.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IITHyderabad_Rank1.jpeg"
+        },
+        {
+            "filename": "IITIndore_Rank1.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IITIndore_Rank1.jpeg"
+        },
+        {
+            "filename": "IITMadras_Rank2.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IITMadras_Rank2.jpeg"
+        },
+        {
+            "filename": "Winner_python.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/Winner_python.jpeg"
+        },
+        {
+            "filename": "genesis_1.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/genesis_1.png"
+        },
+        {
+            "filename": "genesis_2.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/genesis_2.png"
+        },
+        {
+            "filename": "winner_1.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/winner_1.jpeg"
+        },
+        {
+            "filename": "winner_2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/winner_2.jpg"
+        }
+    ],
+    "website-data/design_images": [
+        {
+            "filename": "Air_Cruiser.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Air_Cruiser.jpg"
+        },
+        {
+            "filename": "Air_Cruiser_MKII.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Air_Cruiser_MKII.jpg"
+        },
+        {
+            "filename": "Angels_Of_Peace.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Angels_Of_Peace.png"
+        },
+        {
+            "filename": "Astronaught_Model_001.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Astronaught_Model_001.png"
+        },
+        {
+            "filename": "Car Animation Final.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Car Animation Final.mp4"
+        },
+        {
+            "filename": "Character.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Character.mp4"
+        },
+        {
+            "filename": "Concept_01.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Concept_01.jpg"
+        },
+        {
+            "filename": "DB_11.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/DB_11.jpg"
+        },
+        {
+            "filename": "Dismal.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Dismal.png"
+        },
+        {
+            "filename": "Elite_Sniper_Unit.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Elite_Sniper_Unit.jpg"
+        },
+        {
+            "filename": "Ferrari_250_.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Ferrari_250_.jpg"
+        },
+        {
+            "filename": "Ferrari_F40.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Ferrari_F40.jpg"
+        },
+        {
+            "filename": "Final.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Final.mp4"
+        },
+        {
+            "filename": "Harbinger.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Harbinger.jpg"
+        },
+        {
+            "filename": "High_Lords_Of_Terra.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/High_Lords_Of_Terra.jpg"
+        },
+        {
+            "filename": "High_Lords_Of_Terra_WIP.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/High_Lords_Of_Terra_WIP.jpg"
+        },
+        {
+            "filename": "Lego.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Lego.jpg"
+        },
+        {
+            "filename": "Limbo Final(1).jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Limbo Final(1).jpg"
+        },
+        {
+            "filename": "Limbo Final(2).jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Limbo Final(2).jpg"
+        },
+        {
+            "filename": "Limbo Final.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Limbo Final.jpg"
+        },
+        {
+            "filename": "Nissan_180SX.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Nissan_180SX.jpg"
+        },
+        {
+            "filename": "Oppenheimer_Poster.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Oppenheimer_Poster.jpg"
+        },
+        {
+            "filename": "Plants_vs_Zombie_Model(1).jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Plants_vs_Zombie_Model(1).jpg"
+        },
+        {
+            "filename": "Plants_vs_Zombie_Model.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Plants_vs_Zombie_Model.jpg"
+        },
+        {
+            "filename": "Polaroid_Dream.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Polaroid_Dream.jpg"
+        },
+        {
+            "filename": "Polaroid_Dream_v2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Polaroid_Dream_v2.jpg"
+        },
+        {
+            "filename": "Polaroid_Dream_v3.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Polaroid_Dream_v3.jpg"
+        },
+        {
+            "filename": "Project_C9.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Project_C9.jpg"
+        },
+        {
+            "filename": "Quicksilver.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Quicksilver.jpg"
+        },
+        {
+            "filename": "RazorHeadphone.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/RazorHeadphone.mp4"
+        },
+        {
+            "filename": "Realistic Envo.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Realistic Envo.mp4"
+        },
+        {
+            "filename": "Romancer_Mk_I.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Romancer_Mk_I.jpg"
+        },
+        {
+            "filename": "Sekhmat_Grace.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Sekhmat_Grace.png"
+        },
+        {
+            "filename": "So_It_Wasnt_Real.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/So_It_Wasnt_Real.jpg"
+        },
+        {
+            "filename": "Starless_Night.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Starless_Night.jpg"
+        },
+        {
+            "filename": "Tenacious_12.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Tenacious_12.jpg"
+        },
+        {
+            "filename": "Venom1.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Venom1.jpg"
+        },
+        {
+            "filename": "Wall_Simulation.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Wall_Simulation.mp4"
+        },
+        {
+            "filename": "Worm_Hole.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Worm_Hole.mp4"
+        },
+        {
+            "filename": "Zombie ME2.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/Zombie ME2.mp4"
+        },
+        {
+            "filename": "collision1.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/collision1.mp4"
+        },
+        {
+            "filename": "cout.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/cout.mp4"
+        },
+        {
+            "filename": "finalpendulum.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/finalpendulum.png"
+        },
+        {
+            "filename": "untitled.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/design_images/untitled.png"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/2D Landscape": [
+        {
+            "filename": "boat.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/2D Landscape/boat.png"
+        },
+        {
+            "filename": "final render copy.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/2D Landscape/final render copy.png"
+        },
+        {
+            "filename": "mountain.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/2D Landscape/mountain.png"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Blackhole": [
+        {
+            "filename": "blackhole0001-0250.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Blackhole/blackhole0001-0250.mp4"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Car": [
+        {
+            "filename": "car render test 1.mov",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Car/car render test 1.mov"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Cyberpunk Render": [
+        {
+            "filename": "test2.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Cyberpunk Render/test2.png"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Interior": [
+        {
+            "filename": "Interior.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Interior/Interior.png"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Scifi Scene": [
+        {
+            "filename": "0001-0090.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Scifi Scene/0001-0090.mp4"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Sugar Candy": [
+        {
+            "filename": "candy.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Sugar Candy/candy.png"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Wall Physics": [
+        {
+            "filename": "Wall Simulation.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Wall Physics/Wall Simulation.mp4"
+        }
+    ],
+    "website-data/designs_data/Aditya Mittal/Wormhole": [
+        {
+            "filename": "0001-0120N.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Wormhole/0001-0120N.mp4"
+        },
+        {
+            "filename": "viewport spaceN.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Aditya Mittal/Wormhole/viewport spaceN.mp4"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Car Animation": [
+        {
+            "filename": "Car Animation Final.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Car Animation/Car Animation Final.mp4"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/ChatGPT": [
+        {
+            "filename": "Final.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/ChatGPT/Final.mp4"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Dismal": [
+        {
+            "filename": "Dismal.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Dismal/Dismal.png"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Lego": [
+        {
+            "filename": "Lego.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Lego/Lego.jpg"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Limbo": [
+        {
+            "filename": "Limbo Final.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Limbo/Limbo Final.png"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Metahuman bloody": [
+        {
+            "filename": "Zombie ME2.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Metahuman bloody/Zombie ME2.mp4"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve": [
+        {
+            "filename": "RDR.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/RDR.mp4"
+        },
+        {
+            "filename": "Sibling Love.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Sibling Love.png"
+        }
+    ],
+    "website-data/designs_data/Chinmay Surve/Razor Headphone": [
+        {
+            "filename": "RazorHeadphone.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Chinmay Surve/Razor Headphone/RazorHeadphone.mp4"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Amoung us": [
+        {
+            "filename": "run.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Amoung us/run.png"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Blackhole": [
+        {
+            "filename": "0001-0060.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Blackhole/0001-0060.mkv"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Character": [
+        {
+            "filename": "Character.mov",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Character/Character.mov"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Donut": [
+        {
+            "filename": "0001-0250.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Donut/0001-0250.mkv"
+        },
+        {
+            "filename": "untitled.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Donut/untitled.png"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Realistic Enviornment": [
+        {
+            "filename": "Realistic Envo.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Realistic Enviornment/Realistic Envo.mp4"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Satisfying Animation": [
+        {
+            "filename": "0001-0020.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Satisfying Animation/0001-0020.mp4"
+        },
+        {
+            "filename": "finalpendulum.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Satisfying Animation/finalpendulum.png"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/Space collision": [
+        {
+            "filename": "0001-0060.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Space collision/0001-0060.mkv"
+        },
+        {
+            "filename": "collision1.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/Space collision/collision1.mkv"
+        }
+    ],
+    "website-data/designs_data/Harsh Kalkar/sea": [
+        {
+            "filename": "cout.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Harsh Kalkar/sea/cout.png"
+        }
+    ],
+    "website-data/designs_data/Kshitij Aucharmal": [
+        {
+            "filename": "Humongosaur-like.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Kshitij Aucharmal/Humongosaur-like.mp4"
+        },
+        {
+            "filename": "VID-20231119-WA0000.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Kshitij Aucharmal/VID-20231119-WA0000.mp4"
+        },
+        {
+            "filename": "VID-20231126-WA0005.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Kshitij Aucharmal/VID-20231126-WA0005.mp4"
+        },
+        {
+            "filename": "VID-20231130-WA0001.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Kshitij Aucharmal/VID-20231130-WA0001.mp4"
+        },
+        {
+            "filename": "gamdev-logo0001-0240.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Kshitij Aucharmal/gamdev-logo0001-0240.mp4"
+        }
+    ],
+    "website-data/designs_data/Prajwal Pawar": [
+        {
+            "filename": "1990s.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/1990s.jpg"
+        },
+        {
+            "filename": "AC 001.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/AC 001.jpg"
+        },
+        {
+            "filename": "AC 007.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/AC 007.jpg"
+        },
+        {
+            "filename": "Assassin.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Assassin.png"
+        },
+        {
+            "filename": "Assassin2.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Assassin2.png"
+        },
+        {
+            "filename": "Brigador.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Brigador.jpg"
+        },
+        {
+            "filename": "CELSHADE.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/CELSHADE.jpg"
+        },
+        {
+            "filename": "Ferrari Lusso2 fin.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Ferrari Lusso2 fin.jpg"
+        },
+        {
+            "filename": "Lancer Tank.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Lancer Tank.jpg"
+        },
+        {
+            "filename": "Loyal Waifu 01.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Loyal Waifu 01.jpg"
+        },
+        {
+            "filename": "Metroid Lancer.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Metroid Lancer.jpg"
+        },
+        {
+            "filename": "N.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/N.jpg"
+        },
+        {
+            "filename": "Project C9.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Project C9.jpg"
+        },
+        {
+            "filename": "RR.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/RR.jpg"
+        },
+        {
+            "filename": "SYN MK11.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/SYN MK11.jpg"
+        },
+        {
+            "filename": "SYN MK12.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/SYN MK12.jpg"
+        },
+        {
+            "filename": "SYN MK2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/SYN MK2.jpg"
+        },
+        {
+            "filename": "SYN MK3.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/SYN MK3.jpg"
+        },
+        {
+            "filename": "Sniper Waifu With Auto Frndp1.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Sniper Waifu With Auto Frndp1.jpg"
+        },
+        {
+            "filename": "TONK.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/TONK.jpg"
+        },
+        {
+            "filename": "Tactical Waifu5000.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Tactical Waifu5000.jpg"
+        },
+        {
+            "filename": "Test01.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/Test01.png"
+        },
+        {
+            "filename": "brigador7.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/brigador7.jpg"
+        },
+        {
+            "filename": "brigador8.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/brigador8.jpg"
+        },
+        {
+            "filename": "bstge.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/bstge.jpg"
+        },
+        {
+            "filename": "classy lady.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/classy lady.jpg"
+        },
+        {
+            "filename": "classy lady2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/classy lady2.jpg"
+        },
+        {
+            "filename": "classy lady4.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/classy lady4.jpg"
+        },
+        {
+            "filename": "classy lady7.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/classy lady7.jpg"
+        },
+        {
+            "filename": "db11.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/db11.jpg"
+        },
+        {
+            "filename": "death in fedora (1).jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/death in fedora (1).jpg"
+        },
+        {
+            "filename": "elite sniper unit1.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/elite sniper unit1.jpg"
+        },
+        {
+            "filename": "final car5.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/final car5.jpg"
+        },
+        {
+            "filename": "goth cyberpunk gal2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/goth cyberpunk gal2.jpg"
+        },
+        {
+            "filename": "hard image.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/hard image.png"
+        },
+        {
+            "filename": "high lord of terra4.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/high lord of terra4.jpg"
+        },
+        {
+            "filename": "lancey5.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lancey5.jpg"
+        },
+        {
+            "filename": "lm.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lm.jpg"
+        },
+        {
+            "filename": "lost love 1.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lost love 1.jpg"
+        },
+        {
+            "filename": "lost love 2.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lost love 2.jpg"
+        },
+        {
+            "filename": "lost love 3.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lost love 3.jpg"
+        },
+        {
+            "filename": "lost love.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/lost love.jpg"
+        },
+        {
+            "filename": "loyal desert sniper waifu 01.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/loyal desert sniper waifu 01.jpg"
+        },
+        {
+            "filename": "prajwal-pawar-bb5.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/prajwal-pawar-bb5.jpg"
+        },
+        {
+            "filename": "prajwal-pawar-chieluvu.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/prajwal-pawar-chieluvu.jpg"
+        },
+        {
+            "filename": "prajwal-pawar-vintage-dream.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/prajwal-pawar-vintage-dream.jpg"
+        },
+        {
+            "filename": "prtrt.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/prtrt.jpg"
+        },
+        {
+            "filename": "rennaisance.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/rennaisance.jpg"
+        },
+        {
+            "filename": "starless.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/starless.jpg"
+        },
+        {
+            "filename": "surreal.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/surreal.png"
+        },
+        {
+            "filename": "testfile3.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/testfile3.jpg"
+        },
+        {
+            "filename": "testfile4.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/testfile4.jpg"
+        },
+        {
+            "filename": "venom1.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Prajwal Pawar/venom1.jpg"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Anime style Night Sky": [
+        {
+            "filename": "final.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Anime style Night Sky/final.mp4"
+        },
+        {
+            "filename": "shot10001-0360.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Anime style Night Sky/shot10001-0360.mkv"
+        },
+        {
+            "filename": "shot10180-0240.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Anime style Night Sky/shot10180-0240.mkv"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Space Scenes": [
+        {
+            "filename": "milkyway0001-0060.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/milkyway0001-0060.mkv"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Volvo P1_800": [
+        {
+            "filename": "scene5.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Volvo P1_800/scene5.mp4"
+        }
+    ],
+    "website-data/designs_data/Viraj Surve/Astronaught": [
+        {
+            "filename": "Untitled video - Made with Clipchamp (7).mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Viraj Surve/Astronaught/Untitled video - Made with Clipchamp (7).mp4"
+        }
+    ],
+    "website-data/designs_data/Viraj Surve/Oppheimer Poster": [
+        {
+            "filename": "CILLIAN MURPHY.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Viraj Surve/Oppheimer Poster/CILLIAN MURPHY.jpg"
+        }
+    ],
+    "website-data/designs_data/Viraj Surve/PEA (Plants vs Zombies model)": [
+        {
+            "filename": "untitled.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Viraj Surve/PEA (Plants vs Zombies model)/untitled.png"
+        }
+    ],
+    "website-data/events_data": [
+        {
+            "filename": "blender.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/blender.jpg"
+        },
+        {
+            "filename": "exhibition.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/exhibition.jpg"
+        },
+        {
+            "filename": "industry exp.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/industry exp.jpg"
+        },
+        {
+            "filename": "love2d.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/love2d.jpg"
+        },
+        {
+            "filename": "one day.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/one day.jpg"
+        },
+        {
+            "filename": "shaub.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/shaub.jpg"
+        },
+        {
+            "filename": "ubisoft.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/ubisoft.jpg"
+        },
+        {
+            "filename": "voxel.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/voxel.jpg"
+        },
+        {
+            "filename": "winnner.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/events_data/winnner.jpg"
+        }
+    ],
+    "website-data/games_data": [
+        {
+            "filename": "Algorithm_Visualizer.JPG",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Algorithm_Visualizer.JPG"
+        },
+        {
+            "filename": "Be_Dash.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Be_Dash.png"
+        },
+        {
+            "filename": "Bugs.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Bugs.png"
+        },
+        {
+            "filename": "Celestial_Knife.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Celestial_Knife.png"
+        },
+        {
+            "filename": "Clone_Escape.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Clone_Escape.png"
+        },
+        {
+            "filename": "Dicey_Roads.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Dicey_Roads.jpeg"
+        },
+        {
+            "filename": "Disarm_It.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Disarm_It.jpg"
+        },
+        {
+            "filename": "Dream_Sequencer.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Dream_Sequencer.png"
+        },
+        {
+            "filename": "Event_Horizon.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Event_Horizon.jpg"
+        },
+        {
+            "filename": "Galactic_Blitz.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Galactic_Blitz.png"
+        },
+        {
+            "filename": "Galactic_Clash.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Galactic_Clash.png"
+        },
+        {
+            "filename": "Gemelody.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Gemelody.png"
+        },
+        {
+            "filename": "Macabre.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Macabre.png"
+        },
+        {
+            "filename": "Maze_Master_2.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Maze_Master_2.png"
+        },
+        {
+            "filename": "Midoris_Astro_Quest.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Midoris_Astro_Quest.png"
+        },
+        {
+            "filename": "Orbit_Outbreak.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Orbit_Outbreak.png"
+        },
+        {
+            "filename": "Peacemaker.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Peacemaker.jpeg"
+        },
+        {
+            "filename": "Rewind.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Rewind.png"
+        },
+        {
+            "filename": "Rusty_Chamber.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Rusty_Chamber.png"
+        },
+        {
+            "filename": "Space_Slime_Invasion.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Space_Slime_Invasion.png"
+        },
+        {
+            "filename": "Space_Warriors.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Space_Warriors.png"
+        },
+        {
+            "filename": "Sunken.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Sunken.jpg"
+        },
+        {
+            "filename": "The_Cursed_Frostbite.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/The_Cursed_Frostbite.png"
+        },
+        {
+            "filename": "Upside_Down.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Upside_Down.png"
+        },
+        {
+            "filename": "Wing_It.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/Wing_It.png"
+        },
+        {
+            "filename": "vibora.JPG",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/games_data/vibora.JPG"
+        }
+    ],
+    "website-data/home_data/hero_section": [
+        {
+            "filename": "backgroundVideo.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/home_data/hero_section/backgroundVideo.mp4"
+        }
+    ],
+    "website-data/home_data/partners_and_sponsors": [
+        {
+            "filename": "BetaLabs.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/home_data/partners_and_sponsors/BetaLabs.png"
+        },
+        {
+            "filename": "Defold.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/home_data/partners_and_sponsors/Defold.png"
+        },
+        {
+            "filename": "Nextech.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/home_data/partners_and_sponsors/Nextech.png"
+        }
+    ],
+    "website-data/profile_data": [
+        {
+            "filename": "Aditya Ghadge.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Aditya Ghadge.jpg"
+        },
+        {
+            "filename": "Aditya Malu.JPG",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Aditya Malu.JPG"
+        },
+        {
+            "filename": "Aditya Mittal.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Aditya Mittal.jpg"
+        },
+        {
+            "filename": "Aditya More.jpeg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Aditya More.jpeg"
+        },
+        {
+            "filename": "Apurv Henkare.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Apurv Henkare.jpg"
+        },
+        {
+            "filename": "Bavishya.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Bavishya.jpg"
+        },
+        {
+            "filename": "Bharath Krishnan.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Bharath Krishnan.jpg"
+        },
+        {
+            "filename": "Bhavyam Sanghavi.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Bhavyam Sanghavi.jpg"
+        },
+        {
+            "filename": "Dnyaneshwari Hole.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Dnyaneshwari Hole.jpg"
+        },
+        {
+            "filename": "Gowrish I.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Gowrish I.jpg"
+        },
+        {
+            "filename": "Himanshu Pandey.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Himanshu Pandey.jpg"
+        },
+        {
+            "filename": "Kiran Kankariya.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Kiran Kankariya.jpg"
+        },
+        {
+            "filename": "Mark Samuel.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Mark Samuel.jpg"
+        },
+        {
+            "filename": "Mayuri Kolhe.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Mayuri Kolhe.jpg"
+        },
+        {
+            "filename": "Mihir Ranade.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Mihir Ranade.jpg"
+        },
+        {
+            "filename": "Prajwal Pawar.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Prajwal Pawar.jpg"
+        },
+        {
+            "filename": "Pritika Rohera.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Pritika Rohera.jpg"
+        },
+        {
+            "filename": "Shreyas Umbardand.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Shreyas Umbardand.jpg"
+        },
+        {
+            "filename": "Shripad Kanakdande.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Shripad Kanakdande.jpg"
+        },
+        {
+            "filename": "Shrutika Malve.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Shrutika Malve.jpg"
+        },
+        {
+            "filename": "Soham.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Soham.jpg"
+        },
+        {
+            "filename": "Srivathsa.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Srivathsa.jpg"
+        },
+        {
+            "filename": "Tejashwin.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Tejashwin.jpg"
+        },
+        {
+            "filename": "Vedant Chakkarwar.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/Vedant Chakkarwar.jpg"
+        },
+        {
+            "filename": "profile.webp",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/profile_data/profile.webp"
+        }
+    ]
+}
