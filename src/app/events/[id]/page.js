@@ -31,40 +31,6 @@ const Break = () => {
     )
 }
 
-// individualOrganizers: false, rules: Array(0), _id: '661e96eaa3f0be4f46d601d6', eventName: 'Voxel Battle Competition', imageURL: 'https://res.cloudinary.com/dnl11kvcm/image/upload/v1712819101/events_data/voxel_ayqmkl.jpg', …}
-// endsIn
-// : 
-// "2021-02-25T00:00:00.000Z"
-// eventName
-// : 
-// "Voxel Battle Competition"
-// faq
-// : 
-// []
-// imageURL
-// : 
-// "https://res.cloudinary.com/dnl11kvcm/image/upload/v1712819101/events_data/voxel_ayqmkl.jpg"
-// individualOrganizers
-// : 
-// false
-// organizers
-// : 
-// []
-// prizes
-// : 
-// []
-// rules
-// : 
-// []
-// startsIn
-// : 
-// "2021-02-19T00:00:00.000Z"
-// winners
-// : 
-// []
-// _id
-// : 
-// "661e96eaa3f0be4f46d601d6"
 
 const EventPageLayout = ({ eventArray }) => {
     console.log(eventArray);
@@ -117,7 +83,7 @@ const EventPageLayout = ({ eventArray }) => {
 
 
     return (
-        <div className='block sm:w-[50vw] sm:mx-[25vw] w-full h-full'>
+        <div className='block sm:w-[80vw] lg:w-[50vw] mx-auto w-full h-full'>
             <Title name={eventName} rating={starCount} imgURL={imageURL} />
             <Break />
             {openRegisterModal === true && <EventPageRegister close={handleCloseModal} />}
