@@ -38,10 +38,6 @@
   }
 }
 
-*{
-  @apply bg-slate-900
-}
-
 /* Footer Styles */
 /* idk why but both tailwind as well as this classes are required currently */
 .linkedin {
