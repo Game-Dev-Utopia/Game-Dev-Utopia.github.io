@@ -58,7 +58,7 @@ const Games = ({ gameData }) => {
               <button className="py-2 flex items-center group bg-grad-hover text-sm" onClick={handleLike}>
                 <AiFillLike />
                 <span>{data.likes}</span>
-                <span className=" group-hover:scale-100">
+                <span className="tooltip group-hover:scale-100">
                   <p>Like</p>
                 </span>
               </button>

@@ -57,7 +57,7 @@ export default function Page() {
 
   return (
     <div className='bg-gray-900 p-4 space-y-8'>
-      <Search />
+      {/* <Search /> */}
       <section>
         { 
         categorizedEvents.ongoing.length?(

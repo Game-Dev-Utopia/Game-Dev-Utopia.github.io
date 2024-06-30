@@ -36,8 +36,8 @@ export default function PastEvents({ past }) {
             <Image
               src={imageURL}
               className="opacity-50"
-              fill={true}
-              sizes="25vw"
+              width={200}
+              height={200}
               alt="hello"
             />
           </div>
