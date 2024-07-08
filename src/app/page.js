@@ -12,7 +12,8 @@ import axios from '../api/axios'
 const OPTIONS = {
   loop: true,
 }
-import { useEffect, useState } from "react";
+import React,{ useEffect, useState } from "react";
+import HoverCard from "@/components/visionMission/Card";
 
 
 
@@ -41,20 +42,53 @@ export default function Home() {
   useEffect(() => {
     fetchGames()
   }, [])
+
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 768);
+    };
+
+    // Check the screen size on the initial load
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
-      <LandingPage />
+      <LandingPage/>
+      <div className="flex flex-wrap justify-start">
+        <div className="flex flex-col md:flex-row justify-center items-center gap-5 mt-10 w-full ">
+          <div className="w-full md:w-[40vw] mr-9 ">
+            <HoverCard
+              title="VISION 🌟🌟"
+              content="To be the leading platform that inspires and empowers game developers worldwide, fostering creativity, innovation, and community."
+              isLargeScreen={isLargeScreen}
+            />
+          </div>
+          <div className="w-full md:w-[40vw] mt-5 md:mt-0 mr-9 md:pl-9">
+            <HoverCard
+              title="MISSION 🚀🚀"
+              content="Hamara vision hi hamara mission hai"
+              isLargeScreen={isLargeScreen}
+            />
+          </div>
+        </div>
+      </div>
       {/* <HomePageCarousel images={images}/> */}
-      <section id="games relative space-y-4 z-10">
+      <section id="games" className="relative space-y-4 z-10">
         <h1 className="w-fit mx-auto txt-grad font-bold text-center text-3xl my-10">Games</h1>
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
-
-
         <span className="grid place-items-center">
-          <Link href="/games" className="font-semibold text-lg p-2 ">
-            <button className="bg-grad py-1 rounded-full">
-              See More &rarr;
-            </button>
+          <Link href="/games" className="font-semibold text-lg p-2">
+            <button className="bg-grad py-1 rounded-full">See More &rarr;</button>
           </Link>
         </span>
       </section>
