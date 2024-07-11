@@ -25,7 +25,7 @@ const Sponser_Card = () => {
 
     return (
         <>
-            <h1 className='txt-grad font-bold text-center text-3xl'>Partners & Sponsers</h1>
+            <h1 className='txt-grad leading-loose text-4xl text-center mx-auto font-bold'>Partners & Sponsers</h1>
             <div className='outer_c'>
 
                 <div className='con' >
