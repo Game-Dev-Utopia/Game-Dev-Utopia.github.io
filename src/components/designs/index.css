@@ -8,7 +8,6 @@
   background-position: center;
   background-color: rgba(0,0,0,1);
   border-radius: 1rem;
-  width: fit-content;
   height: fit-content;
 }
 
@@ -198,13 +197,13 @@ button:hover {
   .des-thumbnail-container {
     margin: 5px;
     width: 100%;
-    height: auto;
+    height: fit-content;
   }
 
   .des-video-card {
     margin: 5px;
     width: 100%;
-    height: 100%;
+    height: fit-content;
   }
 
   .video-item video{
@@ -220,6 +219,7 @@ button:hover {
     flex-direction: row; 
     scroll-snap-type: x mandatory; 
     width: fit-content;
+    height: fit-content;
   }
 
   .des-carousel-container {
