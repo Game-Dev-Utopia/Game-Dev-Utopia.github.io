@@ -7,6 +7,10 @@
     ],
     "website-data/achievements_data": [
         {
+            "filename": "Hackathon_AIT.jpg",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/Hackathon_AIT.jpg"
+        },
+        {
             "filename": "IIITK.jpeg",
             "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/achievements_data/IIITK.jpeg"
         },
@@ -653,13 +657,93 @@
             "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Anime style Night Sky/shot10180-0240.mkv"
         }
     ],
+    "website-data/designs_data/Saurav Shinde/Arcade Machine": [
+        {
+            "filename": "22.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Arcade Machine/22.mp4"
+        },
+        {
+            "filename": "render1.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Arcade Machine/render1.png"
+        },
+        {
+            "filename": "shot1.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Arcade Machine/shot1.png"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Low poly Porche": [
+        {
+            "filename": "Porche reel2.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/Porche reel2.mp4"
+        },
+        {
+            "filename": "shot1.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot1.png"
+        },
+        {
+            "filename": "shot2.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot2.png"
+        },
+        {
+            "filename": "shot3.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot3.png"
+        },
+        {
+            "filename": "shot4.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot4.png"
+        },
+        {
+            "filename": "shot5.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot5.png"
+        },
+        {
+            "filename": "shot6.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Low poly Porche/shot6.png"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Night City": [
+        {
+            "filename": "0001-0240.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Night City/0001-0240.mp4"
+        },
+        {
+            "filename": "cityimage1.png",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Night City/cityimage1.png"
+        }
+    ],
     "website-data/designs_data/Saurav Shinde/Space Scenes": [
+        {
+            "filename": "0001-0120.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/0001-0120.mkv"
+        },
+        {
+            "filename": "blackhole0001-0120.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/blackhole0001-0120.mkv"
+        },
         {
             "filename": "milkyway0001-0060.mkv",
             "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/milkyway0001-0060.mkv"
+        },
+        {
+            "filename": "planet 10001-0120.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/planet 10001-0120.mkv"
+        },
+        {
+            "filename": "spacecraft0001-0120.mkv",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Space Scenes/spacecraft0001-0120.mkv"
+        }
+    ],
+    "website-data/designs_data/Saurav Shinde/Sword": [
+        {
+            "filename": "Demo render animation sword.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Sword/Demo render animation sword.mp4"
         }
     ],
     "website-data/designs_data/Saurav Shinde/Volvo P1_800": [
+        {
+            "filename": "Car edit 1.mp4",
+            "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Volvo P1_800/Car edit 1.mp4"
+        },
         {
             "filename": "scene5.mp4",
             "url": "https://gdu-data-bucket.s3.amazonaws.com/website-data/designs_data/Saurav Shinde/Volvo P1_800/scene5.mp4"

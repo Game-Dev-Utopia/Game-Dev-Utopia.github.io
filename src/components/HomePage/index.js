@@ -57,7 +57,7 @@ const Carousel = ({ speed }) => {
     <>
       <div className='c-container'>
         <div className='content my-10'>
-          <h1 className='txt-grad font-bold text-center text-3xl'>Design</h1>
+          <h1 className='txt-grad leading-loose text-4xl text-center mx-11 font-bold'>Design</h1>
           <p>Welcome to our creative hub where Blender and Photoshop work hand in hand to shape virtual worlds and stunning visuals. With Blender, we sculpt, texture, and animate game assets, while Photoshop adds depth to our digital artistry. Join us in unlocking the boundless potential of Blender and Photoshop for gaming and art.</p>
         </div>
         <div className="carousel-container">

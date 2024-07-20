@@ -6,7 +6,7 @@ export default function GameDesignDetails({gameData}) {
   const acheivementArray =gameData.achievements;
   return (
     <section className="game-design-details">
-      <div className="grid grid-cols-2 gap-3 mx-2 pt-4">
+      <div className="grid grid-cols-auto gap-3 mx-2 pt-4">
         <div className="section-content p-6 rounded-2xl bg-[url('/images/games_section_bg_illustration.jpg')] bg-no-repeat bg-right hover:scale-[1.01] hover:shadow-md hover:shadow-[#fdb714] duration-200">
           <h1 className="text-3xl text-headings font-semibold py-2">About the Game</h1>
           <div className='glass_bar'>
@@ -18,7 +18,7 @@ export default function GameDesignDetails({gameData}) {
             {gameData.description}
           </p>
         </div>
-        <div className="section-content p-6 h-full rounded-2xl bg-[url('/images/games_section_bg_illustration.jpg')] bg-no-repeat bg-right  hover:scale-[1.01] hover:shadow-md hover:shadow-[#fdb714] duration-200">
+        {gameData.acheivements && <div className="section-content p-6 h-full rounded-2xl bg-[url('/images/games_section_bg_illustration.jpg')] bg-no-repeat bg-right  hover:scale-[1.01] hover:shadow-md hover:shadow-[#fdb714] duration-200">
           <h1 className="text-3xl text-headings font-semibold py-2">Achievements</h1>
           <div className='glass_bar'>
             <div className='glass1'></div>
@@ -40,7 +40,7 @@ export default function GameDesignDetails({gameData}) {
           <p className='py-6 text-white' >
             {acheivementArray[selectedAwardIndex]}
           </p>
-        </div>
+        </div>}
       </div>
     </section>
   );

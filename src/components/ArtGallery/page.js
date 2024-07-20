@@ -131,7 +131,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
     <div className="design-page">
-      <h1>Designs</h1>
+      <h1 className='txt-grad font-bold text-center text-3xl'>Designs</h1>
       <hr />
 
       <div className="image-gallery">

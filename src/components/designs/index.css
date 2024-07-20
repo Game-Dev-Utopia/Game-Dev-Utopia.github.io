@@ -50,7 +50,7 @@
 }
 
 button {
-  @apply px-2 py-1 duration-200 text-lg bg-[#202020] rounded-md hover:bg-[#fdb714] hover:text-black;
+  @apply px-2 py-1 duration-200 text-lg bg-[#202020] rounded-md hover:text-black;
 }
 
 button:hover {

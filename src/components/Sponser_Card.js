@@ -25,7 +25,7 @@ const Sponser_Card = () => {
 
     return (
         <>
-            <h1 className='txt-grad font-bold text-center text-3xl'>Partners & Sponsers</h1>
+            <h1 className='txt-grad leading-loose text-4xl text-center mx-auto font-bold'>Partners & Sponsers</h1>
             <div className='outer_c'>
 
                 <div className='con' >
@@ -34,8 +34,8 @@ const Sponser_Card = () => {
 
                             {sponserData.map(sponsor => (
                                 <div className="slide" key={sponsor._id}>
-                                    <Image src={`/images/sponser/${sponsor.name}.png`} height="100" width="220" />
-                                    <p className='text-center sponser_name mt-1'>{sponsor.name} <br></br> {sponsor.owner}</p>
+                                    <Image src={`/images/sponser/${sponsor.name}.png`} height="120" width="200" />
+                                    <p className='text-center text-white sponser_name mt-1'>{sponsor.name} <br></br> {sponsor.owner}</p>
                                 </div>
                             ))}
 
