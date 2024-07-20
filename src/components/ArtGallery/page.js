@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from 'next/link'; 
 import { FaFire } from 'react-icons/fa';
 import ShareIcon from '@mui/icons-material/Share';
@@ -11,20 +11,32 @@ import Image from "next/image";
 
 const ArtGallery = () => {
   const [galleryData, setGalleryData] = useState([]);
+  const dataFetchedRef = useRef(false);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const galleryData = async () => {
-      try {
-        const response = await getRequest('api/design/getdesigns');
-        console.log("SSM:", response);
-        setGalleryData(response);
-      } catch (error) {
-        console.error('Error fetching design data:', error);
-      }
-    };
-  
-    galleryData();
+    console.log("Component Mounted");
+    if (!dataFetchedRef.current) {
+      const fetchData = async () => {
+        try {
+          const response = await getRequest('api/design/getdesigns');
+          setGalleryData(response);
+          dataFetchedRef.current = true;
+        } catch (error) {
+          console.error('Error fetching design data:', error);
+        } finally {
+          setLoading(false);
+        }
+      };
+      fetchData();
+    } else {
+      setLoading(false);
+    }
   }, []);
+
+  useEffect(() => {
+    console.log("Component Rendered");
+  });
 
   
   const [likes, setLikes] = useState({});
