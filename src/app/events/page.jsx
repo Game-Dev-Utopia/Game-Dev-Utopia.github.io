@@ -57,9 +57,20 @@ export default function Page() {
 
   return (
     <div className='bg-gray-900 p-4 space-y-8'>
-      <Search />
+      {/* <Search /> */}
       <section>
-        <EventCard events={categorizedEvents.ongoing}/> {/* Pass categorizedEvents */}
+        { 
+        categorizedEvents.ongoing.length?(
+        <EventCard events={categorizedEvents.ongoing}/>
+      ):(
+        <>
+        <span className='flex gap-2 items-center'>
+          <h1 className='text-3xl'>ONGOING EVENTS</h1>
+          <div className='px-2 flex-1 h-[5px] bg-[#f1dc90]'></div>
+        </span>
+          <h1 className='text-5xl w-fit my-3 mx-auto'>No Ongoing Events</h1>
+        </>
+        ) }
       </section>
       <section>
         <span className='flex gap-2 items-center'>

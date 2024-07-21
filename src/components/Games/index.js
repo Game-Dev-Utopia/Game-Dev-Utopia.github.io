@@ -27,19 +27,19 @@ const Games = ({ gameData }) => {
         <div className="video-game-wrapper bg-gradient">
           <div className="thumbnail-container px-6 py-[20px]">
             <div className="thumbnail">
-              <Image width={250} height={100} src={'/images/image-23.png'} alt="Game Thumbnail" />
+              <Image width={250} height={100} src={gameData.thumbnail} alt="Game Thumbnail" />
             </div>
             <p className="py-6 text-white">
               {gameData.title}
             </p>
             <div className="buttons flex gap-2 my-2">
-              <button className="p-3 group gap-1 text-sm">
+              <button className="p-3 group bg-grad-hover gap-1 text-sm">
                 <FaPlay />
                 <span className="tooltip group-hover:scale-100">
                   <p>Play</p>
                 </span>
               </button>
-              <button className="py-2 group gap-1 flex items-center text-sm">
+              <button className="py-2 group bg-grad-hover gap-1 flex items-center text-sm">
                 <FaShare />
                 <span>{data.shares}</span>
                 <span className="tooltip group-hover:scale-100">
@@ -47,7 +47,7 @@ const Games = ({ gameData }) => {
                 </span>
               </button>
               <a href={gameData.download_url} target="_blank">
-                <button className="py-2 group gap-1 items-center text-sm flex">
+                <button className="py-2 group bg-grad-hover gap-1 items-center text-sm flex">
                   <IoMdDownload />
                   <span>{data.downloads}</span>
                   <span className="tooltip group-hover:scale-100">
@@ -55,7 +55,7 @@ const Games = ({ gameData }) => {
                   </span>
                 </button>
               </a>
-              <button className="py-2 flex items-center group text-sm" onClick={handleLike}>
+              <button className="py-2 flex items-center group bg-grad-hover text-sm" onClick={handleLike}>
                 <AiFillLike />
                 <span>{data.likes}</span>
                 <span className="tooltip group-hover:scale-100">
@@ -63,7 +63,7 @@ const Games = ({ gameData }) => {
                 </span>
               </button>
 
-              <button className="py-2 flex items-center group gap-1 text-sm">
+              <button className="py-2 flex items-center group bg-grad-hover gap-1 text-sm">
                 <FaComment />
                 <span>{data.comments}</span>
                 <span className="tooltip group-hover:scale-100">

@@ -11,7 +11,7 @@ export default function Modal({ past, close, setIsOpen }) {
           const { _id, imageURL } = event;
           const isVideoURL = /\.(mp4|webm|ogg)$/i.test(imageURL);
           return (
-            <Link key={index} href={`/events/${_id}`} passHref>
+            <Link key={index} href={`/events/${_id}`} passHref className='p-2'>
               {isVideoURL ? (
                 // Render video if videoURL exists
                 <video
@@ -27,7 +27,9 @@ export default function Modal({ past, close, setIsOpen }) {
                 <Image
                   src={imageURL}
                   alt={'image' + index}
-                  fill={true}
+                  // fill={true}
+                  height={300}
+                  width={300}
                   className='hover:scale-[1.05] transition-all duration-100'
                 />
               )}
