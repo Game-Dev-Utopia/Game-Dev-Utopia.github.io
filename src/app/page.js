@@ -69,14 +69,14 @@ export default function Home() {
           <div className="w-full md:w-[40vw] mr-9 ">
             <HoverCard
               title="VISION 🌟🌟"
-              content="To be the leading platform that inspires and empowers game developers worldwide, fostering creativity, innovation, and community."
+              content="To become India's leading game development community encompassing members of all ages, equipped with industry-level expertise."
               isLargeScreen={isLargeScreen}
             />
           </div>
           <div className="w-full md:w-[40vw] mt-5 md:mt-0 mr-9 md:pl-9">
             <HoverCard
               title="MISSION 🚀🚀"
-              content="Hamara vision hi hamara mission hai"
+              content="To foster a thriving community of passionate individuals dedicated to video game production."
               isLargeScreen={isLargeScreen}
             />
           </div>
