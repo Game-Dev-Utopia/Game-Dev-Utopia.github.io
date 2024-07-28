@@ -11,68 +11,33 @@ import Link from 'next/link';
 
 const HappeningNow = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [categorizedEvents, setCategorizedEvents] = useState({
-    past: [],
-    ongoing: [],
-    upcoming: []
-  });
+  const [slides, setSlides] = useState([]);
 
   useEffect(() => {
     async function getEvents() {
       try {
         const response = await axios.get('/api/event/getallevents');
+        console.log(response.data);
         const eventsArray = response.data;
-        const categorizedEvents = categorize(eventsArray);
-        setCategorizedEvents(categorizedEvents);
-        console.log(categorizedEvents);
+
+        // Populate slides array with events
+        const updatedSlides = eventsArray.map(event => ({
+          title: event.eventName,
+          date: event.startsIn ? new Date(event.startsIn).toISOString().slice(0, 10) : "",
+          description: event.description, // Assuming your event object has a 'description' property
+          image: event.imageURL // Assuming your event object has an 'imageURL' property
+        }));
+
+        setSlides(updatedSlides);
+        console.log(updatedSlides);
       } catch (error) {
         console.error("Error fetching events:", error);
       }
     }
+
     getEvents();
   }, []);
 
-  // Function to categorize events
-  const categorize = (events) => {
-    const today = new Date();
-    const pastEvents = [];
-    const ongoingEvents = [];
-    const upcomingEvents = [];
-
-    events.forEach(event => {
-      const eventStartsIn = new Date(event.startsIn);
-      const eventEndsIn = new Date(event.endsIn);
-
-      if (eventEndsIn < today) {
-        pastEvents.push(event);
-      } else if (eventStartsIn <= today && eventEndsIn >= today) {
-        ongoingEvents.push(event);
-      } else {
-        upcomingEvents.push(event);
-      }
-    });
-
-    return {
-      past: pastEvents,
-      ongoing: ongoingEvents,
-      upcoming: upcomingEvents
-    };
-  }
-
-  // Populate slides array with categorized events
-  useEffect(() => {
-    const allEvents = [...categorizedEvents.past, ...categorizedEvents.ongoing, ...categorizedEvents.upcoming];
-    const updatedSlides = allEvents.map(event => ({
-      title: event.eventName,
-      date: event.startsIn ? new Date(event.startsIn).toISOString().slice(0, 10) : "",
-      description: "event.description",
-      image: event.imageURL // Assuming your event object has an 'image' property
-    }));
-    setSlides(updatedSlides);
-
-  }, [categorizedEvents]);
-
-  const [slides, setSlides] = useState([]);
   console.log(slides);
 
   const handleSlideChange = (swiper) => {
@@ -81,7 +46,7 @@ const HappeningNow = () => {
 
   return (
     <>
-    <h1 className='txt-grad leading-loose text-4xl text-center mx-11 font-bold'>Happening Now</h1>
+    <h1 className='txt-grad leading-loose text-4xl text-center mx-11 font-bold'>Events Center</h1>
 
 <main className="relative w-[min(90rem,90%)] mx-auto  gap-12 py-[min(20vh,3rem)] flex flex-col lg:flex-row">
   <div className="lg:w-1/3 p-4">

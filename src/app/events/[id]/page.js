@@ -1,4 +1,5 @@
-'use client';
+"use client";
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation'
 import eventsData from '@/utilities/EventDetailsData'
 import Title from '@/components/EventsDetails/Event-Details-Title';
@@ -18,7 +19,7 @@ import Winners from '@/components/EventsDetails/Event-Details-Winners';
 import FAQ from '@/components/EventsDetails/Event-Details-FAQ';
 import Community from '@/components/EventsDetails/Event-Details-Community';
 import EventPageRegister from '@/components/EventsDetails/Event-Details-Register';
-import { useEffect, useState } from 'react';
+
 import { getRequest } from '@/api/api';
 
 const Break = () => {
@@ -156,7 +157,6 @@ const EventPageLayout = ({ eventArray }) => {
     )
 
 }
-
 
 const Page = ({ params }) => {
     const id = params.id;
