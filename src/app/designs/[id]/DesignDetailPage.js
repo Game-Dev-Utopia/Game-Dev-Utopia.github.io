@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from 'react'
 import { getRequest } from '@/api/api';
 import Designp1 from '@/components/designs/page.js'
