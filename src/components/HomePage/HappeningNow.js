@@ -42,10 +42,10 @@ const HappeningNow = () => {
 
   return (
     <>
-      <h1 className='txt-grad leading-loose text-4xl text-center mx-11 font-bold'>Events Center</h1>
+      <h1 className='txt-grad leading-loose text-4xl text-center mx-11 font-bold mt-5'>Events Center</h1>
 
-      <main className="relative w-[min(90rem,90%)] mx-auto  gap-12 py-[min(20vh,3rem)] flex flex-col lg:flex-row">
-        <div className="lg:w-1/3 p-4">
+      <main className="relative w-[min(90rem,90%)] mx-auto  gap-12 py-[min(20vh,3rem)] flex flex-col lg:flex-row ">
+        <div className="lg:w-1/3 p-4 h-60 md:h-auto" >
           {slides[activeIndex] && (
             <>
               <span className="uppercase tracking-[1.5px] text-base text-gray-400">{slides[activeIndex].date}</span>
@@ -58,7 +58,7 @@ const HappeningNow = () => {
                 href={slides[activeIndex].link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block text-uppercase text-gray-800 font-medium bg-white border-2 border-gray-300 rounded-full transition duration-300 ease-in-out mt-8 py-2 px-6 hover:border-blue-800 hover:text-blue-800"
+                className="inline-block text-uppercase text-gray-800 font-medium bg-white border-2 border-gray-300 rounded-full transition duration-300 ease-in-out mt-8 py-2 px-6 hover:border-blue-800 hover:text-blue-800 bottom-2" 
               >
                 Register
               </a>

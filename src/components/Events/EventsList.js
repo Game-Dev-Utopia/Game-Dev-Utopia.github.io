@@ -12,7 +12,7 @@ const EventsList = ({ title, events }) => {
 
   return (
     <div className="my-8">
-      <h3 className="text-4xl md:text-5xl font-extrabold txt-grad ml-4">{title}</h3>
+      <h3 className="text-4xl md:text-5xl font-extrabold txt-grad ml-4 leading-loose">{title}</h3>
       {eventslist.length === 0 ? (
         <p className="text-center text:md md:text-lg ml-4 mt-2 text-red-600 font-semibold">
           We don&apos;t have any upcoming events for now. Keep visiting for further updates!

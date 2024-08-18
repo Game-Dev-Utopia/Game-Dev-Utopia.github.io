@@ -16,22 +16,22 @@ const EventCarousell = ({ ongoingEvents }) => {
   const defaultevents = [
     {
       avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival",
+      name: " Music FestivalMusic ",
       shortDescription: "A vibrant music festival featuring top artists.",
     },
     {
       avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival",
+      name: "Music Festival 1",
       shortDescription: "A vibrant music festival featuring top artists.",
     },
     {
       avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival",
+      name: "Music Festival 2",
       shortDescription: "A vibrant music festival featuring top artists.",
     },
     {
       avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival",
+      name: "Music Festival 3",
       shortDescription: "A vibrant music festival featuring top artists.",
     }
   ];

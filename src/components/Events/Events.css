@@ -23,6 +23,10 @@
 .swiper-button-prev::after {
   font-size: 18px; /* Adjust arrow size */
 }
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px; /* Adjust arrow size */
+}
 
 .swiper-button-next {
   right: 10px; /* Positioning from right */
