@@ -7,10 +7,6 @@ export async function generateStaticParams() {
     const response = await getRequest('/api/design/getdesigns');
     const designs = await response;
 
-    if (!Array.isArray(designs)) {
-      throw new Error('API response is not an array');
-    }
-
     // Map each design to a parameter object
     return designs.map(design => ({
       id: design._id.toString(),

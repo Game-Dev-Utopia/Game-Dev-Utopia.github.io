@@ -6,10 +6,7 @@ export async function generateStaticParams() {
     const response = await getRequest('/api/event/getallevents');
     const events = await response;
 
-    if (!Array.isArray(events)) {
-      throw new Error('API response is not an array');
-    }
-    
+
     return events.map(e => ({
       id: e._id.toString(),
     }));

@@ -5,13 +5,6 @@ import { getRequest } from '@/api/api';
 
 export async function generateStaticParams() {
   try {
-    const response = await getRequest('/api/game/getallgames');
-    const games = await response;
-
-    if (!Array.isArray(games)) {
-      throw new Error('API response is not an array');
-    }
-    
     return games.map(e => ({
       id: e._id.toString(),
     }));
