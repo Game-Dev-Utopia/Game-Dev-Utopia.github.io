@@ -3,7 +3,7 @@ import Stepper from "./Stepper";
 import { postRequestJson } from "@/api/api";
 import Image from "next/image";
 
-export default function Form({ heading, image, stepsData , toastHandler}) {
+export default function Form({ heading, image, stepsData, toastHandler }) {
   //console.log("lits"+formattedCountries)
 
   const handleSubmit = async (formData) => {
@@ -12,7 +12,7 @@ export default function Form({ heading, image, stepsData , toastHandler}) {
     formName = formName.replace(/\s/g, '');
     console.log(formName);
 
-    const responseObj = {formName: formName, response:formData};
+    const responseObj = { formName: formName, response: formData };
     console.log(responseObj);
     const response = await postRequestJson(`/api/form/addform`, responseObj);
     //console.log(response);

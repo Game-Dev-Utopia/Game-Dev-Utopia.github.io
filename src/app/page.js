@@ -14,7 +14,7 @@ const OPTIONS = {
 }
 import React,{ useEffect, useState } from "react";
 import HoverCard from "@/components/visionMission/Card";
-
+import HappeningNow from "@/components/HomePage/HappeningNow";
 
 
 // const images = [
@@ -69,7 +69,7 @@ export default function Home() {
           <div className="w-full md:w-[40vw] mr-9 ">
             <HoverCard
               title="VISION 🌟🌟"
-              content=" To become India's leading game development community encompassing members of all ages, equipped with industry-level expertise."
+              content="To become India's leading game development community encompassing members of all ages, equipped with industry-level expertise."
               isLargeScreen={isLargeScreen}
             />
           </div>
@@ -84,7 +84,7 @@ export default function Home() {
       </div>
       {/* <HomePageCarousel images={images}/> */}
       <section id="games" className="relative space-y-4 z-10">
-        <h1 className="w-fit mx-auto txt-grad font-bold text-center text-3xl my-10">Games</h1>
+        <h1 className="w-fit my-5  txt-grad leading-loose text-4xl text-center mx-auto font-bold">Games</h1>
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <span className="grid place-items-center">
           <Link href="/games" className="font-semibold text-lg p-2">
@@ -93,6 +93,7 @@ export default function Home() {
         </span>
       </section>
       <HomePageDesignSection />
+      <HappeningNow />
       <Sponser_Card />
     </>
   )
