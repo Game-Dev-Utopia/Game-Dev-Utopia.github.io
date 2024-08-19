@@ -96,7 +96,7 @@ const Design = ({designData}) => {
       }
     }
 
-    return <img src={designData.designs[0]} alt="Design Thumbnail" className="video-item" />;
+    return <img src={designData.designs[0]} alt="Design Thumbnail" layout="fill" className="item" />;
   };
 
 
@@ -116,6 +116,7 @@ const Design = ({designData}) => {
                     <Image
                       src={designData.designs[0]}
                       alt={`Image ${itemIndex}`}
+                      layout="fill"
                       className={`item img${itemIndex + 1}`}
                     />
                   )}            
