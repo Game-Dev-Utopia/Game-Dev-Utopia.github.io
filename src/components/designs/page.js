@@ -63,6 +63,7 @@ const Design = ({designData}) => {
     }
   };
 
+
   const getFileType = (url) => {
     const fileExtension = url.split('.').pop().toLowerCase();
     if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileExtension)) {

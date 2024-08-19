@@ -18,6 +18,19 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
     onInputChange(fieldName, value);
   };
 
+  const handleMultiSelectChange = (fieldName, value) => {
+    const currentValues = inputData[fieldName] || [];
+    const newValues = currentValues.includes(value)
+      ? currentValues.filter(item => item !== value)
+      : [...currentValues, value];
+
+    setInputData({
+      ...inputData,
+      [fieldName]: newValues
+    });
+    onInputChange(fieldName, newValues);
+  };
+
   const renderField = (field, index) => {
     if (field.inputType === 'textarea') {
       return (
@@ -47,6 +60,27 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           ))}
         </select>
       );
+    } else if (field.inputType === 'multiselect' && Array.isArray(field.options)) {
+      return (
+        <div key={index} className="multiselect-container">
+          {field.options.map((option, optionIndex) => (
+            <div key={optionIndex} className="flex items-center mb-2">
+              <input
+                type="checkbox"
+                id={`${field.fieldName.toLowerCase()}-${optionIndex}`}
+                name={field.fieldName.toLowerCase()}
+                value={option}
+                checked={(inputData[field.fieldName.toLowerCase()] || []).includes(option)}
+                onChange={() => handleMultiSelectChange(field.fieldName.toLowerCase(), option)}
+                className="ml-8 mr-2 w-4 h-4 leading-tight bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
+              />
+              <label htmlFor={`${field.fieldName.toLowerCase()}-${optionIndex}`} className="text-gray-200">
+                {option}
+              </label>
+            </div>
+          ))}
+        </div>
+      );
     } else {
       return (
         <input
@@ -56,7 +90,6 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
           maxLength={field.max}
-
           onChange={(e) => {
             const inputValue = e.target.value.slice(0, field.max); // Limit input value to maximum length
             handleInputChange(field.fieldName.toLowerCase(), inputValue);
@@ -77,7 +110,7 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
               {renderField(field, index)}
               <label
                 htmlFor={field.fieldName.toLowerCase()}
-                className="absolute left-3 -top-7 bg-transparent text-sm leading-7 text-gray transition-all font-normal"
+                className="absolute left-3 -top-7 bg-transparent text-sm leading-7 text-gray transition-all font-semibold"
               >
                 {field.fieldName}
                 <sup className="text-Trialprimary1 text-xs ms-1">*</sup>

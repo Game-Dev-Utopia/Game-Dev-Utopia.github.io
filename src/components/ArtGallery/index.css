@@ -39,7 +39,7 @@
     bottom: 0;
     width: 95%;
     padding: 10px;
-    /* background: transparent; */
+/*     background: transparent; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,18 +52,18 @@
     align-items: center;
     position: relative;
     left: 10px;
-    /* background: transparent; */
+/*     background: transparent; */
     color: white;
   }
   
   .developer-info span {
     margin-left: 8px;
-    /* background: transparent; */
+/*     background: transparent; */
   }
   
   .title,
   .icons, .description {
-    /* background: transparent; */
+/*     background: transparent; */
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -88,7 +88,7 @@
   
   .like-icon,
   .share-icon {
-    /* background: transparent; */
+/*     background: transparent; */
     display: block;
     color: white;
     cursor: pointer;
@@ -102,7 +102,7 @@
   }
   
   .like-count, .share-count {
-    /* background: transparent; */
+/*     background: transparent; */
     color: white;
     font-size: 14px;
   }

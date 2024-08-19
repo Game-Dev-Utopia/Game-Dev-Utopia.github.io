@@ -193,3 +193,4 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
 };
 
 export default ArtGallery;
+                

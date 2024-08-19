@@ -35,7 +35,7 @@ const HoverCard = ({title, content, isLargeScreen}) => {
           {isLargeScreen ? (
             <>
               <p id="prompt md:pr-9">
-                <div className='lg:text-5xl md:text-2xl  text-center font-bold justify-center'>{title}</div>
+                <div className='lg:text-5xl md:text-2xl text-whitetext-white text-center font-bold justify-center'>{title}</div>
                 <br></br>
                 <div className='p-8 text-xl'>{content}</div>
               </p>
@@ -43,7 +43,7 @@ const HoverCard = ({title, content, isLargeScreen}) => {
           ) : (
             <>
               <p id="prompt md:pr-9 m-4">
-                <div className='text-2xl text- text-center font-bold justify-center'>{title}</div>
+                <div className='text-2xl text-white white text-center font-bold justify-center'>{title}</div>
                 <br></br>
                 <div className='p-4 text-lg'>{content}</div>
               </p>

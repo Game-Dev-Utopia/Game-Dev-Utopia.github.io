@@ -1,0 +1,86 @@
+/* Style for Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: #fff; /* White color for arrows */
+  width: 30px; /* Width of the button */
+  height: 30px; /* Height of the button */
+  border-radius: 50%; /* Circular buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Ensure buttons are on top */
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Customize arrow icon */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px; /* Adjust arrow size */
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 18px; /* Adjust arrow size */
+}
+
+.swiper-button-next {
+  right: 10px; /* Positioning from right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Positioning from left */
+}
+
+.clock-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 700px;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: -350px; /* Negative half of width */
+  margin-top: -60px; /* Negative half of height */
+}
+
+.clock {
+  display: flex;
+  gap: 1rem;
+  font-family: 'Arial', sans-serif;
+  color: white;
+}
+
+.clock-item {
+  text-align: center;
+  padding: 7px 7px;
+  border-radius: 10px;
+  width : 3.5rem;
+}
+
+.clock-label {
+  display: block;
+  font-size: 0.75rem;
+  color: #ccc;
+}
+.clock-item:nth-child(1) {
+  background-color: #1d267d;
+}
+
+.clock-item:nth-child(2) {
+  background-color: #1a27a0;
+}
+
+.clock-item:nth-child(3) {
+  background-color: #192abd;
+}
+
+.clock-item:nth-child(4) {
+  background-color: #0c22e3;
+}
+
