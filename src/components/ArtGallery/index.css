@@ -43,6 +43,13 @@
     justify-content: space-between;
     align-items: center;
     opacity: 0;
+    box-shadow: none;
+  }
+
+  .content, .read-more {
+    box-shadow: none;
+    background: transparent;
+    color: white;
   }
   
   
@@ -53,6 +60,7 @@
     left: 10px;
     background: transparent;
     color: white;
+    box-shadow: none;
   }
   
   .developer-info span {
@@ -160,8 +168,8 @@
         break-inside: avoid;
       }
 
-  
       .overlay{
+        box-shadow: none;
         opacity: 1;
       }
     }
@@ -174,8 +182,8 @@
         columns: 1;
       }
 
-  
       .overlay{
+        box-shadow: none;
         opacity: 1;
       }
     }
