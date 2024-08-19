@@ -260,6 +260,13 @@ body {
 /* Landing Page Diamonds styling */
 .DiamondClipPath{
   clip-path: polygon(50% 0%, 100% 51%, 50% 100%, 0% 51%);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+
+.DiamondClipPath img {
+  border-radius: 30px; /* Apply rounding to the image itself */
 }
 
 

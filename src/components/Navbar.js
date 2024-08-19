@@ -10,6 +10,7 @@ import GduLogo from "../../public/GduLogo.png"
 import Image from 'next/image';
 import { Bounce, ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Marquee from './Marquee'; 
 
 function Navbar() {
     const [navDescp, setNavDescp] = useState(false)
@@ -77,6 +78,7 @@ function Navbar() {
             </div>
 
 
+            <Marquee />
 
             {showSidebar && <nav
                 className={'sm:w-fit sm:h-[30rem] items-center w-full max-sm:bottom-0.5 fixed sm:top-[17%] bg-black z-50 pt-4 pb-1 sm:py-4 rounded-xl cursor-default shadow-sm shadow-white sm:mx-0.5'}>
