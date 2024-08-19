@@ -59,22 +59,24 @@ const Stepper = ({ stepsData, onSubmit }) => {
     stepsData.forEach(step => {
       const stepData = {};
   
-      // Iterate over each field in the step
       step.fields.forEach(field => {
         let fieldNameCamelCase;
-        if (field.inputType === 'text' || field.inputType === 'textarea') {
-          // For text and textarea fields, remove spaces and convert to camelCase
-          const formattedFieldName = field.fieldName.trim().replace(/\s+/g, '');
-          fieldNameCamelCase = formattedFieldName.charAt(0).toUpperCase() + formattedFieldName.slice(1);
-        } else if (field.inputType === 'dropdown') {
-          // For dropdown fields, use dropdownName
-          const formattedDropdownName = field.fieldName.trim().replace(/\s+/g, '');
-          fieldNameCamelCase = formattedDropdownName.charAt(0).toUpperCase() + formattedDropdownName.slice(1);
-        }
-  
+        
+        // General case for all field types
+        const formattedFieldName = field.fieldName.trim().replace(/\s+/g, '');
+        fieldNameCamelCase = formattedFieldName.charAt(0).toUpperCase() + formattedFieldName.slice(1);
+        
         // Add the field data to stepData with camelCase field name
-        stepData[fieldNameCamelCase] = cleanFormData[fieldNameCamelCase.toLowerCase()];
-      });
+        const cleanedData = cleanFormData[fieldNameCamelCase.toLowerCase()];
+      
+        if (field.inputType === 'multiselect' && Array.isArray(cleanedData)) {
+          // For multiselect fields, ensure the value is an array
+          stepData[fieldNameCamelCase] = cleanedData;
+        } else {
+          // For all other fields, assign the value directly
+          stepData[fieldNameCamelCase] = cleanedData;
+        }
+      });      
   
       // Add the stepData to formDataObject under the title of the step
       const stepTitle = step.title.replace(/\s+/g, '').toLowerCase();
