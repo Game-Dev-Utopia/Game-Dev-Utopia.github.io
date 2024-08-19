@@ -85,12 +85,12 @@ const TeamSection = ({ data }) => {
                     <div>
                         {data.length > 1 ? (
                             <div className="dropdown">
-                                <button onClick={toggleDropdown} className="md:text-4xl sm:text-xl text-center txt-grad font-extrabold mx-auto">
+                                <button onClick={toggleDropdown} className="md:text-4xl text-2xl text-center txt-grad font-extrabold mx-auto">
                                     {selectedItem ? selectedItem.title : data[0].title} <span className="dropdown-arrow md:text-2xl sm:text-lg">{isDropdownOpen ? '▲' : '▼'}</span>
                                 </button>
                             </div>
                         ) : (
-                            <h1 className="md:text-4xl sm:text-3xl text-center txt-grad font-extrabold mx-auto">{data[0].title}</h1>
+                            <h1 className="md:text-4xl text-2xl text-center txt-grad font-extrabold mx-auto">{data[0].title}</h1>
                         )}
                     </div>
                 </div>

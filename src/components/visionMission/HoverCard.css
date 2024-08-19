@@ -11,7 +11,7 @@
   height: 245px;
 } */
 
-.container {
+.about.container {
     margin-left: auto;
     position: relative;
     width: 100%;
@@ -19,13 +19,13 @@
     /* transition: height 200ms, width 200ms; */
   }
   
-  .container:active {
+.about.container:active {
     height: 50vh;
     width: 100%;
   }
   
   @media (max-width: 768px) {
-    .container {
+  .about.container {
       height: 40vh;
       width: 90%; /* or adjust height for smaller screens */
     }
