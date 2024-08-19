@@ -156,7 +156,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
                   )}
                 </Link>
             <div className="overlay" >
-              <div className="content" style={{ background: "transparent", color: "white" }}>
+              <div className="content">
                 <div className="title">{item.title}</div>
                 <div className="developer-info">
                   <span><Collaborators developersArray={item.developer_ids} /></span>
@@ -168,7 +168,6 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
                   <span
                     className="read-more"
                     onClick={() => toggleShowFullDescription(index)}
-                    style={{ background: "transparent", color: "white" }}
                   >
                     {showFullDescription[index] ? "   Read less" : "Read more"}
                   </span>
