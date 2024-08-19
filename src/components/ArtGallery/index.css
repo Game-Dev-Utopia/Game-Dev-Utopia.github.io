@@ -11,7 +11,6 @@
     }
     
     .image-gallery {
-  
         width: 1220px;
         margin: 20px auto;
         columns: 4;
@@ -21,7 +20,6 @@
     
     .image-gallery>.item img, 
     .video-item video {
-  
       max-width: 100%;
       border-radius: 15px;
       transition: 0.3s ease-in-out;
@@ -40,7 +38,7 @@
     bottom: 0;
     width: 95%;
     padding: 10px;
-/*     background: transparent; */
+    background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -53,18 +51,18 @@
     align-items: center;
     position: relative;
     left: 10px;
-/*     background: transparent; */
+    background: transparent;
     color: white;
   }
   
   .developer-info span {
     margin-left: 8px;
-/*     background: transparent; */
+    background: transparent;
   }
   
   .title,
   .icons, .description {
-/*     background: transparent; */
+    background: transparent;
     color: white;
     font-size: 20px;
     font-weight: bold;
@@ -89,7 +87,7 @@
   
   .like-icon,
   .share-icon {
-/*     background: transparent; */
+    background: transparent;
     display: block;
     color: white;
     cursor: pointer;
@@ -103,7 +101,7 @@
   }
   
   .like-count, .share-count {
-/*     background: transparent; */
+    background: transparent;
     color: white;
     font-size: 14px;
   }
@@ -181,11 +179,3 @@
         opacity: 1;
       }
     }
-  
-    
-   
-    
-    
-   
-    
-      

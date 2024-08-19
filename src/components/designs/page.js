@@ -85,8 +85,7 @@ const Design = ({designData}) => {
         return (
           <video
             loop
-            onMouseEnter={(e) => e.target.play()}
-            onMouseLeave={(e) => e.target.pause()}
+            autoPlay
             muted
             className="video-item"
           >
@@ -99,6 +98,7 @@ const Design = ({designData}) => {
 
     return <img src={designData.designs[0]} alt="Design Thumbnail" className="video-item" />;
   };
+
 
   return (
       <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] design-section-top">
@@ -113,7 +113,7 @@ const Design = ({designData}) => {
                       Your browser does not support the video tag.
                     </video>
                   ) : (
-                    <img
+                    <Image
                       src={designData.designs[0]}
                       alt={`Image ${itemIndex}`}
                       className={`item img${itemIndex + 1}`}
