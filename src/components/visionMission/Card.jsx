@@ -4,7 +4,7 @@ import './HoverCard.css';
 const HoverCard = ({title, content, isLargeScreen}) => {
     
   return (
-    <div className="container noselect">
+    <div className="about container noselect">
   <div className="canvas">
     <div className="tracker tr-1"></div>
     <div className="tracker tr-2"></div>
