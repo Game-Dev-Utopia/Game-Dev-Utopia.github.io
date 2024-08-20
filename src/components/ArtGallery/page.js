@@ -152,6 +152,7 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
                       src={item.designs[0]}
                       alt={`Image ${index}`}
                       className={`item img${index + 1}`}
+                      quality={75}
                     />
                   )}
                 </Link>
