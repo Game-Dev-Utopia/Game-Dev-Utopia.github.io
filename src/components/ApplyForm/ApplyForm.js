@@ -124,7 +124,7 @@ const ApplyForm = () => {
             fieldName: "Social Profiles",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "GitHub profile/Portfolio website link [Else put NA]",
+            placeholder: "GitHub profile/Portfolio website/Resume link [Else put NA]",
             max: 1000,
           },
         ],
