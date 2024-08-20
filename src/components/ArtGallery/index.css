@@ -1,189 +1,192 @@
   
   .design-page {
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .design-page h1 {
-      font-size: 30px;
-      margin: 10px;
-      color: yellow;
-    }
-    
-    .image-gallery {
-        width: 1220px;
-        margin: 20px auto;
-        columns: 4;
-        column-gap: 10px;
-  } 
-  
-    
-    .image-gallery>.item img, 
-    .video-item video {
-      max-width: 100%;
-      border-radius: 15px;
-      transition: 0.3s ease-in-out;
-    }
-    
-  
-  .item, .video-item {
-    position: relative;
-    break-inside: avoid;
-    margin-bottom: 10px;
-    width: 100%;
-  }
-  
-  .overlay {
-    position: absolute;
-    bottom: 0;
-    width: 95%;
-    padding: 10px;
-    background: transparent;
-    display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    opacity: 0;
-    box-shadow: none;
   }
+  
+  .design-page h1 {
+    font-size: 30px;
+    margin: 10px;
+    color: yellow;
+  }
+  
+  .image-gallery {
+      width: 1220px;
+      margin: 10px auto;
+      columns: 4;
+      column-gap: 10px;
+} 
 
-  .content, .read-more {
-    box-shadow: none;
-    background: transparent;
-    color: white;
-  }
   
-  
-  .developer-info {
-    display: flex;
-    align-items: center;
-    position: relative;
-    left: 10px;
-    background: transparent;
-    color: white;
-    box-shadow: none;
-  }
-  
-  .developer-info span {
-    margin-left: 8px;
-    background: transparent;
-  }
-  
-  .title,
-  .icons, .description {
-    background: transparent;
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
-    opacity: 0;
+  .image-gallery>.item img, 
+  .video-item video {
+    max-width: 100%;
+    border-radius: 15px;
     transition: 0.3s ease-in-out;
   }
   
-  .content>.description {
-    font-size: 12px;
-    font-weight: lighter;
-  }
-  
-  .icons > span, .read-more {
-    cursor: pointer;
-  }
-  
-  .read-more {
-    font-weight: 700;
-    color: aquamarine;
-  }
-  
-  
-  .like-icon,
-  .share-icon {
-    background: transparent;
-    display: block;
-    color: white;
-    cursor: pointer;
-    margin-top: 5px;
-  }
-  
-  .like-icon, .share-icon {
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-  }
-  
-  .like-count, .share-count {
-    background: transparent;
-    color: white;
-    font-size: 14px;
-  }
-  
-  .like-icon:hover .like-count,
-  .like-icon:hover, .share-icon:hover  {
-    color: aquamarine;
-  }
-  
-  .item:hover .description, .video-item:hover .description {
-  opacity: 1;
-  animation: fade-out 5s ;
+
+.item, .video-item {
+  position: relative;
+  break-inside: avoid;
+  margin-bottom: 4px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
+  padding: 10px;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  box-shadow: none;
+}
+
+.content, .read-more {
+  box-shadow: none;
+  background: transparent;
+  color: white;
+}
+
+
+.developer-info {
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 10px;
+  background: transparent;
+  color: white;
+  box-shadow: none;
+}
+
+.developer-info span {
+  margin-left: 8px;
+  background: transparent;
+}
+
+.title,
+.icons, .description {
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.content>.description {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.icons > span, .read-more {
+  cursor: pointer;
+}
+
+.read-more {
+  font-weight: 700;
+  color: aquamarine;
+}
+
+
+.like-icon,
+.share-icon {
+  background: transparent;
+  display: block;
+  color: white;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+.like-icon, .share-icon {
+  display: flex;
+  align-items: center;
+  gap: 5px; 
+}
+
+.like-count, .share-count {
+  background: transparent;
+  color: white;
+  font-size: 14px;
+}
+
+.like-icon:hover .like-count,
+.like-icon:hover, .share-icon:hover  {
+  color: aquamarine;
+}
+
+.item:hover .description, .video-item:hover .description {
+opacity: 1;
+animation: fade-out 5s ;
 }
 
 .description {
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+opacity: 0;
+transition: opacity 0.5s ease-in-out;
 }
 
 .overlay:hover .description {
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+opacity: 1;
+transition: opacity 0.5s ease-in-out;
 }
 
 @keyframes fade-out {
-  0% {
+0% {
+  opacity: 1;
+}
+100% {
+  opacity: 0;
+}
+}
+  
+.item:hover img, .video-item:hover video {
+    filter: brightness(0.5);
+    transform: scale(1.1);
+    cursor: pointer;
+    z-index: 999;
+
+  }
+  
+  .item:hover .title,  .item:hover .icons, .item:hover .overlay, 
+  .video-item:hover .title,  .video-item:hover .icons, .video-item:hover .overlay {
+    transition: 0.3s ease-in-out;
     opacity: 1;
   }
-  100% {
-    opacity: 0;
-  }
-}
-    
-  .item:hover img, .video-item:hover video {
-      filter: brightness(0.5);
-      transform: scale(1.1);
-      cursor: pointer;
-      z-index: 999;
   
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    .image-gallery {
+      width: auto;
+      margin: 20px auto;
+      columns: 2;
     }
-    
-    .item:hover .title,  .item:hover .icons, .item:hover .overlay, 
-    .video-item:hover .title,  .video-item:hover .icons, .video-item:hover .overlay {
-      transition: 0.3s ease-in-out;
+
+    .item, .video-item {
+      break-inside: avoid;
+    }
+
+    .overlay{
+      box-shadow: none;
       opacity: 1;
     }
-    
-    @media screen and (min-width: 480px) and (max-width: 768px) {
-      .image-gallery {
-        width: auto;
-        margin: 20px auto;
-        columns: 2;
-      }
+  }
   
-      .item, .video-item {
-        break-inside: avoid;
-      }
-
-      .overlay{
-        box-shadow: none;
-        opacity: 1;
-      }
+  @media screen and (max-width: 480px) {
+    .image-gallery {
+      width: 100%;
+      max-width: 400px; 
+      margin: 20px auto;
+      columns: 1;
     }
-    
-    @media screen and (max-width: 480px) {
-      .image-gallery {
-        width: 100%;
-        max-width: 400px; 
-        margin: 20px auto;
-        columns: 1;
-      }
 
-      .overlay{
-        box-shadow: none;
-        opacity: 1;
-      }
+    .overlay{
+      box-shadow: none;
+      opacity: 1;
     }
+  }

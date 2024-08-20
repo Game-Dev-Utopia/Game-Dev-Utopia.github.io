@@ -59,7 +59,7 @@ const ApplyForm = () => {
         ],
       },
       {
-        title: "Education",
+        title: "Education Info",
         fields: [
           {
             fieldName: "College Name",
