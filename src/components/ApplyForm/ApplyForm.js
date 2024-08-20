@@ -117,7 +117,7 @@ const ApplyForm = () => {
             fieldName: "Projects Worked On",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "Projects they've worked on (Brief description + tech stack used), GitHub/project link [Else put NA]",
+            placeholder: "Projects (Brief description + tech stack, GitHub link or NA)",
             max: 5000,
           },
           {
