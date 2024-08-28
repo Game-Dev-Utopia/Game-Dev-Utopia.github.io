@@ -65,7 +65,7 @@ const ApplyForm = () => {
             fieldName: "College Name",
             inputType: "dropdown",
             datatype: "text",
-            options: ["PICT Pune", "IIIT Kottayam", "IIIT Nagpur", "Other"],
+            options: ["PICT Pune", "IIIT Kottayam", "IIIT Nagpur","AIT", "Other"],
             placeholder: "Select your college name",
           },
           {
