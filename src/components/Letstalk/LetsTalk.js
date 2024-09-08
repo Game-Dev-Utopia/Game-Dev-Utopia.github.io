@@ -17,7 +17,7 @@ export default function LetsTalk({ data }) {
   const toastHandler = (message, type = 'success') => {
     const toastOptions = {
       position: "top-right",
-      autoClose: 2000,
+      autoClose: 4000,
       hideProgressBar: false,
       closeOnClick: true,
       pauseOnHover: true,
