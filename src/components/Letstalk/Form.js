@@ -6,22 +6,25 @@ import Image from 'next/image';
 export default function Form({ heading, image, stepsData, toastHandler }) {
   const handleSubmit = async (formData) => {
     try {
+      console.log(formData);
       let formName = heading.toLowerCase();
       formName = formName.replace(/\s/g, '');
+      console.log(formName);
 
       const responseObj = { formName: formName, response: formData };
-      
+      console.log(responseObj);
       const response = await postRequestJson(`/api/form/addform`, responseObj);
-      
+      console.log(response);
+
       // Trigger the toastHandler for success
       toastHandler('Form submitted successfully!', 'success');
 
       // Redirect to the home page
       window.location.href = '/';
-      
+
     } catch (error) {
       // Handle specific 400 error for email already existing
-      if (error.response && error.response.status === 400 && error.response.data.error === "A form with this email already exists") {
+      if (error.response && error.response.status === 400 && error.response.data.error === "A form with this email already exists for the same form") {
         toastHandler("A form with this email already exists. Please use a different email.", 'error');
       } else {
         // Handle other errors

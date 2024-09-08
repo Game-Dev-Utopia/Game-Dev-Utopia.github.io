@@ -9,7 +9,7 @@ export const Lets_talkData = [
     borderColor: "#44ff00",
     stepsData: [
       {
-        title: "Basic Info",
+        title: "Personal Info",
         fields: [
           {
             fieldName: "Name",
@@ -124,7 +124,7 @@ export const Lets_talkData = [
     borderColor: "#ebf707",
     stepsData: [
       {
-        title: "Basic Info",
+        title: "Personal Info",
         fields: [
           {
             fieldName: "Name",
@@ -218,7 +218,7 @@ export const Lets_talkData = [
     borderColor: "#fa2335",
     stepsData: [
       {
-        title: "Basic Info",
+        title: "Personal Info",
         fields: [
           {
             fieldName: "Name",
@@ -304,7 +304,7 @@ export const Lets_talkData = [
     borderColor: "#f59842",
     stepsData: [
       {
-        title: "Basic Info",
+        title: "Personal Info",
         fields: [
           {
             fieldName: "Name",
@@ -372,7 +372,7 @@ export const Lets_talkData = [
     borderColor: "#b2f084",
     stepsData: [
       {
-        title: "Basic Info",
+        title: "Personal Info",
         fields: [
           {
             fieldName: "Name",
