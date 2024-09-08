@@ -25,7 +25,7 @@ const ApplyForm = () => {
     if (type === 'success') {
       toast.success(`🎉🎉 ${message}`, toastOptions);
     } else if (type === 'error') {
-      toast.error(`❌ ${message}`, toastOptions);
+      toast.error(`${message}`, toastOptions);
     }
   };
     
@@ -110,7 +110,7 @@ const ApplyForm = () => {
             fieldName: "Innovative Idea",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "Any innovative idea you possess to add to the website {Else put NA}",
+            placeholder: "Any innovative idea you possess to add to the website (Else put NA)",
             max: 10000,
           },
         ],
@@ -122,14 +122,14 @@ const ApplyForm = () => {
             fieldName: "Projects Worked On",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "Projects you've worked on (Brief description , tech stack used, weblinks) GitHub/project link {Else put NA}",
+            placeholder: "Projects (Brief description , tech stack used, weblinks) GitHub/project link (Else put NA)",
             max: 5000,
           },
           {
             fieldName: "Social Profiles",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "GitHub profile / Portfolio website / Resume link {Else put NA}",
+            placeholder: "GitHub profile / Portfolio website / Resume link (Else put NA)",
             max: 1000,
           },
         ],
