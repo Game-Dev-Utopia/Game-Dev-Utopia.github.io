@@ -14,23 +14,28 @@ export default function LetsTalk({ data }) {
     <RxCross2 className='text-lg me-4' onClick={closeToast} />
   );
 
-  const toastHandler = () => {
-    console.log("toast"),
-
-      toast('🎉🎉 Form Submitted!!!', {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "dark",
-        transition: Bounce,
-        className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
-        progressStyle: { backgroundColor: '#26C6DA' }
-      });
+  const toastHandler = (message, type = 'success') => {
+    const toastOptions = {
+      position: "top-right",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+      transition: Bounce,
+      className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
+      progressStyle: { backgroundColor: '#26C6DA' },
+    };
+  
+    if (type === 'success') {
+      toast.success(`🎉🎉 ${message}`, toastOptions);
+    } else if (type === 'error') {
+      toast.error(`❌ ${message}`, toastOptions);
+    }
   };
+  
 
   return (
     <>
