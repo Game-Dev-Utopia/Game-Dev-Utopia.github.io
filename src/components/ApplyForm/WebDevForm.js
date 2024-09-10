@@ -34,7 +34,7 @@ const WebDevForm = () => {
     title: "Council Heads 2024",
     text: "We are seeking enthusiastic leads to join our team as heads. Please fill out the form below with your details to apply.",
     active: true,
-    img: "/images/recruit.png",
+    img: "/images/lead.avif",
     borderColor: "#007bff",
     stepsData: [
       {
