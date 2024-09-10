@@ -31,8 +31,8 @@ const WebDevForm = () => {
     
 
   const recruitDevelopersForm = {
-    title: "Council Heads 2024 ",
-    text: "We are seeking enthusiastic students to join our development team. Please fill out the form below with your details to apply.",
+    title: "Council Heads 2024",
+    text: "We are seeking enthusiastic leads to join our team as heads. Please fill out the form below with your details to apply.",
     active: true,
     img: "/images/recruit.png",
     borderColor: "#007bff",
