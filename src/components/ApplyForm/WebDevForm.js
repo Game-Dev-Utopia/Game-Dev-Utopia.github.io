@@ -31,10 +31,10 @@ const WebDevForm = () => {
     
 
   const recruitDevelopersForm = {
-    title: "Recruitment ",
-    text: "We are seeking enthusiastic students to join our development team. Please fill out the form below with your details to apply.",
+    title: "Council Heads 2024",
+    text: "We are seeking enthusiastic leads to join our team as heads. Please fill out the form below with your details to apply.",
     active: true,
-    img: "/images/recruit.png",
+    img: "/images/lead.avif",
     borderColor: "#007bff",
     stepsData: [
       {
@@ -67,20 +67,6 @@ const WebDevForm = () => {
         title: "Education Info",
         fields: [
           {
-            fieldName: "College Name",
-            inputType: "dropdown",
-            datatype: "text",
-            options: ["PICT Pune", "IIIT Kottayam", "IIIT Nagpur", "Other"],
-            placeholder: "Select your college name",
-          },
-          {
-            fieldName: "Year",
-            inputType: "dropdown",
-            datatype: "text",
-            options: ["SE", "TE", "BE"],
-            placeholder: "Select your Engineering year",
-          },
-          {
             fieldName: "Branch",
             inputType: "dropdown",
             datatype: "text",
@@ -100,41 +86,39 @@ const WebDevForm = () => {
             placeholder: "Select your area of interest",
           },
           {
-            fieldName: "Linkedin",
+            fieldName: "LinkedIn",
             inputType: "text",
             datatype: "text",
-            placeholder: "URL {Else put NA}",
+            placeholder: "URL (Else put NA)",
             max: 200,
           },
           {
             fieldName: "Github ",
             inputType: "text",
             datatype: "text",
-            placeholder: "Mandatory for Web&Devops, RnD Head {Else put NA} ",
+            placeholder: "Mandatory for Web&Devops, RnD Head (Else put NA) ",
             max: 200,
           },
           {
             fieldName: "Instagram",
             inputType: "text",
             datatype: "text",
-            placeholder: "Mandatory for Content Head {Else put NA}",
+            placeholder: "Mandatory for Content Head (Else put NA)",
             max: 200,
           },
         ],
         
       },
       {
-        title: "Experience",
-        fields: [
-          
+        title: "Experience Info",
+        fields: [      
           {
             fieldName: "Any Previous Experience",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "Describe your previous similar experiences {Else put NA}",
+            placeholder: "Describe your previous similar experiences (Else put NA)",
             max: 200,
-          }
-          
+          }         
         ],
         
       },
