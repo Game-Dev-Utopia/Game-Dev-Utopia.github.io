@@ -110,7 +110,7 @@ const ApplyForm = () => {
             fieldName: "Innovative Idea",
             inputType: "textarea",
             datatype: "text",
-            placeholder: "Any innovative idea you possess to add to the website (Else put NA)",
+            placeholder: "Any innovative idea you possess to add to the website {Else put NA}",
             max: 10000,
           },
         ],
