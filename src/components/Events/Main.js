@@ -10,6 +10,7 @@ export default function Main() {
     ongoing: [],
     upcoming: []
   });
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getEvents() {
@@ -18,8 +19,10 @@ export default function Main() {
         const eventsArray = response.data;
         const categorizedEvents = categorize(eventsArray);
         setCategorizedEvents(categorizedEvents);
+        setLoading(false);
       } catch (error) {
         console.error("Error fetching events:", error);
+        setLoading(false); 
       }
     }
     getEvents();
@@ -55,8 +58,12 @@ export default function Main() {
 
 
   return (
-    <div className='bg-gray-900'>
-      <EventSlider events={categorizedEvents} />
+    <div className='bg-gray-900 my-11'>
+      {loading ? ( // Show loading message while fetching
+        <div className="text-white text-center">Loading events...</div>
+      ) : (
+        <EventSlider events={categorizedEvents} />
+      )}
     </div>
   );
 }

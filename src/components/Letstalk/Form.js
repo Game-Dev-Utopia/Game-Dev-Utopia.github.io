@@ -36,7 +36,7 @@ export default function Form({ heading, image, stepsData, toastHandler }) {
   return (
     <div className="body-font relative bg-clip-padding backdrop-filter bg-[#0f172a] flex flex-col md:flex-row">
       <div className="w-full md:w-4/12">
-        <Image src={image} height={100} width={300} alt="Your Image" className="h-[250px] m-auto mt-32" />
+        <Image src={image} height={100} width={300} alt="Your Image" className="h-[250px] m-auto mt-20 md:mt-32" />
       </div>
 
       <div className="w-full md:w-4/6 container mx-auto px-5 py-12">

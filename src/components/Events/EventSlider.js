@@ -13,7 +13,6 @@ const EventSlider = ({ events }) => {
       <div className=" mx-auto py-8">
         <EventsList title="Upcoming Events" events={upcomingEvents} />
         <EventsList title="Past Events" events={pastEvents} />
-
       </div>
     </div>
   )

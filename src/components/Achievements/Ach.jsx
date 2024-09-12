@@ -25,9 +25,9 @@ const Ach = () => {
   }, []);
 
   return (
-    <div>
+    <div >
       {isLoading ? (
-        <p>Loading...</p>
+        <p className="my-11 text-center font-bold">Loading...</p>
       ) : (
         <>
           <Top3Achievements Top3Data={top3} />

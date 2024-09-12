@@ -23,21 +23,17 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
     onInputChange(fieldName, newValues);
   };
 
-  const handleInputChange = (fieldName, value, datatype, max) => {
+  const handleInputChange = (fieldName, value, datatype) => {
     let regex;
     switch (datatype) {
       case 'text':
-        if (fieldName === 'name' || fieldName === 'org name') {
-          regex = /^[A-Za-z\s]+$/; // Allows only alphabets and spaces
-        } else {
-          regex = new RegExp(`^[\\w\\s]{0,${max}}$`); // Allows alphanumeric characters and spaces, limits by max length
-        }
+        regex = /^[A-Za-z\s]*$/; // Allows only alphabets and spaces
         break;
       case 'email':
         regex = /^.{0,100}$/; // Allow any characters up to the maximum length
         break;
       case 'number':
-        regex = new RegExp(`^\\d{0,${max}}$`); // Allows only numbers, limits by max length
+        regex = /^\d*$/; // Allows only numbers
         break;
       case 'url':
         regex = new RegExp(
@@ -46,20 +42,21 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
         ); // Basic URL validation regex
         break;
       default:
-        regex = new RegExp(`.{0,${max}}`); // Default regex to limit by max length
+        regex = /.*/; // Default: accept anything
     }
 
-    if (regex.test(value) || datatype === 'dropdown') {  // Ensure dropdown value is accepted
+    // Only update state if the value matches the regex or if it's a dropdown (datatype === 'dropdown')
+    if (regex.test(value) || datatype === 'dropdown') {
       setInputData({
         ...inputData,
         [fieldName]: value,
       });
       onInputChange(fieldName, value);
     } else {
-      // Handle invalid input if necessary
       console.log(`Invalid input for ${fieldName}`);
     }
   };
+
 
   const renderField = (field, index) => {
     if (field.inputType === 'textarea') {
@@ -69,7 +66,8 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           id={field.fieldName.toLowerCase()}
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
-          onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value, field.inputType, field.max)}
+          maxLength={field.max} // Use maxLength attribute for textarea
+          onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value, field.inputType)}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
           placeholder={field.placeholder}
         />
@@ -108,13 +106,15 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
                 onChange={() => handleMultiSelectChange(field.fieldName.toLowerCase(), option)}
                 className="ml-2 mr-2 w-4 h-4 leading-tight bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
               />
-              <label htmlFor={`${field.fieldName.toLowerCase()}-${optionIndex}`} className="text-gray-200">
+              <label
+                htmlFor={`${field.fieldName.toLowerCase()}-${optionIndex}`}
+                className="text-gray-200"
+              >
                 {option}
               </label>
             </div>
           ))}
         </div>
-
       );
     } else {
       return (
@@ -124,17 +124,16 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
           id={field.fieldName.toLowerCase()}
           name={field.fieldName.toLowerCase()}
           value={inputData[field.fieldName.toLowerCase()] || ''}
-          maxLength={field.max}
-          onChange={(e) => {
-            const inputValue = e.target.value.slice(0, field.max); // Limit input value to maximum length
-            handleInputChange(field.fieldName.toLowerCase(), inputValue, field.datatype, field.max);
-          }}
+          maxLength={field.max} // Use maxLength attribute for text inputs
+          onChange={(e) => handleInputChange(field.fieldName.toLowerCase(), e.target.value, field.datatype)}
           className="peer py-2 px-3 w-full bg-white bg-opacity-10 hover:bg-opacity-20 transition duration-500 shadow-inner shadow-slate-600/90 rounded-md outline-none focus:border-slate-500 focus:ring-1 focus:ring-cyan-500"
           placeholder={field.placeholder}
         />
       );
     }
   };
+
+
 
 
   return (

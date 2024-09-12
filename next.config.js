@@ -53,7 +53,7 @@ const nextConfig = {
             },
             {
                 protocol: 'https',
-                hostname: 'pics.craiyon.com',
+                hostname: 'gdu-data-bucket.s3.ap-south-1.amazonaws.com',
             },
             {
                 protocol:'https',
