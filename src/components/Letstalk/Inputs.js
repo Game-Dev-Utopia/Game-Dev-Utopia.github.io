@@ -45,16 +45,13 @@ const Inputs = ({ fields, onInputChange, clearInputs }) => {
         regex = /.*/; // Default: accept anything
     }
 
-    // Only update state if the value matches the regex or if it's a dropdown (datatype === 'dropdown')
-    if (regex.test(value) || datatype === 'dropdown') {
+  
       setInputData({
         ...inputData,
         [fieldName]: value,
       });
       onInputChange(fieldName, value);
-    } else {
-      console.log(`Invalid input for ${fieldName}`);
-    }
+    
   };
 
 

@@ -15,24 +15,24 @@ const EventCarousell = ({ ongoingEvents }) => {
 
   const defaultevents = [
     {
-      avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: " Music FestivalMusic ",
-      shortDescription: "A vibrant music festival featuring top artists.",
+      avatar: "./images/events/event_1.jpg",
+      name: "GameDevUtopia Exhibition",
+      shortDescription: "GameDevUtopia organized an exhibition for PICT students, showcasing a diverse range of games and designs developed under GDU PICT.",
     },
     {
-      avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival 1",
-      shortDescription: "A vibrant music festival featuring top artists.",
+      avatar: "./images/events/event_2.jpg",
+      name: "Defold",
+      shortDescription: "Defold gamejam",
     },
     {
-      avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival 2",
-      shortDescription: "A vibrant music festival featuring top artists.",
+      avatar: "./images/events/event_3.jpg",
+      name: "Blender Workshop",
+      shortDescription: "Workshop held in PICT about blender",
     },
     {
-      avatar: "https://preview.redd.it/ze3754h7j8r61.jpg?width=640&crop=smart&auto=webp&s=614f001c1285369d9cb5261e3ea292a0be40fef7",
-      name: "Music Festival 3",
-      shortDescription: "A vibrant music festival featuring top artists.",
+      avatar: "./images/events/event_5.jpg",
+      name: "Session at IIIT Nagpur",
+      shortDescription: "An Introductory session about Gamedevutopia.",
     }
   ];
 
@@ -66,13 +66,13 @@ const EventCarousell = ({ ongoingEvents }) => {
       }}
     >
       {/* Left section for active event details */}
-      <div className="relative lg:w-2/5 p-8 text-white bg-opacity-70 flex flex-col justify-center z-10 rounded-lg shadow-lg 
+      <div className="relative lg:w-2/5 p-8  bg-opacity-70 flex flex-col justify-center z-10 rounded-lg shadow-lg 
                 md:bg-gradient-to-r from-black via-gray-800 to-transparent 
                 bg-gradient-to-b sm:from-black sm:via-gray-800 sm:to-transparent">
         {events[activeIndex] && (
           <>
-            <h2 className="md:text-6xl text-4xl font-extrabold mb-4">{events[activeIndex].name}</h2>
-            <p className="text-lg mb-6 leading-relaxed">{events[activeIndex].shortDescription}</p>
+            <h2 className="md:text-5xl text-3xl text-white font-bold mb-4">{events[activeIndex].name}</h2>
+            <p className="text-lg mb-6 leading-relaxed text-gray-400">{events[activeIndex].shortDescription}</p>
             
             {/* Conditionally render host, start date, and register link for non-default events */}
             {!events[activeIndex].isDefault && (
