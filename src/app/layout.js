@@ -3,6 +3,8 @@ import './globals.css'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { SidebarProvider } from '@/contexts/SidebarContextProvider'
+import Script from 'next/script';
+import GoogleTagManager from '@/components/analytics/GoogleTagManager';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,18 +16,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <Script id="gtm" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-G-GGQ8NSHNDR');`} // Place your GTM code here
+        </Script>
+      </head>
       <body className={"bg-slate-900"}>
-        <SidebarProvider>
 
-          {/* <div className='w-full bg-gray-900 flex'>
-  <div className=''>
-  </div>
-  <div className='w-screen md:w-[95vw] relative md:left-[4vw]'>
-    {children}
-  </div>
-</div> */}
+        <SidebarProvider>
           <div className='w-full'>
             <div className='w-full bg-slate-900 flex'>
+              <GoogleTagManager />
               <Navbar />
               <div className='w-screen  md:w-[96.5vw] relative top-[5.5rem] sm:left-[3.5vw]'>
                 {children}
