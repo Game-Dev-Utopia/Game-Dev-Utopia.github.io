@@ -4,7 +4,7 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import { SidebarProvider } from '@/contexts/SidebarContextProvider'
 import Script from 'next/script';
-import GoogleTagManager from '@/components/analytics/GoogleTagManager';
+import GoogleTagManager from '@/components/Analytics/GoogleTagManager';
 
 const inter = Inter({ subsets: ['latin'] })
 

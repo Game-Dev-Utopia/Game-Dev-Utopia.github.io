@@ -42,11 +42,11 @@ const HoverCard = ({title, content, isLargeScreen}) => {
             </>
           ) : (
             <>
-              <p id="prompt md:pr-9 m-4">
+              <div id="prompt md:pr-9 m-4">
                 <div className='text-2xl text-white white text-center font-bold justify-center'>{title}</div>
                 <br></br>
                 <div className='p-4 text-lg'>{content}</div>
-              </p>
+              </div>
             </>
             )}
     </div>

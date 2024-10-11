@@ -12,4 +12,4 @@ const GoogleTagManager = () => {
     );
   };
   
-  export default GoogleTagManager;
+export default GoogleTagManager;

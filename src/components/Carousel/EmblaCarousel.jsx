@@ -53,7 +53,7 @@ const EmblaCarousel = (props) => {
 
                       {/* make image fir according to landscape also */}
                       {/* https://images.firstpost.com/uploads/2022/10/BGMI-was-banned-in-July-this-year.-Will-the-battle-royale-make-a-comeback-this-year.jpg?im=FitAndFill=(596,336) */}
-                      <Image src={item.thumbnail} fill={true} className='h-full w-full rounded-xl border-solid aspect-video'></Image>
+                      <Image src={item.thumbnail} fill={true} className='h-full w-full rounded-xl border-solid aspect-video' alt="carousel"></Image>
                       {/* <div className='-left-24 relative bottom-2 px-2'><Like /></div>
                       <div className='-right-1 relative bottom-2 px-2'><Save /></div> */}
                     </div>
