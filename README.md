@@ -1,46 +1,89 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# GameDevUtopia Website Frontend
 
- 
-## TO DO
-1) Fix Server Side and Client SIde Optimisation
-2) Every Guy add Social Media Handle and Social Media URL  
-4) Card.jsx handle the handles (DONE)
-
-## BUGS
-1) Cards visible bg when cards move...
+Welcome to the GameDevUtopia Website Frontend repository. This project is built using Next and Tailwind to provide a fast and modern frontend experience.
 
 
-## Getting Started
+## About
+This project is the frontend part of the GameDevUtopia website. It leverages the power of NextJS for building user interfaces and Vite for fast and optimized development and build processes. Additionally, it utilizes Tailwind CSS for utility-first CSS styling.
 
-First, run the development server:
+### Technologies Used
+- Next:A React-based framework for building server-rendered web applications with enhanced performance and scalability.
+- Tailwind CSS: A utility-first CSS framework for rapid UI development.
+- Axios : A promise-based HTTP client for making API requests and handling responses in the frontend.
+- Next.js App Router : Provides file-based routing, enabling easy and dynamic route management for the website's navigation.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Installation
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To get a local copy up and running, follow these simple steps:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+1. **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+    ```sh
+    git clone https://github.com/Game-Dev-Utopia/Game-Dev-Utopia.github.io
+    ```
 
-## Learn More
+2. **Navigate to the project directory:**
 
-To learn more about Next.js, take a look at the following resources:
+    ```sh
+    cd Game-Dev-Utopia.github.io
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Install dependencies:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```properties
+    npm install
+    ```
 
-## Deploy on Vercel
+4. **Run the project:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```properties
+    npm run dev
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contribution Guide
+
+Thank you for considering contributing to our project! We appreciate your interest and look forward to collaborating with you. To ensure effective cooperation, please adhere to the guidelines provided in this document.
+
+## Naming Conventions
+
+### Commit Messages
+
+#### Single Change Format
+
+**Please follow this format for commit messages:**
+
+**Message**: `<type>(<scope>): <subject>`
+
+**Types**: new, add, fix, docs, style, refactor, test
+
+**Examples**:
+- `new(home): created home page`
+- `add(auth): added login functionality`
+- `fix(navbar): resolve dropdown issue`
+
+#### Multiple Changes Format
+
+**Please follow this format for multiple changes:**
+
+**Message**: `<Action>`
+
+**Description**: `[ <type>(<scope>): <subject> ]`
+
+**Actions**: Major changes, Minor changes, Bug fixes
+
+**Examples**:
+- **Message**: `Minor changes`
+- **Description**: 
+  - `add(auth): added login functionality`
+  - `fix(navbar): resolve dropdown issue`
+
+### Component Naming
+
+For Next components:
+- **Component Names:** Use PascalCase.
+  - Example: `UserProfile`, `LoginButton`
+
+
+## Contact
+
+For any questions or inquiries, please contact.
