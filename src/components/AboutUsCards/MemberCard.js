@@ -18,7 +18,7 @@ const MemberCard = ({ data }) => {
     const designation = data.bodies[0].responsibilities.join(" | ");
 
     return (
-        <div className="w-1/4 relative mt-16 mx-1 mb-32 sm:mb-24">
+        <div className="w-1/4 relative mt-16  mb-16 sm:mb-24">
             <div className="rounded overflow-hidden shadow-md bg-gradient-to-br from-slate-900 via-slate-700 to-slate-600">
                 <div className="absolute -mt-20 w-full flex justify-center">
                     <div className="h-32 w-32">
@@ -38,7 +38,7 @@ const MemberCard = ({ data }) => {
                     <h1 className="font-bold text-white text-3xl text-center mb-1">{data.name}</h1>
                     <p className="text-white font-semibold text-sm text-center">{designation}</p>
 
-                    <p className="text-center text-gray-200 text-base pt-3 font-normal h-32 overflow-x-scroll">
+                    <p className="text-center text-gray-200 text-base pt-3 font-normal h-auto">
                         {data.intro}
                     </p>
 

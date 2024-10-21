@@ -23,6 +23,7 @@ export default function Home() {
     await axios.get('/api/game/homepagegames')
       .then((response) => {
         const { games } = response.data;
+        console.log("games: ", games)
         setSlides(games)
       })
       .catch((error) => {
