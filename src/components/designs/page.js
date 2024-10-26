@@ -32,46 +32,42 @@ const Design = ({ designData }) => {
     downloads: 0,
   });
 
-  const [likes, setLikes] = useState({});
+  // const [likes, setLikes] = useState({});
+  // const [shared, setShared] = useState({});
+  // const [userLiked, setUserLiked] = useState(false);
+  // const [userShared, setUserShared] = useState(false);
 
-  const [shared, setShared] = useState({});
-  const [userLiked, setUserLiked] = useState(false);
-  const [userShared, setUserShared] = useState(false);
+  // useEffect(() => {
+  //   const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
+  //   const savedShares = JSON.parse(localStorage.getItem("shares")) || {};
+  //   setLikes(savedLikes);
+  //   setShared(savedShares);
+  // }, []);
 
-  useEffect(() => {
-    const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
+  // const handleLike = (index) => {
+  //   if (!userLiked) {
+  //     const newLikes = {
+  //       ...likes,
+  //       [index]: (likes[index] || 0) + 1,
+  //     };
+  //     setLikes(newLikes);
+  //     localStorage.setItem("likes", JSON.stringify(newLikes));
+  //     setUserLiked(true);
+  //   }
+  // };
 
-    const savedShares = JSON.parse(localStorage.getItem("shares")) || {};
+  // const handleShare = (index) => {
+  //   if (!userShared) {
+  //     const newShares = {
+  //       ...shared,
+  //       [index]: (shared[index] || 0) + 1,
+  //     };
+  //     setShared(newShares);
+  //     localStorage.setItem("shares", JSON.stringify(newShares));
+  //     setUserShared(true);
+  //   }
+  // };
 
-    setLikes(savedLikes);
-    setShared(savedShares);
-  }, []);
-
-  const handleLike = (index) => {
-    if (!userLiked) {
-      const newLikes = {
-        ...likes,
-        [index]: (likes[index] || 0) + 1,
-      };
-
-      setLikes(newLikes);
-      localStorage.setItem("likes", JSON.stringify(newLikes));
-      setUserLiked(true);
-    }
-  };
-
-  const handleShare = (index) => {
-    if (!userShared) {
-      const newShares = {
-        ...shared,
-        [index]: (shared[index] || 0) + 1,
-      };
-
-      setShared(newShares);
-      localStorage.setItem("shares", JSON.stringify(newShares));
-      setUserShared(true);
-    }
-  };
 
   const getFileType = (url) => {
     const fileExtension = url.split(".").pop().toLowerCase();
@@ -114,112 +110,70 @@ const Design = ({ designData }) => {
   };
 
   return (
-    <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] design-section-top">
-      {" "}
-      <div className="video-design-wrapper bg-gradient">
-        {" "}
-        <div className="des-thumbnail-container px-6 py-[20px]">
-          {" "}
-          <div className="des-thumbnail">
-            {" "}
-            {getFileType(designData.designs[0]) === "video" ? (
-              <video
-                loop
-                onMouseEnter={(e) => e.target.play()}
-                onMouseLeave={(e) => e.target.pause()}
-                muted
-                onEnded={(e) => handleVideoEnded(e, index)}
-                className={`video-item video$ {
-          itemIndex + 1
-        }
-
-        `}
-              >
-                {" "}
-                <source src={designData.designs[0]} type="video/mp4" /> Your
-                browser does not support the video tag.{" "}
-              </video>
-            ) : (
-              <Image
-                src={designData.designs[0]}
-                alt={`Image $ {
-          itemIndex
-        }
-
-        `}
-                layout="fill"
-                className={`item img$ {
-          itemIndex + 1
-        }
-
-        `}
-              />
-            )}
-          </div>{" "}
-          <p className="py-6 text-white"> {designData.title}</p>{" "}
-          <p className="py-6 text-white text-lg !important">
-            {" "}
-            <Collaborators developersArray={designData.developer_ids} />{" "}
-          </p>{" "}
-          <div className="des-buttons flex gap-2 my-2">
-            {" "}
-            <button className="p-3 group gap-1 text-sm">
-              {" "}
-              <FaPlay />{" "}
-              <span className="tooltip group-hover:scale-100">
-                {" "}
-                <p>Play</p>{" "}
-              </span>{" "}
-            </button>{" "}
-            <button
-              className="py-2 group gap-1 flex items-center text-sm"
-              onClick={() => handleShare(0)}
-            >
-              {" "}
-              <FaShare /> <span> {shared[0] || 0}</span>{" "}
-              <span className="tooltip group-hover:scale-100">
-                {" "}
-                <p>Share</p>{" "}
-              </span>{" "}
-            </button>{" "}
-            <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
-              {" "}
-              <button className="py-2 group gap-1 items-center text-sm flex">
-                {" "}
-                <IoMdDownload /> <span> {data.downloads}</span>{" "}
+      <div className="mx-2 px-3 py-[20px] rounded-2xl bg-gradient-to-tr from-[#000] to-[#000] design-section-top">
+        <div className="video-design-wrapper bg-gradient">
+          <div className="des-thumbnail-container px-6 py-[20px]">
+            <div className="des-thumbnail">
+            {getFileType(designData.designs[0]) === 'video' ? (
+                    <video loop
+              onMouseEnter={(e) => e.target.play()}
+              onMouseLeave={(e) => e.target.pause()} muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${itemIndex + 1}`}>
+                      <source src={designData.designs[0]} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  ) : (
+                    <Image
+                      src={designData.designs[0]}
+                      alt={`Image ${itemIndex}`}
+                      layout="fill"
+                      className={`item img${itemIndex + 1}`}
+                    />
+                  )}            
+                </div>
+            <p className="py-6 text-white">
+              {designData.title}
+            </p>
+            <p className='py-6 text-white text-lg !important'>
+              <Collaborators developersArray={designData.developer_ids} />
+            </p>
+            {/* <div className="des-buttons flex gap-2 my-2">
+              <button className="p-3 group gap-1 text-sm">
+                <FaPlay />
                 <span className="tooltip group-hover:scale-100">
-                  {" "}
-                  <p>Download</p>{" "}
-                </span>{" "}
-              </button>{" "}
-            </a>{" "}
-            <button
-              className="py-2 flex items-center group text-sm"
-              onClick={() => handleLike(0)}
-            >
-              {" "}
-              <AiFillLike /> <span> {likes[0] || 0}</span>{" "}
-              <span className="tooltip group-hover:scale-100">
-                {" "}
-                <p>Like</p>{" "}
-              </span>{" "}
-            </button>{" "}
-          </div>{" "}
-          <div className="flex gap-2 relative top-3">
-            {" "}
-            {genre.map((item) => (
-              <span
-                key={item}
-                className="border-yellow-700 border-2 py-1 rounded-full bg-slate-900 text-gray-300 text-xs px-2"
-              >
-                {" "}
-                {item}
-              </span>
-            ))}
-          </div>{" "}
-        </div>{" "}
-        <div className="des-video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20">
-          {" "}
+                  <p>Play</p>
+                </span>
+              </button>
+              <button className="py-2 group gap-1 flex items-center text-sm" onClick={() => handleShare(0)}>
+                <FaShare />
+                <span>{shared[0] || 0}</span>
+                <span className="tooltip group-hover:scale-100">
+                  <p>Share</p>
+                </span>
+              </button>
+              <a href="https://chouremalhar.itch.io/dicey-roads" target="_blank">
+                <button className="py-2 group gap-1 items-center text-sm flex">
+                  <IoMdDownload />
+                  <span>{data.downloads}</span>
+                  <span className="tooltip group-hover:scale-100">
+                    <p>Download</p>
+                  </span>
+                </button>
+              </a>
+              <button className="py-2 flex items-center group text-sm" onClick={() => handleLike(0)}>
+                <AiFillLike />
+                <span>{likes[0] || 0}</span>
+                <span className="tooltip group-hover:scale-100">
+                  <p>Like</p>
+                </span>
+              </button>
+            </div> */}
+            <div className="flex gap-2 relative top-3">
+              {genre.map((item) => (
+                <span key={item} className="border-yellow-700 border-2 py-1 rounded-full bg-slate-900 text-gray-300 text-xs px-2">{item}</span>))}
+            </div>
+          </div>
+
+          <div className="des-video-card px-6 py-[20px] h-full border-l-2 border-slate-300 border-opacity-20" >
           {determineContent()}
           <span>
             <p className="pt-7 px-2 text-white"> {designData.description}</p>
