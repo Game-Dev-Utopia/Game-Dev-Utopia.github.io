@@ -129,6 +129,17 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
   }, [hoveredIndex, fadeTimeout]);
 
 
+  const playParentVideo = (id) => {
+    const parentVideo = document.querySelector('.video-item.video1');
+    parentVideo.play();
+  }
+
+  const pauseParentVideo = (id) => {
+    const parentVideo = document.querySelector('.video-item.video1');
+    parentVideo.play();
+  }
+
+
   return (
     <div className="design-page">
       <h1 className='txt-grad font-bold text-center text-3xl'>Designs</h1>
@@ -136,13 +147,14 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
 
       <div className="image-gallery">
         {galleryData.map((item, index) => (
-          <div key={index} className={`item img${index + 1}`}>
+          <div key={index} className={`item img${index + 1} relative z-10`}>
             <Link href={`/designs/${item._id}`} passHref>
                   {getFileType(item.designs[0]) === 'video' ? (
-                    <video loop
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()} muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${index + 1}`}
-                    style={{ borderRadius: '15px' }}>
+                    <video loop muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${index + 1}`}
+                    style={{ borderRadius: '15px' }}
+                    onMouseEnter={(e) => e.target.play()}
+                    onMouseLeave={(e) => e.target.pause()}
+                    >
                       <source src={item.designs[0]} type="video/mp4" />
                       Your browser does not support the video tag.
                     </video>
@@ -156,34 +168,37 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
                     />
                   )}
                 </Link>
-            <div className="overlay" >
-              <div className="content">
-                <div className="title">{item.title}</div>
-                <div className="developer-info">
-                  <span><Collaborators developersArray={item.developer_ids} /></span>
+            <div className="absolute bottom-0 w-full flex flex-row justify-between items-end p-2 opacity-0 group hover:opacity-100 duration-700 transition z-10 bg-transparent" 
+            // onMouseEnter={(e) => e.target.play()}
+            // onMouseLeave={(e) => e.target.pause()}
+            >
+                <div className="w-fit">
+                  <span className="text-xl font-bold">{item.title}</span>
+                  <div className="">
+                    <span><Collaborators developersArray={item.developer_ids} /></span>
+                  </div>
+                  <div className="text-xs">
+                    {showFullDescription[index]
+                      ? item.description
+                      : `${item.description.slice(0, 70)}...`}
+                    <span
+                      className="cursor-pointer font-bold text-cyan-300"
+                      onClick={() => toggleShowFullDescription(index)}
+                    >
+                      {showFullDescription[index] ? "   Read less" : "Read more"}
+                    </span>
+                  </div>
                 </div>
-              <div className="description">
-                  {showFullDescription[index]
-                    ? item.description
-                    : `${item.description.slice(0, 70)}...`}
-                  <span
-                    className="read-more"
-                    onClick={() => toggleShowFullDescription(index)}
-                  >
-                    {showFullDescription[index] ? "   Read less" : "Read more"}
-                  </span>
+                <div className="flex flex-col icons justify-end">
+                  <div className="like-icon flex justify-between" onClick={() => handleLike(index)}>
+                    <FaFire style={{ background: "transparent" }} />
+                    <span className="like-count block">{likes[index] || 0}</span>
+                  </div>
+                  <div className="share-icon justify-between" onClick={() => handleShare(index)}>
+                    <ShareIcon style={{ background: "transparent" }} />
+                    <span className="share-count block">{shares[index] || 0}</span>
+                  </div>
                 </div>
-              </div>
-              <div className="icons">
-                <div className="like-icon" onClick={() => handleLike(index)}>
-                  <FaFire style={{ background: "transparent" }} />
-                  <span className="like-count">{likes[index] || 0}</span>
-                </div>
-                <div className="share-icon" onClick={() => handleShare(index)}>
-                  <ShareIcon style={{ background: "transparent" }} />
-                  <span className="share-count">{shares[index] || 0}</span>
-                </div>
-              </div>
             </div>
           </div>
         ))}

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import TeamSection from './TeamSection';
 import { getRequest } from "@/api/api";
+import './AboutUs.css';
 import Timeline from "@/components/HistoryTimeline/Timeline";
 
 const AboutUsNew = () => {
@@ -25,6 +26,7 @@ const AboutUsNew = () => {
 
         fetchData();
     }, []);
+
     return (
         <>
             {isLoading ? (
@@ -45,8 +47,6 @@ const AboutUsNew = () => {
             ) : (
                 <Timeline datas={timelineData.timeline} />
             )}
-
-
         </>
     )
 }

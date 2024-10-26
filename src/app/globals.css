@@ -21,6 +21,12 @@
   display: none;
 }
 
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
