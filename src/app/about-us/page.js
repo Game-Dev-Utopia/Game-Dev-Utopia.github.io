@@ -3,6 +3,7 @@
 
 import AboutUs from '@/components/AboutUsCards/AboutUs';
 import AboutUsNew from '@/components/AboutUsCards/AboutUsNew';
+import Carousel from '@/components/AboutUsCards/Carousel'
 
 const page = () => {
     
@@ -10,6 +11,7 @@ const page = () => {
     return (
         // <AboutUs />
         <AboutUsNew />
+        // <Carousel/>
     )
 }
 
