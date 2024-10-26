@@ -45,16 +45,16 @@ const ArtGallery = () => {
     setShares(savedShares);
   }, []);
 
-  const handleLike = (index) => {
-    if (!liked[index]) {
-      setLiked((prevLiked) => ({ ...prevLiked, [index]: true }));
-      setLikes((prevLikes) => {
-        const newLikes = { ...prevLikes, [index]: (prevLikes[index] || 0) + 1 };
-        localStorage.setItem("likes", JSON.stringify(newLikes));
-        return newLikes;
-      });
-    }
-  };
+	const handleLike = (index) => {
+		if (!liked[index]) {
+			setLiked((prevLiked) => ({ ...prevLiked, [index]: true }));
+			setLikes((prevLikes) => {
+				const newLikes = { ...prevLikes, [index]: (prevLikes[index] || 0) + 1 };
+				localStorage.setItem("likes", JSON.stringify(newLikes));
+				return newLikes;
+			});
+		}
+	};
 
   const handleShare = (index) => {
     if (!shared[index]) {
