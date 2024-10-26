@@ -27,41 +27,41 @@ const Design = ({designData}) => {
     downloads: 0
   });
 
-  const [likes, setLikes] = useState({});
-  const [shared, setShared] = useState({});
-  const [userLiked, setUserLiked] = useState(false);
-  const [userShared, setUserShared] = useState(false);
+  // const [likes, setLikes] = useState({});
+  // const [shared, setShared] = useState({});
+  // const [userLiked, setUserLiked] = useState(false);
+  // const [userShared, setUserShared] = useState(false);
 
-  useEffect(() => {
-    const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
-    const savedShares = JSON.parse(localStorage.getItem("shares")) || {};
-    setLikes(savedLikes);
-    setShared(savedShares);
-  }, []);
+  // useEffect(() => {
+  //   const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
+  //   const savedShares = JSON.parse(localStorage.getItem("shares")) || {};
+  //   setLikes(savedLikes);
+  //   setShared(savedShares);
+  // }, []);
 
-  const handleLike = (index) => {
-    if (!userLiked) {
-      const newLikes = {
-        ...likes,
-        [index]: (likes[index] || 0) + 1,
-      };
-      setLikes(newLikes);
-      localStorage.setItem("likes", JSON.stringify(newLikes));
-      setUserLiked(true);
-    }
-  };
+  // const handleLike = (index) => {
+  //   if (!userLiked) {
+  //     const newLikes = {
+  //       ...likes,
+  //       [index]: (likes[index] || 0) + 1,
+  //     };
+  //     setLikes(newLikes);
+  //     localStorage.setItem("likes", JSON.stringify(newLikes));
+  //     setUserLiked(true);
+  //   }
+  // };
 
-  const handleShare = (index) => {
-    if (!userShared) {
-      const newShares = {
-        ...shared,
-        [index]: (shared[index] || 0) + 1,
-      };
-      setShared(newShares);
-      localStorage.setItem("shares", JSON.stringify(newShares));
-      setUserShared(true);
-    }
-  };
+  // const handleShare = (index) => {
+  //   if (!userShared) {
+  //     const newShares = {
+  //       ...shared,
+  //       [index]: (shared[index] || 0) + 1,
+  //     };
+  //     setShared(newShares);
+  //     localStorage.setItem("shares", JSON.stringify(newShares));
+  //     setUserShared(true);
+  //   }
+  // };
 
 
   const getFileType = (url) => {
@@ -127,7 +127,7 @@ const Design = ({designData}) => {
             <p className='py-6 text-white text-lg !important'>
               <Collaborators developersArray={designData.developer_ids} />
             </p>
-            <div className="des-buttons flex gap-2 my-2">
+            {/* <div className="des-buttons flex gap-2 my-2">
               <button className="p-3 group gap-1 text-sm">
                 <FaPlay />
                 <span className="tooltip group-hover:scale-100">
@@ -157,7 +157,7 @@ const Design = ({designData}) => {
                   <p>Like</p>
                 </span>
               </button>
-            </div>
+            </div> */}
             <div className="flex gap-2 relative top-3">
               {genre.map((item) => (
                 <span key={item} className="border-yellow-700 border-2 py-1 rounded-full bg-slate-900 text-gray-300 text-xs px-2">{item}</span>))}
