@@ -25,7 +25,7 @@ const AchievementsList = ({datas}) =>
     return (
         <div className='w-full'>
             <div ref={ScrollRef}  className='Scroll overflow-y-scroll max-h-[600px] w-[94%] mx-[3%]  transition-all rounded-[2rem] md:rounded-[5rem] border-2'>
-                <div  className='List-Timeline '> 
+                <div  className='relative'> 
                     <br/>
                     <br/>
                     {datas.map((data, i) => <TimelineCard key={i} data={data} index={i} scrollCurrent={scrollCurrent}/> )}
