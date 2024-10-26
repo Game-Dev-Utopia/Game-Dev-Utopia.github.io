@@ -1,11 +1,10 @@
-"use client"
+"use client";
 import React, { useEffect, useRef, useState } from "react";
-import Link from 'next/link'; 
-import { FaFire } from 'react-icons/fa';
-import ShareIcon from '@mui/icons-material/Share';
+import Link from "next/link";
+import { FaFire } from "react-icons/fa";
+import ShareIcon from "@mui/icons-material/Share";
 import Avatar from "@mui/material/Avatar";
-import { getRequest } from '@/api/api';
-import "./index.css";
+import { getRequest } from "@/api/api";
 import Collaborators from "../GamePage/Collaborators";
 import Image from "next/image";
 
@@ -13,17 +12,22 @@ const ArtGallery = () => {
   const [galleryData, setGalleryData] = useState([]);
   const dataFetchedRef = useRef(false);
   const [loading, setLoading] = useState(true);
+  const [likes, setLikes] = useState({});
+  const [liked, setLiked] = useState({});
+  const [shared, setShared] = useState({});
+  const [shares, setShares] = useState({});
+  const [showFullDescription, setShowFullDescription] = useState({});
+  const [hoveredIndex, setHoveredIndex] = useState(null);
 
   useEffect(() => {
-    console.log("Component Mounted");
     if (!dataFetchedRef.current) {
       const fetchData = async () => {
         try {
-          const response = await getRequest('api/design/getdesigns');
+          const response = await getRequest("api/design/getdesigns");
           setGalleryData(response);
           dataFetchedRef.current = true;
         } catch (error) {
-          console.error('Error fetching design data:', error);
+          console.error("Error fetching design data:", error);
         } finally {
           setLoading(false);
         }
@@ -33,17 +37,6 @@ const ArtGallery = () => {
       setLoading(false);
     }
   }, []);
-
-  useEffect(() => {
-    console.log("Component Rendered");
-  });
-
-  
-  const [likes, setLikes] = useState({});
-  const [liked, setLiked] = useState({});
-  const [shared, setShared] = useState({});
-  const [shares, setShares] = useState({});
-  const [showFullDescription, setShowFullDescription] = useState({});
 
   useEffect(() => {
     const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
@@ -67,17 +60,14 @@ const ArtGallery = () => {
     if (!shared[index]) {
       setShared((prevShared) => ({ ...prevShared, [index]: true }));
       setShares((prevShares) => {
-        const newShares = { ...prevShares, [index]: (prevShares[index] || 0) + 1 };
+        const newShares = {
+          ...prevShares,
+          [index]: (prevShares[index] || 0) + 1,
+        };
         localStorage.setItem("shares", JSON.stringify(newShares));
         return newShares;
       });
     }
-  };
-
-  const handleVideoEnded = (event, index) => {
-    const videoElement = event.target;
-    videoElement.currentTime = 0;
-    videoElement.play();
   };
 
   const toggleShowFullDescription = (index) => {
@@ -87,102 +77,80 @@ const ArtGallery = () => {
     }));
   };
 
-const [hoveredIndex, setHoveredIndex] = useState(null);
-  const [fadeTimeout, setFadeTimeout] = useState(null);
-
-  const handleDescriptionHover = (index) => {
-    setHoveredIndex(index);
-  };
-
   const getFileType = (url) => {
-    const fileExtension = url.split('.').pop().toLowerCase();
-    if (['jpg', 'jpeg', 'png', 'gif', 'bmp'].includes(fileExtension)) {
-      return 'image';
-    } else if (['mp4', 'webm', 'ogg', 'mkv', 'mov'].includes(fileExtension)) {
-      return 'video';
-    }
-    return 'unknown';
+    const fileExtension = url.split(".").pop().toLowerCase();
+    return ["jpg", "jpeg", "png", "gif", "bmp"].includes(fileExtension)
+      ? "image"
+      : "video";
   };
-
-  useEffect(() => {
-    if (hoveredIndex !== null) {
-      const timeout = setTimeout(() => {
-        setHoveredIndex(null);
-      }, 2000);
-
-      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
-      if (descriptionElement) {
-        descriptionElement.classList.add('fade-out');
-      }
-
-      setFadeTimeout(timeout);
-    }
-
-    return () => {
-      clearTimeout(fadeTimeout);
-
-      const descriptionElement = document.getElementById(`description-${hoveredIndex}`);
-      if (descriptionElement) {
-        descriptionElement.classList.remove('fade-out');
-      }
-    };
-  }, [hoveredIndex, fadeTimeout]);
-
 
   return (
-    <div className="design-page">
-      <h1 className='txt-grad font-bold text-center text-3xl'>Designs</h1>
-      <hr />
+    <div className="flex flex-col items-center">
+      <h1 className="text-3xl font-bold text-center text-yellow-500 mb-4">
+        Designs
+      </h1>
+      <hr className="w-full" />
 
-      <div className="image-gallery">
+      <div className="md:w-full w-[90%]  max-w-6xl columns-1 md:columns-2 lg:columns-4 gap-4 mx-auto">
         {galleryData.map((item, index) => (
-          <div key={index} className={`item img${index + 1}`}>
+          <div
+            key={index}
+            className="relative mb-4 break-inside-avoid overflow-hidden rounded-lg"
+          >
             <Link href={`/designs/${item._id}`} passHref>
-                  {getFileType(item.designs[0]) === 'video' ? (
-                    <video loop
-              onMouseEnter={(e) => e.target.play()}
-              onMouseLeave={(e) => e.target.pause()} muted onEnded={(e) => handleVideoEnded(e, index)} className={`video-item video${index + 1}`}
-                    style={{ borderRadius: '15px' }}>
-                      <source src={item.designs[0]} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  ) : (
-                    <Image
-                    fill={true}
-                      src={item.designs[0]}
-                      alt={`Image ${index}`}
-                      className={`item img${index + 1}`}
-                      quality={75}
-                    />
-                  )}
-                </Link>
-            <div className="overlay" >
-              <div className="content">
-                <div className="title">{item.title}</div>
-                <div className="developer-info">
-                  <span><Collaborators developersArray={item.developer_ids} /></span>
-                </div>
-              <div className="description">
-                  {showFullDescription[index]
-                    ? item.description
-                    : `${item.description.slice(0, 70)}...`}
-                  <span
-                    className="read-more"
-                    onClick={() => toggleShowFullDescription(index)}
-                  >
-                    {showFullDescription[index] ? "   Read less" : "Read more"}
-                  </span>
-                </div>
+              {getFileType(item.designs[0]) === "video" ? (
+                <video
+                  loop
+                  muted
+                  onMouseEnter={(e) => e.target.play()}
+                  onMouseLeave={(e) => e.target.pause()}
+                  className="w-full h-full rounded-lg object-cover"
+                >
+                  <source src={item.designs[0]} type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <Image
+                  fill={true}
+                  src={item.designs[0]}
+                  alt={`Image ${index}`}
+                  className="w-full h-full object-cover rounded-lg"
+                  quality={75}
+                />
+              )}
+            </Link>
+            <div className="absolute bottom-0 w-full px-4 py-2 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-start">
+              <div className="text-white text-xl font-semibold">
+                {item.title}
               </div>
-              <div className="icons">
-                <div className="like-icon" onClick={() => handleLike(index)}>
-                  <FaFire style={{ background: "transparent" }} />
-                  <span className="like-count">{likes[index] || 0}</span>
-                </div>
-                <div className="share-icon" onClick={() => handleShare(index)}>
-                  <ShareIcon style={{ background: "transparent" }} />
-                  <span className="share-count">{shares[index] || 0}</span>
-                </div>
+              <div className="flex items-center text-white">
+                <Collaborators developersArray={item.developer_ids} />
+              </div>
+              <div className="text-white mt-2 text-sm">
+                {showFullDescription[index]
+                  ? item.description
+                  : `${item.description.slice(0, 70)}...`}
+                <span
+                  className="text-aqua cursor-pointer font-bold ml-2"
+                  onClick={() => toggleShowFullDescription(index)}
+                >
+                  {showFullDescription[index] ? "Read less" : "Read more"}
+                </span>
+              </div>
+              <div className="flex items-center mt-3">
+                <button
+                  className="flex items-center text-white hover:text-aqua mr-4"
+                  onClick={() => handleLike(index)}
+                >
+                  <FaFire className="mr-1" /> <span>{likes[index] || 0}</span>
+                </button>
+                <button
+                  className="flex items-center text-white hover:text-aqua"
+                  onClick={() => handleShare(index)}
+                >
+                  <ShareIcon className="mr-1" />{" "}
+                  <span>{shares[index] || 0}</span>
+                </button>
               </div>
             </div>
           </div>
@@ -193,4 +161,3 @@ const [hoveredIndex, setHoveredIndex] = useState(null);
 };
 
 export default ArtGallery;
-                

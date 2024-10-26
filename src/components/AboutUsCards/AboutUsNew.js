@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TeamSection from './TeamSection';
 import { getRequest } from "@/api/api";
 import Timeline from "@/components/HistoryTimeline/Timeline";
+import LoadingSpinner from '../LoadingSpinner';
 
 const AboutUsNew = () => {
     const [aboutUsData, setAboutUsData] = useState([]);
@@ -28,7 +29,7 @@ const AboutUsNew = () => {
     return (
         <>
             {isLoading ? (
-                <p>Loading...</p>
+                <LoadingSpinner/>
             ) : (
                 <>
                     {Object.keys(aboutUsData).map((index, i) => {
