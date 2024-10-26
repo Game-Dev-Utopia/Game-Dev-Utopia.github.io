@@ -3,6 +3,7 @@ import CardHolder from "@/components/AboutUsCards/CardHolder";
 import CardHolderDynamic from "@/components/AboutUsCards/CardHolderDynamic";
 import { getRequest } from "@/api/api";
 import Timeline from "@/components/HistoryTimeline/Timeline";
+import LoadingSpinner from "../LoadingSpinner";
 
 //import aboutUsData from "@/utilities/aboutUsPageData";
 
@@ -34,7 +35,7 @@ const AboutUs = () => {
   return (
     <>
       {isLoading && !aboutUsData ? (
-        <p>Loading...</p>
+      <p>Loading...</p>
       ) : (
         <div className="bg-hero">
           {Object.keys(aboutUsData).map((index, i) => {
