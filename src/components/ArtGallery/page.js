@@ -91,13 +91,14 @@ const ArtGallery = () => {
       </h1>
       <hr className="w-full" />
 
-      <div className="md:w-full w-[90%]  max-w-6xl columns-1 md:columns-2 lg:columns-4 gap-4 mx-auto">
+      <div className="md:w-full w-[90%]  max-w-6xl columns-1 md:columns-2 lg:columns-4 gap-4 mx-auto ">
         {galleryData.map((item, index) => (
+          <Link href={`/designs/${item._id}`} passHref>
           <div
             key={index}
-            className="relative mb-4 break-inside-avoid overflow-hidden rounded-lg"
+            className="relative mb-2 break-inside-avoid overflow-hidden rounded-lg z-10"
           >
-            <Link href={`/designs/${item._id}`} passHref>
+            
               {getFileType(item.designs[0]) === "video" ? (
                 <video
                   loop
@@ -118,15 +119,15 @@ const ArtGallery = () => {
                   quality={75}
                 />
               )}
-            </Link>
+            
             <div className="absolute bottom-0 w-full px-4 py-2 bg-gradient-to-t from-black to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col items-start">
-              <div className="text-white text-xl font-semibold">
+              <div className="text-white text-lg font-semibold">
                 {item.title}
               </div>
               <div className="flex items-center text-white">
                 <Collaborators developersArray={item.developer_ids} />
               </div>
-              <div className="text-white mt-2 text-sm">
+              <div className="text-white mt-1 text-xs">
                 {showFullDescription[index]
                   ? item.description
                   : `${item.description.slice(0, 70)}...`}
@@ -134,18 +135,18 @@ const ArtGallery = () => {
                   className="text-aqua cursor-pointer font-bold ml-2"
                   onClick={() => toggleShowFullDescription(index)}
                 >
-                  {showFullDescription[index] ? "Read less" : "Read more"}
+                  {/* {showFullDescription[index] ? "Read less" : "Read more"} */}
                 </span>
               </div>
-              <div className="flex items-center mt-3">
+              <div className="flex items-center mt-2 h">
                 <button
-                  className="flex items-center text-white hover:text-aqua mr-4"
+                  className=" flex items-center text-white mr-4 bg-transparent hover:bg-transparent hover:text-txt-grad"
                   onClick={() => handleLike(index)}
                 >
                   <FaFire className="mr-1" /> <span>{likes[index] || 0}</span>
                 </button>
                 <button
-                  className="flex items-center text-white hover:text-aqua"
+                  className="flex items-center text-white  bg-transparent hover:bg-transparent over:text-txt-grad"
                   onClick={() => handleShare(index)}
                 >
                   <ShareIcon className="mr-1" />{" "}
@@ -154,6 +155,7 @@ const ArtGallery = () => {
               </div>
             </div>
           </div>
+          </Link>
         ))}
       </div>
     </div>
