@@ -93,7 +93,7 @@ const ArtGallery = () => {
 
       <div className="md:w-full w-[90%]  max-w-6xl columns-1 md:columns-2 lg:columns-4 gap-4 mx-auto ">
         {galleryData.map((item, index) => (
-          <Link href={`/designs/${item._id}`} passHref>
+          <Link href={`/designs/${item._id}`} passHref  key={index}>
           <div
             key={index}
             className="relative mb-2 break-inside-avoid overflow-hidden rounded-lg z-10"
