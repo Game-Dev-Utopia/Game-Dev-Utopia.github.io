@@ -98,24 +98,16 @@ const Stepper = ({ stepsData, onSubmit }) => {
   
   return (
     <>
-      <div
-        className={`flex ${
-          stepsData.length === 1 ? "justify-center" : "justify-between"
-        }`}
-      >
+      <div className={`flex ${stepsData.length === 1 ? "justify-center" : "justify-between"}`}>
         {stepsData.map((step, i) => (
           <div
             key={i}
-            className={`relative flex flex-col justify-center items-center  w-1/2 ${
-              currentStep === i && "active"
-            } ${i < currentStep ? "complete" : ""}`}
+            className={ `step-item  w-1/2 ${currentStep === i && "active"} ${i < currentStep ? "complete" : ""}`}
           >
-            <div className="step w-10 h-10 flex items-center justify-center z-10 relative bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full font-semibold text-white transition-all">
+            <div className="step">
               {i < currentStep ? <TiTick size={24} /> : i + 1}
             </div>
-            <p className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text font-bold text-center">
-              {step.title}
-            </p>
+            <p className="bg-gradient-to-r from-cyan-500 to-blue-500 text-transparent bg-clip-text font-bold text-center">{step.title}</p>
           </div>
         ))}
       </div>
@@ -137,12 +129,8 @@ const Stepper = ({ stepsData, onSubmit }) => {
         )}
 
         <button
-          className={`mx-auto text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-blue-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-8 py-2.5 text-center ${
-            !isAllInputsFilled && "opacity-50 cursor-not-allowed"
-          }`}
-          onClick={
-            currentStep === stepsData.length - 1 ? handleSubmit : handleNext
-          }
+          className={`mx-auto text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-blue-800 shadow-lg shadow-cyan-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-8 py-2.5 text-center ${!isAllInputsFilled && 'opacity-50 cursor-not-allowed'}`}
+          onClick={currentStep === stepsData.length - 1 ? handleSubmit : handleNext}
           disabled={!isAllInputsFilled}
         >
           {currentStep === stepsData.length - 1 ? "Submit" : "Next"}

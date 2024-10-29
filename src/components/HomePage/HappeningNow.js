@@ -103,7 +103,7 @@ const HappeningNow = () => {
         </div>
       </main>
       <div className="grid place-items-center">
-        <Link href="/events"><button className='button-rounded mx-auto mb-5'>See More →</button></Link>
+        <Link href="/events"><button className='see-more button-rounded mx-auto mb-5'>See More →</button></Link>
       </div>
     </>
   );
