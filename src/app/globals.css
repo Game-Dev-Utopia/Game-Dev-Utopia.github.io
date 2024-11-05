@@ -187,7 +187,7 @@ body {
 }
 
 
-button {
+.see-more{
   border-radius: 8px;
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
@@ -210,9 +210,9 @@ button {
     color: #747bff;
   }
 
-  button {
+  /* button {
     background-color: #f9f9f9;
-  }
+  } */
 }
 
 body {

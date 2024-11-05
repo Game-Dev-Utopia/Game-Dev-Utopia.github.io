@@ -139,7 +139,7 @@ const Carousel = ({ speed }) => {
         </div>
       </div>
       <Link href="/designs" className="font-semibold flex justify-center my-10 text-lg p-2 mx-auto">
-        <button className="bg-grad mx-auto text-center rounded-full py-1">
+        <button className="bg-grad mx-auto text-center rounded-full py-1 see-more">
           See More &rarr;
         </button>
       </Link>

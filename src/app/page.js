@@ -80,7 +80,7 @@ export default function Home() {
         <EmblaCarousel slides={SLIDES} options={OPTIONS} />
         <span className="grid place-items-center">
           <Link href="/games" className="font-semibold text-lg p-2">
-            <button className="bg-grad py-1 rounded-full">See More &rarr;</button>
+            <button className="bg-grad py-1 rounded-full see-more">See More &rarr;</button>
           </Link>
         </span>
       </section>
