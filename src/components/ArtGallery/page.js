@@ -29,14 +29,14 @@ const ArtGallery = () => {
         } catch (error) {
           console.error("Error fetching design data:", error);
         } finally {
-          setLoading(false);
+          setLoading(false)
         }
-      };
-      fetchData();
+      }
+      fetchData()
     } else {
-      setLoading(false);
+      setLoading(false)
     }
-  }, []);
+  }, [])
 
   useEffect(() => {
     const savedLikes = JSON.parse(localStorage.getItem("likes")) || {};
@@ -56,7 +56,7 @@ const ArtGallery = () => {
 		}
 	};
 
-  const handleShare = (index) => {
+  const handleShare = index => {
     if (!shared[index]) {
       setShared((prevShared) => ({ ...prevShared, [index]: true }));
       setShares((prevShares) => {
@@ -68,14 +68,14 @@ const ArtGallery = () => {
         return newShares;
       });
     }
-  };
+  }
 
   const toggleShowFullDescription = (index) => {
     setShowFullDescription((prevShowFullDescription) => ({
       ...prevShowFullDescription,
-      [index]: !prevShowFullDescription[index],
-    }));
-  };
+      [index]: !prevShowFullDescription[index]
+    }))
+  }
 
   const getFileType = (url) => {
     const fileExtension = url.split(".").pop().toLowerCase();
@@ -159,7 +159,7 @@ const ArtGallery = () => {
         ))}
       </div>
     </div>
-  );
-};
+  )
+}
 
 export default ArtGallery;
