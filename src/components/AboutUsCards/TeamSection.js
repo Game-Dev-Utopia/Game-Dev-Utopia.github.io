@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef } from 'react'
-import './AboutUs.css'
 import MemberCard from './MemberCard'
 import MobileComp from './MobileComp'
 import Carousel from './Carousel'
@@ -72,10 +71,10 @@ const TeamSection = ({ data }) => {
         {data.map((section, index) => (
           <div
             key={index}
-            className='bg-slate-900 sm:pt-4 md:pt-16 transition-all mt-2 rounded-md mx-9'
+            className='bg-slate-900 sm:pt-4 md:pt-16 transition-all mt-2 rounded-md mx-9 min-w-full'
           >
             <div className=''>
-              <h1 className='md:text-4xl text-2xl text-center txt-grad font-extrabold mx-auto'>
+              <h1 className='md:text-4xl text-2xl text-center txt-grad font-extrabold mx-auto mb-4'>
                 {section.title}
               </h1>
             </div>
@@ -101,12 +100,15 @@ const TeamSection = ({ data }) => {
               </div>
             </div> */}
 
-            <Carousel>
+            <Carousel className=''>
               {section.data.map((item, i) => (
-                <MemberCard data={item} key={i} className='mx-4 inline' />
+                <MemberCard data={item} key={i} className='' />
               ))}
               {section.data.map((item, i) => (
-                <MemberCard data={item} key={i} className='mx-4 inline' />
+                <MemberCard data={item} key={i} className='' />
+              ))}
+              {section.data.map((item, i) => (
+                <MemberCard data={item} key={i} className='' />
               ))}
             </Carousel>
           </div>
