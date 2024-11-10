@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const instance = axios.create({
-  baseURL: 'https://gdu-club-website-be.onrender.com',
+  baseURL: process.env.BASE_URL || 'https://gdu-club-website-be.onrender.com',
   timeout: 50000,
   headers: {
     'Content-Type': 'application/json',
