@@ -1,6 +1,7 @@
+"use client";
 import React from 'react';
 
-const TermsAndConditions = () => {
+const Page = () => {
   return (
     <div className="p-6 bg-gray-50 text-gray-800 rounded-lg shadow-md max-w-4xl mx-auto mt-10">
       <h1 className="text-3xl font-bold text-center mb-4">Terms & Conditions</h1>
@@ -57,4 +58,4 @@ const TermsAndConditions = () => {
   );
 };
 
-export default TermsAndConditions;
+export default Page;

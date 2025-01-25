@@ -1,4 +1,5 @@
-const ContactUs = () => {
+"use client";
+const Page = () => {
     return (
       <div className="p-6 bg-gray-50 text-gray-800 rounded-lg shadow-md max-w-4xl mx-auto mt-10">
         <h1 className="text-3xl font-bold text-center mb-4">Contact Us</h1>
@@ -36,5 +37,5 @@ const ContactUs = () => {
     );
   };
   
-  export default ContactUs;
+  export default Page;
   
