@@ -4,13 +4,13 @@ import React from 'react';
 const Page = () => {
   return (
     <div className="p-6 bg-gray-50 text-gray-800 rounded-lg shadow-md max-w-4xl mx-auto mt-10">
-      <h1 className="text-3xl font-bold text-center mb-4">Terms & Conditions</h1>
+      <h1 className="text-3xl font-bold text-center mb-4">Terms &amp; Conditions</h1>
       <p className="text-sm text-gray-500 text-center mb-6">Last updated on 25-01-2025 14:03:56</p>
       <p className="mb-4">
-        These Terms and Conditions, along with the privacy policy or other terms (“Terms”), constitute a binding
-        agreement by and between GAMEDEVUTOPIA (“Website Owner” or “we” or “us” or “our”) and
-        you (“you” or “your”) and relate to your use of our website, goods (as applicable) or services (as applicable)
-        (collectively, “Services”).
+        These Terms and Conditions, along with the privacy policy or other terms (&quot;Terms&quot;), constitute a binding
+        agreement by and between GAMEDEVUTOPIA (&quot;Website Owner&quot; or &quot;we&quot; or &quot;us&quot; or &quot;our&quot;) and
+        you (&quot;you&quot; or &quot;your&quot;) and relate to your use of our website, goods (as applicable) or services (as applicable)
+        (collectively, &quot;Services&quot;).
       </p>
       <p className="mb-4">
         By using our website and availing the Services, you agree that you have read and accepted these Terms

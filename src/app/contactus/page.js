@@ -15,7 +15,7 @@ const Page = () => {
            GAMEDEVUTOPIA
           </p>
           <p className="mb-2">
-            <span className="font-semibold">Registered Address:</span> GameDevUtopia, SCTR's Pune Institute of Computer Technology, Pune, Maharashtra, PIN: 411043
+            <span className="font-semibold">Registered Address:</span> GameDevUtopia, SCTR&apos;s Pune Institute of Computer Technology, Pune, Maharashtra, PIN: 411043
           </p>
           <p className="mb-2">
             <span className="font-semibold">Operational Address:</span> GameDevUtopia, Pune Institute of Computer Technology, Dhankawadi, Pune, Pune, Maharashtra, PIN: 411043
