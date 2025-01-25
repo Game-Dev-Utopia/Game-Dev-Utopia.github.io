@@ -27,6 +27,8 @@ concurrency:
 jobs:
   # Build job
   build:
+    environment:
+      name: github-pages
     runs-on: ubuntu-latest
     env:
       NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL }}
