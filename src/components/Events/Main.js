@@ -1,33 +1,32 @@
-
-import { events } from '../../data/event_details';
-import { useEffect, useState } from 'react'; // Import useState
-import axios from '../../api/axios';
-import EventSlider from './EventSlider';
+import { events } from "../../data/event_details";
+import { useEffect, useState } from "react"; // Import useState
+import axios from "../../api/axios";
+import EventSlider from "./EventSlider";
+import { Loader, Loader2 } from "lucide-react";
 
 export default function Main() {
   const [categorizedEvents, setCategorizedEvents] = useState({
     past: [],
     ongoing: [],
-    upcoming: []
+    upcoming: [],
   });
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getEvents() {
       try {
-        const response = await axios.get('/api/event/getallevents');
+        const response = await axios.get("/api/event/getallevents");
         const eventsArray = response.data;
         const categorizedEvents = categorize(eventsArray);
         setCategorizedEvents(categorizedEvents);
         setLoading(false);
       } catch (error) {
         console.error("Error fetching events:", error);
-        setLoading(false); 
+        setLoading(false);
       }
     }
     getEvents();
-    
-  }, [categorizedEvents]);
+  }, [loading]);
 
   // Function to categorize events
   const categorize = (events) => {
@@ -36,31 +35,37 @@ export default function Main() {
     const ongoingEvents = [];
     const upcomingEvents = [];
 
-    events.forEach(event => {
-        const eventStartsIn = event.startsIn ? new Date(event.startsIn) : null;
-        const eventEndsIn = event.endsIn ? new Date(event.endsIn) : null;
+    events.forEach((event) => {
+      const eventStartsIn = event.startsIn ? new Date(event.startsIn) : null;
+      const eventEndsIn = event.endsIn ? new Date(event.endsIn) : null;
 
-        if (eventEndsIn && eventEndsIn < today) {
-            pastEvents.push(event);
-        } else if (eventStartsIn && eventStartsIn <= today && eventEndsIn && eventEndsIn >= today) {
-            ongoingEvents.push(event);
-        } else if (eventStartsIn && eventStartsIn > today) {
-            upcomingEvents.push(event);
-        }
+      if (eventEndsIn && eventEndsIn < today) {
+        pastEvents.push(event);
+      } else if (
+        eventStartsIn &&
+        eventStartsIn <= today &&
+        eventEndsIn &&
+        eventEndsIn >= today
+      ) {
+        ongoingEvents.push(event);
+      } else if (eventStartsIn && eventStartsIn > today) {
+        upcomingEvents.push(event);
+      }
     });
 
     return {
-        past: pastEvents,
-        ongoing: ongoingEvents,
-        upcoming: upcomingEvents
+      past: pastEvents,
+      ongoing: ongoingEvents,
+      upcoming: upcomingEvents,
     };
-};
-
+  };
 
   return (
-    <div className='bg-gray-900 my-11'>
+    <div className="bg-gray-900 my-11">
       {loading ? ( // Show loading message while fetching
-        <div className="text-white text-center">Loading events...</div>
+        <div className="text-white flex  justify-center items-center">
+          <Loader2 className="animate-spin " />
+        </div>
       ) : (
         <EventSlider events={categorizedEvents} />
       )}

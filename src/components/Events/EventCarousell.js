@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/navigation';
-import 'swiper/css/autoplay';
-import { EffectCoverflow, Navigation, Autoplay } from 'swiper/modules';
-import Clock from './Clock'; // Ensure the Clock component is correctly imported
-import './Events.css'; // Import custom CSS file
-import Link from 'next/link';
+import React, { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/navigation";
+import "swiper/css/autoplay";
+import { EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
+import Clock from "./Clock"; // Ensure the Clock component is correctly imported
+import "./Events.css"; // Import custom CSS file
+import Link from "next/link";
 
 const EventCarousell = ({ ongoingEvents }) => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -17,7 +17,8 @@ const EventCarousell = ({ ongoingEvents }) => {
     {
       avatar: "./images/events/event_1.jpg",
       name: "GameDevUtopia Exhibition",
-      shortDescription: "GameDevUtopia organized an exhibition for PICT students, showcasing a diverse range of games and designs developed under GDU PICT.",
+      shortDescription:
+        "GameDevUtopia organized an exhibition for PICT students, showcasing a diverse range of games and designs developed under GDU PICT.",
     },
     {
       avatar: "./images/events/event_2.jpg",
@@ -33,13 +34,14 @@ const EventCarousell = ({ ongoingEvents }) => {
       avatar: "./images/events/event_5.jpg",
       name: "Session at IIIT Nagpur",
       shortDescription: "An Introductory session about Gamedevutopia.",
-    }
+    },
   ];
 
-  const eventslist = ongoingEvents.map(event => ({
+  const eventslist = ongoingEvents.map((event) => ({
     host: "GameDevUtopia",
     name: event.eventName,
     avatar: event.imageURL,
+    registerLink: event.webUrl,
     shortDescription: "Event Description",
     startDate: event.startsIn,
     isDefault: false, // Adding this flag to distinguish between default and ongoing events
@@ -50,7 +52,7 @@ const EventCarousell = ({ ongoingEvents }) => {
       setEvents(eventslist);
     } else {
       // Adding the isDefault flag for default events
-      setEvents(defaultevents.map(event => ({ ...event, isDefault: true })));
+      setEvents(defaultevents.map((event) => ({ ...event, isDefault: true })));
     }
   }, [ongoingEvents]);
 
@@ -62,25 +64,37 @@ const EventCarousell = ({ ongoingEvents }) => {
     <div
       className="relative h-[85vh] md:h-[90vh] flex flex-col lg:flex-row bg-cover bg-center transition-background duration-500"
       style={{
-        backgroundImage: `url(${events[activeIndex]?.avatar || 'default-image-url'})`,
+        backgroundImage: `url(${
+          events[activeIndex]?.avatar || "default-image-url"
+        })`,
       }}
     >
       {/* Left section for active event details */}
-      <div className="relative lg:w-2/5 p-8  bg-opacity-70 flex flex-col justify-center z-10 rounded-lg shadow-lg 
+      <div
+        className="relative lg:w-2/5 p-8  bg-opacity-70 flex flex-col justify-center z-10 rounded-lg shadow-lg 
                 md:bg-gradient-to-r from-black via-gray-800 to-transparent 
-                bg-gradient-to-b sm:from-black sm:via-gray-800 sm:to-transparent">
+                bg-gradient-to-b sm:from-black sm:via-gray-800 sm:to-transparent"
+      >
         {events[activeIndex] && (
           <>
-            <h2 className="md:text-5xl text-3xl text-white font-bold mb-4">{events[activeIndex].name}</h2>
-            <p className="text-lg mb-6 leading-relaxed text-gray-400">{events[activeIndex].shortDescription}</p>
-            
+            <h2 className="md:text-5xl text-3xl text-white font-bold mb-4">
+              {events[activeIndex].name}
+            </h2>
+            <p className="text-lg mb-6 leading-relaxed text-gray-400">
+              {events[activeIndex].shortDescription}
+            </p>
+
             {/* Conditionally render host, start date, and register link for non-default events */}
             {!events[activeIndex].isDefault && (
               <>
-                <h3 className="text-2xl font-semibold mb-4">{events[activeIndex].host}</h3>
-                <div className="text-xl mb-6 font-medium">
-                  <Clock targetDate={events[activeIndex].startDate} />
-                </div>
+                <h3 className="text-2xl font-semibold mb-4">
+                  {events[activeIndex].host}
+                </h3>
+                {Date.now() > events[activeIndex].startDate && (
+                  <div className="text-xl mb-6 font-medium">
+                    <Clock targetDate={events[activeIndex].startDate} />
+                  </div>
+                )}
                 <Link
                   href={events[activeIndex].registerLink || "#"}
                   target="_blank"
@@ -126,8 +140,8 @@ const EventCarousell = ({ ongoingEvents }) => {
               key={index}
               style={{
                 backgroundImage: `url(${event.avatar})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
+                backgroundSize: "cover",
+                backgroundPosition: "center",
               }}
             >
               {/* Slide content if needed */}
