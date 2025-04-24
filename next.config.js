@@ -58,6 +58,14 @@ const nextConfig = {
             {
                 protocol:'https',
                 hostname:'gdu-data-bucket.s3.amazonaws.com'
+            },
+            {
+                protocol:'https',
+                hostname:'dwsmkbe2bf414.cloudfront.net'
+            },
+            {
+                protocol:'https',
+                hostname:'cdn.discordapp.com'
             }
         ]
     }
