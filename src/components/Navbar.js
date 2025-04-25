@@ -114,7 +114,6 @@ function Navbar() {
                                         toast('🎉🎉 Logged out successfully!', {
                                             position: "top-right",
                                             autoClose: 1000,
-                                            onClose: () => window.location.reload(),
                                             hideProgressBar: false,
                                             closeOnClick: true,
                                             pauseOnHover: true,
@@ -124,7 +123,8 @@ function Navbar() {
                                             transition: Bounce,
                                             className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
                                             progressStyle: { backgroundColor: '#26C6DA' }
-                                        }); 
+                                        });
+                                        window.location.href = (process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:8080") + "/api/auth/logout";
                                         console.log("Logged out!");
                                     }}>
                                         Logout
