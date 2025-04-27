@@ -281,7 +281,7 @@ function Navbar() {
                             onClick={(profileInfo?.buttonText == "Join Server")? joinUserToGuild : closeModal}
                             className="mt-4 px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-all"
                         >
-                            Close
+                            {profileInfo?.buttonText || "Close"}
                         </button>
                     </div>
                 </Modal>
