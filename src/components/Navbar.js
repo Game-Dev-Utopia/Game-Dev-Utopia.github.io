@@ -69,6 +69,7 @@ function Navbar() {
         console.log(addToGuildResponse.data);
         if (addToGuildResponse.data.message == "User added to guild successfully") {
             setProfileInfo({ ...profileInfo, buttonText: "Close" });
+            setShowProfileModal(false);
             toast('🎉🎉 Successfully joined the guild!', {
                 position: "top-right",
                 autoClose: 2000,
