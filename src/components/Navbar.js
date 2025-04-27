@@ -13,6 +13,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import Marquee from './Marquee';
 import Cookies from 'js-cookie';
 import { DropdownMenu, DropdownMenuLabel, DropdownMenuItem, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuSeparator } from './ui/dropdown-menu';
+import Modal from './ui/modal';
+import axios from '../api/axios';
+import { ChevronDown } from 'lucide-react';
 
 function Navbar() {
     const [navDescp, setNavDescp] = useState(false)
@@ -21,6 +24,8 @@ function Navbar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [avatar, setAvatar] = useState(null);
     const [username, setUsername] = useState(null);
+    const [showProfileModal, setShowProfileModal] = useState(false);
+    const [profileInfo, setProfileInfo] = useState(null);
 
     useEffect(() => {
         // Check if the UID cookie exists
@@ -35,8 +40,64 @@ function Navbar() {
             setAvatar(avatarCookie);
             console.log(avatarCookie);
             setUsername(usernameCookie);
+            axios.get('/api/auth/discord/getUserData', {
+                headers: {
+                    'User-Id': Cookies.get('uid'),
+                }
+            }).then((response) => {
+                let ModalData = response.data;
+                setProfileInfo(ModalData);
+            });
         }
     }, []);
+
+    const handleProfileClick = () => {
+        setShowProfileModal(true); // Show the modal when "Profile" is clicked
+    };
+
+    const closeModal = () => {
+        setShowProfileModal(false); // Close the modal
+    };
+
+    const joinUserToGuild = async () => {
+        setProfileInfo({ ...profileInfo, buttonText: "Joining..." });
+        const addToGuildResponse = await axios.get('/api/auth/discord/addToGuild', {
+            headers: {
+                'User-Id': Cookies.get('uid'),
+            }
+        });
+        console.log(addToGuildResponse.data);
+        if (addToGuildResponse.data.message == "User added to guild successfully") {
+            setProfileInfo({ ...profileInfo, buttonText: "Close" });
+            toast('🎉🎉 Successfully joined the guild!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "coloured",
+                transition: Bounce,
+                className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
+                progressStyle: { backgroundColor: '#26C6DA' }
+            });
+        } else {
+            toast('❌ Failed to join the guild!', {
+                position: "top-right",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "coloured",
+                transition: Bounce,
+                className: 'text-white bg-slate-800 rounded-lg flex items-center shadow-lg p-2 font-bold',
+                progressStyle: { backgroundColor: '#26C6DA' }
+            });
+        }
+    };
 
     const CloseButton = ({ closeToast }) => (
         <RxCross2 className='text-lg me-4' onClick={closeToast} />
@@ -96,12 +157,13 @@ function Navbar() {
                                             height={30}
                                             className="rounded-full"
                                         />
-                                        <span className='text-white ml-2 mt-1'>{username} 🔽</span>
+                                        <span className='text-white ml-2 mt-1'>{username?.split(" ")[0]}</span>
+                                        <ChevronDown className='text-white ml-1 mt-1.5' size={20} />
                                     </div>
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
                                     <DropdownMenuLabel>Account</DropdownMenuLabel>
-                                    <DropdownMenuItem onClick={() => alert("Profile clicked!")}>
+                                    <DropdownMenuItem onClick={handleProfileClick}>
                                         Profile
                                     </DropdownMenuItem>
                                     <DropdownMenuItem onClick={() => alert("Settings clicked!")}>
@@ -134,7 +196,7 @@ function Navbar() {
                         </div>
                     ) : (
                         // Show Discord login button if not logged in
-                        <Link href={process.env.NEXT_PUBLIC_BASE_URL + "/api/auth/login"}>
+                        <Link href={(process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:8080") + "/api/auth/login"}>
                             <div className='flex items-center justify-center bg-sky-500 text-white px-4 py-2 rounded-lg hover:bg-sky-600 transition-all duration-300'>
                                 <FaIcons.FaDiscord size={20} className='mr-2' />
                                 <span className='text-sm sm:text-lg font-semibold'>Login</span>
@@ -201,6 +263,29 @@ function Navbar() {
                     })}
                 </ul>
             </nav>}
+
+            {/* Profile Modal */}
+            {showProfileModal && (
+                <Modal onClose={closeModal}>
+                    <div className="flex flex-col items-center p-6">
+                        <Image
+                            src={avatar}
+                            alt="User Avatar"
+                            width={80}
+                            height={80}
+                            className="rounded-full mb-4"
+                        />
+                        <h2 className="text-xl font-bold text-white">{username}</h2>
+                        <p className="text-gray-400">{profileInfo?.displayText || "Unable to show profile info for now!"}</p>
+                        <button
+                            onClick={(profileInfo?.buttonText == "Join Server")? joinUserToGuild : closeModal}
+                            className="mt-4 px-4 py-2 bg-sky-500 text-white rounded-lg hover:bg-sky-600 transition-all"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </Modal>
+            )}
 
         </>
     );
